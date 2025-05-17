@@ -1,0 +1,35 @@
+INFO: [HLS 200-10] Running 'C:/Xilinx2/Vivado/2019.1/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'Samarth' on host 'samarth-asus' (Windows NT_amd64 version 6.2) on Tue May 13 12:56:46 +0530 2025
+INFO: [HLS 200-10] In directory 'C:/Users/Samarth/IIIT_Intern'
+Sourcing Tcl script 'C:/Users/Samarth/IIIT_Intern/lab_1_pynq_2/solution1/export.tcl'
+INFO: [HLS 200-10] Opening project 'C:/Users/Samarth/IIIT_Intern/lab_1_pynq_2'.
+INFO: [HLS 200-10] Opening solution 'C:/Users/Samarth/IIIT_Intern/lab_1_pynq_2/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+bad lexical cast: source type value could not be interpreted as target
+    while executing
+"rdi::set_property core_revision 2505131256 {component component_1}"
+    invoked from within
+"set_property core_revision $Revision $core"
+    (file "run_ippack.tcl" line 776)
+INFO: [Common 17-206] Exiting Vivado at Tue May 13 12:56:59 2025...
+ERROR: [IMPL 213-28] Failed to generate IP.
+command 'ap_source' returned error code
+    while executing
+"source C:/Users/Samarth/IIIT_Intern/lab_1_pynq_2/solution1/export.tcl"
+    invoked from within
+"hls::main C:/Users/Samarth/IIIT_Intern/lab_1_pynq_2/solution1/export.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$args"
+    (procedure "hls_proc" line 5)
+    invoked from within
+"hls_proc $argv"
