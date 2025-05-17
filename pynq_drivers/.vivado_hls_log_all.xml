@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog>
+        <logs message="ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***" projectName="lab1_pynq" solutionName="solution1" date="2025-05-13T14:10:05.637+0530"/>
+        <logs message="ERROR: Please check the snapshot name which is created during 'xelab',the current snapshot name &quot;xsim.dir/lab_1/xsimk.exe&quot; does not exist " projectName="lab1_pynq" solutionName="solution1" date="2025-05-13T14:10:05.607+0530"/>
+        <logs message="ERROR: [VRFC 10-2865] module 'apatb_lab_1_top' ignored due to previous errors [C:/Users/Samarth/IIIT_Intern/pynq_lab/hls/lab1_pynq/solution1/sim/verilog/lab_1.autotb.v:31]" projectName="lab1_pynq" solutionName="solution1" date="2025-05-13T14:10:05.391+0530"/>
+        <logs message="ERROR: [VRFC 10-2989] 'ap_done' is not declared [C:/Users/Samarth/IIIT_Intern/pynq_lab/hls/lab1_pynq/solution1/sim/verilog/lab_1.autotb.v:175]" projectName="lab1_pynq" solutionName="solution1" date="2025-05-13T14:10:04.761+0530"/>
+        <logs message="ERROR: [VRFC 10-3821] variable 'AESL_done' is written by both continuous and procedural assignments [C:/Users/Samarth/IIIT_Intern/pynq_lab/hls/lab1_pynq/solution1/sim/verilog/lab_1.autotb.v:147]" projectName="lab1_pynq" solutionName="solution1" date="2025-05-13T14:10:04.747+0530"/>
+        <logs message="ERROR: [VRFC 10-2989] 'ap_done' is not declared [C:/Users/Samarth/IIIT_Intern/pynq_lab/hls/lab1_pynq/solution1/sim/verilog/lab_1.autotb.v:147]" projectName="lab1_pynq" solutionName="solution1" date="2025-05-13T14:10:04.730+0530"/>
+      </simLog>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>
