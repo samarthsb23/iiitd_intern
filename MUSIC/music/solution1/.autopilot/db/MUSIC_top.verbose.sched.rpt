@@ -1,0 +1,389 @@
+
+
+================================================================
+== Vivado HLS Report for 'MUSIC_top'
+================================================================
+* Date:           Fri May 30 11:15:28 2025
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        music
+* Solution:       solution1
+* Product family: zynquplus
+* Target device:  xczu28dr-ffvg1517-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.658|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +----------+----------+----------+----------+----------+
+    |       Latency       |       Interval      | Pipeline |
+    |    min   |    max   |    min   |    max   |   Type   |
+    +----------+----------+----------+----------+----------+
+    |  16391005|  19133723|  16390806|  18769911| dataflow |
+    +----------+----------+----------+----------+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 10
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 10, States = { 1 2 3 4 5 6 7 8 9 10 }
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%inMAT_re = alloca [200 x double], align 8" [kernel_qrf_0.cpp:188]   --->   Operation 11 'alloca' 'inMAT_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%inMAT_im = alloca [200 x double], align 8" [kernel_qrf_0.cpp:188]   --->   Operation 12 'alloca' 'inMAT_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%matrix1_re = alloca [10000 x double], align 8" [kernel_qrf_0.cpp:191]   --->   Operation 13 'alloca' 'matrix1_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%matrix1_im = alloca [10000 x double], align 8" [kernel_qrf_0.cpp:191]   --->   Operation 14 'alloca' 'matrix1_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%noiseSS_0_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 15 'alloca' 'noiseSS_0_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%noiseSS_1_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 16 'alloca' 'noiseSS_1_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%noiseSS_2_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 17 'alloca' 'noiseSS_2_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%noiseSS_3_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 18 'alloca' 'noiseSS_3_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%noiseSS_4_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 19 'alloca' 'noiseSS_4_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%noiseSS_5_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 20 'alloca' 'noiseSS_5_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%noiseSS_6_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 21 'alloca' 'noiseSS_6_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%noiseSS_7_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 22 'alloca' 'noiseSS_7_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%noiseSS_8_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 23 'alloca' 'noiseSS_8_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%noiseSS_9_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 24 'alloca' 'noiseSS_9_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%noiseSS_10_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 25 'alloca' 'noiseSS_10_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%noiseSS_11_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 26 'alloca' 'noiseSS_11_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%noiseSS_12_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 27 'alloca' 'noiseSS_12_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%noiseSS_13_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 28 'alloca' 'noiseSS_13_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%noiseSS_14_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 29 'alloca' 'noiseSS_14_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%noiseSS_15_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 30 'alloca' 'noiseSS_15_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%noiseSS_16_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 31 'alloca' 'noiseSS_16_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%noiseSS_17_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 32 'alloca' 'noiseSS_17_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%noiseSS_18_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 33 'alloca' 'noiseSS_18_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%noiseSS_19_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 34 'alloca' 'noiseSS_19_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%noiseSS_20_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 35 'alloca' 'noiseSS_20_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%noiseSS_21_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 36 'alloca' 'noiseSS_21_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%noiseSS_22_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 37 'alloca' 'noiseSS_22_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%noiseSS_23_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 38 'alloca' 'noiseSS_23_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%noiseSS_24_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 39 'alloca' 'noiseSS_24_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%noiseSS_25_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 40 'alloca' 'noiseSS_25_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%noiseSS_26_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 41 'alloca' 'noiseSS_26_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%noiseSS_27_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 42 'alloca' 'noiseSS_27_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%noiseSS_28_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 43 'alloca' 'noiseSS_28_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%noiseSS_29_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 44 'alloca' 'noiseSS_29_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%noiseSS_30_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 45 'alloca' 'noiseSS_30_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%noiseSS_31_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 46 'alloca' 'noiseSS_31_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%noiseSS_32_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 47 'alloca' 'noiseSS_32_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%noiseSS_33_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 48 'alloca' 'noiseSS_33_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%noiseSS_34_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 49 'alloca' 'noiseSS_34_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%noiseSS_35_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 50 'alloca' 'noiseSS_35_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%noiseSS_36_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 51 'alloca' 'noiseSS_36_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%noiseSS_37_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 52 'alloca' 'noiseSS_37_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%noiseSS_38_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 53 'alloca' 'noiseSS_38_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%noiseSS_39_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 54 'alloca' 'noiseSS_39_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%noiseSS_40_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 55 'alloca' 'noiseSS_40_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%noiseSS_41_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 56 'alloca' 'noiseSS_41_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%noiseSS_42_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 57 'alloca' 'noiseSS_42_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%noiseSS_43_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 58 'alloca' 'noiseSS_43_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%noiseSS_44_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 59 'alloca' 'noiseSS_44_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%noiseSS_45_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 60 'alloca' 'noiseSS_45_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%noiseSS_46_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 61 'alloca' 'noiseSS_46_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%noiseSS_47_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 62 'alloca' 'noiseSS_47_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%noiseSS_48_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 63 'alloca' 'noiseSS_48_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%noiseSS_49_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 64 'alloca' 'noiseSS_49_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%noiseSS_50_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 65 'alloca' 'noiseSS_50_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%noiseSS_51_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 66 'alloca' 'noiseSS_51_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%noiseSS_52_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 67 'alloca' 'noiseSS_52_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%noiseSS_53_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 68 'alloca' 'noiseSS_53_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%noiseSS_54_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 69 'alloca' 'noiseSS_54_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%noiseSS_55_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 70 'alloca' 'noiseSS_55_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%noiseSS_56_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 71 'alloca' 'noiseSS_56_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "%noiseSS_57_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 72 'alloca' 'noiseSS_57_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%noiseSS_58_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 73 'alloca' 'noiseSS_58_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%noiseSS_59_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 74 'alloca' 'noiseSS_59_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%noiseSS_60_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 75 'alloca' 'noiseSS_60_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%noiseSS_61_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 76 'alloca' 'noiseSS_61_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%noiseSS_62_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 77 'alloca' 'noiseSS_62_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%noiseSS_63_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 78 'alloca' 'noiseSS_63_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%noiseSS_64_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 79 'alloca' 'noiseSS_64_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%noiseSS_65_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 80 'alloca' 'noiseSS_65_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%noiseSS_66_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 81 'alloca' 'noiseSS_66_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 82 [1/1] (0.00ns)   --->   "%noiseSS_67_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 82 'alloca' 'noiseSS_67_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 83 [1/1] (0.00ns)   --->   "%noiseSS_68_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 83 'alloca' 'noiseSS_68_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 84 [1/1] (0.00ns)   --->   "%noiseSS_69_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 84 'alloca' 'noiseSS_69_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%noiseSS_70_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 85 'alloca' 'noiseSS_70_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "%noiseSS_71_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 86 'alloca' 'noiseSS_71_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 87 [1/1] (0.00ns)   --->   "%noiseSS_72_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 87 'alloca' 'noiseSS_72_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 88 [1/1] (0.00ns)   --->   "%noiseSS_73_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 88 'alloca' 'noiseSS_73_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 89 [1/1] (0.00ns)   --->   "%noiseSS_74_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 89 'alloca' 'noiseSS_74_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 90 [1/1] (0.00ns)   --->   "%noiseSS_75_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 90 'alloca' 'noiseSS_75_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 91 [1/1] (0.00ns)   --->   "%noiseSS_76_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 91 'alloca' 'noiseSS_76_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 92 [1/1] (0.00ns)   --->   "%noiseSS_77_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 92 'alloca' 'noiseSS_77_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 93 [1/1] (0.00ns)   --->   "%noiseSS_78_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 93 'alloca' 'noiseSS_78_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 94 [1/1] (0.00ns)   --->   "%noiseSS_79_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 94 'alloca' 'noiseSS_79_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 95 [1/1] (0.00ns)   --->   "%noiseSS_80_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 95 'alloca' 'noiseSS_80_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 96 [1/1] (0.00ns)   --->   "%noiseSS_81_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 96 'alloca' 'noiseSS_81_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 97 [1/1] (0.00ns)   --->   "%noiseSS_82_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 97 'alloca' 'noiseSS_82_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 98 [1/1] (0.00ns)   --->   "%noiseSS_83_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 98 'alloca' 'noiseSS_83_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 99 [1/1] (0.00ns)   --->   "%noiseSS_84_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 99 'alloca' 'noiseSS_84_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 100 [1/1] (0.00ns)   --->   "%noiseSS_85_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 100 'alloca' 'noiseSS_85_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 101 [1/1] (0.00ns)   --->   "%noiseSS_86_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 101 'alloca' 'noiseSS_86_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 102 [1/1] (0.00ns)   --->   "%noiseSS_87_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 102 'alloca' 'noiseSS_87_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 103 [1/1] (0.00ns)   --->   "%noiseSS_88_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 103 'alloca' 'noiseSS_88_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 104 [1/1] (0.00ns)   --->   "%noiseSS_89_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 104 'alloca' 'noiseSS_89_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 105 [1/1] (0.00ns)   --->   "%noiseSS_90_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 105 'alloca' 'noiseSS_90_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 106 [1/1] (0.00ns)   --->   "%noiseSS_91_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 106 'alloca' 'noiseSS_91_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 107 [1/1] (0.00ns)   --->   "%noiseSS_92_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 107 'alloca' 'noiseSS_92_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 108 [1/1] (0.00ns)   --->   "%noiseSS_93_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 108 'alloca' 'noiseSS_93_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 109 [1/1] (0.00ns)   --->   "%noiseSS_94_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 109 'alloca' 'noiseSS_94_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 110 [1/1] (0.00ns)   --->   "%noiseSS_95_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 110 'alloca' 'noiseSS_95_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 111 [1/1] (0.00ns)   --->   "%noiseSS_96_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 111 'alloca' 'noiseSS_96_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 112 [1/1] (0.00ns)   --->   "%noiseSS_97_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 112 'alloca' 'noiseSS_97_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 113 [1/1] (0.00ns)   --->   "%noiseSS_98_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 113 'alloca' 'noiseSS_98_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 114 [1/1] (0.00ns)   --->   "%noiseSS_99_re = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 114 'alloca' 'noiseSS_99_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 115 [1/1] (0.00ns)   --->   "%noiseSS_0_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 115 'alloca' 'noiseSS_0_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 116 [1/1] (0.00ns)   --->   "%noiseSS_1_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 116 'alloca' 'noiseSS_1_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 117 [1/1] (0.00ns)   --->   "%noiseSS_2_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 117 'alloca' 'noiseSS_2_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 118 [1/1] (0.00ns)   --->   "%noiseSS_3_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 118 'alloca' 'noiseSS_3_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 119 [1/1] (0.00ns)   --->   "%noiseSS_4_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 119 'alloca' 'noiseSS_4_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 120 [1/1] (0.00ns)   --->   "%noiseSS_5_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 120 'alloca' 'noiseSS_5_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 121 [1/1] (0.00ns)   --->   "%noiseSS_6_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 121 'alloca' 'noiseSS_6_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 122 [1/1] (0.00ns)   --->   "%noiseSS_7_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 122 'alloca' 'noiseSS_7_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 123 [1/1] (0.00ns)   --->   "%noiseSS_8_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 123 'alloca' 'noiseSS_8_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 124 [1/1] (0.00ns)   --->   "%noiseSS_9_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 124 'alloca' 'noiseSS_9_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 125 [1/1] (0.00ns)   --->   "%noiseSS_10_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 125 'alloca' 'noiseSS_10_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 126 [1/1] (0.00ns)   --->   "%noiseSS_11_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 126 'alloca' 'noiseSS_11_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 127 [1/1] (0.00ns)   --->   "%noiseSS_12_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 127 'alloca' 'noiseSS_12_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 128 [1/1] (0.00ns)   --->   "%noiseSS_13_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 128 'alloca' 'noiseSS_13_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 129 [1/1] (0.00ns)   --->   "%noiseSS_14_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 129 'alloca' 'noiseSS_14_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 130 [1/1] (0.00ns)   --->   "%noiseSS_15_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 130 'alloca' 'noiseSS_15_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 131 [1/1] (0.00ns)   --->   "%noiseSS_16_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 131 'alloca' 'noiseSS_16_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 132 [1/1] (0.00ns)   --->   "%noiseSS_17_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 132 'alloca' 'noiseSS_17_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 133 [1/1] (0.00ns)   --->   "%noiseSS_18_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 133 'alloca' 'noiseSS_18_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 134 [1/1] (0.00ns)   --->   "%noiseSS_19_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 134 'alloca' 'noiseSS_19_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 135 [1/1] (0.00ns)   --->   "%noiseSS_20_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 135 'alloca' 'noiseSS_20_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 136 [1/1] (0.00ns)   --->   "%noiseSS_21_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 136 'alloca' 'noiseSS_21_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 137 [1/1] (0.00ns)   --->   "%noiseSS_22_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 137 'alloca' 'noiseSS_22_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 138 [1/1] (0.00ns)   --->   "%noiseSS_23_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 138 'alloca' 'noiseSS_23_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 139 [1/1] (0.00ns)   --->   "%noiseSS_24_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 139 'alloca' 'noiseSS_24_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 140 [1/1] (0.00ns)   --->   "%noiseSS_25_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 140 'alloca' 'noiseSS_25_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 141 [1/1] (0.00ns)   --->   "%noiseSS_26_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 141 'alloca' 'noiseSS_26_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 142 [1/1] (0.00ns)   --->   "%noiseSS_27_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 142 'alloca' 'noiseSS_27_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 143 [1/1] (0.00ns)   --->   "%noiseSS_28_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 143 'alloca' 'noiseSS_28_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 144 [1/1] (0.00ns)   --->   "%noiseSS_29_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 144 'alloca' 'noiseSS_29_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 145 [1/1] (0.00ns)   --->   "%noiseSS_30_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 145 'alloca' 'noiseSS_30_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 146 [1/1] (0.00ns)   --->   "%noiseSS_31_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 146 'alloca' 'noiseSS_31_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 147 [1/1] (0.00ns)   --->   "%noiseSS_32_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 147 'alloca' 'noiseSS_32_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 148 [1/1] (0.00ns)   --->   "%noiseSS_33_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 148 'alloca' 'noiseSS_33_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 149 [1/1] (0.00ns)   --->   "%noiseSS_34_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 149 'alloca' 'noiseSS_34_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 150 [1/1] (0.00ns)   --->   "%noiseSS_35_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 150 'alloca' 'noiseSS_35_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 151 [1/1] (0.00ns)   --->   "%noiseSS_36_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 151 'alloca' 'noiseSS_36_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 152 [1/1] (0.00ns)   --->   "%noiseSS_37_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 152 'alloca' 'noiseSS_37_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 153 [1/1] (0.00ns)   --->   "%noiseSS_38_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 153 'alloca' 'noiseSS_38_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 154 [1/1] (0.00ns)   --->   "%noiseSS_39_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 154 'alloca' 'noiseSS_39_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 155 [1/1] (0.00ns)   --->   "%noiseSS_40_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 155 'alloca' 'noiseSS_40_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 156 [1/1] (0.00ns)   --->   "%noiseSS_41_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 156 'alloca' 'noiseSS_41_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 157 [1/1] (0.00ns)   --->   "%noiseSS_42_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 157 'alloca' 'noiseSS_42_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 158 [1/1] (0.00ns)   --->   "%noiseSS_43_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 158 'alloca' 'noiseSS_43_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 159 [1/1] (0.00ns)   --->   "%noiseSS_44_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 159 'alloca' 'noiseSS_44_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 160 [1/1] (0.00ns)   --->   "%noiseSS_45_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 160 'alloca' 'noiseSS_45_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 161 [1/1] (0.00ns)   --->   "%noiseSS_46_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 161 'alloca' 'noiseSS_46_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 162 [1/1] (0.00ns)   --->   "%noiseSS_47_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 162 'alloca' 'noiseSS_47_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 163 [1/1] (0.00ns)   --->   "%noiseSS_48_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 163 'alloca' 'noiseSS_48_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 164 [1/1] (0.00ns)   --->   "%noiseSS_49_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 164 'alloca' 'noiseSS_49_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 165 [1/1] (0.00ns)   --->   "%noiseSS_50_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 165 'alloca' 'noiseSS_50_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 166 [1/1] (0.00ns)   --->   "%noiseSS_51_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 166 'alloca' 'noiseSS_51_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 167 [1/1] (0.00ns)   --->   "%noiseSS_52_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 167 'alloca' 'noiseSS_52_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 168 [1/1] (0.00ns)   --->   "%noiseSS_53_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 168 'alloca' 'noiseSS_53_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 169 [1/1] (0.00ns)   --->   "%noiseSS_54_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 169 'alloca' 'noiseSS_54_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 170 [1/1] (0.00ns)   --->   "%noiseSS_55_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 170 'alloca' 'noiseSS_55_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 171 [1/1] (0.00ns)   --->   "%noiseSS_56_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 171 'alloca' 'noiseSS_56_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 172 [1/1] (0.00ns)   --->   "%noiseSS_57_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 172 'alloca' 'noiseSS_57_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 173 [1/1] (0.00ns)   --->   "%noiseSS_58_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 173 'alloca' 'noiseSS_58_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 174 [1/1] (0.00ns)   --->   "%noiseSS_59_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 174 'alloca' 'noiseSS_59_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 175 [1/1] (0.00ns)   --->   "%noiseSS_60_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 175 'alloca' 'noiseSS_60_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 176 [1/1] (0.00ns)   --->   "%noiseSS_61_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 176 'alloca' 'noiseSS_61_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 177 [1/1] (0.00ns)   --->   "%noiseSS_62_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 177 'alloca' 'noiseSS_62_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 178 [1/1] (0.00ns)   --->   "%noiseSS_63_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 178 'alloca' 'noiseSS_63_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 179 [1/1] (0.00ns)   --->   "%noiseSS_64_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 179 'alloca' 'noiseSS_64_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 180 [1/1] (0.00ns)   --->   "%noiseSS_65_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 180 'alloca' 'noiseSS_65_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 181 [1/1] (0.00ns)   --->   "%noiseSS_66_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 181 'alloca' 'noiseSS_66_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 182 [1/1] (0.00ns)   --->   "%noiseSS_67_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 182 'alloca' 'noiseSS_67_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 183 [1/1] (0.00ns)   --->   "%noiseSS_68_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 183 'alloca' 'noiseSS_68_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 184 [1/1] (0.00ns)   --->   "%noiseSS_69_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 184 'alloca' 'noiseSS_69_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 185 [1/1] (0.00ns)   --->   "%noiseSS_70_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 185 'alloca' 'noiseSS_70_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 186 [1/1] (0.00ns)   --->   "%noiseSS_71_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 186 'alloca' 'noiseSS_71_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 187 [1/1] (0.00ns)   --->   "%noiseSS_72_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 187 'alloca' 'noiseSS_72_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 188 [1/1] (0.00ns)   --->   "%noiseSS_73_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 188 'alloca' 'noiseSS_73_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 189 [1/1] (0.00ns)   --->   "%noiseSS_74_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 189 'alloca' 'noiseSS_74_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 190 [1/1] (0.00ns)   --->   "%noiseSS_75_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 190 'alloca' 'noiseSS_75_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 191 [1/1] (0.00ns)   --->   "%noiseSS_76_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 191 'alloca' 'noiseSS_76_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 192 [1/1] (0.00ns)   --->   "%noiseSS_77_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 192 'alloca' 'noiseSS_77_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 193 [1/1] (0.00ns)   --->   "%noiseSS_78_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 193 'alloca' 'noiseSS_78_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 194 [1/1] (0.00ns)   --->   "%noiseSS_79_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 194 'alloca' 'noiseSS_79_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 195 [1/1] (0.00ns)   --->   "%noiseSS_80_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 195 'alloca' 'noiseSS_80_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 196 [1/1] (0.00ns)   --->   "%noiseSS_81_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 196 'alloca' 'noiseSS_81_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 197 [1/1] (0.00ns)   --->   "%noiseSS_82_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 197 'alloca' 'noiseSS_82_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 198 [1/1] (0.00ns)   --->   "%noiseSS_83_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 198 'alloca' 'noiseSS_83_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 199 [1/1] (0.00ns)   --->   "%noiseSS_84_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 199 'alloca' 'noiseSS_84_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 200 [1/1] (0.00ns)   --->   "%noiseSS_85_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 200 'alloca' 'noiseSS_85_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 201 [1/1] (0.00ns)   --->   "%noiseSS_86_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 201 'alloca' 'noiseSS_86_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 202 [1/1] (0.00ns)   --->   "%noiseSS_87_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 202 'alloca' 'noiseSS_87_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 203 [1/1] (0.00ns)   --->   "%noiseSS_88_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 203 'alloca' 'noiseSS_88_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 204 [1/1] (0.00ns)   --->   "%noiseSS_89_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 204 'alloca' 'noiseSS_89_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 205 [1/1] (0.00ns)   --->   "%noiseSS_90_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 205 'alloca' 'noiseSS_90_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 206 [1/1] (0.00ns)   --->   "%noiseSS_91_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 206 'alloca' 'noiseSS_91_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 207 [1/1] (0.00ns)   --->   "%noiseSS_92_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 207 'alloca' 'noiseSS_92_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 208 [1/1] (0.00ns)   --->   "%noiseSS_93_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 208 'alloca' 'noiseSS_93_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 209 [1/1] (0.00ns)   --->   "%noiseSS_94_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 209 'alloca' 'noiseSS_94_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 210 [1/1] (0.00ns)   --->   "%noiseSS_95_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 210 'alloca' 'noiseSS_95_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 211 [1/1] (0.00ns)   --->   "%noiseSS_96_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 211 'alloca' 'noiseSS_96_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 212 [1/1] (0.00ns)   --->   "%noiseSS_97_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 212 'alloca' 'noiseSS_97_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 213 [1/1] (0.00ns)   --->   "%noiseSS_98_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 213 'alloca' 'noiseSS_98_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 214 [1/1] (0.00ns)   --->   "%noiseSS_99_im = alloca [98 x float], align 4" [kernel_qrf_0.cpp:194]   --->   Operation 214 'alloca' 'noiseSS_99_im' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 215 [2/2] (0.00ns)   --->   "call fastcc void @inputdatamover(i128* %in_V_data, i1* %in_V_last_V, [200 x double]* %inMAT_re, [200 x double]* %inMAT_im)" [kernel_qrf_0.cpp:189]   --->   Operation 215 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 216 [1/2] (0.00ns)   --->   "call fastcc void @inputdatamover(i128* %in_V_data, i1* %in_V_last_V, [200 x double]* %inMAT_re, [200 x double]* %inMAT_im)" [kernel_qrf_0.cpp:189]   --->   Operation 216 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 217 [2/2] (0.00ns)   --->   "call fastcc void @AutoCorrelation([200 x double]* %inMAT_re, [200 x double]* %inMAT_im, [10000 x double]* %matrix1_re, [10000 x double]* %matrix1_im)" [kernel_qrf_0.cpp:192]   --->   Operation 217 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 218 [1/2] (0.00ns)   --->   "call fastcc void @AutoCorrelation([200 x double]* %inMAT_re, [200 x double]* %inMAT_im, [10000 x double]* %matrix1_re, [10000 x double]* %matrix1_im)" [kernel_qrf_0.cpp:192]   --->   Operation 218 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 219 [2/2] (0.00ns)   --->   "call fastcc void @qr_givens([10000 x double]* %matrix1_re, [10000 x double]* %matrix1_im, [98 x float]* %noiseSS_0_re, [98 x float]* %noiseSS_1_re, [98 x float]* %noiseSS_2_re, [98 x float]* %noiseSS_3_re, [98 x float]* %noiseSS_4_re, [98 x float]* %noiseSS_5_re, [98 x float]* %noiseSS_6_re, [98 x float]* %noiseSS_7_re, [98 x float]* %noiseSS_8_re, [98 x float]* %noiseSS_9_re, [98 x float]* %noiseSS_10_re, [98 x float]* %noiseSS_11_re, [98 x float]* %noiseSS_12_re, [98 x float]* %noiseSS_13_re, [98 x float]* %noiseSS_14_re, [98 x float]* %noiseSS_15_re, [98 x float]* %noiseSS_16_re, [98 x float]* %noiseSS_17_re, [98 x float]* %noiseSS_18_re, [98 x float]* %noiseSS_19_re, [98 x float]* %noiseSS_20_re, [98 x float]* %noiseSS_21_re, [98 x float]* %noiseSS_22_re, [98 x float]* %noiseSS_23_re, [98 x float]* %noiseSS_24_re, [98 x float]* %noiseSS_25_re, [98 x float]* %noiseSS_26_re, [98 x float]* %noiseSS_27_re, [98 x float]* %noiseSS_28_re, [98 x float]* %noiseSS_29_re, [98 x float]* %noiseSS_30_re, [98 x float]* %noiseSS_31_re, [98 x float]* %noiseSS_32_re, [98 x float]* %noiseSS_33_re, [98 x float]* %noiseSS_34_re, [98 x float]* %noiseSS_35_re, [98 x float]* %noiseSS_36_re, [98 x float]* %noiseSS_37_re, [98 x float]* %noiseSS_38_re, [98 x float]* %noiseSS_39_re, [98 x float]* %noiseSS_40_re, [98 x float]* %noiseSS_41_re, [98 x float]* %noiseSS_42_re, [98 x float]* %noiseSS_43_re, [98 x float]* %noiseSS_44_re, [98 x float]* %noiseSS_45_re, [98 x float]* %noiseSS_46_re, [98 x float]* %noiseSS_47_re, [98 x float]* %noiseSS_48_re, [98 x float]* %noiseSS_49_re, [98 x float]* %noiseSS_50_re, [98 x float]* %noiseSS_51_re, [98 x float]* %noiseSS_52_re, [98 x float]* %noiseSS_53_re, [98 x float]* %noiseSS_54_re, [98 x float]* %noiseSS_55_re, [98 x float]* %noiseSS_56_re, [98 x float]* %noiseSS_57_re, [98 x float]* %noiseSS_58_re, [98 x float]* %noiseSS_59_re, [98 x float]* %noiseSS_60_re, [98 x float]* %noiseSS_61_re, [98 x float]* %noiseSS_62_re, [98 x float]* %noiseSS_63_re, [98 x float]* %noiseSS_64_re, [98 x float]* %noiseSS_65_re, [98 x float]* %noiseSS_66_re, [98 x float]* %noiseSS_67_re, [98 x float]* %noiseSS_68_re, [98 x float]* %noiseSS_69_re, [98 x float]* %noiseSS_70_re, [98 x float]* %noiseSS_71_re, [98 x float]* %noiseSS_72_re, [98 x float]* %noiseSS_73_re, [98 x float]* %noiseSS_74_re, [98 x float]* %noiseSS_75_re, [98 x float]* %noiseSS_76_re, [98 x float]* %noiseSS_77_re, [98 x float]* %noiseSS_78_re, [98 x float]* %noiseSS_79_re, [98 x float]* %noiseSS_80_re, [98 x float]* %noiseSS_81_re, [98 x float]* %noiseSS_82_re, [98 x float]* %noiseSS_83_re, [98 x float]* %noiseSS_84_re, [98 x float]* %noiseSS_85_re, [98 x float]* %noiseSS_86_re, [98 x float]* %noiseSS_87_re, [98 x float]* %noiseSS_88_re, [98 x float]* %noiseSS_89_re, [98 x float]* %noiseSS_90_re, [98 x float]* %noiseSS_91_re, [98 x float]* %noiseSS_92_re, [98 x float]* %noiseSS_93_re, [98 x float]* %noiseSS_94_re, [98 x float]* %noiseSS_95_re, [98 x float]* %noiseSS_96_re, [98 x float]* %noiseSS_97_re, [98 x float]* %noiseSS_98_re, [98 x float]* %noiseSS_99_re, [98 x float]* %noiseSS_0_im, [98 x float]* %noiseSS_1_im, [98 x float]* %noiseSS_2_im, [98 x float]* %noiseSS_3_im, [98 x float]* %noiseSS_4_im, [98 x float]* %noiseSS_5_im, [98 x float]* %noiseSS_6_im, [98 x float]* %noiseSS_7_im, [98 x float]* %noiseSS_8_im, [98 x float]* %noiseSS_9_im, [98 x float]* %noiseSS_10_im, [98 x float]* %noiseSS_11_im, [98 x float]* %noiseSS_12_im, [98 x float]* %noiseSS_13_im, [98 x float]* %noiseSS_14_im, [98 x float]* %noiseSS_15_im, [98 x float]* %noiseSS_16_im, [98 x float]* %noiseSS_17_im, [98 x float]* %noiseSS_18_im, [98 x float]* %noiseSS_19_im, [98 x float]* %noiseSS_20_im, [98 x float]* %noiseSS_21_im, [98 x float]* %noiseSS_22_im, [98 x float]* %noiseSS_23_im, [98 x float]* %noiseSS_24_im, [98 x float]* %noiseSS_25_im, [98 x float]* %noiseSS_26_im, [98 x float]* %noiseSS_27_im, [98 x float]* %noiseSS_28_im, [98 x float]* %noiseSS_29_im, [98 x float]* %noiseSS_30_im, [98 x float]* %noiseSS_31_im, [98 x float]* %noiseSS_32_im, [98 x float]* %noiseSS_33_im, [98 x float]* %noiseSS_34_im, [98 x float]* %noiseSS_35_im, [98 x float]* %noiseSS_36_im, [98 x float]* %noiseSS_37_im, [98 x float]* %noiseSS_38_im, [98 x float]* %noiseSS_39_im, [98 x float]* %noiseSS_40_im, [98 x float]* %noiseSS_41_im, [98 x float]* %noiseSS_42_im, [98 x float]* %noiseSS_43_im, [98 x float]* %noiseSS_44_im, [98 x float]* %noiseSS_45_im, [98 x float]* %noiseSS_46_im, [98 x float]* %noiseSS_47_im, [98 x float]* %noiseSS_48_im, [98 x float]* %noiseSS_49_im, [98 x float]* %noiseSS_50_im, [98 x float]* %noiseSS_51_im, [98 x float]* %noiseSS_52_im, [98 x float]* %noiseSS_53_im, [98 x float]* %noiseSS_54_im, [98 x float]* %noiseSS_55_im, [98 x float]* %noiseSS_56_im, [98 x float]* %noiseSS_57_im, [98 x float]* %noiseSS_58_im, [98 x float]* %noiseSS_59_im, [98 x float]* %noiseSS_60_im, [98 x float]* %noiseSS_61_im, [98 x float]* %noiseSS_62_im, [98 x float]* %noiseSS_63_im, [98 x float]* %noiseSS_64_im, [98 x float]* %noiseSS_65_im, [98 x float]* %noiseSS_66_im, [98 x float]* %noiseSS_67_im, [98 x float]* %noiseSS_68_im, [98 x float]* %noiseSS_69_im, [98 x float]* %noiseSS_70_im, [98 x float]* %noiseSS_71_im, [98 x float]* %noiseSS_72_im, [98 x float]* %noiseSS_73_im, [98 x float]* %noiseSS_74_im, [98 x float]* %noiseSS_75_im, [98 x float]* %noiseSS_76_im, [98 x float]* %noiseSS_77_im, [98 x float]* %noiseSS_78_im, [98 x float]* %noiseSS_79_im, [98 x float]* %noiseSS_80_im, [98 x float]* %noiseSS_81_im, [98 x float]* %noiseSS_82_im, [98 x float]* %noiseSS_83_im, [98 x float]* %noiseSS_84_im, [98 x float]* %noiseSS_85_im, [98 x float]* %noiseSS_86_im, [98 x float]* %noiseSS_87_im, [98 x float]* %noiseSS_88_im, [98 x float]* %noiseSS_89_im, [98 x float]* %noiseSS_90_im, [98 x float]* %noiseSS_91_im, [98 x float]* %noiseSS_92_im, [98 x float]* %noiseSS_93_im, [98 x float]* %noiseSS_94_im, [98 x float]* %noiseSS_95_im, [98 x float]* %noiseSS_96_im, [98 x float]* %noiseSS_97_im, [98 x float]* %noiseSS_98_im, [98 x float]* %noiseSS_99_im)" [kernel_qrf_0.cpp:195]   --->   Operation 219 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 0.00>
+ST_7 : Operation 220 [1/2] (0.00ns)   --->   "call fastcc void @qr_givens([10000 x double]* %matrix1_re, [10000 x double]* %matrix1_im, [98 x float]* %noiseSS_0_re, [98 x float]* %noiseSS_1_re, [98 x float]* %noiseSS_2_re, [98 x float]* %noiseSS_3_re, [98 x float]* %noiseSS_4_re, [98 x float]* %noiseSS_5_re, [98 x float]* %noiseSS_6_re, [98 x float]* %noiseSS_7_re, [98 x float]* %noiseSS_8_re, [98 x float]* %noiseSS_9_re, [98 x float]* %noiseSS_10_re, [98 x float]* %noiseSS_11_re, [98 x float]* %noiseSS_12_re, [98 x float]* %noiseSS_13_re, [98 x float]* %noiseSS_14_re, [98 x float]* %noiseSS_15_re, [98 x float]* %noiseSS_16_re, [98 x float]* %noiseSS_17_re, [98 x float]* %noiseSS_18_re, [98 x float]* %noiseSS_19_re, [98 x float]* %noiseSS_20_re, [98 x float]* %noiseSS_21_re, [98 x float]* %noiseSS_22_re, [98 x float]* %noiseSS_23_re, [98 x float]* %noiseSS_24_re, [98 x float]* %noiseSS_25_re, [98 x float]* %noiseSS_26_re, [98 x float]* %noiseSS_27_re, [98 x float]* %noiseSS_28_re, [98 x float]* %noiseSS_29_re, [98 x float]* %noiseSS_30_re, [98 x float]* %noiseSS_31_re, [98 x float]* %noiseSS_32_re, [98 x float]* %noiseSS_33_re, [98 x float]* %noiseSS_34_re, [98 x float]* %noiseSS_35_re, [98 x float]* %noiseSS_36_re, [98 x float]* %noiseSS_37_re, [98 x float]* %noiseSS_38_re, [98 x float]* %noiseSS_39_re, [98 x float]* %noiseSS_40_re, [98 x float]* %noiseSS_41_re, [98 x float]* %noiseSS_42_re, [98 x float]* %noiseSS_43_re, [98 x float]* %noiseSS_44_re, [98 x float]* %noiseSS_45_re, [98 x float]* %noiseSS_46_re, [98 x float]* %noiseSS_47_re, [98 x float]* %noiseSS_48_re, [98 x float]* %noiseSS_49_re, [98 x float]* %noiseSS_50_re, [98 x float]* %noiseSS_51_re, [98 x float]* %noiseSS_52_re, [98 x float]* %noiseSS_53_re, [98 x float]* %noiseSS_54_re, [98 x float]* %noiseSS_55_re, [98 x float]* %noiseSS_56_re, [98 x float]* %noiseSS_57_re, [98 x float]* %noiseSS_58_re, [98 x float]* %noiseSS_59_re, [98 x float]* %noiseSS_60_re, [98 x float]* %noiseSS_61_re, [98 x float]* %noiseSS_62_re, [98 x float]* %noiseSS_63_re, [98 x float]* %noiseSS_64_re, [98 x float]* %noiseSS_65_re, [98 x float]* %noiseSS_66_re, [98 x float]* %noiseSS_67_re, [98 x float]* %noiseSS_68_re, [98 x float]* %noiseSS_69_re, [98 x float]* %noiseSS_70_re, [98 x float]* %noiseSS_71_re, [98 x float]* %noiseSS_72_re, [98 x float]* %noiseSS_73_re, [98 x float]* %noiseSS_74_re, [98 x float]* %noiseSS_75_re, [98 x float]* %noiseSS_76_re, [98 x float]* %noiseSS_77_re, [98 x float]* %noiseSS_78_re, [98 x float]* %noiseSS_79_re, [98 x float]* %noiseSS_80_re, [98 x float]* %noiseSS_81_re, [98 x float]* %noiseSS_82_re, [98 x float]* %noiseSS_83_re, [98 x float]* %noiseSS_84_re, [98 x float]* %noiseSS_85_re, [98 x float]* %noiseSS_86_re, [98 x float]* %noiseSS_87_re, [98 x float]* %noiseSS_88_re, [98 x float]* %noiseSS_89_re, [98 x float]* %noiseSS_90_re, [98 x float]* %noiseSS_91_re, [98 x float]* %noiseSS_92_re, [98 x float]* %noiseSS_93_re, [98 x float]* %noiseSS_94_re, [98 x float]* %noiseSS_95_re, [98 x float]* %noiseSS_96_re, [98 x float]* %noiseSS_97_re, [98 x float]* %noiseSS_98_re, [98 x float]* %noiseSS_99_re, [98 x float]* %noiseSS_0_im, [98 x float]* %noiseSS_1_im, [98 x float]* %noiseSS_2_im, [98 x float]* %noiseSS_3_im, [98 x float]* %noiseSS_4_im, [98 x float]* %noiseSS_5_im, [98 x float]* %noiseSS_6_im, [98 x float]* %noiseSS_7_im, [98 x float]* %noiseSS_8_im, [98 x float]* %noiseSS_9_im, [98 x float]* %noiseSS_10_im, [98 x float]* %noiseSS_11_im, [98 x float]* %noiseSS_12_im, [98 x float]* %noiseSS_13_im, [98 x float]* %noiseSS_14_im, [98 x float]* %noiseSS_15_im, [98 x float]* %noiseSS_16_im, [98 x float]* %noiseSS_17_im, [98 x float]* %noiseSS_18_im, [98 x float]* %noiseSS_19_im, [98 x float]* %noiseSS_20_im, [98 x float]* %noiseSS_21_im, [98 x float]* %noiseSS_22_im, [98 x float]* %noiseSS_23_im, [98 x float]* %noiseSS_24_im, [98 x float]* %noiseSS_25_im, [98 x float]* %noiseSS_26_im, [98 x float]* %noiseSS_27_im, [98 x float]* %noiseSS_28_im, [98 x float]* %noiseSS_29_im, [98 x float]* %noiseSS_30_im, [98 x float]* %noiseSS_31_im, [98 x float]* %noiseSS_32_im, [98 x float]* %noiseSS_33_im, [98 x float]* %noiseSS_34_im, [98 x float]* %noiseSS_35_im, [98 x float]* %noiseSS_36_im, [98 x float]* %noiseSS_37_im, [98 x float]* %noiseSS_38_im, [98 x float]* %noiseSS_39_im, [98 x float]* %noiseSS_40_im, [98 x float]* %noiseSS_41_im, [98 x float]* %noiseSS_42_im, [98 x float]* %noiseSS_43_im, [98 x float]* %noiseSS_44_im, [98 x float]* %noiseSS_45_im, [98 x float]* %noiseSS_46_im, [98 x float]* %noiseSS_47_im, [98 x float]* %noiseSS_48_im, [98 x float]* %noiseSS_49_im, [98 x float]* %noiseSS_50_im, [98 x float]* %noiseSS_51_im, [98 x float]* %noiseSS_52_im, [98 x float]* %noiseSS_53_im, [98 x float]* %noiseSS_54_im, [98 x float]* %noiseSS_55_im, [98 x float]* %noiseSS_56_im, [98 x float]* %noiseSS_57_im, [98 x float]* %noiseSS_58_im, [98 x float]* %noiseSS_59_im, [98 x float]* %noiseSS_60_im, [98 x float]* %noiseSS_61_im, [98 x float]* %noiseSS_62_im, [98 x float]* %noiseSS_63_im, [98 x float]* %noiseSS_64_im, [98 x float]* %noiseSS_65_im, [98 x float]* %noiseSS_66_im, [98 x float]* %noiseSS_67_im, [98 x float]* %noiseSS_68_im, [98 x float]* %noiseSS_69_im, [98 x float]* %noiseSS_70_im, [98 x float]* %noiseSS_71_im, [98 x float]* %noiseSS_72_im, [98 x float]* %noiseSS_73_im, [98 x float]* %noiseSS_74_im, [98 x float]* %noiseSS_75_im, [98 x float]* %noiseSS_76_im, [98 x float]* %noiseSS_77_im, [98 x float]* %noiseSS_78_im, [98 x float]* %noiseSS_79_im, [98 x float]* %noiseSS_80_im, [98 x float]* %noiseSS_81_im, [98 x float]* %noiseSS_82_im, [98 x float]* %noiseSS_83_im, [98 x float]* %noiseSS_84_im, [98 x float]* %noiseSS_85_im, [98 x float]* %noiseSS_86_im, [98 x float]* %noiseSS_87_im, [98 x float]* %noiseSS_88_im, [98 x float]* %noiseSS_89_im, [98 x float]* %noiseSS_90_im, [98 x float]* %noiseSS_91_im, [98 x float]* %noiseSS_92_im, [98 x float]* %noiseSS_93_im, [98 x float]* %noiseSS_94_im, [98 x float]* %noiseSS_95_im, [98 x float]* %noiseSS_96_im, [98 x float]* %noiseSS_97_im, [98 x float]* %noiseSS_98_im, [98 x float]* %noiseSS_99_im)" [kernel_qrf_0.cpp:195]   --->   Operation 220 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 0.00>
+ST_8 : Operation 221 [2/2] (0.00ns)   --->   "call fastcc void @MSG([98 x float]* %noiseSS_0_re, [98 x float]* %noiseSS_1_re, [98 x float]* %noiseSS_2_re, [98 x float]* %noiseSS_3_re, [98 x float]* %noiseSS_4_re, [98 x float]* %noiseSS_5_re, [98 x float]* %noiseSS_6_re, [98 x float]* %noiseSS_7_re, [98 x float]* %noiseSS_8_re, [98 x float]* %noiseSS_9_re, [98 x float]* %noiseSS_10_re, [98 x float]* %noiseSS_11_re, [98 x float]* %noiseSS_12_re, [98 x float]* %noiseSS_13_re, [98 x float]* %noiseSS_14_re, [98 x float]* %noiseSS_15_re, [98 x float]* %noiseSS_16_re, [98 x float]* %noiseSS_17_re, [98 x float]* %noiseSS_18_re, [98 x float]* %noiseSS_19_re, [98 x float]* %noiseSS_20_re, [98 x float]* %noiseSS_21_re, [98 x float]* %noiseSS_22_re, [98 x float]* %noiseSS_23_re, [98 x float]* %noiseSS_24_re, [98 x float]* %noiseSS_25_re, [98 x float]* %noiseSS_26_re, [98 x float]* %noiseSS_27_re, [98 x float]* %noiseSS_28_re, [98 x float]* %noiseSS_29_re, [98 x float]* %noiseSS_30_re, [98 x float]* %noiseSS_31_re, [98 x float]* %noiseSS_32_re, [98 x float]* %noiseSS_33_re, [98 x float]* %noiseSS_34_re, [98 x float]* %noiseSS_35_re, [98 x float]* %noiseSS_36_re, [98 x float]* %noiseSS_37_re, [98 x float]* %noiseSS_38_re, [98 x float]* %noiseSS_39_re, [98 x float]* %noiseSS_40_re, [98 x float]* %noiseSS_41_re, [98 x float]* %noiseSS_42_re, [98 x float]* %noiseSS_43_re, [98 x float]* %noiseSS_44_re, [98 x float]* %noiseSS_45_re, [98 x float]* %noiseSS_46_re, [98 x float]* %noiseSS_47_re, [98 x float]* %noiseSS_48_re, [98 x float]* %noiseSS_49_re, [98 x float]* %noiseSS_50_re, [98 x float]* %noiseSS_51_re, [98 x float]* %noiseSS_52_re, [98 x float]* %noiseSS_53_re, [98 x float]* %noiseSS_54_re, [98 x float]* %noiseSS_55_re, [98 x float]* %noiseSS_56_re, [98 x float]* %noiseSS_57_re, [98 x float]* %noiseSS_58_re, [98 x float]* %noiseSS_59_re, [98 x float]* %noiseSS_60_re, [98 x float]* %noiseSS_61_re, [98 x float]* %noiseSS_62_re, [98 x float]* %noiseSS_63_re, [98 x float]* %noiseSS_64_re, [98 x float]* %noiseSS_65_re, [98 x float]* %noiseSS_66_re, [98 x float]* %noiseSS_67_re, [98 x float]* %noiseSS_68_re, [98 x float]* %noiseSS_69_re, [98 x float]* %noiseSS_70_re, [98 x float]* %noiseSS_71_re, [98 x float]* %noiseSS_72_re, [98 x float]* %noiseSS_73_re, [98 x float]* %noiseSS_74_re, [98 x float]* %noiseSS_75_re, [98 x float]* %noiseSS_76_re, [98 x float]* %noiseSS_77_re, [98 x float]* %noiseSS_78_re, [98 x float]* %noiseSS_79_re, [98 x float]* %noiseSS_80_re, [98 x float]* %noiseSS_81_re, [98 x float]* %noiseSS_82_re, [98 x float]* %noiseSS_83_re, [98 x float]* %noiseSS_84_re, [98 x float]* %noiseSS_85_re, [98 x float]* %noiseSS_86_re, [98 x float]* %noiseSS_87_re, [98 x float]* %noiseSS_88_re, [98 x float]* %noiseSS_89_re, [98 x float]* %noiseSS_90_re, [98 x float]* %noiseSS_91_re, [98 x float]* %noiseSS_92_re, [98 x float]* %noiseSS_93_re, [98 x float]* %noiseSS_94_re, [98 x float]* %noiseSS_95_re, [98 x float]* %noiseSS_96_re, [98 x float]* %noiseSS_97_re, [98 x float]* %noiseSS_98_re, [98 x float]* %noiseSS_99_re, [98 x float]* %noiseSS_0_im, [98 x float]* %noiseSS_1_im, [98 x float]* %noiseSS_2_im, [98 x float]* %noiseSS_3_im, [98 x float]* %noiseSS_4_im, [98 x float]* %noiseSS_5_im, [98 x float]* %noiseSS_6_im, [98 x float]* %noiseSS_7_im, [98 x float]* %noiseSS_8_im, [98 x float]* %noiseSS_9_im, [98 x float]* %noiseSS_10_im, [98 x float]* %noiseSS_11_im, [98 x float]* %noiseSS_12_im, [98 x float]* %noiseSS_13_im, [98 x float]* %noiseSS_14_im, [98 x float]* %noiseSS_15_im, [98 x float]* %noiseSS_16_im, [98 x float]* %noiseSS_17_im, [98 x float]* %noiseSS_18_im, [98 x float]* %noiseSS_19_im, [98 x float]* %noiseSS_20_im, [98 x float]* %noiseSS_21_im, [98 x float]* %noiseSS_22_im, [98 x float]* %noiseSS_23_im, [98 x float]* %noiseSS_24_im, [98 x float]* %noiseSS_25_im, [98 x float]* %noiseSS_26_im, [98 x float]* %noiseSS_27_im, [98 x float]* %noiseSS_28_im, [98 x float]* %noiseSS_29_im, [98 x float]* %noiseSS_30_im, [98 x float]* %noiseSS_31_im, [98 x float]* %noiseSS_32_im, [98 x float]* %noiseSS_33_im, [98 x float]* %noiseSS_34_im, [98 x float]* %noiseSS_35_im, [98 x float]* %noiseSS_36_im, [98 x float]* %noiseSS_37_im, [98 x float]* %noiseSS_38_im, [98 x float]* %noiseSS_39_im, [98 x float]* %noiseSS_40_im, [98 x float]* %noiseSS_41_im, [98 x float]* %noiseSS_42_im, [98 x float]* %noiseSS_43_im, [98 x float]* %noiseSS_44_im, [98 x float]* %noiseSS_45_im, [98 x float]* %noiseSS_46_im, [98 x float]* %noiseSS_47_im, [98 x float]* %noiseSS_48_im, [98 x float]* %noiseSS_49_im, [98 x float]* %noiseSS_50_im, [98 x float]* %noiseSS_51_im, [98 x float]* %noiseSS_52_im, [98 x float]* %noiseSS_53_im, [98 x float]* %noiseSS_54_im, [98 x float]* %noiseSS_55_im, [98 x float]* %noiseSS_56_im, [98 x float]* %noiseSS_57_im, [98 x float]* %noiseSS_58_im, [98 x float]* %noiseSS_59_im, [98 x float]* %noiseSS_60_im, [98 x float]* %noiseSS_61_im, [98 x float]* %noiseSS_62_im, [98 x float]* %noiseSS_63_im, [98 x float]* %noiseSS_64_im, [98 x float]* %noiseSS_65_im, [98 x float]* %noiseSS_66_im, [98 x float]* %noiseSS_67_im, [98 x float]* %noiseSS_68_im, [98 x float]* %noiseSS_69_im, [98 x float]* %noiseSS_70_im, [98 x float]* %noiseSS_71_im, [98 x float]* %noiseSS_72_im, [98 x float]* %noiseSS_73_im, [98 x float]* %noiseSS_74_im, [98 x float]* %noiseSS_75_im, [98 x float]* %noiseSS_76_im, [98 x float]* %noiseSS_77_im, [98 x float]* %noiseSS_78_im, [98 x float]* %noiseSS_79_im, [98 x float]* %noiseSS_80_im, [98 x float]* %noiseSS_81_im, [98 x float]* %noiseSS_82_im, [98 x float]* %noiseSS_83_im, [98 x float]* %noiseSS_84_im, [98 x float]* %noiseSS_85_im, [98 x float]* %noiseSS_86_im, [98 x float]* %noiseSS_87_im, [98 x float]* %noiseSS_88_im, [98 x float]* %noiseSS_89_im, [98 x float]* %noiseSS_90_im, [98 x float]* %noiseSS_91_im, [98 x float]* %noiseSS_92_im, [98 x float]* %noiseSS_93_im, [98 x float]* %noiseSS_94_im, [98 x float]* %noiseSS_95_im, [98 x float]* %noiseSS_96_im, [98 x float]* %noiseSS_97_im, [98 x float]* %noiseSS_98_im, [98 x float]* %noiseSS_99_im, float* %out_V_data, i1* %out_V_last_V)" [kernel_qrf_0.cpp:197]   --->   Operation 221 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 0.00>
+ST_9 : Operation 222 [1/2] (0.00ns)   --->   "call fastcc void @MSG([98 x float]* %noiseSS_0_re, [98 x float]* %noiseSS_1_re, [98 x float]* %noiseSS_2_re, [98 x float]* %noiseSS_3_re, [98 x float]* %noiseSS_4_re, [98 x float]* %noiseSS_5_re, [98 x float]* %noiseSS_6_re, [98 x float]* %noiseSS_7_re, [98 x float]* %noiseSS_8_re, [98 x float]* %noiseSS_9_re, [98 x float]* %noiseSS_10_re, [98 x float]* %noiseSS_11_re, [98 x float]* %noiseSS_12_re, [98 x float]* %noiseSS_13_re, [98 x float]* %noiseSS_14_re, [98 x float]* %noiseSS_15_re, [98 x float]* %noiseSS_16_re, [98 x float]* %noiseSS_17_re, [98 x float]* %noiseSS_18_re, [98 x float]* %noiseSS_19_re, [98 x float]* %noiseSS_20_re, [98 x float]* %noiseSS_21_re, [98 x float]* %noiseSS_22_re, [98 x float]* %noiseSS_23_re, [98 x float]* %noiseSS_24_re, [98 x float]* %noiseSS_25_re, [98 x float]* %noiseSS_26_re, [98 x float]* %noiseSS_27_re, [98 x float]* %noiseSS_28_re, [98 x float]* %noiseSS_29_re, [98 x float]* %noiseSS_30_re, [98 x float]* %noiseSS_31_re, [98 x float]* %noiseSS_32_re, [98 x float]* %noiseSS_33_re, [98 x float]* %noiseSS_34_re, [98 x float]* %noiseSS_35_re, [98 x float]* %noiseSS_36_re, [98 x float]* %noiseSS_37_re, [98 x float]* %noiseSS_38_re, [98 x float]* %noiseSS_39_re, [98 x float]* %noiseSS_40_re, [98 x float]* %noiseSS_41_re, [98 x float]* %noiseSS_42_re, [98 x float]* %noiseSS_43_re, [98 x float]* %noiseSS_44_re, [98 x float]* %noiseSS_45_re, [98 x float]* %noiseSS_46_re, [98 x float]* %noiseSS_47_re, [98 x float]* %noiseSS_48_re, [98 x float]* %noiseSS_49_re, [98 x float]* %noiseSS_50_re, [98 x float]* %noiseSS_51_re, [98 x float]* %noiseSS_52_re, [98 x float]* %noiseSS_53_re, [98 x float]* %noiseSS_54_re, [98 x float]* %noiseSS_55_re, [98 x float]* %noiseSS_56_re, [98 x float]* %noiseSS_57_re, [98 x float]* %noiseSS_58_re, [98 x float]* %noiseSS_59_re, [98 x float]* %noiseSS_60_re, [98 x float]* %noiseSS_61_re, [98 x float]* %noiseSS_62_re, [98 x float]* %noiseSS_63_re, [98 x float]* %noiseSS_64_re, [98 x float]* %noiseSS_65_re, [98 x float]* %noiseSS_66_re, [98 x float]* %noiseSS_67_re, [98 x float]* %noiseSS_68_re, [98 x float]* %noiseSS_69_re, [98 x float]* %noiseSS_70_re, [98 x float]* %noiseSS_71_re, [98 x float]* %noiseSS_72_re, [98 x float]* %noiseSS_73_re, [98 x float]* %noiseSS_74_re, [98 x float]* %noiseSS_75_re, [98 x float]* %noiseSS_76_re, [98 x float]* %noiseSS_77_re, [98 x float]* %noiseSS_78_re, [98 x float]* %noiseSS_79_re, [98 x float]* %noiseSS_80_re, [98 x float]* %noiseSS_81_re, [98 x float]* %noiseSS_82_re, [98 x float]* %noiseSS_83_re, [98 x float]* %noiseSS_84_re, [98 x float]* %noiseSS_85_re, [98 x float]* %noiseSS_86_re, [98 x float]* %noiseSS_87_re, [98 x float]* %noiseSS_88_re, [98 x float]* %noiseSS_89_re, [98 x float]* %noiseSS_90_re, [98 x float]* %noiseSS_91_re, [98 x float]* %noiseSS_92_re, [98 x float]* %noiseSS_93_re, [98 x float]* %noiseSS_94_re, [98 x float]* %noiseSS_95_re, [98 x float]* %noiseSS_96_re, [98 x float]* %noiseSS_97_re, [98 x float]* %noiseSS_98_re, [98 x float]* %noiseSS_99_re, [98 x float]* %noiseSS_0_im, [98 x float]* %noiseSS_1_im, [98 x float]* %noiseSS_2_im, [98 x float]* %noiseSS_3_im, [98 x float]* %noiseSS_4_im, [98 x float]* %noiseSS_5_im, [98 x float]* %noiseSS_6_im, [98 x float]* %noiseSS_7_im, [98 x float]* %noiseSS_8_im, [98 x float]* %noiseSS_9_im, [98 x float]* %noiseSS_10_im, [98 x float]* %noiseSS_11_im, [98 x float]* %noiseSS_12_im, [98 x float]* %noiseSS_13_im, [98 x float]* %noiseSS_14_im, [98 x float]* %noiseSS_15_im, [98 x float]* %noiseSS_16_im, [98 x float]* %noiseSS_17_im, [98 x float]* %noiseSS_18_im, [98 x float]* %noiseSS_19_im, [98 x float]* %noiseSS_20_im, [98 x float]* %noiseSS_21_im, [98 x float]* %noiseSS_22_im, [98 x float]* %noiseSS_23_im, [98 x float]* %noiseSS_24_im, [98 x float]* %noiseSS_25_im, [98 x float]* %noiseSS_26_im, [98 x float]* %noiseSS_27_im, [98 x float]* %noiseSS_28_im, [98 x float]* %noiseSS_29_im, [98 x float]* %noiseSS_30_im, [98 x float]* %noiseSS_31_im, [98 x float]* %noiseSS_32_im, [98 x float]* %noiseSS_33_im, [98 x float]* %noiseSS_34_im, [98 x float]* %noiseSS_35_im, [98 x float]* %noiseSS_36_im, [98 x float]* %noiseSS_37_im, [98 x float]* %noiseSS_38_im, [98 x float]* %noiseSS_39_im, [98 x float]* %noiseSS_40_im, [98 x float]* %noiseSS_41_im, [98 x float]* %noiseSS_42_im, [98 x float]* %noiseSS_43_im, [98 x float]* %noiseSS_44_im, [98 x float]* %noiseSS_45_im, [98 x float]* %noiseSS_46_im, [98 x float]* %noiseSS_47_im, [98 x float]* %noiseSS_48_im, [98 x float]* %noiseSS_49_im, [98 x float]* %noiseSS_50_im, [98 x float]* %noiseSS_51_im, [98 x float]* %noiseSS_52_im, [98 x float]* %noiseSS_53_im, [98 x float]* %noiseSS_54_im, [98 x float]* %noiseSS_55_im, [98 x float]* %noiseSS_56_im, [98 x float]* %noiseSS_57_im, [98 x float]* %noiseSS_58_im, [98 x float]* %noiseSS_59_im, [98 x float]* %noiseSS_60_im, [98 x float]* %noiseSS_61_im, [98 x float]* %noiseSS_62_im, [98 x float]* %noiseSS_63_im, [98 x float]* %noiseSS_64_im, [98 x float]* %noiseSS_65_im, [98 x float]* %noiseSS_66_im, [98 x float]* %noiseSS_67_im, [98 x float]* %noiseSS_68_im, [98 x float]* %noiseSS_69_im, [98 x float]* %noiseSS_70_im, [98 x float]* %noiseSS_71_im, [98 x float]* %noiseSS_72_im, [98 x float]* %noiseSS_73_im, [98 x float]* %noiseSS_74_im, [98 x float]* %noiseSS_75_im, [98 x float]* %noiseSS_76_im, [98 x float]* %noiseSS_77_im, [98 x float]* %noiseSS_78_im, [98 x float]* %noiseSS_79_im, [98 x float]* %noiseSS_80_im, [98 x float]* %noiseSS_81_im, [98 x float]* %noiseSS_82_im, [98 x float]* %noiseSS_83_im, [98 x float]* %noiseSS_84_im, [98 x float]* %noiseSS_85_im, [98 x float]* %noiseSS_86_im, [98 x float]* %noiseSS_87_im, [98 x float]* %noiseSS_88_im, [98 x float]* %noiseSS_89_im, [98 x float]* %noiseSS_90_im, [98 x float]* %noiseSS_91_im, [98 x float]* %noiseSS_92_im, [98 x float]* %noiseSS_93_im, [98 x float]* %noiseSS_94_im, [98 x float]* %noiseSS_95_im, [98 x float]* %noiseSS_96_im, [98 x float]* %noiseSS_97_im, [98 x float]* %noiseSS_98_im, [98 x float]* %noiseSS_99_im, float* %out_V_data, i1* %out_V_last_V)" [kernel_qrf_0.cpp:197]   --->   Operation 222 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 0.00>
+ST_10 : Operation 223 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, i32 0, [1 x i8]* @p_str1) nounwind" [kernel_qrf_0.cpp:186]   --->   Operation 223 'specdataflowpipeline' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 224 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i128* %in_V_data), !map !89"   --->   Operation 224 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 225 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %in_V_last_V), !map !98"   --->   Operation 225 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 226 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(float* %out_V_data), !map !102"   --->   Operation 226 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 227 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %out_V_last_V), !map !106"   --->   Operation 227 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 228 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([10 x i8]* @MUSIC_top_str) nounwind"   --->   Operation 228 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 229 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str6, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [kernel_qrf_0.cpp:183]   --->   Operation 229 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 230 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %out_V_data, i1* %out_V_last_V, [5 x i8]* @p_str7, i32 1, i32 1, [5 x i8]* @p_str8, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [kernel_qrf_0.cpp:184]   --->   Operation 230 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 231 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i128* %in_V_data, i1* %in_V_last_V, [5 x i8]* @p_str7, i32 1, i32 1, [5 x i8]* @p_str8, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [kernel_qrf_0.cpp:185]   --->   Operation 231 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 232 [1/1] (0.00ns)   --->   "ret void" [kernel_qrf_0.cpp:198]   --->   Operation 232 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+ <State 7>: 0ns
+The critical path consists of the following:
+
+ <State 8>: 0ns
+The critical path consists of the following:
+
+ <State 9>: 0ns
+The critical path consists of the following:
+
+ <State 10>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

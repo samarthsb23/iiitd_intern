@@ -1,0 +1,121 @@
+verilog xil_defaultlib --include "C:/Xilinx_2024_ent/Vivado/2024.2/data/xilinx_vip/include" --include "../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/ec67/hdl" --include "../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/6f8f/hdl" --include "../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/f0b6/hdl/verilog" --include "../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/0127/hdl/verilog" --include "../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/e6f2/hdl/verilog" --include "../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/814a/hdl/verilog" --include "../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/1017/hdl/verilog" --include "../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/52c0/hdl/verilog" --include "../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/2276/hdl/verilog" \
+"../../../bd/matrix/ip/matrix_zynq_ultra_ps_e_0_0/sim/matrix_zynq_ultra_ps_e_0_0_vip_wrapper.v" \
+"../../../bd/matrix/ip/matrix_axi_smc_0/bd_0/ip/ip_0/sim/bd_fb28_one_0.v" \
+
+sv xil_defaultlib --include "C:/Xilinx_2024_ent/Vivado/2024.2/data/xilinx_vip/include" --include "../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/ec67/hdl" --include "../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/6f8f/hdl" --include "../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/f0b6/hdl/verilog" --include "../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/0127/hdl/verilog" --include "../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/e6f2/hdl/verilog" --include "../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/814a/hdl/verilog" --include "../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/1017/hdl/verilog" --include "../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/52c0/hdl/verilog" --include "../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/2276/hdl/verilog" \
+"../../../bd/matrix/ip/matrix_axi_smc_0/bd_0/ip/ip_2/sim/bd_fb28_arinsw_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_0/bd_0/ip/ip_3/sim/bd_fb28_rinsw_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_0/bd_0/ip/ip_4/sim/bd_fb28_awinsw_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_0/bd_0/ip/ip_5/sim/bd_fb28_winsw_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_0/bd_0/ip/ip_6/sim/bd_fb28_binsw_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_0/bd_0/ip/ip_7/sim/bd_fb28_aroutsw_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_0/bd_0/ip/ip_8/sim/bd_fb28_routsw_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_0/bd_0/ip/ip_9/sim/bd_fb28_awoutsw_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_0/bd_0/ip/ip_10/sim/bd_fb28_woutsw_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_0/bd_0/ip/ip_11/sim/bd_fb28_boutsw_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_0/bd_0/ip/ip_12/sim/bd_fb28_arni_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_0/bd_0/ip/ip_13/sim/bd_fb28_rni_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_0/bd_0/ip/ip_14/sim/bd_fb28_awni_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_0/bd_0/ip/ip_15/sim/bd_fb28_wni_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_0/bd_0/ip/ip_16/sim/bd_fb28_bni_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_0/bd_0/ip/ip_17/sim/bd_fb28_s00mmu_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_0/bd_0/ip/ip_18/sim/bd_fb28_s00tr_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_0/bd_0/ip/ip_19/sim/bd_fb28_s00sic_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_0/bd_0/ip/ip_20/sim/bd_fb28_s00a2s_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_0/bd_0/ip/ip_21/sim/bd_fb28_sarn_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_0/bd_0/ip/ip_22/sim/bd_fb28_srn_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_0/bd_0/ip/ip_23/sim/bd_fb28_sawn_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_0/bd_0/ip/ip_24/sim/bd_fb28_swn_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_0/bd_0/ip/ip_25/sim/bd_fb28_sbn_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_0/bd_0/ip/ip_26/sim/bd_fb28_s01mmu_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_0/bd_0/ip/ip_27/sim/bd_fb28_s01tr_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_0/bd_0/ip/ip_28/sim/bd_fb28_s01sic_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_0/bd_0/ip/ip_29/sim/bd_fb28_s01a2s_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_0/bd_0/ip/ip_30/sim/bd_fb28_sarn_1.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_0/bd_0/ip/ip_31/sim/bd_fb28_srn_1.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_0/bd_0/ip/ip_32/sim/bd_fb28_sawn_1.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_0/bd_0/ip/ip_33/sim/bd_fb28_swn_1.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_0/bd_0/ip/ip_34/sim/bd_fb28_sbn_1.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_0/bd_0/ip/ip_35/sim/bd_fb28_m00s2a_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_0/bd_0/ip/ip_36/sim/bd_fb28_m00arn_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_0/bd_0/ip/ip_37/sim/bd_fb28_m00rn_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_0/bd_0/ip/ip_38/sim/bd_fb28_m00awn_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_0/bd_0/ip/ip_39/sim/bd_fb28_m00wn_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_0/bd_0/ip/ip_40/sim/bd_fb28_m00bn_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_0/bd_0/ip/ip_41/sim/bd_fb28_m00e_0.sv" \
+
+verilog xil_defaultlib --include "C:/Xilinx_2024_ent/Vivado/2024.2/data/xilinx_vip/include" --include "../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/ec67/hdl" --include "../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/6f8f/hdl" --include "../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/f0b6/hdl/verilog" --include "../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/0127/hdl/verilog" --include "../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/e6f2/hdl/verilog" --include "../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/814a/hdl/verilog" --include "../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/1017/hdl/verilog" --include "../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/52c0/hdl/verilog" --include "../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/2276/hdl/verilog" \
+"../../../bd/matrix/ip/matrix_axi_smc_0/bd_0/sim/bd_fb28.v" \
+"../../../bd/matrix/ip/matrix_axi_smc_0/sim/matrix_axi_smc_0.v" \
+"../../../bd/matrix/ip/matrix_axi_smc_1_0/bd_0/ip/ip_0/sim/bd_a737_one_0.v" \
+
+sv xil_defaultlib --include "C:/Xilinx_2024_ent/Vivado/2024.2/data/xilinx_vip/include" --include "../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/ec67/hdl" --include "../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/6f8f/hdl" --include "../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/f0b6/hdl/verilog" --include "../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/0127/hdl/verilog" --include "../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/e6f2/hdl/verilog" --include "../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/814a/hdl/verilog" --include "../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/1017/hdl/verilog" --include "../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/52c0/hdl/verilog" --include "../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/2276/hdl/verilog" \
+"../../../bd/matrix/ip/matrix_axi_smc_1_0/bd_0/ip/ip_2/sim/bd_a737_arsw_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_1_0/bd_0/ip/ip_3/sim/bd_a737_rsw_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_1_0/bd_0/ip/ip_4/sim/bd_a737_awsw_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_1_0/bd_0/ip/ip_5/sim/bd_a737_wsw_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_1_0/bd_0/ip/ip_6/sim/bd_a737_bsw_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_1_0/bd_0/ip/ip_7/sim/bd_a737_s00mmu_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_1_0/bd_0/ip/ip_8/sim/bd_a737_s00tr_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_1_0/bd_0/ip/ip_9/sim/bd_a737_s00sic_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_1_0/bd_0/ip/ip_10/sim/bd_a737_s00a2s_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_1_0/bd_0/ip/ip_11/sim/bd_a737_sarn_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_1_0/bd_0/ip/ip_12/sim/bd_a737_srn_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_1_0/bd_0/ip/ip_13/sim/bd_a737_s01mmu_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_1_0/bd_0/ip/ip_14/sim/bd_a737_s01tr_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_1_0/bd_0/ip/ip_15/sim/bd_a737_s01sic_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_1_0/bd_0/ip/ip_16/sim/bd_a737_s01a2s_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_1_0/bd_0/ip/ip_17/sim/bd_a737_sawn_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_1_0/bd_0/ip/ip_18/sim/bd_a737_swn_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_1_0/bd_0/ip/ip_19/sim/bd_a737_sbn_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_1_0/bd_0/ip/ip_20/sim/bd_a737_m00s2a_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_1_0/bd_0/ip/ip_21/sim/bd_a737_m00arn_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_1_0/bd_0/ip/ip_22/sim/bd_a737_m00rn_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_1_0/bd_0/ip/ip_23/sim/bd_a737_m00awn_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_1_0/bd_0/ip/ip_24/sim/bd_a737_m00wn_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_1_0/bd_0/ip/ip_25/sim/bd_a737_m00bn_0.sv" \
+"../../../bd/matrix/ip/matrix_axi_smc_1_0/bd_0/ip/ip_26/sim/bd_a737_m00e_0.sv" \
+
+verilog xil_defaultlib --include "C:/Xilinx_2024_ent/Vivado/2024.2/data/xilinx_vip/include" --include "../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/ec67/hdl" --include "../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/6f8f/hdl" --include "../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/f0b6/hdl/verilog" --include "../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/0127/hdl/verilog" --include "../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/e6f2/hdl/verilog" --include "../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/814a/hdl/verilog" --include "../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/1017/hdl/verilog" --include "../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/52c0/hdl/verilog" --include "../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/2276/hdl/verilog" \
+"../../../bd/matrix/ip/matrix_axi_smc_1_0/bd_0/sim/bd_a737.v" \
+"../../../bd/matrix/ip/matrix_axi_smc_1_0/sim/matrix_axi_smc_1_0.v" \
+"../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/e6f2/hdl/ip/matrixmul_8_unopt_fadd_32ns_32ns_32_4_full_dsp_1_ip.v" \
+"../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/e6f2/hdl/ip/matrixmul_8_unopt_fmul_32ns_32ns_32_3_max_dsp_1_ip.v" \
+"../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/e6f2/hdl/verilog/matrixmul_8_unopt_fadd_32ns_32ns_32_4_full_dsp_1.v" \
+"../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/e6f2/hdl/verilog/matrixmul_8_unopt_flow_control_loop_pipe_sequential_init.v" \
+"../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/e6f2/hdl/verilog/matrixmul_8_unopt_fmul_32ns_32ns_32_3_max_dsp_1.v" \
+"../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/e6f2/hdl/verilog/matrixmul_8_unopt_hls_deadlock_idx0_monitor.v" \
+"../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/e6f2/hdl/verilog/matrixmul_8_unopt_matrixmul_8_unopt_Pipeline_loop3.v" \
+"../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/e6f2/hdl/verilog/matrixmul_8_unopt_matrixmul_8_unopt_Pipeline_loop_input_A2.v" \
+"../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/e6f2/hdl/verilog/matrixmul_8_unopt_matrixmul_8_unopt_Pipeline_loop_input_B2.v" \
+"../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/e6f2/hdl/verilog/matrixmul_8_unopt_matrixmul_8_unopt_Pipeline_loop_output_C2.v" \
+"../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/e6f2/hdl/verilog/matrixmul_8_unopt_regslice_both.v" \
+"../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/e6f2/hdl/verilog/matrixmul_8_unopt_sparsemux_17_3_32_1_1.v" \
+"../../../../demo_matrix.gen/sources_1/bd/matrix/ipshared/e6f2/hdl/verilog/matrixmul_8_unopt.v" \
+"../../../bd/matrix/ip/matrix_matrixmul_8_unopt_0_1/sim/matrix_matrixmul_8_unopt_0_1.v" \
+"../../../bd/matrix/ip/matrix_system_ila_0_0/bd_0/ip/ip_0/sim/bd_d138_ila_lib_0.v" \
+"../../../bd/matrix/ip/matrix_system_ila_0_0/bd_0/ip/ip_1/bd_d138_g_inst_0_gigantic_mux.v" \
+"../../../bd/matrix/ip/matrix_system_ila_0_0/bd_0/ip/ip_1/sim/bd_d138_g_inst_0.v" \
+"../../../bd/matrix/ip/matrix_system_ila_0_0/bd_0/ip/ip_2/sim/bd_d138_slot_0_aw_0.v" \
+"../../../bd/matrix/ip/matrix_system_ila_0_0/bd_0/ip/ip_3/sim/bd_d138_slot_0_w_0.v" \
+"../../../bd/matrix/ip/matrix_system_ila_0_0/bd_0/ip/ip_4/sim/bd_d138_slot_0_b_0.v" \
+"../../../bd/matrix/ip/matrix_system_ila_0_0/bd_0/ip/ip_5/sim/bd_d138_slot_0_ar_0.v" \
+"../../../bd/matrix/ip/matrix_system_ila_0_0/bd_0/ip/ip_6/sim/bd_d138_slot_0_r_0.v" \
+"../../../bd/matrix/ip/matrix_system_ila_0_0/bd_0/ip/ip_7/sim/bd_d138_slot_1_aw_0.v" \
+"../../../bd/matrix/ip/matrix_system_ila_0_0/bd_0/ip/ip_8/sim/bd_d138_slot_1_w_0.v" \
+"../../../bd/matrix/ip/matrix_system_ila_0_0/bd_0/ip/ip_9/sim/bd_d138_slot_1_b_0.v" \
+"../../../bd/matrix/ip/matrix_system_ila_0_0/bd_0/ip/ip_10/sim/bd_d138_slot_1_ar_0.v" \
+"../../../bd/matrix/ip/matrix_system_ila_0_0/bd_0/ip/ip_11/sim/bd_d138_slot_1_r_0.v" \
+"../../../bd/matrix/ip/matrix_system_ila_0_0/bd_0/ip/ip_12/sim/bd_d138_slot_3_aw_0.v" \
+"../../../bd/matrix/ip/matrix_system_ila_0_0/bd_0/ip/ip_13/sim/bd_d138_slot_3_w_0.v" \
+"../../../bd/matrix/ip/matrix_system_ila_0_0/bd_0/ip/ip_14/sim/bd_d138_slot_3_b_0.v" \
+"../../../bd/matrix/ip/matrix_system_ila_0_0/bd_0/ip/ip_15/sim/bd_d138_slot_3_ar_0.v" \
+"../../../bd/matrix/ip/matrix_system_ila_0_0/bd_0/ip/ip_16/sim/bd_d138_slot_3_r_0.v" \
+"../../../bd/matrix/ip/matrix_system_ila_0_0/bd_0/sim/bd_d138.v" \
+"../../../bd/matrix/ip/matrix_system_ila_0_0/sim/matrix_system_ila_0_0.v" \
+"../../../bd/matrix/sim/matrix.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

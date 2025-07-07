@@ -1,0 +1,6 @@
+
+Family       : azynq
+Device       : xa7z020
+Package      : -clg400
+Speed Grade  : -1I
+Clock Period : 10

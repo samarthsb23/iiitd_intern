@@ -1,0 +1,163 @@
+
+
+================================================================
+== Vitis HLS Report for 'matrixmul_3_Pipeline_loop_output_C1_loop_output_C2'
+================================================================
+* Date:           Thu May 22 14:54:09 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        matrixmul_3
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: azynq
+* Target device:  xa7z020-clg400-1I
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.082 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |       68|       68|  0.680 us|  0.680 us|   65|   65|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                                 |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |            Loop Name            |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- loop_output_C1_loop_output_C2  |       66|       66|         4|          1|          1|    64|       yes|
+        +---------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|    122|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       0|     63|    -|
+|Register         |        -|    -|      30|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|      30|    185|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------------------+----------+----+---+----+------------+------------+
+    |          Variable Name         | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------------+----------+----+---+----+------------+------------+
+    |add_ln181_1_fu_108_p2           |         +|   0|  0|  14|           7|           1|
+    |add_ln181_fu_125_p2             |         +|   0|  0|  13|           4|           1|
+    |add_ln182_fu_193_p2             |         +|   0|  0|  13|           4|           1|
+    |add_ln185_fu_175_p2             |         +|   0|  0|  14|           6|           6|
+    |ap_block_pp0_stage0_01001_grp1  |       and|   0|  0|   2|           1|           1|
+    |local_stream_last_fu_187_p2     |       and|   0|  0|   2|           1|           1|
+    |cmp68_fu_165_p2                 |      icmp|   0|  0|  13|           4|           3|
+    |icmp_ln181_fu_102_p2            |      icmp|   0|  0|  15|           7|           8|
+    |icmp_ln182_fu_131_p2            |      icmp|   0|  0|  13|           4|           5|
+    |icmp_ln187_fu_181_p2            |      icmp|   0|  0|  13|           4|           3|
+    |select_ln142_fu_137_p3          |    select|   0|  0|   4|           1|           1|
+    |select_ln181_fu_145_p3          |    select|   0|  0|   4|           1|           4|
+    |ap_enable_pp0                   |       xor|   0|  0|   2|           1|           2|
+    +--------------------------------+----------+----+---+----+------------+------------+
+    |Total                           |          |   0|  0| 122|          45|          37|
+    +--------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------------+----+-----------+-----+-----------+
+    |                  Name                  | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------------+----+-----------+-----+-----------+
+    |ap_done_int                             |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1                 |   9|          2|    1|          2|
+    |ap_sig_allocacmp_indvar_flatten20_load  |   9|          2|    7|         14|
+    |col_fu_52                               |   9|          2|    4|          8|
+    |indvar_flatten20_fu_60                  |   9|          2|    7|         14|
+    |out_C_TDATA_blk_n                       |   9|          2|    1|          2|
+    |row_fu_56                               |   9|          2|    4|          8|
+    +----------------------------------------+----+-----------+-----+-----------+
+    |Total                                   |  63|         14|   25|         50|
+    +----------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------------+---+----+-----+-----------+
+    |                   Name                  | FF| LUT| Bits| Const Bits|
+    +-----------------------------------------+---+----+-----+-----------+
+    |add_ln185_reg_250                        |  6|   0|    6|          0|
+    |ap_CS_fsm                                |  1|   0|    1|          0|
+    |ap_done_reg                              |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1                  |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2                  |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3                  |  1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter1_reg         |  1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter2_reg         |  1|   0|    1|          0|
+    |col_fu_52                                |  4|   0|    4|          0|
+    |indvar_flatten20_fu_60                   |  7|   0|    7|          0|
+    |local_stream_last_reg_255                |  1|   0|    1|          0|
+    |local_stream_last_reg_255_pp0_iter2_reg  |  1|   0|    1|          0|
+    |row_fu_56                                |  4|   0|    4|          0|
+    +-----------------------------------------+---+----+-----+-----------+
+    |Total                                    | 30|   0|   30|          0|
+    +-----------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+-----+-----+------------+----------------------------------------------------+--------------+
+|     RTL Ports     | Dir | Bits|  Protocol  |                    Source Object                   |    C Type    |
++-------------------+-----+-----+------------+----------------------------------------------------+--------------+
+|ap_clk             |   in|    1|  ap_ctrl_hs|  matrixmul_3_Pipeline_loop_output_C1_loop_output_C2|  return value|
+|ap_rst             |   in|    1|  ap_ctrl_hs|  matrixmul_3_Pipeline_loop_output_C1_loop_output_C2|  return value|
+|ap_start           |   in|    1|  ap_ctrl_hs|  matrixmul_3_Pipeline_loop_output_C1_loop_output_C2|  return value|
+|ap_done            |  out|    1|  ap_ctrl_hs|  matrixmul_3_Pipeline_loop_output_C1_loop_output_C2|  return value|
+|ap_idle            |  out|    1|  ap_ctrl_hs|  matrixmul_3_Pipeline_loop_output_C1_loop_output_C2|  return value|
+|ap_ready           |  out|    1|  ap_ctrl_hs|  matrixmul_3_Pipeline_loop_output_C1_loop_output_C2|  return value|
+|out_C_TREADY       |   in|    1|        axis|                                               out_C|       pointer|
+|out_C_TDATA        |  out|   64|        axis|                                               out_C|       pointer|
+|out_C_TVALID       |  out|    1|        axis|                                               out_C|       pointer|
+|output_C_address0  |  out|    6|   ap_memory|                                            output_C|         array|
+|output_C_ce0       |  out|    1|   ap_memory|                                            output_C|         array|
+|output_C_q0        |   in|   32|   ap_memory|                                            output_C|         array|
++-------------------+-----+-----+------------+----------------------------------------------------+--------------+
+

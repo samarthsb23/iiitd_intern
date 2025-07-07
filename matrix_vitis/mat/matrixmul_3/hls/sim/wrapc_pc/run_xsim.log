@@ -1,0 +1,104 @@
+No errors!!
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 128
+
+C:\Users\Samarth\Desktop\IIIT_Intern\matrix_vitis\mat\matrixmul_3\hls\sim\verilog>set PATH= 
+
+C:\Users\Samarth\Desktop\IIIT_Intern\matrix_vitis\mat\matrixmul_3\hls\sim\verilog>call C:/Xilinx/Vivado/2024.2/bin/xelab xil_defaultlib.apatb_matrixmul_3_top glbl -Oenable_linking_all_libraries  -prj matrixmul_3.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm  -L floating_point_v7_0_24 -L floating_point_v7_1_19 --lib "ieee_proposed=./ieee_proposed" -s matrixmul_3  
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_matrixmul_3_top glbl -Oenable_linking_all_libraries -prj matrixmul_3.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_0_24 -L floating_point_v7_1_19 --lib ieee_proposed=./ieee_proposed -s matrixmul_3 
+Multi-threading is on. Using 14 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Samarth/Desktop/IIIT_Intern/matrix_vitis/mat/matrixmul_3/hls/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Samarth/Desktop/IIIT_Intern/matrix_vitis/mat/matrixmul_3/hls/sim/verilog/AESL_axi_s_in_A.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_in_A
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Samarth/Desktop/IIIT_Intern/matrix_vitis/mat/matrixmul_3/hls/sim/verilog/AESL_axi_s_out_C.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_out_C
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Samarth/Desktop/IIIT_Intern/matrix_vitis/mat/matrixmul_3/hls/sim/verilog/AESL_deadlock_idx0_monitor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_idx0_monitor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Samarth/Desktop/IIIT_Intern/matrix_vitis/mat/matrixmul_3/hls/sim/verilog/AESL_deadlock_kernel_monitor_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_kernel_monitor_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Samarth/Desktop/IIIT_Intern/matrix_vitis/mat/matrixmul_3/hls/sim/verilog/AESL_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Samarth/Desktop/IIIT_Intern/matrix_vitis/mat/matrixmul_3/hls/sim/verilog/matrixmul_3.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_matrixmul_3_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Samarth/Desktop/IIIT_Intern/matrix_vitis/mat/matrixmul_3/hls/sim/verilog/matrixmul_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matrixmul_3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Samarth/Desktop/IIIT_Intern/matrix_vitis/mat/matrixmul_3/hls/sim/verilog/matrixmul_3_flow_control_loop_pipe_sequential_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matrixmul_3_flow_control_loop_pipe_sequential_init
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Samarth/Desktop/IIIT_Intern/matrix_vitis/mat/matrixmul_3/hls/sim/verilog/matrixmul_3_input_A_RAM_AUTO_1R1W.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matrixmul_3_input_A_RAM_AUTO_1R1W
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Samarth/Desktop/IIIT_Intern/matrix_vitis/mat/matrixmul_3/hls/sim/verilog/matrixmul_3_matrixmul_3_Pipeline_loop1_loop2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matrixmul_3_matrixmul_3_Pipeline_loop1_loop2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Samarth/Desktop/IIIT_Intern/matrix_vitis/mat/matrixmul_3/hls/sim/verilog/matrixmul_3_matrixmul_3_Pipeline_loop_input_A1_loop_input_A2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matrixmul_3_matrixmul_3_Pipeline_loop_input_A1_loop_input_A2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Samarth/Desktop/IIIT_Intern/matrix_vitis/mat/matrixmul_3/hls/sim/verilog/matrixmul_3_matrixmul_3_Pipeline_loop_input_B1_loop_input_B2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matrixmul_3_matrixmul_3_Pipeline_loop_input_B1_loop_input_B2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Samarth/Desktop/IIIT_Intern/matrix_vitis/mat/matrixmul_3/hls/sim/verilog/matrixmul_3_matrixmul_3_Pipeline_loop_output_C1_loop_output_C2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matrixmul_3_matrixmul_3_Pipeline_loop_output_C1_loop_output_C2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Samarth/Desktop/IIIT_Intern/matrix_vitis/mat/matrixmul_3/hls/sim/verilog/matrixmul_3_mul_32s_32s_32_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matrixmul_3_mul_32s_32s_32_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Samarth/Desktop/IIIT_Intern/matrix_vitis/mat/matrixmul_3/hls/sim/verilog/matrixmul_3_output_C_RAM_AUTO_1R1W.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matrixmul_3_output_C_RAM_AUTO_1R1W
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Samarth/Desktop/IIIT_Intern/matrix_vitis/mat/matrixmul_3/hls/sim/verilog/matrixmul_3_regslice_both.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matrixmul_3_regslice_both
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Samarth/Desktop/IIIT_Intern/matrix_vitis/mat/matrixmul_3/hls/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling module xil_defaultlib.matrixmul_3_input_A_RAM_AUTO_1R1...
+Compiling module xil_defaultlib.matrixmul_3_output_C_RAM_AUTO_1R...
+Compiling module xil_defaultlib.matrixmul_3_flow_control_loop_pi...
+Compiling module xil_defaultlib.matrixmul_3_matrixmul_3_Pipeline...
+Compiling module xil_defaultlib.matrixmul_3_matrixmul_3_Pipeline...
+Compiling module xil_defaultlib.matrixmul_3_mul_32s_32s_32_2_1(N...
+Compiling module xil_defaultlib.matrixmul_3_matrixmul_3_Pipeline...
+Compiling module xil_defaultlib.matrixmul_3_matrixmul_3_Pipeline...
+Compiling module xil_defaultlib.matrixmul_3_regslice_both(DataWi...
+Compiling module xil_defaultlib.matrixmul_3
+Compiling module xil_defaultlib.fifo(DEPTH=128,WIDTH=64)
+Compiling module xil_defaultlib.AESL_axi_s_in_A
+Compiling module xil_defaultlib.fifo(DEPTH=64,WIDTH=64)
+Compiling module xil_defaultlib.AESL_axi_s_out_C
+Compiling module xil_defaultlib.AESL_deadlock_idx0_monitor
+Compiling module xil_defaultlib.AESL_deadlock_kernel_monitor_top...
+Compiling module xil_defaultlib.nodf_module_intf_default
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=1)
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.apatb_matrixmul_3_top
+Compiling module work.glbl
+Built simulation snapshot matrixmul_3
+
+****** xsim v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Thu May 22 14:57:30 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/matrixmul_3/xsim_script.tcl
+# xsim {matrixmul_3} -autoloadwcfg -tclbatch {matrixmul_3.tcl}
+Time resolution is 1 ps
+source matrixmul_3.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "125000"
+// RTL Simulation : 1 / 1 [100.00%] @ "2865000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 2925 ns : File "C:/Users/Samarth/Desktop/IIIT_Intern/matrix_vitis/mat/matrixmul_3/hls/sim/verilog/matrixmul_3.autotb.v" Line 196
+## quit
+INFO: [Common 17-206] Exiting xsim at Thu May 22 14:57:36 2025...
+No errors!!
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 128

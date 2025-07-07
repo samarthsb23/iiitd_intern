@@ -1,0 +1,159 @@
+
+
+================================================================
+== Vitis HLS Report for 'matrixmul_32_opt_Pipeline_loop_input_B244'
+================================================================
+* Date:           Mon Jun  2 11:53:23 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        matrix_8_opt
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynquplusRFSOC
+* Target device:  xczu28dr-ffvg1517-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  1.635 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |       34|       34|  0.340 us|  0.340 us|   33|   33|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                 |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |    Loop Name    |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- loop_input_B2  |       32|       32|         2|          1|          1|    32|       yes|
+        +-----------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|      31|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       0|      54|    -|
+|Register         |        -|     -|      16|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|      16|      85|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     2160|  4272|  850560|  425280|   80|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------+----------+----+---+----+------------+------------+
+    |       Variable Name       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------+----------+----+---+----+------------+------------+
+    |add_ln28_fu_109_p2         |         +|   0|  0|  13|           6|           1|
+    |ap_block_pp0_stage0_11001  |       and|   0|  0|   2|           1|           1|
+    |icmp_ln28_fu_103_p2        |      icmp|   0|  0|  14|           6|           7|
+    |ap_enable_pp0              |       xor|   0|  0|   2|           1|           2|
+    +---------------------------+----------+----+---+----+------------+------------+
+    |Total                      |          |   0|  0|  31|          14|          11|
+    +---------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_col     |   9|          2|    6|         12|
+    |col_45_fu_60             |   9|          2|    6|         12|
+    |empty_160_o              |   9|          2|   32|         64|
+    |in_A_TDATA_blk_n         |   9|          2|    1|          2|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  54|         12|   47|         94|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------------+---+----+-----+-----------+
+    |                    Name                   | FF| LUT| Bits| Const Bits|
+    +-------------------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                                  |  1|   0|    1|          0|
+    |ap_block_pp0_stage0_subdone_grp0_done_reg  |  1|   0|    1|          0|
+    |ap_done_reg                                |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1                    |  1|   0|    1|          0|
+    |col_45_fu_60                               |  6|   0|    6|          0|
+    |col_reg_176                                |  6|   0|    6|          0|
+    +-------------------------------------------+---+----+-----+-----------+
+    |Total                                      | 16|   0|   16|          0|
+    +-------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------+-----+-----+------------+-------------------------------------------+--------------+
+|      RTL Ports      | Dir | Bits|  Protocol  |               Source Object               |    C Type    |
++---------------------+-----+-----+------------+-------------------------------------------+--------------+
+|ap_clk               |   in|    1|  ap_ctrl_hs|  matrixmul_32_opt_Pipeline_loop_input_B244|  return value|
+|ap_rst               |   in|    1|  ap_ctrl_hs|  matrixmul_32_opt_Pipeline_loop_input_B244|  return value|
+|ap_start             |   in|    1|  ap_ctrl_hs|  matrixmul_32_opt_Pipeline_loop_input_B244|  return value|
+|ap_done              |  out|    1|  ap_ctrl_hs|  matrixmul_32_opt_Pipeline_loop_input_B244|  return value|
+|ap_idle              |  out|    1|  ap_ctrl_hs|  matrixmul_32_opt_Pipeline_loop_input_B244|  return value|
+|ap_ready             |  out|    1|  ap_ctrl_hs|  matrixmul_32_opt_Pipeline_loop_input_B244|  return value|
+|in_A_TVALID          |   in|    1|        axis|                              in_A_V_data_V|       pointer|
+|in_A_TDATA           |   in|   32|        axis|                              in_A_V_data_V|       pointer|
+|input_B_13_address0  |  out|    5|   ap_memory|                                 input_B_13|         array|
+|input_B_13_ce0       |  out|    1|   ap_memory|                                 input_B_13|         array|
+|input_B_13_we0       |  out|    1|   ap_memory|                                 input_B_13|         array|
+|input_B_13_d0        |  out|   32|   ap_memory|                                 input_B_13|         array|
+|in_A_TREADY          |  out|    1|        axis|                              in_A_V_last_V|       pointer|
+|in_A_TLAST           |   in|    1|        axis|                              in_A_V_last_V|       pointer|
+|in_A_TKEEP           |   in|    4|        axis|                              in_A_V_keep_V|       pointer|
+|in_A_TSTRB           |   in|    4|        axis|                              in_A_V_strb_V|       pointer|
+|empty_160_i          |   in|   32|     ap_ovld|                                  empty_160|       pointer|
+|empty_160_o          |  out|   32|     ap_ovld|                                  empty_160|       pointer|
+|empty_160_o_ap_vld   |  out|    1|     ap_ovld|                                  empty_160|       pointer|
+|empty_161            |  out|    4|      ap_vld|                                  empty_161|       pointer|
+|empty_161_ap_vld     |  out|    1|      ap_vld|                                  empty_161|       pointer|
+|empty_162            |  out|    4|      ap_vld|                                  empty_162|       pointer|
+|empty_162_ap_vld     |  out|    1|      ap_vld|                                  empty_162|       pointer|
+|empty                |  out|    1|      ap_vld|                                      empty|       pointer|
+|empty_ap_vld         |  out|    1|      ap_vld|                                      empty|       pointer|
++---------------------+-----+-----+------------+-------------------------------------------+--------------+
+

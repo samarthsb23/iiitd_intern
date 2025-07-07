@@ -1,0 +1,108 @@
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "C:/Xilinx_HLS/Vivado/2019.2/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx_HLS/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_matrixmul_5_top glbl -prj matrixmul_5.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile C:/Xilinx_HLS/Vivado/2019.2/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s matrixmul_5 -debug wave 
+Multi-threading is on. Using 14 slave threads.
+Determining compilation order of HDL files.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Samarth/OneDrive/Desktop/IIT/IIIT_Intern/Training/Lab2/MatrixMul/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Samarth/OneDrive/Desktop/IIT/IIIT_Intern/Training/Lab2/MatrixMul/solution1/sim/verilog/AESL_axi_s_in_A.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_in_A
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Samarth/OneDrive/Desktop/IIT/IIIT_Intern/Training/Lab2/MatrixMul/solution1/sim/verilog/AESL_axi_s_out_C.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_out_C
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Samarth/OneDrive/Desktop/IIT/IIIT_Intern/Training/Lab2/MatrixMul/solution1/sim/verilog/AESL_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Samarth/OneDrive/Desktop/IIT/IIIT_Intern/Training/Lab2/MatrixMul/solution1/sim/verilog/matrixmul_5.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_matrixmul_5_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Samarth/OneDrive/Desktop/IIT/IIIT_Intern/Training/Lab2/MatrixMul/solution1/sim/verilog/matrixmul_5.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matrixmul_5
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Samarth/OneDrive/Desktop/IIT/IIIT_Intern/Training/Lab2/MatrixMul/solution1/sim/verilog/matrixmul_5_fpextsc4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matrixmul_5_fpextsc4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Samarth/OneDrive/Desktop/IIT/IIIT_Intern/Training/Lab2/MatrixMul/solution1/sim/verilog/matrixmul_5_inputbkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matrixmul_5_inputbkb_ram
+INFO: [VRFC 10-311] analyzing module matrixmul_5_inputbkb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Samarth/OneDrive/Desktop/IIT/IIIT_Intern/Training/Lab2/MatrixMul/solution1/sim/verilog/matrixmul_5_outpurcU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matrixmul_5_outpurcU_ram
+INFO: [VRFC 10-311] analyzing module matrixmul_5_outpurcU
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Samarth/OneDrive/Desktop/IIT/IIIT_Intern/Training/Lab2/MatrixMul/solution1/sim/verilog/regslice_core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regslice_both
+INFO: [VRFC 10-311] analyzing module regslice_forward
+INFO: [VRFC 10-311] analyzing module regslice_reverse
+INFO: [VRFC 10-311] analyzing module regslice_both_w1
+INFO: [VRFC 10-311] analyzing module regslice_forward_w1
+INFO: [VRFC 10-311] analyzing module regslice_reverse_w1
+INFO: [VRFC 10-311] analyzing module ibuf
+INFO: [VRFC 10-311] analyzing module obuf
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Samarth/OneDrive/Desktop/IIT/IIIT_Intern/Training/Lab2/MatrixMul/solution1/sim/verilog/ip/xil_defaultlib/matrixmul_5_ap_fpext_0_no_dsp_32.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'matrixmul_5_ap_fpext_0_no_dsp_32'
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3499] library name 'floating_point_v7_1_9' of instantiated unit conflicts with visible identifier [ip/xil_defaultlib/matrixmul_5_ap_fpext_0_no_dsp_32.vhd:190]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package floating_point_v7_1_9.floating_point_v7_1_9_viv_comp
+Compiling package xbip_utils_v3_0_10.xbip_utils_v3_0_10_pkg
+Compiling package axi_utils_v2_0_6.axi_utils_v2_0_6_pkg
+Compiling package floating_point_v7_1_9.floating_point_v7_1_9_consts
+Compiling package ieee.math_real
+Compiling package floating_point_v7_1_9.floating_point_v7_1_9_exp_table_...
+Compiling package mult_gen_v12_0_16.mult_gen_v12_0_16_pkg
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package floating_point_v7_1_9.floating_point_v7_1_9_pkg
+Compiling package floating_point_v7_1_9.flt_utils
+Compiling package unisim.vcomponents
+Compiling package xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv_comp
+Compiling module xil_defaultlib.matrixmul_5_inputbkb_ram
+Compiling module xil_defaultlib.matrixmul_5_inputbkb(DataWidth=2...
+Compiling module xil_defaultlib.matrixmul_5_outpurcU_ram
+Compiling module xil_defaultlib.matrixmul_5_outpurcU(DataWidth=2...
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_9.delay [\delay(width=23,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_9.delay [\delay(width=8,length=0)\]
+Compiling architecture muxcy_v of entity unisim.MUXCY [muxcy_default]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_9.delay [\delay(width=4,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_9.carry_chain [\carry_chain(c_xdevicefamily="ki...]
+Compiling architecture synth of entity floating_point_v7_1_9.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_9.delay [\delay(length=0,fast_input=true)...]
+Compiling architecture rtl of entity floating_point_v7_1_9.special_detect [\special_detect(a_fw=24,op_delay...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_9.delay [\delay(length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_9.delay [\delay(width=2,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_9.delay [\delay(width=4,length=0,fast_inp...]
+Compiling architecture rtl of entity floating_point_v7_1_9.flt_to_flt_conv_exp [\flt_to_flt_conv_exp(r_w=64,r_ew...]
+Compiling architecture synth of entity floating_point_v7_1_9.flt_dec_op [\flt_dec_op(c_xdevicefamily="zyn...]
+Compiling architecture rtl of entity floating_point_v7_1_9.flt_to_flt_conv [\flt_to_flt_conv(c_xdevicefamily...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_9.delay [\delay(width=64,length=0)\]
+Compiling architecture xilinx of entity floating_point_v7_1_9.floating_point_v7_1_9_viv [\floating_point_v7_1_9_viv(c_xde...]
+Compiling architecture xilinx of entity floating_point_v7_1_9.floating_point_v7_1_9 [\floating_point_v7_1_9(c_xdevice...]
+Compiling architecture matrixmul_5_ap_fpext_0_no_dsp_32_arch of entity xil_defaultlib.matrixmul_5_ap_fpext_0_no_dsp_32 [matrixmul_5_ap_fpext_0_no_dsp_32...]
+Compiling module xil_defaultlib.matrixmul_5_fpextsc4
+Compiling module xil_defaultlib.ibuf(W=33)
+Compiling module xil_defaultlib.obuf(W=33)
+Compiling module xil_defaultlib.regslice_both_default
+Compiling module xil_defaultlib.ibuf(W=2)
+Compiling module xil_defaultlib.obuf(W=2)
+Compiling module xil_defaultlib.regslice_both(DataWidth=1)
+Compiling module xil_defaultlib.matrixmul_5
+Compiling module xil_defaultlib.fifo(DEPTH=128,WIDTH=32)
+Compiling module xil_defaultlib.fifo(DEPTH=128,WIDTH=1)
+Compiling module xil_defaultlib.AESL_axi_s_in_A
+Compiling module xil_defaultlib.fifo(DEPTH=64,WIDTH=32)
+Compiling module xil_defaultlib.fifo(DEPTH=64,WIDTH=1)
+Compiling module xil_defaultlib.AESL_axi_s_out_C
+Compiling module xil_defaultlib.apatb_matrixmul_5_top
+Compiling module work.glbl
+Built simulation snapshot matrixmul_5

@@ -1,0 +1,1538 @@
+[
+    {
+        "name": "_Z18matrixmul_32_unoptRN3hls6streamINS_4axisIfLy0ELy0ELy0ELh56ELb0EEELi0EEES4_",
+        "df_function": "%F271",
+        "df_type": "Function",
+        "project": "SLX",
+        "processes": {
+            "1": {
+                "id": "1",
+                "name": "Artificial<Start>",
+                "src_range": {
+                    "start_loc": {
+                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                        "line": 4,
+                        "column": 1
+                    },
+                    "end_loc": {
+                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                        "line": 75,
+                        "column": 1
+                    }
+                },
+                "display_name": "<START>",
+                "kind": "start"
+            },
+            "2": {
+                "id": "2",
+                "name": "Artificial<End>",
+                "src_range": {
+                    "start_loc": {
+                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                        "line": 4,
+                        "column": 1
+                    },
+                    "end_loc": {
+                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                        "line": 75,
+                        "column": 1
+                    }
+                },
+                "display_name": "<END>",
+                "kind": "end"
+            },
+            "3": {
+                "id": "3",
+                "name": "Region<OutlineCall(R2 matrixmul_32_unopt) BB 'codeRepl' [Loop] 'Outline_T3_F271_R2_Loop'>",
+                "src_range": {
+                    "start_loc": {
+                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                        "line": 20,
+                        "column": 17
+                    },
+                    "end_loc": {
+                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                        "line": 27,
+                        "column": 2
+                    }
+                },
+                "display_name": "loop_input_A1",
+                "io_signatures": {
+                    "has_unresolved_accesses": false,
+                    "accesses": [
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                    "line": 4,
+                                    "column": 0
+                                },
+                                "id": "VId_150_*0(0,64)arg",
+                                "name": "in_A",
+                                "display_name": "axis_data &in_A"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Fifo",
+                                    "range": {
+                                        "is_exact": false,
+                                        "is_empty": false
+                                    },
+                                    "instr": "call",
+                                    "src_loc": {
+                                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                        "line": 24,
+                                        "column": 24
+                                    },
+                                    "access_type": "%\"struct.hls::axis.9\"",
+                                    "access_bit_width": 81,
+                                    "exec_count": 1024
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Fifo",
+                            "has_alias": false,
+                            "arg_idx": 0
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                    "line": 13,
+                                    "column": 15
+                                },
+                                "id": "VId_158_!c?(?,?)",
+                                "name": "local_stream",
+                                "display_name": "axis_float_t local_stream"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 12,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "src_loc": {
+                                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                        "line": 4294967295,
+                                        "column": 0
+                                    },
+                                    "access_type": "%\"struct.hls::axis.9.unwrap\"",
+                                    "access_bit_width": 81,
+                                    "exec_count": 1024
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                    "line": 13,
+                                    "column": 15
+                                },
+                                "id": "VId_158_.A0(0,32)",
+                                "name": "local_stream.data",
+                                "display_name": "Type_data axis_float_t::data"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 4,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                        "line": 25,
+                                        "column": 37
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 1024
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                    "line": 8,
+                                    "column": 12
+                                },
+                                "id": "VId_152_[?(?,1024)][?(?,32)]",
+                                "name": "input_A[*][*]",
+                                "display_name": "Mat_Dtype input_A[32][32]"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 4096,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "src_loc": {
+                                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                        "line": 25,
+                                        "column": 22
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 1024
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        }
+                    ]
+                },
+                "metrics": {
+                    "initiation_interval": 1026
+                },
+                "subregions": [
+                    {
+                        "id": "%F272_R2",
+                        "description": "<loop 'loop_input_A1'>",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                "line": 20,
+                                "column": 17
+                            },
+                            "end_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                "line": 27,
+                                "column": 2
+                            }
+                        }
+                    }
+                ],
+                "subdataflow": [
+                    {
+                        "id": "%L22",
+                        "region_type": "Loop",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                "line": 20,
+                                "column": 17
+                            },
+                            "end_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                "line": 27,
+                                "column": 2
+                            }
+                        }
+                    },
+                    {
+                        "id": "%L23",
+                        "region_type": "Loop",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                "line": 21,
+                                "column": 18
+                            },
+                            "end_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                "line": 26,
+                                "column": 3
+                            }
+                        }
+                    }
+                ],
+                "guidance": [
+                    {
+                        "type": "LoopGuidance",
+                        "ti": {
+                            "min": 1024,
+                            "max": 1024
+                        },
+                        "ii": {
+                            "min": 32,
+                            "max": 32
+                        },
+                        "effective_tc": {
+                            "min": 32,
+                            "max": 32
+                        },
+                        "tc": {
+                            "min": 32,
+                            "max": 32
+                        },
+                        "ureg_id": "%L22",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                "line": 20,
+                                "column": 17
+                            },
+                            "end_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                "line": 27,
+                                "column": 2
+                            }
+                        },
+                        "details": []
+                    },
+                    {
+                        "type": "LoopGuidance",
+                        "ti": {
+                            "min": 32,
+                            "max": 32
+                        },
+                        "ii": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "effective_tc": {
+                            "min": 32,
+                            "max": 32
+                        },
+                        "tc": {
+                            "min": 32,
+                            "max": 32
+                        },
+                        "ureg_id": "%L23",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                "line": 21,
+                                "column": 18
+                            },
+                            "end_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                "line": 26,
+                                "column": 3
+                            }
+                        },
+                        "details": [
+                            {
+                                "type": "MemPortContention",
+                                "available_ports": {
+                                    "min": 2,
+                                    "max": 2
+                                },
+                                "required_ports": {
+                                    "min": 1,
+                                    "max": 1
+                                },
+                                "ii_lower_bound": {
+                                    "min": 1,
+                                    "max": 1
+                                },
+                                "variable": {
+                                    "name": "input_A",
+                                    "display_name": "input_A",
+                                    "id": "173",
+                                    "location": {
+                                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                        "line": 8,
+                                        "column": 0
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            "4": {
+                "id": "4",
+                "name": "Region<OutlineCall(R3 matrixmul_32_unopt) BB 'codeRepl1' [Loop] 'Outline_T4_F271_R25_Loop'>",
+                "src_range": {
+                    "start_loc": {
+                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                        "line": 29,
+                        "column": 17
+                    },
+                    "end_loc": {
+                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                        "line": 36,
+                        "column": 2
+                    }
+                },
+                "display_name": "loop_input_B1",
+                "io_signatures": {
+                    "has_unresolved_accesses": false,
+                    "accesses": [
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                    "line": 4,
+                                    "column": 0
+                                },
+                                "id": "VId_150_*0(0,64)arg",
+                                "name": "in_A",
+                                "display_name": "axis_data &in_A"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Fifo",
+                                    "range": {
+                                        "is_exact": false,
+                                        "is_empty": false
+                                    },
+                                    "instr": "call",
+                                    "src_loc": {
+                                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                        "line": 33,
+                                        "column": 24
+                                    },
+                                    "access_type": "%\"struct.hls::axis.9\"",
+                                    "access_bit_width": 81,
+                                    "exec_count": 1024
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Fifo",
+                            "has_alias": false,
+                            "arg_idx": 0
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                    "line": 13,
+                                    "column": 15
+                                },
+                                "id": "VId_158_!c?(?,?)",
+                                "name": "local_stream",
+                                "display_name": "axis_float_t local_stream"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 12,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "src_loc": {
+                                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                        "line": 4294967295,
+                                        "column": 0
+                                    },
+                                    "access_type": "%\"struct.hls::axis.9.unwrap\"",
+                                    "access_bit_width": 81,
+                                    "exec_count": 1024
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                    "line": 13,
+                                    "column": 15
+                                },
+                                "id": "VId_158_.A0(0,32)",
+                                "name": "local_stream.data",
+                                "display_name": "Type_data axis_float_t::data"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 4,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                        "line": 34,
+                                        "column": 37
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 1024
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                    "line": 9,
+                                    "column": 12
+                                },
+                                "id": "VId_153_[?(?,1024)][?(?,32)]",
+                                "name": "input_B[*][*]",
+                                "display_name": "Mat_Dtype input_B[32][32]"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 4096,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "src_loc": {
+                                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                        "line": 34,
+                                        "column": 22
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 1024
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        }
+                    ]
+                },
+                "metrics": {
+                    "initiation_interval": 1026
+                },
+                "subregions": [
+                    {
+                        "id": "%F273_R2",
+                        "description": "<loop 'loop_input_B1'>",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                "line": 29,
+                                "column": 17
+                            },
+                            "end_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                "line": 36,
+                                "column": 2
+                            }
+                        }
+                    }
+                ],
+                "subdataflow": [
+                    {
+                        "id": "%L20",
+                        "region_type": "Loop",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                "line": 29,
+                                "column": 17
+                            },
+                            "end_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                "line": 36,
+                                "column": 2
+                            }
+                        }
+                    },
+                    {
+                        "id": "%L21",
+                        "region_type": "Loop",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                "line": 30,
+                                "column": 18
+                            },
+                            "end_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                "line": 35,
+                                "column": 3
+                            }
+                        }
+                    }
+                ],
+                "guidance": [
+                    {
+                        "type": "LoopGuidance",
+                        "ti": {
+                            "min": 1024,
+                            "max": 1024
+                        },
+                        "ii": {
+                            "min": 32,
+                            "max": 32
+                        },
+                        "effective_tc": {
+                            "min": 32,
+                            "max": 32
+                        },
+                        "tc": {
+                            "min": 32,
+                            "max": 32
+                        },
+                        "ureg_id": "%L20",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                "line": 29,
+                                "column": 17
+                            },
+                            "end_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                "line": 36,
+                                "column": 2
+                            }
+                        },
+                        "details": []
+                    },
+                    {
+                        "type": "LoopGuidance",
+                        "ti": {
+                            "min": 32,
+                            "max": 32
+                        },
+                        "ii": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "effective_tc": {
+                            "min": 32,
+                            "max": 32
+                        },
+                        "tc": {
+                            "min": 32,
+                            "max": 32
+                        },
+                        "ureg_id": "%L21",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                "line": 30,
+                                "column": 18
+                            },
+                            "end_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                "line": 35,
+                                "column": 3
+                            }
+                        },
+                        "details": [
+                            {
+                                "type": "MemPortContention",
+                                "available_ports": {
+                                    "min": 2,
+                                    "max": 2
+                                },
+                                "required_ports": {
+                                    "min": 1,
+                                    "max": 1
+                                },
+                                "ii_lower_bound": {
+                                    "min": 1,
+                                    "max": 1
+                                },
+                                "variable": {
+                                    "name": "input_B",
+                                    "display_name": "input_B",
+                                    "id": "179",
+                                    "location": {
+                                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                        "line": 9,
+                                        "column": 0
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            "5": {
+                "id": "5",
+                "name": "Region<OutlineCall(R4 matrixmul_32_unopt) BB 'codeRepl2' [Loop] 'Outline_T5_F271_R48_Loop'>",
+                "src_range": {
+                    "start_loc": {
+                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                        "line": 40,
+                        "column": 9
+                    },
+                    "end_loc": {
+                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                        "line": 51,
+                        "column": 2
+                    }
+                },
+                "display_name": "loop1",
+                "io_signatures": {
+                    "has_unresolved_accesses": false,
+                    "accesses": [
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                    "line": 10,
+                                    "column": 12
+                                },
+                                "id": "VId_154_[?(?,1024)][?(?,32)]",
+                                "name": "output_C[*][*]",
+                                "display_name": "Mat_Dtype output_C[32][32]"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 4096,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "src_loc": {
+                                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                        "line": 49,
+                                        "column": 23
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 1024
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                    "line": 8,
+                                    "column": 12
+                                },
+                                "id": "VId_152_[?(?,1024)][?(?,32)]",
+                                "name": "input_A[*][*]",
+                                "display_name": "Mat_Dtype input_A[32][32]"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 4096,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                        "line": 47,
+                                        "column": 12
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 32768
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                    "line": 9,
+                                    "column": 12
+                                },
+                                "id": "VId_153_[?(?,1024)][?(?,32)]",
+                                "name": "input_B[*][*]",
+                                "display_name": "Mat_Dtype input_B[32][32]"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 4096,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                        "line": 47,
+                                        "column": 34
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 32768
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        }
+                    ]
+                },
+                "metrics": {
+                    "initiation_interval": 294914
+                },
+                "subregions": [
+                    {
+                        "id": "%F274_R2",
+                        "description": "<loop 'loop1'>",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                "line": 40,
+                                "column": 9
+                            },
+                            "end_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                "line": 51,
+                                "column": 2
+                            }
+                        }
+                    }
+                ],
+                "subdataflow": [
+                    {
+                        "id": "%L17",
+                        "region_type": "Loop",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                "line": 40,
+                                "column": 9
+                            },
+                            "end_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                "line": 51,
+                                "column": 2
+                            }
+                        }
+                    },
+                    {
+                        "id": "%L18",
+                        "region_type": "Loop",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                "line": 41,
+                                "column": 10
+                            },
+                            "end_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                "line": 50,
+                                "column": 3
+                            }
+                        }
+                    },
+                    {
+                        "id": "%L19",
+                        "region_type": "Loop",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                "line": 43,
+                                "column": 11
+                            },
+                            "end_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                "line": 48,
+                                "column": 4
+                            }
+                        }
+                    }
+                ],
+                "guidance": [
+                    {
+                        "type": "LoopGuidance",
+                        "ti": {
+                            "min": 294912,
+                            "max": 294912
+                        },
+                        "ii": {
+                            "min": 9216,
+                            "max": 9216
+                        },
+                        "effective_tc": {
+                            "min": 32,
+                            "max": 32
+                        },
+                        "tc": {
+                            "min": 32,
+                            "max": 32
+                        },
+                        "ureg_id": "%L17",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                "line": 40,
+                                "column": 9
+                            },
+                            "end_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                "line": 51,
+                                "column": 2
+                            }
+                        },
+                        "details": []
+                    },
+                    {
+                        "type": "LoopGuidance",
+                        "ti": {
+                            "min": 9216,
+                            "max": 9216
+                        },
+                        "ii": {
+                            "min": 288,
+                            "max": 288
+                        },
+                        "effective_tc": {
+                            "min": 32,
+                            "max": 32
+                        },
+                        "tc": {
+                            "min": 32,
+                            "max": 32
+                        },
+                        "ureg_id": "%L18",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                "line": 41,
+                                "column": 10
+                            },
+                            "end_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                "line": 50,
+                                "column": 3
+                            }
+                        },
+                        "details": [
+                            {
+                                "type": "MemPortContention",
+                                "available_ports": {
+                                    "min": 2,
+                                    "max": 2
+                                },
+                                "required_ports": {
+                                    "min": 1,
+                                    "max": 1
+                                },
+                                "ii_lower_bound": {
+                                    "min": 1,
+                                    "max": 1
+                                },
+                                "variable": {
+                                    "name": "output_C",
+                                    "display_name": "output_C",
+                                    "id": "180",
+                                    "location": {
+                                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                        "line": 10,
+                                        "column": 0
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "type": "LoopGuidance",
+                        "ti": {
+                            "min": 288,
+                            "max": 288
+                        },
+                        "ii": {
+                            "min": 9,
+                            "max": 9
+                        },
+                        "effective_tc": {
+                            "min": 32,
+                            "max": 32
+                        },
+                        "tc": {
+                            "min": 32,
+                            "max": 32
+                        },
+                        "ureg_id": "%L19",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                "line": 43,
+                                "column": 11
+                            },
+                            "end_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                "line": 48,
+                                "column": 4
+                            }
+                        },
+                        "details": [
+                            {
+                                "type": "MemPortContention",
+                                "available_ports": {
+                                    "min": 2,
+                                    "max": 2
+                                },
+                                "required_ports": {
+                                    "min": 1,
+                                    "max": 1
+                                },
+                                "ii_lower_bound": {
+                                    "min": 1,
+                                    "max": 1
+                                },
+                                "variable": {
+                                    "name": "input_A",
+                                    "display_name": "input_A",
+                                    "id": "181",
+                                    "location": {
+                                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                        "line": 8,
+                                        "column": 0
+                                    }
+                                }
+                            },
+                            {
+                                "type": "MemPortContention",
+                                "available_ports": {
+                                    "min": 2,
+                                    "max": 2
+                                },
+                                "required_ports": {
+                                    "min": 1,
+                                    "max": 1
+                                },
+                                "ii_lower_bound": {
+                                    "min": 1,
+                                    "max": 1
+                                },
+                                "variable": {
+                                    "name": "input_B",
+                                    "display_name": "input_B",
+                                    "id": "182",
+                                    "location": {
+                                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                        "line": 9,
+                                        "column": 0
+                                    }
+                                }
+                            },
+                            {
+                                "type": "CyclicDependence",
+                                "ii_lower_bound": {
+                                    "min": 4,
+                                    "max": 4
+                                },
+                                "variables": [
+                                    {
+                                        "name": "res [phi]",
+                                        "id": "<unknown>"
+                                    },
+                                    {
+                                        "name": "add [fadd]",
+                                        "id": "<unknown>",
+                                        "location": {
+                                            "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                            "line": 47,
+                                            "column": 9
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "6": {
+                "id": "6",
+                "name": "Region<OutlineCall(R5 matrixmul_32_unopt) BB 'codeRepl3' [Loop] 'Outline_T6_F271_R83_Loop'>",
+                "src_range": {
+                    "start_loc": {
+                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                        "line": 54,
+                        "column": 18
+                    },
+                    "end_loc": {
+                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                        "line": 74,
+                        "column": 2
+                    }
+                },
+                "display_name": "loop_output_C1",
+                "io_signatures": {
+                    "has_unresolved_accesses": false,
+                    "accesses": [
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                    "line": 10,
+                                    "column": 12
+                                },
+                                "id": "VId_154_[?(?,1024)][?(?,32)]",
+                                "name": "output_C[*][*]",
+                                "display_name": "Mat_Dtype output_C[32][32]"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 4096,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                        "line": 61,
+                                        "column": 23
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 1024
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                    "line": 4,
+                                    "column": 0
+                                },
+                                "id": "VId_151_*0(0,64)arg",
+                                "name": "out_C",
+                                "display_name": "axis_data &out_C"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Fifo",
+                                    "range": {
+                                        "is_exact": false,
+                                        "is_empty": false
+                                    },
+                                    "instr": "call",
+                                    "src_loc": {
+                                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                        "line": 72,
+                                        "column": 10
+                                    },
+                                    "access_type": "%\"struct.hls::axis.9\"",
+                                    "access_bit_width": 81,
+                                    "exec_count": 1024
+                                }
+                            ],
+                            "kind": "Fifo",
+                            "has_alias": false,
+                            "arg_idx": 1
+                        }
+                    ]
+                },
+                "metrics": {
+                    "initiation_interval": 5123
+                },
+                "subregions": [
+                    {
+                        "id": "%F275_R2",
+                        "description": "<loop 'loop_output_C1'>",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                "line": 54,
+                                "column": 18
+                            },
+                            "end_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                "line": 74,
+                                "column": 2
+                            }
+                        }
+                    }
+                ],
+                "subdataflow": [
+                    {
+                        "id": "%L15",
+                        "region_type": "Loop",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                "line": 54,
+                                "column": 18
+                            },
+                            "end_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                "line": 74,
+                                "column": 2
+                            }
+                        }
+                    },
+                    {
+                        "id": "%L16",
+                        "region_type": "Loop",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                "line": 55,
+                                "column": 19
+                            },
+                            "end_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                "line": 73,
+                                "column": 3
+                            }
+                        }
+                    }
+                ],
+                "guidance": [
+                    {
+                        "type": "LoopGuidance",
+                        "ti": {
+                            "min": 5120,
+                            "max": 5120
+                        },
+                        "ii": {
+                            "min": 160,
+                            "max": 160
+                        },
+                        "effective_tc": {
+                            "min": 32,
+                            "max": 32
+                        },
+                        "tc": {
+                            "min": 32,
+                            "max": 32
+                        },
+                        "ureg_id": "%L15",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                "line": 54,
+                                "column": 18
+                            },
+                            "end_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                "line": 74,
+                                "column": 2
+                            }
+                        },
+                        "details": []
+                    },
+                    {
+                        "type": "LoopGuidance",
+                        "ti": {
+                            "min": 160,
+                            "max": 160
+                        },
+                        "ii": {
+                            "min": 5,
+                            "max": 5
+                        },
+                        "effective_tc": {
+                            "min": 32,
+                            "max": 32
+                        },
+                        "tc": {
+                            "min": 32,
+                            "max": 32
+                        },
+                        "ureg_id": "%L16",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                "line": 55,
+                                "column": 19
+                            },
+                            "end_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                "line": 73,
+                                "column": 3
+                            }
+                        },
+                        "details": [
+                            {
+                                "type": "MemPortContention",
+                                "available_ports": {
+                                    "min": 2,
+                                    "max": 2
+                                },
+                                "required_ports": {
+                                    "min": 1,
+                                    "max": 1
+                                },
+                                "ii_lower_bound": {
+                                    "min": 1,
+                                    "max": 1
+                                },
+                                "variable": {
+                                    "name": "output_C",
+                                    "display_name": "output_C",
+                                    "id": "183",
+                                    "location": {
+                                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                                        "line": 10,
+                                        "column": 0
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "channels": {
+            "in_A_RAW_1_3_#0": {
+                "name": "in_A_RAW_1_3_#0",
+                "variable_id": "VId_150_*0(0,64)arg",
+                "variable_name": "in_A",
+                "declaration": "axis_data &in_A",
+                "kind": "Fifo",
+                "dependence": "RAW",
+                "channel_width": 81,
+                "src_loc": {
+                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                    "line": 4,
+                    "column": 0
+                },
+                "metrics": {
+                    "volume": 82944,
+                    "channel_rate": 2.812480926643021E-1
+                },
+                "source": "1",
+                "sink": "3"
+            },
+            "local_stream.data_RAW_3_4_#1": {
+                "name": "local_stream.data_RAW_3_4_#1",
+                "variable_id": "VId_158_.A0(0,32)",
+                "variable_name": "local_stream.data",
+                "declaration": "Type_data axis_float_t::data",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 0,
+                "src_loc": {
+                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                    "line": 13,
+                    "column": 15
+                },
+                "source": "3",
+                "sink": "4"
+            },
+            "local_stream.data_WAR_3_4_#2": {
+                "name": "local_stream.data_WAR_3_4_#2",
+                "variable_id": "VId_158_.A0(0,32)",
+                "variable_name": "local_stream.data",
+                "declaration": "Type_data axis_float_t::data",
+                "kind": "Ptr",
+                "dependence": "WAR",
+                "channel_width": 0,
+                "src_loc": {
+                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                    "line": 13,
+                    "column": 15
+                },
+                "source": "3",
+                "sink": "4"
+            },
+            "local_stream_WAW_3_4_#3": {
+                "name": "local_stream_WAW_3_4_#3",
+                "variable_id": "VId_158_!c?(?,?)",
+                "variable_name": "local_stream",
+                "declaration": "axis_float_t local_stream",
+                "kind": "Ptr",
+                "dependence": "WAW",
+                "channel_width": 0,
+                "src_loc": {
+                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                    "line": 13,
+                    "column": 15
+                },
+                "source": "3",
+                "sink": "4"
+            },
+            "in_A_RAR_3_4_#4": {
+                "name": "in_A_RAR_3_4_#4",
+                "variable_id": "VId_150_*0(0,64)arg",
+                "variable_name": "in_A",
+                "declaration": "axis_data &in_A",
+                "kind": "Fifo",
+                "dependence": "RAR",
+                "channel_width": 0,
+                "src_loc": {
+                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                    "line": 4,
+                    "column": 0
+                },
+                "source": "3",
+                "sink": "4"
+            },
+            "local_stream.data_RAR_3_4_#5": {
+                "name": "local_stream.data_RAR_3_4_#5",
+                "variable_id": "VId_158_.A0(0,32)",
+                "variable_name": "local_stream.data",
+                "declaration": "Type_data axis_float_t::data",
+                "kind": "Ptr",
+                "dependence": "RAR",
+                "channel_width": 0,
+                "src_loc": {
+                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                    "line": 13,
+                    "column": 15
+                },
+                "source": "3",
+                "sink": "4"
+            },
+            "input_A[*][*]_RAW_3_5_#6": {
+                "name": "input_A[*][*]_RAW_3_5_#6",
+                "variable_id": "VId_152_[?(?,1024)][?(?,32)]",
+                "variable_name": "input_A[*][*]",
+                "declaration": "Mat_Dtype input_A[32][32]",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 32,
+                "src_loc": {
+                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                    "line": 8,
+                    "column": 12
+                },
+                "metrics": {
+                    "volume": 1048576,
+                    "channel_rate": 3.555531443064758E0
+                },
+                "source": "3",
+                "sink": "5"
+            },
+            "input_B[*][*]_RAW_4_5_#7": {
+                "name": "input_B[*][*]_RAW_4_5_#7",
+                "variable_id": "VId_153_[?(?,1024)][?(?,32)]",
+                "variable_name": "input_B[*][*]",
+                "declaration": "Mat_Dtype input_B[32][32]",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 32,
+                "src_loc": {
+                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                    "line": 9,
+                    "column": 12
+                },
+                "metrics": {
+                    "volume": 1048576,
+                    "channel_rate": 3.555531443064758E0
+                },
+                "source": "4",
+                "sink": "5"
+            },
+            "output_C[*][*]_RAW_5_6_#8": {
+                "name": "output_C[*][*]_RAW_5_6_#8",
+                "variable_id": "VId_154_[?(?,1024)][?(?,32)]",
+                "variable_name": "output_C[*][*]",
+                "declaration": "Mat_Dtype output_C[32][32]",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 32,
+                "src_loc": {
+                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                    "line": 10,
+                    "column": 12
+                },
+                "metrics": {
+                    "volume": 32768,
+                    "channel_rate": 1.1111035759577369E-1
+                },
+                "source": "5",
+                "sink": "6"
+            },
+            "out_C_RAW_6_2_#9": {
+                "name": "out_C_RAW_6_2_#9",
+                "variable_id": "VId_151_*0(0,64)arg",
+                "variable_name": "out_C",
+                "declaration": "axis_data &out_C",
+                "kind": "Fifo",
+                "dependence": "RAW",
+                "channel_width": 81,
+                "src_loc": {
+                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                    "line": 4,
+                    "column": 0
+                },
+                "metrics": {
+                    "volume": 82944,
+                    "channel_rate": 2.812480926643021E-1
+                },
+                "source": "6",
+                "sink": "2"
+            }
+        },
+        "control": [
+            {
+                "source": "3",
+                "sink": "4"
+            },
+            {
+                "source": "4",
+                "sink": "5"
+            },
+            {
+                "source": "5",
+                "sink": "6"
+            },
+            {
+                "source": "1",
+                "sink": "3"
+            },
+            {
+                "source": "6",
+                "sink": "2"
+            }
+        ]
+    }
+]

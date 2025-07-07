@@ -1,0 +1,35 @@
+#-----------------------------------------------------------
+# xsim v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Fri May 30 15:56:39 2025
+# Process ID         : 10768
+# Current directory  : C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_8_unopt/matrix_8_unopt/hls/sim/verilog
+# Command line       : xsim.exe -mode tcl -source {xsim.dir/matrixmul_100_unopt/xsim_script.tcl}
+# Log file           : C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_8_unopt/matrix_8_unopt/hls/sim/verilog/xsim.log
+# Journal file       : C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_8_unopt/matrix_8_unopt/hls/sim/verilog\xsim.jou
+# Running On         : Samarth-Asus
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i5-12500H
+# CPU Frequency      : 3110 MHz
+# CPU Physical cores : 12
+# CPU Logical cores  : 16
+# Host memory        : 16785 MB
+# Swap memory        : 20401 MB
+# Total Virtual      : 37186 MB
+# Available Virtual  : 6725 MB
+#-----------------------------------------------------------
+source xsim.dir/matrixmul_100_unopt/xsim_script.tcl
+# xsim {matrixmul_100_unopt} -autoloadwcfg -tclbatch {matrixmul_100_unopt.tcl}
+Time resolution is 1 ps
+source matrixmul_100_unopt.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 10 [0.00%] @ "125000"

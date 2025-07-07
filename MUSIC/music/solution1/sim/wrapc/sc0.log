@@ -1,0 +1,5 @@
+   Build using "C:/Xilinx2/Vivado/2019.1/msys64/mingw64/bin/g++"
+   Compiling test_qrf.cpp_pre.cpp.tb.cpp
+   Compiling apatb_MUSIC_top.cpp
+   Compiling kernel_qrf_0.cpp_pre.cpp.tb.cpp
+   Generating cosim.tv.exe

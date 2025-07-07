@@ -1,0 +1,7 @@
+   Build using "C:/Xilinx_2024_ent/Vitis/2024.2/vcxx/libexec/clang++"
+   Compiling matrix.cpp_pre.cpp.tb.cpp
+   Compiling apatb_matrixmul_100_unopt.cpp
+   Compiling matrix_tb.cpp_pre.cpp.tb.cpp
+   Compiling apatb_matrixmul_100_unopt_util.cpp
+   Compiling apatb_matrixmul_100_unopt_ir.ll
+   Generating cosim.tv.exe

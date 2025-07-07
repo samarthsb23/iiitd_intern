@@ -1,0 +1,2 @@
+No errors!! Average RMSE over 10 runs: 0.000032
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 20000

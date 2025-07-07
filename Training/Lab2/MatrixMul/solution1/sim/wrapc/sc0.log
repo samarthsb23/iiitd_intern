@@ -1,0 +1,5 @@
+   Build using "C:/Xilinx_HLS/Vivado/2019.2/tps/win64/msys64/mingw64/bin/g++"
+   Compiling apatb_matrixmul_5.cpp
+   Compiling matrix_mul.cpp_pre.cpp.tb.cpp
+   Compiling matrix_mul_tb.cpp_pre.cpp.tb.cpp
+   Generating cosim.tv.exe

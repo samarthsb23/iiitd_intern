@@ -1,0 +1,12 @@
+{
+  "name": "mat_32_opt",
+  "type": "HLS",
+  "configuration": {
+    "componentType": "HLS",
+    "configFiles": [
+      "hls_config.cfg"
+    ],
+    "work_dir": "mat_32_opt"
+  },
+  "template": "empty_hls_component"
+}

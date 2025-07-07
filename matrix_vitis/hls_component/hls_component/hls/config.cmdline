@@ -1,0 +1,3 @@
+relativeroot=C:/Users/Samarth/Desktop/IIIT_Intern/matrix_vitis/hls_component
+original_argv=--mode hls --csim --config C:\Users\Samarth\Desktop\IIIT_Intern\matrix_vitis\hls_component\hls_config.cfg --work_dir hls_component 
+

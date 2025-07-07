@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# xsim v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Thu Mar 27 12:28:08 2025
+# Process ID: 1296
+# Current directory: C:/Users/Samarth/OneDrive/Desktop/IIT/IIIT_Intern/Training/Lab1/live_find/solution1/sim/verilog
+# Command line: xsim.exe -mode tcl -source {xsim.dir/find/xsim_script.tcl}
+# Log file: C:/Users/Samarth/OneDrive/Desktop/IIT/IIIT_Intern/Training/Lab1/live_find/solution1/sim/verilog/xsim.log
+# Journal file: C:/Users/Samarth/OneDrive/Desktop/IIT/IIIT_Intern/Training/Lab1/live_find/solution1/sim/verilog\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/find/xsim_script.tcl
+# xsim {find} -autoloadwcfg -tclbatch {find.tcl}
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source find.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "125000"
+// RTL Simulation : 1 / 1 [100.00%] @ "785000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 825 ns : File "C:/Users/Samarth/OneDrive/Desktop/IIT/IIIT_Intern/Training/Lab1/live_find/solution1/sim/verilog/find.autotb.v" Line 248
+## quit
+INFO: [Common 17-206] Exiting xsim at Thu Mar 27 12:28:16 2025...

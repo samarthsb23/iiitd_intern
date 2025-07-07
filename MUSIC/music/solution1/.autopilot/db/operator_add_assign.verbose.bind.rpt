@@ -1,0 +1,467 @@
+
+
+================================================================
+== Vivado HLS Report for 'operator_add_assign'
+================================================================
+* Date:           Fri May 30 11:14:54 2025
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        music
+* Solution:       solution1
+* Product family: zynquplus
+* Target device:  xczu28dr-ffvg1517-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     6.437|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    3|    3|    1|    1| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 4
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 4, States = { 1 2 3 4 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 6.43>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%rhs_im_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %rhs_im_read)" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:170]   --->   Operation 5 'read' 'rhs_im_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%rhs_re_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %rhs_re_read)" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:170]   --->   Operation 6 'read' 'rhs_re_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%x_complex_im_read = call float @_ssdm_op_Read.ap_auto.float(float %x_complex_float_im_read)" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:170]   --->   Operation 7 'read' 'x_complex_im_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%x_complex_re_read = call float @_ssdm_op_Read.ap_auto.float(float %x_complex_float_re_read)" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:170]   --->   Operation 8 'read' 'x_complex_re_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [4/4] (6.43ns)   --->   "%agg_result_re_write_s = fadd float %rhs_re_read_1, %x_complex_re_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171]   --->   Operation 9 'fadd' 'agg_result_re_write_s' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 10 [4/4] (6.43ns)   --->   "%agg_result_im_write_s = fadd float %rhs_im_read_1, %x_complex_im_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171]   --->   Operation 10 'fadd' 'agg_result_im_write_s' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 6.43>
+ST_2 : Operation 11 [3/4] (6.43ns)   --->   "%agg_result_re_write_s = fadd float %rhs_re_read_1, %x_complex_re_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171]   --->   Operation 11 'fadd' 'agg_result_re_write_s' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 12 [3/4] (6.43ns)   --->   "%agg_result_im_write_s = fadd float %rhs_im_read_1, %x_complex_im_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171]   --->   Operation 12 'fadd' 'agg_result_im_write_s' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 6.43>
+ST_3 : Operation 13 [2/4] (6.43ns)   --->   "%agg_result_re_write_s = fadd float %rhs_re_read_1, %x_complex_re_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171]   --->   Operation 13 'fadd' 'agg_result_re_write_s' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 14 [2/4] (6.43ns)   --->   "%agg_result_im_write_s = fadd float %rhs_im_read_1, %x_complex_im_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171]   --->   Operation 14 'fadd' 'agg_result_im_write_s' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 6.43>
+ST_4 : Operation 15 [1/4] (6.43ns)   --->   "%agg_result_re_write_s = fadd float %rhs_re_read_1, %x_complex_re_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171]   --->   Operation 15 'fadd' 'agg_result_re_write_s' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 16 [1/4] (6.43ns)   --->   "%agg_result_im_write_s = fadd float %rhs_im_read_1, %x_complex_im_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171]   --->   Operation 16 'fadd' 'agg_result_im_write_s' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 17 [1/1] (0.00ns)   --->   "%newret = insertvalue { float, float } undef, float %agg_result_re_write_s, 0" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171]   --->   Operation 17 'insertvalue' 'newret' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 18 [1/1] (0.00ns)   --->   "%newret2 = insertvalue { float, float } %newret, float %agg_result_im_write_s, 1" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171]   --->   Operation 18 'insertvalue' 'newret2' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 19 [1/1] (0.00ns)   --->   "ret { float, float } %newret2" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171]   --->   Operation 19 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 1
+- Is pipelined: 1
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ x_complex_float_re_read]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ x_complex_float_im_read]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ rhs_re_read]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ rhs_im_read]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+rhs_im_read_1         (read       ) [ 01111]
+rhs_re_read_1         (read       ) [ 01111]
+x_complex_im_read     (read       ) [ 01111]
+x_complex_re_read     (read       ) [ 01111]
+agg_result_re_write_s (fadd       ) [ 00000]
+agg_result_im_write_s (fadd       ) [ 00000]
+newret                (insertvalue) [ 00000]
+newret2               (insertvalue) [ 00000]
+ret_ln171             (ret        ) [ 00000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="x_complex_float_re_read">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="x_complex_float_re_read"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="x_complex_float_im_read">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="x_complex_float_im_read"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="rhs_re_read">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="rhs_re_read"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="rhs_im_read">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="rhs_im_read"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1001" name="const_8">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.float"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1001" name="const_10">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1004" name="rhs_im_read_1_read_fu_12">
+<pin_list>
+<pin id="13" dir="0" index="0" bw="32" slack="0"/>
+<pin id="14" dir="0" index="1" bw="32" slack="0"/>
+<pin id="15" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="rhs_im_read_1/1 "/>
+</bind>
+</comp>
+
+<comp id="18" class="1004" name="rhs_re_read_1_read_fu_18">
+<pin_list>
+<pin id="19" dir="0" index="0" bw="32" slack="0"/>
+<pin id="20" dir="0" index="1" bw="32" slack="0"/>
+<pin id="21" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="rhs_re_read_1/1 "/>
+</bind>
+</comp>
+
+<comp id="24" class="1004" name="x_complex_im_read_read_fu_24">
+<pin_list>
+<pin id="25" dir="0" index="0" bw="32" slack="0"/>
+<pin id="26" dir="0" index="1" bw="32" slack="0"/>
+<pin id="27" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="x_complex_im_read/1 "/>
+</bind>
+</comp>
+
+<comp id="30" class="1004" name="x_complex_re_read_read_fu_30">
+<pin_list>
+<pin id="31" dir="0" index="0" bw="32" slack="0"/>
+<pin id="32" dir="0" index="1" bw="32" slack="0"/>
+<pin id="33" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="x_complex_re_read/1 "/>
+</bind>
+</comp>
+
+<comp id="36" class="1004" name="grp_fu_36">
+<pin_list>
+<pin id="37" dir="0" index="0" bw="32" slack="0"/>
+<pin id="38" dir="0" index="1" bw="32" slack="0"/>
+<pin id="39" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="fadd(9) " fcode="fadd"/>
+<opset="agg_result_re_write_s/1 "/>
+</bind>
+</comp>
+
+<comp id="42" class="1004" name="grp_fu_42">
+<pin_list>
+<pin id="43" dir="0" index="0" bw="32" slack="0"/>
+<pin id="44" dir="0" index="1" bw="32" slack="0"/>
+<pin id="45" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="fadd(9) " fcode="fadd"/>
+<opset="agg_result_im_write_s/1 "/>
+</bind>
+</comp>
+
+<comp id="48" class="1004" name="newret_fu_48">
+<pin_list>
+<pin id="49" dir="0" index="0" bw="64" slack="0"/>
+<pin id="50" dir="0" index="1" bw="32" slack="0"/>
+<pin id="51" dir="1" index="2" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="insertvalue(57) " fcode="insertvalue"/>
+<opset="newret/4 "/>
+</bind>
+</comp>
+
+<comp id="54" class="1004" name="newret2_fu_54">
+<pin_list>
+<pin id="55" dir="0" index="0" bw="64" slack="0"/>
+<pin id="56" dir="0" index="1" bw="32" slack="0"/>
+<pin id="57" dir="1" index="2" bw="64" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="insertvalue(57) " fcode="insertvalue"/>
+<opset="newret2/4 "/>
+</bind>
+</comp>
+
+<comp id="60" class="1005" name="rhs_im_read_1_reg_60">
+<pin_list>
+<pin id="61" dir="0" index="0" bw="32" slack="1"/>
+<pin id="62" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="rhs_im_read_1 "/>
+</bind>
+</comp>
+
+<comp id="65" class="1005" name="rhs_re_read_1_reg_65">
+<pin_list>
+<pin id="66" dir="0" index="0" bw="32" slack="1"/>
+<pin id="67" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="rhs_re_read_1 "/>
+</bind>
+</comp>
+
+<comp id="70" class="1005" name="x_complex_im_read_reg_70">
+<pin_list>
+<pin id="71" dir="0" index="0" bw="32" slack="1"/>
+<pin id="72" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="x_complex_im_read "/>
+</bind>
+</comp>
+
+<comp id="75" class="1005" name="x_complex_re_read_reg_75">
+<pin_list>
+<pin id="76" dir="0" index="0" bw="32" slack="1"/>
+<pin id="77" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="x_complex_re_read "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="16"><net_src comp="8" pin="0"/><net_sink comp="12" pin=0"/></net>
+
+<net id="17"><net_src comp="6" pin="0"/><net_sink comp="12" pin=1"/></net>
+
+<net id="22"><net_src comp="8" pin="0"/><net_sink comp="18" pin=0"/></net>
+
+<net id="23"><net_src comp="4" pin="0"/><net_sink comp="18" pin=1"/></net>
+
+<net id="28"><net_src comp="8" pin="0"/><net_sink comp="24" pin=0"/></net>
+
+<net id="29"><net_src comp="2" pin="0"/><net_sink comp="24" pin=1"/></net>
+
+<net id="34"><net_src comp="8" pin="0"/><net_sink comp="30" pin=0"/></net>
+
+<net id="35"><net_src comp="0" pin="0"/><net_sink comp="30" pin=1"/></net>
+
+<net id="40"><net_src comp="18" pin="2"/><net_sink comp="36" pin=0"/></net>
+
+<net id="41"><net_src comp="30" pin="2"/><net_sink comp="36" pin=1"/></net>
+
+<net id="46"><net_src comp="12" pin="2"/><net_sink comp="42" pin=0"/></net>
+
+<net id="47"><net_src comp="24" pin="2"/><net_sink comp="42" pin=1"/></net>
+
+<net id="52"><net_src comp="10" pin="0"/><net_sink comp="48" pin=0"/></net>
+
+<net id="53"><net_src comp="36" pin="2"/><net_sink comp="48" pin=1"/></net>
+
+<net id="58"><net_src comp="48" pin="2"/><net_sink comp="54" pin=0"/></net>
+
+<net id="59"><net_src comp="42" pin="2"/><net_sink comp="54" pin=1"/></net>
+
+<net id="63"><net_src comp="12" pin="2"/><net_sink comp="60" pin=0"/></net>
+
+<net id="64"><net_src comp="60" pin="1"/><net_sink comp="42" pin=0"/></net>
+
+<net id="68"><net_src comp="18" pin="2"/><net_sink comp="65" pin=0"/></net>
+
+<net id="69"><net_src comp="65" pin="1"/><net_sink comp="36" pin=0"/></net>
+
+<net id="73"><net_src comp="24" pin="2"/><net_sink comp="70" pin=0"/></net>
+
+<net id="74"><net_src comp="70" pin="1"/><net_sink comp="42" pin=1"/></net>
+
+<net id="78"><net_src comp="30" pin="2"/><net_sink comp="75" pin=0"/></net>
+
+<net id="79"><net_src comp="75" pin="1"/><net_sink comp="36" pin=1"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+	Port: operator+= : x_complex_float_re_read | {1 }
+	Port: operator+= : x_complex_float_im_read | {1 }
+	Port: operator+= : rhs_re_read | {1 }
+	Port: operator+= : rhs_im_read | {1 }
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+		newret : 1
+		newret2 : 2
+		ret_ln171 : 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|------------------------------|---------|---------|---------|
+| Operation|        Functional Unit       |  DSP48E |    FF   |   LUT   |
+|----------|------------------------------|---------|---------|---------|
+|   fadd   |           grp_fu_36          |    2    |   227   |   214   |
+|          |           grp_fu_42          |    2    |   227   |   214   |
+|----------|------------------------------|---------|---------|---------|
+|          |   rhs_im_read_1_read_fu_12   |    0    |    0    |    0    |
+|   read   |   rhs_re_read_1_read_fu_18   |    0    |    0    |    0    |
+|          | x_complex_im_read_read_fu_24 |    0    |    0    |    0    |
+|          | x_complex_re_read_read_fu_30 |    0    |    0    |    0    |
+|----------|------------------------------|---------|---------|---------|
+|insertvalue|         newret_fu_48         |    0    |    0    |    0    |
+|          |         newret2_fu_54        |    0    |    0    |    0    |
+|----------|------------------------------|---------|---------|---------|
+|   Total  |                              |    4    |   454   |   428   |
+|----------|------------------------------|---------|---------|---------|
+
+Memories:
+N/A
+
+* Register list:
++------------------------+--------+
+|                        |   FF   |
++------------------------+--------+
+|  rhs_im_read_1_reg_60  |   32   |
+|  rhs_re_read_1_reg_65  |   32   |
+|x_complex_im_read_reg_70|   32   |
+|x_complex_re_read_reg_75|   32   |
++------------------------+--------+
+|          Total         |   128  |
++------------------------+--------+
+
+* Multiplexer (MUX) list: 
+|-----------|------|------|------|--------||---------||---------|
+|    Comp   |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
+|-----------|------|------|------|--------||---------||---------|
+| grp_fu_36 |  p0  |   2  |  32  |   64   ||    9    |
+| grp_fu_36 |  p1  |   2  |  32  |   64   ||    9    |
+| grp_fu_42 |  p0  |   2  |  32  |   64   ||    9    |
+| grp_fu_42 |  p1  |   2  |  32  |   64   ||    9    |
+|-----------|------|------|------|--------||---------||---------|
+|   Total   |      |      |      |   256  ||  2.624  ||    36   |
+|-----------|------|------|------|--------||---------||---------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+--------+
+|           | DSP48E |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+--------+
+|  Function |    4   |    -   |   454  |   428  |
+|   Memory  |    -   |    -   |    -   |    -   |
+|Multiplexer|    -   |    2   |    -   |   36   |
+|  Register |    -   |    -   |   128  |    -   |
++-----------+--------+--------+--------+--------+
+|   Total   |    4   |    2   |   582  |   464  |
++-----------+--------+--------+--------+--------+

@@ -1,0 +1,51 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_matrixmul_100_unopt_ir
+Args:            
+  - Callee:          'matrixmul_100_unopt(hls::stream<hls::axis<float, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<float, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: matrix.cpp, Line: 4, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_matrixmul_100_unopt_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        loop_input_A2
+  - String:          '> at '
+  - LoopLoc:         'matrix.cpp:21:18'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        loop_input_B2
+  - String:          '> at '
+  - LoopLoc:         'matrix.cpp:30:18'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        loop3
+  - String:          '> at '
+  - LoopLoc:         'matrix.cpp:43:11'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        loop_output_C2
+  - String:          '> at '
+  - LoopLoc:         'matrix.cpp:55:19'
+  - String:          ' '
+...

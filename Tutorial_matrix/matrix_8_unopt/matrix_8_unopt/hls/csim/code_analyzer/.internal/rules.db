@@ -1,0 +1,229 @@
+{
+    "rules": {
+        "['C:\\\\Users\\\\Samarth\\\\Desktop\\\\IIIT_Intern\\\\Tutorial_matrix\\\\matrix_8_unopt\\\\matrix_8_unopt\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\matrix.cpp.0.bc', 'C:\\\\Users\\\\Samarth\\\\Desktop\\\\IIIT_Intern\\\\Tutorial_matrix\\\\matrix_8_unopt\\\\matrix_8_unopt\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\matrix.cpp.0.bc.d']": {
+            "command": [
+                "c:\\xilinx_2024_ent\\vitis\\2024.2\\vcxx\\/libexec/clang.exe",
+                "-c",
+                "-emit-llvm",
+                "-MD",
+                "-MF",
+                "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix_8_unopt\\hls\\csim\\code_analyzer\\.internal\\build\\matrix.cpp.0.bc.d",
+                "-fhls",
+                "-hls-syn-headers-dir=c:\\xilinx_2024_ent\\vitis\\2024.2\\vcxx\\data\\autopilot",
+                "-vitis-hls=C:\\Xilinx_2024_ent\\Vitis\\2024.2",
+                "--sysroot=C:\\Xilinx_2024_ent\\Vitis\\2024.2\\tps\\mingw\\10.0.0\\win64.o\\nt",
+                "-hls-clock-period=10.0",
+                "-fslxtrace",
+                "-fslx-compile-mode",
+                "-fhlstoplevel=matrixmul_32_unopt",
+                "matrix.cpp",
+                "-o",
+                "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix_8_unopt\\hls\\csim\\code_analyzer\\.internal\\build\\matrix.cpp.0.bc"
+            ],
+            "exectime": 2.0862536430358887,
+            "cwd": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt"
+        },
+        "['C:\\\\Users\\\\Samarth\\\\Desktop\\\\IIIT_Intern\\\\Tutorial_matrix\\\\matrix_8_unopt\\\\matrix_8_unopt\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\matrix_tb.cpp.0.o', 'C:\\\\Users\\\\Samarth\\\\Desktop\\\\IIIT_Intern\\\\Tutorial_matrix\\\\matrix_8_unopt\\\\matrix_8_unopt\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\matrix_tb.cpp.0.o.d']": {
+            "command": [
+                "c:\\xilinx_2024_ent\\vitis\\2024.2\\vcxx\\/libexec/clang.exe",
+                "-c",
+                "-MD",
+                "-MF",
+                "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix_8_unopt\\hls\\csim\\code_analyzer\\.internal\\build\\matrix_tb.cpp.0.o.d",
+                "-fhls-tb",
+                "-hls-sim-headers-dir=c:\\xilinx_2024_ent\\vitis\\2024.2\\vcxx\\data\\include",
+                "-vitis-hls=C:\\Xilinx_2024_ent\\Vitis\\2024.2",
+                "--sysroot=C:\\Xilinx_2024_ent\\Vitis\\2024.2\\tps\\mingw\\10.0.0\\win64.o\\nt",
+                "-fslxtrace",
+                "-fslx-compile-mode",
+                "-fslxskipfunctionbody",
+                "-fhlstoplevel=matrixmul_32_unopt",
+                "C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_8_unopt/matrix_tb.cpp",
+                "-o",
+                "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix_8_unopt\\hls\\csim\\code_analyzer\\.internal\\build\\matrix_tb.cpp.0.o"
+            ],
+            "exectime": 2.327630043029785,
+            "cwd": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt"
+        },
+        "['C:\\\\Users\\\\Samarth\\\\Desktop\\\\IIIT_Intern\\\\Tutorial_matrix\\\\matrix_8_unopt\\\\matrix_8_unopt\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\matrix.cpp.0.o', 'C:\\\\Users\\\\Samarth\\\\Desktop\\\\IIIT_Intern\\\\Tutorial_matrix\\\\matrix_8_unopt\\\\matrix_8_unopt\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\matrix.cpp.0.o.d']": {
+            "command": [
+                "c:\\xilinx_2024_ent\\vitis\\2024.2\\vcxx\\/libexec/clang.exe",
+                "-c",
+                "-MD",
+                "-MF",
+                "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix_8_unopt\\hls\\csim\\code_analyzer\\.internal\\build\\matrix.cpp.0.o.d",
+                "-fhls-tb",
+                "-hls-sim-headers-dir=c:\\xilinx_2024_ent\\vitis\\2024.2\\vcxx\\data\\include",
+                "-vitis-hls=C:\\Xilinx_2024_ent\\Vitis\\2024.2",
+                "--sysroot=C:\\Xilinx_2024_ent\\Vitis\\2024.2\\tps\\mingw\\10.0.0\\win64.o\\nt",
+                "-fslxtrace",
+                "-fslx-compile-mode",
+                "-fslxskipfunctionbody",
+                "-fhlstoplevel=matrixmul_32_unopt",
+                "matrix.cpp",
+                "-o",
+                "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix_8_unopt\\hls\\csim\\code_analyzer\\.internal\\build\\matrix.cpp.0.o"
+            ],
+            "exectime": 1.9324414730072021,
+            "cwd": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt"
+        },
+        "['C:\\\\Users\\\\Samarth\\\\Desktop\\\\IIIT_Intern\\\\Tutorial_matrix\\\\matrix_8_unopt\\\\matrix_8_unopt\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\syn_srcs.bc']": {
+            "command": [
+                "c:\\xilinx_2024_ent\\vitis\\2024.2\\vcxx\\/libexec/llvm-link.exe",
+                "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix_8_unopt\\hls\\csim\\code_analyzer\\.internal\\build\\matrix.cpp.0.bc",
+                "-o",
+                "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix_8_unopt\\hls\\csim\\code_analyzer\\.internal\\build\\syn_srcs.bc"
+            ],
+            "exectime": 0.33659982681274414,
+            "cwd": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt"
+        },
+        "['C:\\\\Users\\\\Samarth\\\\Desktop\\\\IIIT_Intern\\\\Tutorial_matrix\\\\matrix_8_unopt\\\\matrix_8_unopt\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\syn_srcs.opt.bc']": {
+            "command": [
+                "c:\\xilinx_2024_ent\\vitis\\2024.2\\vcxx\\/libexec/opt.exe",
+                "-check-single-toplevel",
+                "-make-non-toplevel-internal",
+                "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix_8_unopt\\hls\\csim\\code_analyzer\\.internal\\build\\syn_srcs.bc",
+                "-o",
+                "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix_8_unopt\\hls\\csim\\code_analyzer\\.internal\\build\\syn_srcs.opt.bc"
+            ],
+            "exectime": 0.10762476921081543,
+            "cwd": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt"
+        },
+        "['C:\\\\Users\\\\Samarth\\\\Desktop\\\\IIIT_Intern\\\\Tutorial_matrix\\\\matrix_8_unopt\\\\matrix_8_unopt\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\app.exe']": {
+            "command": [
+                "c:\\xilinx_2024_ent\\vitis\\2024.2\\vcxx\\/libexec/clang++.exe",
+                "-o",
+                "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix_8_unopt\\hls\\csim\\code_analyzer\\.internal\\build\\app.exe",
+                "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix_8_unopt\\hls\\csim\\code_analyzer\\.internal\\build\\matrix_tb.cpp.0.o",
+                "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix_8_unopt\\hls\\csim\\code_analyzer\\.internal\\build\\matrix.cpp.0.o",
+                "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix_8_unopt\\hls\\csim\\code_analyzer\\.internal\\build\\syn_srcs.opt.bc",
+                "-fhls",
+                "-fhlstoplevel=matrixmul_32_unopt",
+                "-LC:\\Xilinx_2024_ent\\Vitis\\2024.2\\win64\\tools\\dds_v6_0",
+                "-lIp_dds_compiler_v6_0_bitacc_cmodel",
+                "-LC:\\Xilinx_2024_ent\\Vitis\\2024.2\\win64\\tools\\fft_v9_1",
+                "-lIp_xfft_v9_1_bitacc_cmodel",
+                "-LC:\\Xilinx_2024_ent\\Vitis\\2024.2\\win64\\tools\\fir_v7_0",
+                "-lIp_fir_compiler_v7_2_bitacc_cmodel",
+                "-LC:\\Xilinx_2024_ent\\Vitis\\2024.2\\win64\\tools\\fpo_v7_1",
+                "-lIp_floating_point_v7_1_bitacc_cmodel",
+                "-lm",
+                "-LC:\\Xilinx_2024_ent\\Vitis\\2024.2\\win64\\lib\\csim",
+                "-lhlsm-GCC95-x64",
+                "-lhlsmc++-GCC95-x64",
+                "-lgmp",
+                "-lmpfr",
+                "--sysroot=C:\\Xilinx_2024_ent\\Vitis\\2024.2\\tps\\mingw\\10.0.0\\win64.o\\nt",
+                "-LC:\\Xilinx_2024_ent\\Vitis\\2024.2\\tps\\mingw\\10.0.0\\win64.o\\nt\\x86_64-w64-mingw32\\lib",
+                "-LC:\\Xilinx_2024_ent\\Vitis\\2024.2\\tps\\mingw\\10.0.0\\win64.o\\nt\\lib",
+                "-LC:\\Xilinx_2024_ent\\Vitis\\2024.2\\tps\\mingw\\10.0.0\\win64.o\\nt\\lib\\gcc",
+                "-LC:\\Xilinx_2024_ent\\Vitis\\2024.2\\tps\\mingw\\10.0.0\\win64.o\\nt\\lib\\gcc\\x86_64-w64-mingw32\\9.5.0",
+                "-LC:\\Xilinx_2024_ent\\Vitis\\2024.2\\tps\\mingw\\10.0.0\\win64.o\\nt\\libexec\\gcc\\x86_64-w64-mingw32\\9.5.0",
+                "-fslxtrace",
+                "-fslx-compile-mode",
+                "-Wl,-mllvm,-profilerOutputDirectory=C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix_8_unopt\\hls\\csim\\code_analyzer\\.internal\\profiler\\0",
+                "-fslxpthreads",
+                "-lpthread"
+            ],
+            "exectime": 1.1057953834533691,
+            "cwd": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt"
+        },
+        "['C:\\\\Users\\\\Samarth\\\\Desktop\\\\IIIT_Intern\\\\Tutorial_matrix\\\\matrix_8_unopt\\\\matrix_8_unopt\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\instrument\\\\app_0\\\\hls_ir_info.json']": {
+            "command": [
+                "c:\\xilinx_2024_ent\\vitis\\2024.2\\vcxx\\/libexec/irInfoDump.exe",
+                "--ir-module",
+                "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix_8_unopt\\hls\\csim\\code_analyzer\\.internal\\instrument\\app_0\\project.symbols.bc",
+                "--json-output",
+                "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix_8_unopt\\hls\\csim\\code_analyzer\\.internal\\instrument\\app_0\\hls_ir_info.json",
+                "--hw-function",
+                "matrixmul_32_unopt"
+            ],
+            "exectime": 0.10996890068054199,
+            "cwd": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt"
+        },
+        "['C:\\\\Users\\\\Samarth\\\\Desktop\\\\IIIT_Intern\\\\Tutorial_matrix\\\\matrix_8_unopt\\\\matrix_8_unopt\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\instrument\\\\app_0\\\\binary_dependencies.json']": {
+            "command": [
+                "c:\\xilinx_2024_ent\\vitis\\2024.2\\vcxx\\libexec\\clang-scan-deps.exe",
+                "--compilation-database=C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix_8_unopt\\hls\\csim\\code_analyzer\\.internal\\instrument\\app_0\\compile_commands.json",
+                "--format=vitiscxx",
+                "--reuse-filemanager=false",
+                "--output=C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix_8_unopt\\hls\\csim\\code_analyzer\\.internal\\instrument\\app_0\\binary_dependencies.json"
+            ],
+            "exectime": 0.23333120346069336,
+            "cwd": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt"
+        },
+        "['C:\\\\Users\\\\Samarth\\\\Desktop\\\\IIIT_Intern\\\\Tutorial_matrix\\\\matrix_8_unopt\\\\matrix_8_unopt\\\\hls\\\\csim\\\\code_analyzer\\\\bin\\\\.tracing_stdout.txt', 'C:\\\\Users\\\\Samarth\\\\Desktop\\\\IIIT_Intern\\\\Tutorial_matrix\\\\matrix_8_unopt\\\\matrix_8_unopt\\\\hls\\\\csim\\\\code_analyzer\\\\bin\\\\.tracing_stderr.txt']": {
+            "command": [
+                "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix_8_unopt\\hls\\csim\\code_analyzer\\.internal\\build\\app.exe"
+            ],
+            "exectime": 0.6343305110931396,
+            "cwd": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix_8_unopt\\hls\\csim\\code_analyzer\\tracing\\csim\\build"
+        },
+        "['C:\\\\Users\\\\Samarth\\\\Desktop\\\\IIIT_Intern\\\\Tutorial_matrix\\\\matrix_8_unopt\\\\matrix_8_unopt\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\instrument\\\\app_0\\\\annotated.bc']": {
+            "command": [
+                "c:\\xilinx_2024_ent\\vitis\\2024.2\\vcxx\\/libexec/optimizer.exe",
+                "-DFGPass",
+                "-outputDir",
+                "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix_8_unopt\\hls\\csim\\code_analyzer\\output",
+                "-logDir",
+                "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix_8_unopt\\hls\\csim\\code_analyzer\\log",
+                "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix_8_unopt\\hls\\csim\\code_analyzer\\.internal\\instrument\\app_0\\project.symbols.bc",
+                "-staticFile",
+                "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix_8_unopt\\hls\\csim\\code_analyzer\\.internal\\instrument\\app_0\\static.xml",
+                "-traceFile",
+                "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix_8_unopt\\hls\\csim\\code_analyzer\\.internal\\profiler\\0\\app_0_3\\thread0000-trace.txt",
+                "-o",
+                "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix_8_unopt\\hls\\csim\\code_analyzer\\.internal\\instrument\\app_0\\annotated.bc"
+            ],
+            "exectime": 0.8725264072418213,
+            "cwd": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt"
+        },
+        "['C:\\\\Users\\\\Samarth\\\\Desktop\\\\IIIT_Intern\\\\Tutorial_matrix\\\\matrix_8_unopt\\\\matrix_8_unopt\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\dataflow\\\\0\\\\taskgraph.json']": {
+            "command": [
+                "c:\\xilinx_2024_ent\\vitis\\2024.2\\vcxx\\/libexec/parallelismSelector.exe",
+                "--basepath",
+                "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt",
+                "--fpga-part",
+                "xczu28dr-ffvg1517-2-e",
+                "--device-totals",
+                "c:\\xilinx_2024_ent\\vitis\\2024.2\\vcxx\\data\\platform\\logic\\fpga.devicetotals",
+                "--clock-frequency",
+                "100.0",
+                "--out-dir",
+                "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix_8_unopt\\hls\\csim\\code_analyzer\\output",
+                "--log-dir",
+                "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix_8_unopt\\hls\\csim\\code_analyzer\\log",
+                "--objective",
+                "none",
+                "--performance-target",
+                "target_both",
+                "--max-array-optimization-factor",
+                "1024",
+                "--complete-partition-limit",
+                "4",
+                "--lut-constraint",
+                "100.0",
+                "--ff-constraint",
+                "100.0",
+                "--dsp-constraint",
+                "100.0",
+                "--bram-constraint",
+                "100.0",
+                "--uram-constraint",
+                "100.0",
+                "--max-iterations",
+                "1000",
+                "--max-iterations-branch-full-log",
+                "20",
+                "--ir-module",
+                "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix_8_unopt\\hls\\csim\\code_analyzer\\.internal\\instrument\\app_0\\annotated.bc",
+                "--df-id",
+                "0",
+                "--df-target",
+                "%F271"
+            ],
+            "exectime": 1.2414817810058594,
+            "cwd": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt"
+        }
+    }
+}

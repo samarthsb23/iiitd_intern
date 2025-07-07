@@ -1,0 +1,2 @@
+parallelismSelector::WARNG: WARNING: [SIM 211-206] Code Analyzer does not display the impact of the partition pragma for dataflow channels (C:\Users\Samarth\Desktop\IIIT_Intern\Tutorial_matrix\matrix_8_opt\matrix.cpp:8:2)
+parallelismSelector::WARNG: WARNING: [SIM 211-206] Code Analyzer does not display the impact of the partition pragma for dataflow channels (C:\Users\Samarth\Desktop\IIIT_Intern\Tutorial_matrix\matrix_8_opt\matrix.cpp:10:2)

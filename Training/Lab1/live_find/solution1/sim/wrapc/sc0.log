@@ -1,0 +1,5 @@
+   Build using "C:/Xilinx_HLS/Vivado/2019.2/tps/win64/msys64/mingw64/bin/g++"
+   Compiling find_ip.cpp_pre.cpp.tb.cpp
+   Compiling find_tb.cpp_pre.cpp.tb.cpp
+   Compiling apatb_find.cpp
+   Generating cosim.tv.exe

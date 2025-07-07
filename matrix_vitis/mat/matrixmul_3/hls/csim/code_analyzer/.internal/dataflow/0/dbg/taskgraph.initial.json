@@ -1,0 +1,1293 @@
+[
+    {
+        "name": "_Z11matrixmul_3RN3hls6streamI9axis_dataLi0EEES3_",
+        "df_function": "%F257",
+        "df_type": "Function",
+        "project": "SLX",
+        "processes": {
+            "1": {
+                "id": "1",
+                "name": "Artificial<Start>",
+                "src_range": {
+                    "start_loc": {
+                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                        "line": 132,
+                        "column": 1
+                    },
+                    "end_loc": {
+                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                        "line": 197,
+                        "column": 1
+                    }
+                },
+                "display_name": "<START>",
+                "kind": "start"
+            },
+            "2": {
+                "id": "2",
+                "name": "Artificial<End>",
+                "src_range": {
+                    "start_loc": {
+                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                        "line": 132,
+                        "column": 1
+                    },
+                    "end_loc": {
+                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                        "line": 197,
+                        "column": 1
+                    }
+                },
+                "display_name": "<END>",
+                "kind": "end"
+            },
+            "3": {
+                "id": "3",
+                "name": "Region<Loop(R2 matrixmul_3) Name 'for.cond'>",
+                "src_range": {
+                    "start_loc": {
+                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                        "line": 147,
+                        "column": 17
+                    },
+                    "end_loc": {
+                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                        "line": 154,
+                        "column": 2
+                    }
+                },
+                "display_name": "loop_input_A1",
+                "io_signatures": {
+                    "has_unresolved_accesses": false,
+                    "accesses": [
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                    "line": 132,
+                                    "column": 0
+                                },
+                                "id": "VId_115_*0(0,64)arg.A0(0,64)",
+                                "name": "in_A.Handle",
+                                "display_name": "axis_data *stream<axis_data, 0>::Handle"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Fifo",
+                                    "range": {
+                                        "is_exact": false,
+                                        "is_empty": false
+                                    },
+                                    "instr": "call",
+                                    "src_loc": {
+                                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                        "line": 151,
+                                        "column": 24
+                                    },
+                                    "access_type": "%struct.axis_data.9",
+                                    "access_bit_width": 57,
+                                    "exec_count": 64
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Fifo",
+                            "has_alias": false,
+                            "arg_idx": 0
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                    "line": 143,
+                                    "column": 12
+                                },
+                                "id": "VId_123_!c?(?,?)",
+                                "name": "local_stream",
+                                "display_name": "axis_data local_stream"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 8,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "src_loc": {
+                                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                        "line": 4294967295,
+                                        "column": 0
+                                    },
+                                    "access_type": "%struct.axis_data.9.unwrap",
+                                    "access_bit_width": 57,
+                                    "exec_count": 64
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                    "line": 143,
+                                    "column": 12
+                                },
+                                "id": "VId_123_.A0(0,32)",
+                                "name": "local_stream.data",
+                                "display_name": "Mat_Dtype axis_data::data"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 4,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                        "line": 152,
+                                        "column": 37
+                                    },
+                                    "access_type": "i32",
+                                    "access_bit_width": 32,
+                                    "exec_count": 64
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                    "line": 136,
+                                    "column": 12
+                                },
+                                "id": "VId_117_[?(?,256)][?(?,32)]",
+                                "name": "input_A[*][*]",
+                                "display_name": "Mat_Dtype input_A[8][8]"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 256,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "src_loc": {
+                                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                        "line": 152,
+                                        "column": 22
+                                    },
+                                    "access_type": "i32",
+                                    "access_bit_width": 32,
+                                    "exec_count": 64
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        }
+                    ]
+                },
+                "subregions": [
+                    {
+                        "id": "%F257_R2",
+                        "description": "<loop 'loop_input_A1'>",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                "line": 147,
+                                "column": 17
+                            },
+                            "end_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                "line": 154,
+                                "column": 2
+                            }
+                        }
+                    }
+                ],
+                "subdataflow": [
+                    {
+                        "id": "%L22",
+                        "region_type": "Loop",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                "line": 148,
+                                "column": 18
+                            },
+                            "end_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                "line": 153,
+                                "column": 3
+                            }
+                        }
+                    }
+                ]
+            },
+            "4": {
+                "id": "4",
+                "name": "Region<Loop(R25 matrixmul_3) Name 'for.cond9'>",
+                "src_range": {
+                    "start_loc": {
+                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                        "line": 156,
+                        "column": 17
+                    },
+                    "end_loc": {
+                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                        "line": 163,
+                        "column": 2
+                    }
+                },
+                "display_name": "loop_input_B1",
+                "io_signatures": {
+                    "has_unresolved_accesses": false,
+                    "accesses": [
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                    "line": 132,
+                                    "column": 0
+                                },
+                                "id": "VId_115_*0(0,64)arg.A0(0,64)",
+                                "name": "in_A.Handle",
+                                "display_name": "axis_data *stream<axis_data, 0>::Handle"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Fifo",
+                                    "range": {
+                                        "is_exact": false,
+                                        "is_empty": false
+                                    },
+                                    "instr": "call",
+                                    "src_loc": {
+                                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                        "line": 160,
+                                        "column": 24
+                                    },
+                                    "access_type": "%struct.axis_data.9",
+                                    "access_bit_width": 57,
+                                    "exec_count": 64
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Fifo",
+                            "has_alias": false,
+                            "arg_idx": 0
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                    "line": 143,
+                                    "column": 12
+                                },
+                                "id": "VId_123_!c?(?,?)",
+                                "name": "local_stream",
+                                "display_name": "axis_data local_stream"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 8,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "src_loc": {
+                                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                        "line": 4294967295,
+                                        "column": 0
+                                    },
+                                    "access_type": "%struct.axis_data.9.unwrap",
+                                    "access_bit_width": 57,
+                                    "exec_count": 64
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                    "line": 143,
+                                    "column": 12
+                                },
+                                "id": "VId_123_.A0(0,32)",
+                                "name": "local_stream.data",
+                                "display_name": "Mat_Dtype axis_data::data"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 4,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                        "line": 161,
+                                        "column": 37
+                                    },
+                                    "access_type": "i32",
+                                    "access_bit_width": 32,
+                                    "exec_count": 64
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                    "line": 138,
+                                    "column": 12
+                                },
+                                "id": "VId_118_[?(?,256)][?(?,32)]",
+                                "name": "input_B[*][*]",
+                                "display_name": "Mat_Dtype input_B[8][8]"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 256,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "src_loc": {
+                                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                        "line": 161,
+                                        "column": 22
+                                    },
+                                    "access_type": "i32",
+                                    "access_bit_width": 32,
+                                    "exec_count": 64
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        }
+                    ]
+                },
+                "subregions": [
+                    {
+                        "id": "%F257_R25",
+                        "description": "<loop 'loop_input_B1'>",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                "line": 156,
+                                "column": 17
+                            },
+                            "end_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                "line": 163,
+                                "column": 2
+                            }
+                        }
+                    }
+                ],
+                "subdataflow": [
+                    {
+                        "id": "%L20",
+                        "region_type": "Loop",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                "line": 157,
+                                "column": 18
+                            },
+                            "end_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                "line": 162,
+                                "column": 3
+                            }
+                        }
+                    }
+                ]
+            },
+            "5": {
+                "id": "5",
+                "name": "Region<Loop(R48 matrixmul_3) Name 'for.cond28'>",
+                "src_range": {
+                    "start_loc": {
+                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                        "line": 167,
+                        "column": 9
+                    },
+                    "end_loc": {
+                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                        "line": 178,
+                        "column": 2
+                    }
+                },
+                "display_name": "loop1",
+                "io_signatures": {
+                    "has_unresolved_accesses": false,
+                    "accesses": [
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                    "line": 140,
+                                    "column": 12
+                                },
+                                "id": "VId_119_[?(?,256)][?(?,32)]",
+                                "name": "output_C[*][*]",
+                                "display_name": "Mat_Dtype output_C[8][8]"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 256,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "src_loc": {
+                                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                        "line": 176,
+                                        "column": 23
+                                    },
+                                    "access_type": "i32",
+                                    "access_bit_width": 32,
+                                    "exec_count": 64
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                    "line": 136,
+                                    "column": 12
+                                },
+                                "id": "VId_117_[?(?,256)][?(?,32)]",
+                                "name": "input_A[*][*]",
+                                "display_name": "Mat_Dtype input_A[8][8]"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 256,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                        "line": 174,
+                                        "column": 12
+                                    },
+                                    "access_type": "i32",
+                                    "access_bit_width": 32,
+                                    "exec_count": 512
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                    "line": 138,
+                                    "column": 12
+                                },
+                                "id": "VId_118_[?(?,256)][?(?,32)]",
+                                "name": "input_B[*][*]",
+                                "display_name": "Mat_Dtype input_B[8][8]"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 256,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                        "line": 174,
+                                        "column": 34
+                                    },
+                                    "access_type": "i32",
+                                    "access_bit_width": 32,
+                                    "exec_count": 512
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        }
+                    ]
+                },
+                "subregions": [
+                    {
+                        "id": "%F257_R48",
+                        "description": "<loop 'loop1'>",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                "line": 167,
+                                "column": 9
+                            },
+                            "end_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                "line": 178,
+                                "column": 2
+                            }
+                        }
+                    }
+                ],
+                "subdataflow": [
+                    {
+                        "id": "%L17",
+                        "region_type": "Loop",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                "line": 168,
+                                "column": 10
+                            },
+                            "end_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                "line": 177,
+                                "column": 3
+                            }
+                        }
+                    },
+                    {
+                        "id": "%L18",
+                        "region_type": "Loop",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                "line": 171,
+                                "column": 11
+                            },
+                            "end_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                "line": 175,
+                                "column": 4
+                            }
+                        }
+                    }
+                ]
+            },
+            "6": {
+                "id": "6",
+                "name": "Region<Loop(R83 matrixmul_3) Name 'for.cond58'>",
+                "src_range": {
+                    "start_loc": {
+                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                        "line": 181,
+                        "column": 18
+                    },
+                    "end_loc": {
+                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                        "line": 196,
+                        "column": 2
+                    }
+                },
+                "display_name": "loop_output_C1",
+                "io_signatures": {
+                    "has_unresolved_accesses": false,
+                    "accesses": [
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                    "line": 140,
+                                    "column": 12
+                                },
+                                "id": "VId_119_[?(?,256)][?(?,32)]",
+                                "name": "output_C[*][*]",
+                                "display_name": "Mat_Dtype output_C[8][8]"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 256,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                        "line": 185,
+                                        "column": 24
+                                    },
+                                    "access_type": "i32",
+                                    "access_bit_width": 32,
+                                    "exec_count": 64
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                    "line": 143,
+                                    "column": 12
+                                },
+                                "id": "VId_123_.A0(0,32)",
+                                "name": "local_stream.data",
+                                "display_name": "Mat_Dtype axis_data::data"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 4,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                        "line": 194,
+                                        "column": 10
+                                    },
+                                    "access_type": "i32",
+                                    "access_bit_width": 32,
+                                    "exec_count": 64
+                                }
+                            ],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 4,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "src_loc": {
+                                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                        "line": 185,
+                                        "column": 22
+                                    },
+                                    "access_type": "i32",
+                                    "access_bit_width": 32,
+                                    "exec_count": 64
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                    "line": 143,
+                                    "column": 12
+                                },
+                                "id": "VId_123_.A1(32,8)",
+                                "name": "local_stream.last",
+                                "display_name": "ap_uint<1> axis_data::last"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 4,
+                                                "end": 5,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                        "line": 194,
+                                        "column": 10
+                                    },
+                                    "access_type": "i1",
+                                    "access_bit_width": 1,
+                                    "exec_count": 64
+                                }
+                            ],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 4,
+                                                "end": 5,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "src_loc": {
+                                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                        "line": 4294967295,
+                                        "column": 0
+                                    },
+                                    "access_type": "i1",
+                                    "access_bit_width": 1,
+                                    "exec_count": 64
+                                },
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 4,
+                                                "end": 5,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "src_loc": {
+                                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                        "line": 4294967295,
+                                        "column": 0
+                                    },
+                                    "access_type": "i1",
+                                    "access_bit_width": 1,
+                                    "exec_count": 64
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                    "line": 143,
+                                    "column": 12
+                                },
+                                "id": "VId_123_.A2(40,24)[?(?,8)]",
+                                "name": "local_stream",
+                                "display_name": "axis_data local_stream"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 5,
+                                                "end": 6,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                        "line": 194,
+                                        "column": 10
+                                    },
+                                    "access_type": "i8",
+                                    "access_bit_width": 8,
+                                    "exec_count": 64
+                                },
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 6,
+                                                "end": 7,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                        "line": 194,
+                                        "column": 10
+                                    },
+                                    "access_type": "i8",
+                                    "access_bit_width": 8,
+                                    "exec_count": 64
+                                },
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 7,
+                                                "end": 8,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                        "line": 194,
+                                        "column": 10
+                                    },
+                                    "access_type": "i8",
+                                    "access_bit_width": 8,
+                                    "exec_count": 64
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                    "line": 132,
+                                    "column": 0
+                                },
+                                "id": "VId_116_*0(0,64)arg.A0(0,64)",
+                                "name": "out_C.Handle",
+                                "display_name": "axis_data *stream<axis_data, 0>::Handle"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Fifo",
+                                    "range": {
+                                        "is_exact": false,
+                                        "is_empty": false
+                                    },
+                                    "instr": "call",
+                                    "src_loc": {
+                                        "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                        "line": 194,
+                                        "column": 10
+                                    },
+                                    "access_type": "%struct.axis_data.9",
+                                    "access_bit_width": 57,
+                                    "exec_count": 64
+                                }
+                            ],
+                            "kind": "Fifo",
+                            "has_alias": false,
+                            "arg_idx": 1
+                        }
+                    ]
+                },
+                "subregions": [
+                    {
+                        "id": "%F257_R83",
+                        "description": "<loop 'loop_output_C1'>",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                "line": 181,
+                                "column": 18
+                            },
+                            "end_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                "line": 196,
+                                "column": 2
+                            }
+                        }
+                    }
+                ],
+                "subdataflow": [
+                    {
+                        "id": "%L15",
+                        "region_type": "Loop",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                "line": 182,
+                                "column": 19
+                            },
+                            "end_loc": {
+                                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                                "line": 195,
+                                "column": 3
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "channels": {
+            "in_A.Handle_RAW_1_3_#0": {
+                "name": "in_A.Handle_RAW_1_3_#0",
+                "variable_id": "VId_115_*0(0,64)arg.A0(0,64)",
+                "variable_name": "in_A.Handle",
+                "declaration": "axis_data *stream<axis_data, 0>::Handle",
+                "kind": "Fifo",
+                "dependence": "RAW",
+                "channel_width": 0,
+                "src_loc": {
+                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                    "line": 132,
+                    "column": 0
+                },
+                "source": "1",
+                "sink": "3"
+            },
+            "local_stream.data_RAW_3_4_#1": {
+                "name": "local_stream.data_RAW_3_4_#1",
+                "variable_id": "VId_123_.A0(0,32)",
+                "variable_name": "local_stream.data",
+                "declaration": "Mat_Dtype axis_data::data",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 0,
+                "src_loc": {
+                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                    "line": 143,
+                    "column": 12
+                },
+                "source": "3",
+                "sink": "4"
+            },
+            "local_stream.data_WAR_3_4_#2": {
+                "name": "local_stream.data_WAR_3_4_#2",
+                "variable_id": "VId_123_.A0(0,32)",
+                "variable_name": "local_stream.data",
+                "declaration": "Mat_Dtype axis_data::data",
+                "kind": "Ptr",
+                "dependence": "WAR",
+                "channel_width": 0,
+                "src_loc": {
+                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                    "line": 143,
+                    "column": 12
+                },
+                "source": "3",
+                "sink": "4"
+            },
+            "local_stream_WAW_3_4_#3": {
+                "name": "local_stream_WAW_3_4_#3",
+                "variable_id": "VId_123_!c?(?,?)",
+                "variable_name": "local_stream",
+                "declaration": "axis_data local_stream",
+                "kind": "Ptr",
+                "dependence": "WAW",
+                "channel_width": 0,
+                "src_loc": {
+                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                    "line": 143,
+                    "column": 12
+                },
+                "source": "3",
+                "sink": "4"
+            },
+            "in_A.Handle_RAR_3_4_#4": {
+                "name": "in_A.Handle_RAR_3_4_#4",
+                "variable_id": "VId_115_*0(0,64)arg.A0(0,64)",
+                "variable_name": "in_A.Handle",
+                "declaration": "axis_data *stream<axis_data, 0>::Handle",
+                "kind": "Fifo",
+                "dependence": "RAR",
+                "channel_width": 0,
+                "src_loc": {
+                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                    "line": 132,
+                    "column": 0
+                },
+                "source": "3",
+                "sink": "4"
+            },
+            "local_stream.data_RAR_3_4_#5": {
+                "name": "local_stream.data_RAR_3_4_#5",
+                "variable_id": "VId_123_.A0(0,32)",
+                "variable_name": "local_stream.data",
+                "declaration": "Mat_Dtype axis_data::data",
+                "kind": "Ptr",
+                "dependence": "RAR",
+                "channel_width": 0,
+                "src_loc": {
+                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                    "line": 143,
+                    "column": 12
+                },
+                "source": "3",
+                "sink": "4"
+            },
+            "input_A[*][*]_RAW_3_5_#6": {
+                "name": "input_A[*][*]_RAW_3_5_#6",
+                "variable_id": "VId_117_[?(?,256)][?(?,32)]",
+                "variable_name": "input_A[*][*]",
+                "declaration": "Mat_Dtype input_A[8][8]",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 0,
+                "src_loc": {
+                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                    "line": 136,
+                    "column": 12
+                },
+                "source": "3",
+                "sink": "5"
+            },
+            "input_B[*][*]_RAW_4_5_#7": {
+                "name": "input_B[*][*]_RAW_4_5_#7",
+                "variable_id": "VId_118_[?(?,256)][?(?,32)]",
+                "variable_name": "input_B[*][*]",
+                "declaration": "Mat_Dtype input_B[8][8]",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 0,
+                "src_loc": {
+                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                    "line": 138,
+                    "column": 12
+                },
+                "source": "4",
+                "sink": "5"
+            },
+            "output_C[*][*]_RAW_5_6_#8": {
+                "name": "output_C[*][*]_RAW_5_6_#8",
+                "variable_id": "VId_119_[?(?,256)][?(?,32)]",
+                "variable_name": "output_C[*][*]",
+                "declaration": "Mat_Dtype output_C[8][8]",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 0,
+                "src_loc": {
+                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                    "line": 140,
+                    "column": 12
+                },
+                "source": "5",
+                "sink": "6"
+            },
+            "local_stream.data_RAW_4_6_#9": {
+                "name": "local_stream.data_RAW_4_6_#9",
+                "variable_id": "VId_123_.A0(0,32)",
+                "variable_name": "local_stream.data",
+                "declaration": "Mat_Dtype axis_data::data",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 0,
+                "src_loc": {
+                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                    "line": 143,
+                    "column": 12
+                },
+                "source": "4",
+                "sink": "6"
+            },
+            "local_stream.last_RAW_4_6_#10": {
+                "name": "local_stream.last_RAW_4_6_#10",
+                "variable_id": "VId_123_.A1(32,8)",
+                "variable_name": "local_stream.last",
+                "declaration": "ap_uint<1> axis_data::last",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 0,
+                "src_loc": {
+                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                    "line": 143,
+                    "column": 12
+                },
+                "source": "4",
+                "sink": "6"
+            },
+            "local_stream_RAW_4_6_#11": {
+                "name": "local_stream_RAW_4_6_#11",
+                "variable_id": "VId_123_.A2(40,24)[?(?,8)]",
+                "variable_name": "local_stream",
+                "declaration": "axis_data local_stream",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 0,
+                "src_loc": {
+                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                    "line": 143,
+                    "column": 12
+                },
+                "source": "4",
+                "sink": "6"
+            },
+            "local_stream.data_WAR_4_6_#12": {
+                "name": "local_stream.data_WAR_4_6_#12",
+                "variable_id": "VId_123_.A0(0,32)",
+                "variable_name": "local_stream.data",
+                "declaration": "Mat_Dtype axis_data::data",
+                "kind": "Ptr",
+                "dependence": "WAR",
+                "channel_width": 0,
+                "src_loc": {
+                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                    "line": 143,
+                    "column": 12
+                },
+                "source": "4",
+                "sink": "6"
+            },
+            "local_stream.data_WAW_4_6_#13": {
+                "name": "local_stream.data_WAW_4_6_#13",
+                "variable_id": "VId_123_.A0(0,32)",
+                "variable_name": "local_stream.data",
+                "declaration": "Mat_Dtype axis_data::data",
+                "kind": "Ptr",
+                "dependence": "WAW",
+                "channel_width": 0,
+                "src_loc": {
+                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                    "line": 143,
+                    "column": 12
+                },
+                "source": "4",
+                "sink": "6"
+            },
+            "local_stream.last_WAW_4_6_#14": {
+                "name": "local_stream.last_WAW_4_6_#14",
+                "variable_id": "VId_123_.A1(32,8)",
+                "variable_name": "local_stream.last",
+                "declaration": "ap_uint<1> axis_data::last",
+                "kind": "Ptr",
+                "dependence": "WAW",
+                "channel_width": 0,
+                "src_loc": {
+                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                    "line": 143,
+                    "column": 12
+                },
+                "source": "4",
+                "sink": "6"
+            },
+            "local_stream.data_RAR_4_6_#15": {
+                "name": "local_stream.data_RAR_4_6_#15",
+                "variable_id": "VId_123_.A0(0,32)",
+                "variable_name": "local_stream.data",
+                "declaration": "Mat_Dtype axis_data::data",
+                "kind": "Ptr",
+                "dependence": "RAR",
+                "channel_width": 0,
+                "src_loc": {
+                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                    "line": 143,
+                    "column": 12
+                },
+                "source": "4",
+                "sink": "6"
+            },
+            "out_C.Handle_RAW_6_2_#16": {
+                "name": "out_C.Handle_RAW_6_2_#16",
+                "variable_id": "VId_116_*0(0,64)arg.A0(0,64)",
+                "variable_name": "out_C.Handle",
+                "declaration": "axis_data *stream<axis_data, 0>::Handle",
+                "kind": "Fifo",
+                "dependence": "RAW",
+                "channel_width": 0,
+                "src_loc": {
+                    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                    "line": 132,
+                    "column": 0
+                },
+                "source": "6",
+                "sink": "2"
+            }
+        },
+        "control": [
+            {
+                "source": "3",
+                "sink": "4"
+            },
+            {
+                "source": "4",
+                "sink": "5"
+            },
+            {
+                "source": "5",
+                "sink": "6"
+            },
+            {
+                "source": "1",
+                "sink": "3"
+            },
+            {
+                "source": "6",
+                "sink": "2"
+            }
+        ]
+    }
+]

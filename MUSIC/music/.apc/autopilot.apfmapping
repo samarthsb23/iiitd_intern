@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="kernel_qrf_0.cpp" path="C:\Users\Samarth\Desktop\IIIT_Intern\MUSIC\kernel_qrf_0.cpp"/>
+    <originFiles name="music.h" path="C:\Users\Samarth\Desktop\IIIT_Intern\MUSIC\music.h"/>
+  </source>
+  <testbench>
+    <originFiles name="test_qrf.cpp" path="C:\Users\Samarth\Desktop\IIIT_Intern\MUSIC\test_qrf.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

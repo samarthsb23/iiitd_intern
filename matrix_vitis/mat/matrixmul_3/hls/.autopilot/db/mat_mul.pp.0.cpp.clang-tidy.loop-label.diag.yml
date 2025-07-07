@@ -1,0 +1,40 @@
+---
+MainSourceFile:  'C:/Users/Samarth/Desktop/IIIT_Intern/matrix_vitis/mat/matrixmul_3/hls/.autopilot/db/mat_mul.pp.0.cpp'
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        'C:\Xilinx\Vitis\2024.2\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Samarth\Desktop\IIIT_Intern\matrix_vitis\mat\matrixmul_3\hls\.autopilot\db\mat_mul.pp.0.cpp'
+        Offset:          322916
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        'C:\Xilinx\Vitis\2024.2\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Samarth\Desktop\IIIT_Intern\matrix_vitis\mat\matrixmul_3\hls\.autopilot\db\mat_mul.pp.0.cpp'
+        Offset:          323382
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        'C:\Xilinx\Vitis\2024.2\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Samarth\Desktop\IIIT_Intern\matrix_vitis\mat\matrixmul_3\hls\.autopilot\db\mat_mul.pp.0.cpp'
+        Offset:          323849
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1248_1:  '
+    FileOffset:      1248
+    FilePath:        'C:\Xilinx\Vitis\2024.2\common\technology\autopilot\etc\ap_fixed_base.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Samarth\Desktop\IIIT_Intern\matrix_vitis\mat\matrixmul_3\hls\.autopilot\db\mat_mul.pp.0.cpp'
+        Offset:          607207
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1248_1: '
+...

@@ -1,0 +1,402 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Xilinx_2024_ent/Vitis/2024.2/common/technology/autopilot\ap_axi_sdata.h:149:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_data" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Xilinx_2024_ent/Vitis/2024.2/common/technology/autopilot\ap_axi_sdata.h:154:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="set_data" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Xilinx_2024_ent/Vitis/2024.2/common/technology/autopilot\ap_axi_sdata.h:219:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="keep_all" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Xilinx_2024_ent/Vitis/2024.2/common/technology/autopilot\ap_axi_sdata.h:332:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="empty" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Xilinx_2024_ent/Vitis/2024.2/common/technology/autopilot\ap_axi_sdata.h:340:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="full" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Xilinx_2024_ent/Vitis/2024.2/common/technology/autopilot\ap_axi_sdata.h:349:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Xilinx_2024_ent/Vitis/2024.2/common/technology/autopilot\ap_axi_sdata.h:360:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Xilinx_2024_ent/Vitis/2024.2/common/technology/autopilot\ap_axi_sdata.h:372:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="write" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Xilinx_2024_ent/Vitis/2024.2/common/technology/autopilot\ap_axi_sdata.h:383:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read_nb" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Xilinx_2024_ent/Vitis/2024.2/common/technology/autopilot\ap_axi_sdata.h:400:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="write_nb" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="directive:1:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="matrixmul_32_opt" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=matrixmul_32_opt" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matrix.cpp:4:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matrixmul_32_opt" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_ctrl_none port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matrix.cpp:5:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matrixmul_32_opt" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis register both port=in_A" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matrix.cpp:6:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matrixmul_32_opt" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis register both port=out_C" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matrix.cpp:8:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matrixmul_32_opt" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=input_A complete dim=2" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matrix.cpp:10:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matrixmul_32_opt" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=input_B complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matrix.cpp:21:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matrixmul_32_opt" ARG_PragmaIsValid="1" ARG_PragmaType="loop_flatten" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matrix.cpp:29:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matrixmul_32_opt" ARG_PragmaIsValid="1" ARG_PragmaType="loop_flatten" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matrix.cpp:41:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matrixmul_32_opt" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matrix.cpp:54:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matrixmul_32_opt" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="matrix.cpp:42:9" msg_body="Loop 'loop3' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="loop3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="matrix.cpp:3:0" msg_body="Unrolling loop 'loop3' (matrix.cpp:42:9) in function 'matrixmul_32_opt' completely with a factor of 32">
+        <args Factor="32" LoopLoc="matrix.cpp:42:9" LoopName="loop3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Applying array_partition to 'input_A': Complete partitioning on dimension 2.">
+        <args Dim="2" Mode="Complete" UOName="input_A"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="matrix.cpp:9:12" msg_body="Applying array_partition to 'input_B': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="input_B"/>
+    </msg>
+    <msg msg_groups="AUTOMATION" msg_id="214-426" msg_severity="INFO" msg_loc="matrix.cpp:3:0" msg_body="Unrolling small iteration loop 'loop_output_C1' (matrix.cpp:52:18) in function 'matrixmul_32_opt' automatically">
+        <args LoopLoc="matrix.cpp:52:18" LoopName="loop_output_C1"/>
+    </msg>
+    <msg msg_groups="AUTOMATION" msg_id="214-426" msg_severity="INFO" msg_loc="matrix.cpp:3:0" msg_body="Unrolling small iteration loop 'loop1' (matrix.cpp:38:9) in function 'matrixmul_32_opt' automatically">
+        <args LoopLoc="matrix.cpp:38:9" LoopName="loop1"/>
+    </msg>
+    <msg msg_groups="AUTOMATION" msg_id="214-426" msg_severity="INFO" msg_loc="matrix.cpp:3:0" msg_body="Unrolling small iteration loop 'loop_input_B1' (matrix.cpp:27:17) in function 'matrixmul_32_opt' automatically">
+        <args LoopLoc="matrix.cpp:27:17" LoopName="loop_input_B1"/>
+    </msg>
+    <msg msg_groups="AUTOMATION" msg_id="214-426" msg_severity="INFO" msg_loc="matrix.cpp:3:0" msg_body="Unrolling small iteration loop 'loop_input_A1' (matrix.cpp:18:17) in function 'matrixmul_32_opt' automatically">
+        <args LoopLoc="matrix.cpp:18:17" LoopName="loop_input_A1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="matrix.cpp:3:0" msg_body="Unrolling loop 'loop_output_C1' (matrix.cpp:52:18) in function 'matrixmul_32_opt' completely with a factor of 32">
+        <args Factor="32" LoopLoc="matrix.cpp:52:18" LoopName="loop_output_C1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="matrix.cpp:3:0" msg_body="Unrolling loop 'loop1' (matrix.cpp:38:9) in function 'matrixmul_32_opt' completely with a factor of 32">
+        <args Factor="32" LoopLoc="matrix.cpp:38:9" LoopName="loop1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="matrix.cpp:3:0" msg_body="Unrolling loop 'loop_input_B1' (matrix.cpp:27:17) in function 'matrixmul_32_opt' completely with a factor of 32">
+        <args Factor="32" LoopLoc="matrix.cpp:27:17" LoopName="loop_input_B1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="matrix.cpp:3:0" msg_body="Unrolling loop 'loop_input_A1' (matrix.cpp:18:17) in function 'matrixmul_32_opt' completely with a factor of 32">
+        <args Factor="32" LoopLoc="matrix.cpp:18:17" LoopName="loop_input_A1"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-449" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Automatically partitioning array 'input_A' dimension 1 completely based on constant index.">
+        <args Dim="1" Value="input_A"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-449" msg_severity="INFO" msg_loc="matrix.cpp:11:12" msg_body="Automatically partitioning array 'output_C' dimension 1 completely based on constant index.">
+        <args Dim="1" Value="output_C"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="array_partition dim=1 type=complete  variable=input_A_0 1 matrixmul_32_opt matrix.cpp:7:12 input_A_0">
+        <args PragmaFunction="matrixmul_32_opt" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=input_A_0" PragmaType="array_partition" VarName="input_A_0" varLoc="matrix.cpp:7:12"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'input_A_0' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="input_A_0" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="array_partition dim=1 type=complete  variable=input_A_1 1 matrixmul_32_opt matrix.cpp:7:12 input_A_1">
+        <args PragmaFunction="matrixmul_32_opt" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=input_A_1" PragmaType="array_partition" VarName="input_A_1" varLoc="matrix.cpp:7:12"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'input_A_1' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="input_A_1" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="array_partition dim=1 type=complete  variable=input_A_10 1 matrixmul_32_opt matrix.cpp:7:12 input_A_10">
+        <args PragmaFunction="matrixmul_32_opt" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=input_A_10" PragmaType="array_partition" VarName="input_A_10" varLoc="matrix.cpp:7:12"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'input_A_10' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="input_A_10" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="array_partition dim=1 type=complete  variable=input_A_11 1 matrixmul_32_opt matrix.cpp:7:12 input_A_11">
+        <args PragmaFunction="matrixmul_32_opt" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=input_A_11" PragmaType="array_partition" VarName="input_A_11" varLoc="matrix.cpp:7:12"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'input_A_11' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="input_A_11" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="array_partition dim=1 type=complete  variable=input_A_12 1 matrixmul_32_opt matrix.cpp:7:12 input_A_12">
+        <args PragmaFunction="matrixmul_32_opt" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=input_A_12" PragmaType="array_partition" VarName="input_A_12" varLoc="matrix.cpp:7:12"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'input_A_12' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="input_A_12" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="array_partition dim=1 type=complete  variable=input_A_13 1 matrixmul_32_opt matrix.cpp:7:12 input_A_13">
+        <args PragmaFunction="matrixmul_32_opt" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=input_A_13" PragmaType="array_partition" VarName="input_A_13" varLoc="matrix.cpp:7:12"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'input_A_13' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="input_A_13" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="array_partition dim=1 type=complete  variable=input_A_14 1 matrixmul_32_opt matrix.cpp:7:12 input_A_14">
+        <args PragmaFunction="matrixmul_32_opt" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=input_A_14" PragmaType="array_partition" VarName="input_A_14" varLoc="matrix.cpp:7:12"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'input_A_14' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="input_A_14" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="array_partition dim=1 type=complete  variable=input_A_15 1 matrixmul_32_opt matrix.cpp:7:12 input_A_15">
+        <args PragmaFunction="matrixmul_32_opt" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=input_A_15" PragmaType="array_partition" VarName="input_A_15" varLoc="matrix.cpp:7:12"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'input_A_15' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="input_A_15" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="array_partition dim=1 type=complete  variable=input_A_16 1 matrixmul_32_opt matrix.cpp:7:12 input_A_16">
+        <args PragmaFunction="matrixmul_32_opt" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=input_A_16" PragmaType="array_partition" VarName="input_A_16" varLoc="matrix.cpp:7:12"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'input_A_16' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="input_A_16" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="array_partition dim=1 type=complete  variable=input_A_17 1 matrixmul_32_opt matrix.cpp:7:12 input_A_17">
+        <args PragmaFunction="matrixmul_32_opt" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=input_A_17" PragmaType="array_partition" VarName="input_A_17" varLoc="matrix.cpp:7:12"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'input_A_17' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="input_A_17" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="array_partition dim=1 type=complete  variable=input_A_18 1 matrixmul_32_opt matrix.cpp:7:12 input_A_18">
+        <args PragmaFunction="matrixmul_32_opt" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=input_A_18" PragmaType="array_partition" VarName="input_A_18" varLoc="matrix.cpp:7:12"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'input_A_18' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="input_A_18" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="array_partition dim=1 type=complete  variable=input_A_19 1 matrixmul_32_opt matrix.cpp:7:12 input_A_19">
+        <args PragmaFunction="matrixmul_32_opt" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=input_A_19" PragmaType="array_partition" VarName="input_A_19" varLoc="matrix.cpp:7:12"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'input_A_19' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="input_A_19" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="array_partition dim=1 type=complete  variable=input_A_2 1 matrixmul_32_opt matrix.cpp:7:12 input_A_2">
+        <args PragmaFunction="matrixmul_32_opt" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=input_A_2" PragmaType="array_partition" VarName="input_A_2" varLoc="matrix.cpp:7:12"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'input_A_2' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="input_A_2" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="array_partition dim=1 type=complete  variable=input_A_20 1 matrixmul_32_opt matrix.cpp:7:12 input_A_20">
+        <args PragmaFunction="matrixmul_32_opt" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=input_A_20" PragmaType="array_partition" VarName="input_A_20" varLoc="matrix.cpp:7:12"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'input_A_20' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="input_A_20" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="array_partition dim=1 type=complete  variable=input_A_21 1 matrixmul_32_opt matrix.cpp:7:12 input_A_21">
+        <args PragmaFunction="matrixmul_32_opt" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=input_A_21" PragmaType="array_partition" VarName="input_A_21" varLoc="matrix.cpp:7:12"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'input_A_21' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="input_A_21" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="array_partition dim=1 type=complete  variable=input_A_22 1 matrixmul_32_opt matrix.cpp:7:12 input_A_22">
+        <args PragmaFunction="matrixmul_32_opt" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=input_A_22" PragmaType="array_partition" VarName="input_A_22" varLoc="matrix.cpp:7:12"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'input_A_22' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="input_A_22" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="array_partition dim=1 type=complete  variable=input_A_23 1 matrixmul_32_opt matrix.cpp:7:12 input_A_23">
+        <args PragmaFunction="matrixmul_32_opt" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=input_A_23" PragmaType="array_partition" VarName="input_A_23" varLoc="matrix.cpp:7:12"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'input_A_23' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="input_A_23" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="array_partition dim=1 type=complete  variable=input_A_24 1 matrixmul_32_opt matrix.cpp:7:12 input_A_24">
+        <args PragmaFunction="matrixmul_32_opt" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=input_A_24" PragmaType="array_partition" VarName="input_A_24" varLoc="matrix.cpp:7:12"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'input_A_24' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="input_A_24" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="array_partition dim=1 type=complete  variable=input_A_25 1 matrixmul_32_opt matrix.cpp:7:12 input_A_25">
+        <args PragmaFunction="matrixmul_32_opt" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=input_A_25" PragmaType="array_partition" VarName="input_A_25" varLoc="matrix.cpp:7:12"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'input_A_25' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="input_A_25" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="array_partition dim=1 type=complete  variable=input_A_26 1 matrixmul_32_opt matrix.cpp:7:12 input_A_26">
+        <args PragmaFunction="matrixmul_32_opt" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=input_A_26" PragmaType="array_partition" VarName="input_A_26" varLoc="matrix.cpp:7:12"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'input_A_26' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="input_A_26" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="array_partition dim=1 type=complete  variable=input_A_27 1 matrixmul_32_opt matrix.cpp:7:12 input_A_27">
+        <args PragmaFunction="matrixmul_32_opt" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=input_A_27" PragmaType="array_partition" VarName="input_A_27" varLoc="matrix.cpp:7:12"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'input_A_27' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="input_A_27" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="array_partition dim=1 type=complete  variable=input_A_28 1 matrixmul_32_opt matrix.cpp:7:12 input_A_28">
+        <args PragmaFunction="matrixmul_32_opt" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=input_A_28" PragmaType="array_partition" VarName="input_A_28" varLoc="matrix.cpp:7:12"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'input_A_28' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="input_A_28" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="array_partition dim=1 type=complete  variable=input_A_29 1 matrixmul_32_opt matrix.cpp:7:12 input_A_29">
+        <args PragmaFunction="matrixmul_32_opt" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=input_A_29" PragmaType="array_partition" VarName="input_A_29" varLoc="matrix.cpp:7:12"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'input_A_29' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="input_A_29" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="array_partition dim=1 type=complete  variable=input_A_3 1 matrixmul_32_opt matrix.cpp:7:12 input_A_3">
+        <args PragmaFunction="matrixmul_32_opt" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=input_A_3" PragmaType="array_partition" VarName="input_A_3" varLoc="matrix.cpp:7:12"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'input_A_3' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="input_A_3" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="array_partition dim=1 type=complete  variable=input_A_30 1 matrixmul_32_opt matrix.cpp:7:12 input_A_30">
+        <args PragmaFunction="matrixmul_32_opt" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=input_A_30" PragmaType="array_partition" VarName="input_A_30" varLoc="matrix.cpp:7:12"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'input_A_30' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="input_A_30" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="array_partition dim=1 type=complete  variable=input_A_31 1 matrixmul_32_opt matrix.cpp:7:12 input_A_31">
+        <args PragmaFunction="matrixmul_32_opt" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=input_A_31" PragmaType="array_partition" VarName="input_A_31" varLoc="matrix.cpp:7:12"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'input_A_31' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="input_A_31" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="array_partition dim=1 type=complete  variable=input_A_4 1 matrixmul_32_opt matrix.cpp:7:12 input_A_4">
+        <args PragmaFunction="matrixmul_32_opt" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=input_A_4" PragmaType="array_partition" VarName="input_A_4" varLoc="matrix.cpp:7:12"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'input_A_4' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="input_A_4" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="array_partition dim=1 type=complete  variable=input_A_5 1 matrixmul_32_opt matrix.cpp:7:12 input_A_5">
+        <args PragmaFunction="matrixmul_32_opt" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=input_A_5" PragmaType="array_partition" VarName="input_A_5" varLoc="matrix.cpp:7:12"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'input_A_5' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="input_A_5" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="array_partition dim=1 type=complete  variable=input_A_6 1 matrixmul_32_opt matrix.cpp:7:12 input_A_6">
+        <args PragmaFunction="matrixmul_32_opt" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=input_A_6" PragmaType="array_partition" VarName="input_A_6" varLoc="matrix.cpp:7:12"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'input_A_6' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="input_A_6" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="array_partition dim=1 type=complete  variable=input_A_7 1 matrixmul_32_opt matrix.cpp:7:12 input_A_7">
+        <args PragmaFunction="matrixmul_32_opt" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=input_A_7" PragmaType="array_partition" VarName="input_A_7" varLoc="matrix.cpp:7:12"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'input_A_7' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="input_A_7" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="array_partition dim=1 type=complete  variable=input_A_8 1 matrixmul_32_opt matrix.cpp:7:12 input_A_8">
+        <args PragmaFunction="matrixmul_32_opt" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=input_A_8" PragmaType="array_partition" VarName="input_A_8" varLoc="matrix.cpp:7:12"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'input_A_8' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="input_A_8" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="array_partition dim=1 type=complete  variable=input_A_9 1 matrixmul_32_opt matrix.cpp:7:12 input_A_9">
+        <args PragmaFunction="matrixmul_32_opt" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=input_A_9" PragmaType="array_partition" VarName="input_A_9" varLoc="matrix.cpp:7:12"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'input_A_9' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="input_A_9" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="matrix.cpp:11:12" msg_body="array_partition dim=1 type=complete  variable=output_C 1 matrixmul_32_opt matrix.cpp:11:12 output_C">
+        <args PragmaFunction="matrixmul_32_opt" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=output_C" PragmaType="array_partition" VarName="output_C" varLoc="matrix.cpp:11:12"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="matrix.cpp:11:12" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'output_C' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="output_C" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Applying array_partition to 'input_A_0': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="input_A_0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Applying array_partition to 'input_A_1': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="input_A_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Applying array_partition to 'input_A_2': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="input_A_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Applying array_partition to 'input_A_3': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="input_A_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Applying array_partition to 'input_A_4': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="input_A_4"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Applying array_partition to 'input_A_5': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="input_A_5"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Applying array_partition to 'input_A_6': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="input_A_6"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Applying array_partition to 'input_A_7': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="input_A_7"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Applying array_partition to 'input_A_8': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="input_A_8"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Applying array_partition to 'input_A_9': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="input_A_9"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Applying array_partition to 'input_A_10': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="input_A_10"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Applying array_partition to 'input_A_11': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="input_A_11"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Applying array_partition to 'input_A_12': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="input_A_12"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Applying array_partition to 'input_A_13': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="input_A_13"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Applying array_partition to 'input_A_14': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="input_A_14"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Applying array_partition to 'input_A_15': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="input_A_15"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Applying array_partition to 'input_A_16': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="input_A_16"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Applying array_partition to 'input_A_17': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="input_A_17"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Applying array_partition to 'input_A_18': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="input_A_18"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Applying array_partition to 'input_A_19': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="input_A_19"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Applying array_partition to 'input_A_20': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="input_A_20"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Applying array_partition to 'input_A_21': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="input_A_21"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Applying array_partition to 'input_A_22': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="input_A_22"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Applying array_partition to 'input_A_23': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="input_A_23"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Applying array_partition to 'input_A_24': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="input_A_24"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Applying array_partition to 'input_A_25': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="input_A_25"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Applying array_partition to 'input_A_26': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="input_A_26"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Applying array_partition to 'input_A_27': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="input_A_27"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Applying array_partition to 'input_A_28': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="input_A_28"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Applying array_partition to 'input_A_29': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="input_A_29"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Applying array_partition to 'input_A_30': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="input_A_30"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="matrix.cpp:7:12" msg_body="Applying array_partition to 'input_A_31': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="input_A_31"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="matrix.cpp:11:12" msg_body="Applying array_partition to 'output_C': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="output_C"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

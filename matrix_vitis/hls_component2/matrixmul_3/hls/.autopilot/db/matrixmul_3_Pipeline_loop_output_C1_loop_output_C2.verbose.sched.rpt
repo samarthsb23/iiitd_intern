@@ -1,0 +1,187 @@
+
+
+================================================================
+== Vitis HLS Report for 'matrixmul_3_Pipeline_loop_output_C1_loop_output_C2'
+================================================================
+* Date:           Thu May 22 15:58:12 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        matrixmul_3
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.082 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |       68|       68|  0.680 us|  0.680 us|   65|   65|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                                 |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |            Loop Name            |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- loop_output_C1_loop_output_C2  |       66|       66|         4|          1|          1|    64|       yes|
+        +---------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 4
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 4, States = { 1 2 3 4 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 5.04>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%col = alloca i32 1" [../mat_mul.cpp:142]   --->   Operation 7 'alloca' 'col' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%row = alloca i32 1" [../mat_mul.cpp:142]   --->   Operation 8 'alloca' 'row' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%indvar_flatten20 = alloca i32 1"   --->   Operation 9 'alloca' 'indvar_flatten20' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %out_C, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (1.58ns)   --->   "%store_ln0 = store i7 0, i7 %indvar_flatten20"   --->   Operation 11 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 12 [1/1] (1.58ns)   --->   "%store_ln142 = store i4 0, i4 %row" [../mat_mul.cpp:142]   --->   Operation 12 'store' 'store_ln142' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 13 [1/1] (1.58ns)   --->   "%store_ln142 = store i4 0, i4 %col" [../mat_mul.cpp:142]   --->   Operation 13 'store' 'store_ln142' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body62"   --->   Operation 14 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%indvar_flatten20_load = load i7 %indvar_flatten20" [../mat_mul.cpp:181]   --->   Operation 15 'load' 'indvar_flatten20_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (1.87ns)   --->   "%icmp_ln181 = icmp_eq  i7 %indvar_flatten20_load, i7 64" [../mat_mul.cpp:181]   --->   Operation 16 'icmp' 'icmp_ln181' <Predicate = true> <Delay = 1.87> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.87> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 17 [1/1] (1.87ns)   --->   "%add_ln181_1 = add i7 %indvar_flatten20_load, i7 1" [../mat_mul.cpp:181]   --->   Operation 17 'add' 'add_ln181_1' <Predicate = true> <Delay = 1.87> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%br_ln181 = br i1 %icmp_ln181, void %for.inc76, void %for.end78.exitStub" [../mat_mul.cpp:181]   --->   Operation 18 'br' 'br_ln181' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (1.58ns)   --->   "%store_ln181 = store i7 %add_ln181_1, i7 %indvar_flatten20" [../mat_mul.cpp:181]   --->   Operation 19 'store' 'store_ln181' <Predicate = (!icmp_ln181)> <Delay = 1.58>
+
+State 2 <SV = 1> <Delay = 6.08>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%col_load = load i4 %col" [../mat_mul.cpp:182]   --->   Operation 20 'load' 'col_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%row_load = load i4 %row" [../mat_mul.cpp:181]   --->   Operation 21 'load' 'row_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (1.73ns)   --->   "%add_ln181 = add i4 %row_load, i4 1" [../mat_mul.cpp:181]   --->   Operation 22 'add' 'add_ln181' <Predicate = true> <Delay = 1.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 23 [1/1] (1.73ns)   --->   "%icmp_ln182 = icmp_eq  i4 %col_load, i4 8" [../mat_mul.cpp:182]   --->   Operation 23 'icmp' 'icmp_ln182' <Predicate = true> <Delay = 1.73> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 24 [1/1] (1.02ns)   --->   "%select_ln142 = select i1 %icmp_ln182, i4 0, i4 %col_load" [../mat_mul.cpp:142]   --->   Operation 24 'select' 'select_ln142' <Predicate = true> <Delay = 1.02> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 25 [1/1] (1.02ns)   --->   "%select_ln181 = select i1 %icmp_ln182, i4 %add_ln181, i4 %row_load" [../mat_mul.cpp:181]   --->   Operation 25 'select' 'select_ln181' <Predicate = true> <Delay = 1.02> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%trunc_ln185 = trunc i4 %select_ln181" [../mat_mul.cpp:185]   --->   Operation 26 'trunc' 'trunc_ln185' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%tmp_2 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i3.i3, i3 %trunc_ln185, i3 0" [../mat_mul.cpp:185]   --->   Operation 27 'bitconcatenate' 'tmp_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (1.73ns)   --->   "%cmp68 = icmp_eq  i4 %select_ln181, i4 7" [../mat_mul.cpp:181]   --->   Operation 28 'icmp' 'cmp68' <Predicate = true> <Delay = 1.73> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%zext_ln185 = zext i4 %select_ln142" [../mat_mul.cpp:185]   --->   Operation 29 'zext' 'zext_ln185' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (1.82ns)   --->   "%add_ln185 = add i6 %tmp_2, i6 %zext_ln185" [../mat_mul.cpp:185]   --->   Operation 30 'add' 'add_ln185' <Predicate = true> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 31 [1/1] (1.73ns)   --->   "%icmp_ln187 = icmp_eq  i4 %select_ln142, i4 7" [../mat_mul.cpp:187]   --->   Operation 31 'icmp' 'icmp_ln187' <Predicate = true> <Delay = 1.73> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 32 [1/1] (0.97ns)   --->   "%local_stream_last = and i1 %cmp68, i1 %icmp_ln187" [../mat_mul.cpp:187]   --->   Operation 32 'and' 'local_stream_last' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 33 [1/1] (1.73ns)   --->   "%add_ln182 = add i4 %select_ln142, i4 1" [../mat_mul.cpp:182]   --->   Operation 33 'add' 'add_ln182' <Predicate = true> <Delay = 1.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 34 [1/1] (1.58ns)   --->   "%store_ln142 = store i4 %select_ln181, i4 %row" [../mat_mul.cpp:142]   --->   Operation 34 'store' 'store_ln142' <Predicate = true> <Delay = 1.58>
+ST_2 : Operation 35 [1/1] (1.58ns)   --->   "%store_ln142 = store i4 %add_ln182, i4 %col" [../mat_mul.cpp:142]   --->   Operation 35 'store' 'store_ln142' <Predicate = true> <Delay = 1.58>
+
+State 3 <SV = 2> <Delay = 3.25>
+ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%zext_ln185_1 = zext i6 %add_ln185" [../mat_mul.cpp:185]   --->   Operation 36 'zext' 'zext_ln185_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%output_C_addr = getelementptr i32 %output_C, i64 0, i64 %zext_ln185_1" [../mat_mul.cpp:185]   --->   Operation 37 'getelementptr' 'output_C_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 38 [2/2] (3.25ns)   --->   "%local_stream_data = load i6 %output_C_addr" [../mat_mul.cpp:185]   --->   Operation 38 'load' 'local_stream_data' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_3 : Operation 47 [1/1] (1.58ns)   --->   "%ret_ln0 = ret"   --->   Operation 47 'ret' 'ret_ln0' <Predicate = (icmp_ln181)> <Delay = 1.58>
+
+State 4 <SV = 3> <Delay = 5.08>
+ST_4 : Operation 39 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @loop_output_C1_loop_output_C2_str"   --->   Operation 39 'specloopname' 'specloopname_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 40 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 64, i64 64, i64 64"   --->   Operation 40 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 41 [1/1] (0.00ns)   --->   "%specpipeline_ln183 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_1" [../mat_mul.cpp:183]   --->   Operation 41 'specpipeline' 'specpipeline_ln183' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 42 [1/2] ( I:3.25ns O:3.25ns )   --->   "%local_stream_data = load i6 %output_C_addr" [../mat_mul.cpp:185]   --->   Operation 42 'load' 'local_stream_data' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_4 : Operation 43 [1/1] (0.00ns)   --->   "%tmp = bitconcatenate i33 @_ssdm_op_BitConcatenate.i33.i1.i32, i1 %local_stream_last, i32 %local_stream_data" [../mat_mul.cpp:194]   --->   Operation 43 'bitconcatenate' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 44 [1/1] (0.00ns)   --->   "%zext_ln194 = zext i33 %tmp" [../mat_mul.cpp:194]   --->   Operation 44 'zext' 'zext_ln194' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 45 [1/1] (1.82ns)   --->   "%write_ln194 = write void @_ssdm_op_Write.axis.volatile.i64P128A, i64 %out_C, i64 %zext_ln194" [../mat_mul.cpp:194]   --->   Operation 45 'write' 'write_ln194' <Predicate = true> <Delay = 1.82> <CoreInst = "regslice">   --->   Core 135 'regslice' <Latency = 0> <II = 1> <Delay = 2.48> <Adapter> <Opcode : 'read' 'write'>
+ST_4 : Operation 46 [1/1] (0.00ns)   --->   "%br_ln182 = br void %for.body62" [../mat_mul.cpp:182]   --->   Operation 46 'br' 'br_ln182' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 5.046ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln0') of constant 0 on local variable 'indvar_flatten20' [7]  (1.588 ns)
+	'load' operation 7 bit ('indvar_flatten20_load', ../mat_mul.cpp:181) on local variable 'indvar_flatten20' [12]  (0.000 ns)
+	'add' operation 7 bit ('add_ln181_1', ../mat_mul.cpp:181) [14]  (1.870 ns)
+	'store' operation 0 bit ('store_ln181', ../mat_mul.cpp:181) of variable 'add_ln181_1', ../mat_mul.cpp:181 on local variable 'indvar_flatten20' [40]  (1.588 ns)
+
+ <State 2>: 6.082ns
+The critical path consists of the following:
+	'load' operation 4 bit ('col_load', ../mat_mul.cpp:182) on local variable 'col', ../mat_mul.cpp:142 [17]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln182', ../mat_mul.cpp:182) [22]  (1.735 ns)
+	'select' operation 4 bit ('select_ln142', ../mat_mul.cpp:142) [23]  (1.024 ns)
+	'add' operation 4 bit ('add_ln182', ../mat_mul.cpp:182) [39]  (1.735 ns)
+	'store' operation 0 bit ('store_ln142', ../mat_mul.cpp:142) of variable 'add_ln182', ../mat_mul.cpp:182 on local variable 'col', ../mat_mul.cpp:142 [42]  (1.588 ns)
+
+ <State 3>: 3.254ns
+The critical path consists of the following:
+	'getelementptr' operation 6 bit ('output_C_addr', ../mat_mul.cpp:185) [31]  (0.000 ns)
+	'load' operation 32 bit ('local_stream.data', ../mat_mul.cpp:185) on array 'output_C' [33]  (3.254 ns)
+
+ <State 4>: 5.081ns
+The critical path consists of the following:
+	'load' operation 32 bit ('local_stream.data', ../mat_mul.cpp:185) on array 'output_C' [33]  (3.254 ns)
+	axis write operation ('write_ln194', ../mat_mul.cpp:194) on port 'out_C' (../mat_mul.cpp:194) [38]  (1.827 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

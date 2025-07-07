@@ -1,0 +1,53 @@
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "C:/Xilinx_HLS/Vivado/2019.2/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx_HLS/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_find_top glbl -prj find.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile C:/Xilinx_HLS/Vivado/2019.2/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s find 
+Multi-threading is on. Using 14 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Samarth/OneDrive/Desktop/IIT/IIIT_Intern/Training/Lab1/live_find/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Samarth/OneDrive/Desktop/IIT/IIIT_Intern/Training/Lab1/live_find/solution1/sim/verilog/AESL_axi_s_in_vec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_in_vec
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Samarth/OneDrive/Desktop/IIT/IIIT_Intern/Training/Lab1/live_find/solution1/sim/verilog/AESL_axi_s_out_vec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_out_vec
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Samarth/OneDrive/Desktop/IIT/IIIT_Intern/Training/Lab1/live_find/solution1/sim/verilog/AESL_axi_s_val_r.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_val_r
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Samarth/OneDrive/Desktop/IIT/IIIT_Intern/Training/Lab1/live_find/solution1/sim/verilog/AESL_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Samarth/OneDrive/Desktop/IIT/IIIT_Intern/Training/Lab1/live_find/solution1/sim/verilog/find.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_find_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Samarth/OneDrive/Desktop/IIT/IIIT_Intern/Training/Lab1/live_find/solution1/sim/verilog/find.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module find
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Samarth/OneDrive/Desktop/IIT/IIIT_Intern/Training/Lab1/live_find/solution1/sim/verilog/regslice_core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regslice_both
+INFO: [VRFC 10-311] analyzing module regslice_forward
+INFO: [VRFC 10-311] analyzing module regslice_reverse
+INFO: [VRFC 10-311] analyzing module regslice_both_w1
+INFO: [VRFC 10-311] analyzing module regslice_forward_w1
+INFO: [VRFC 10-311] analyzing module regslice_reverse_w1
+INFO: [VRFC 10-311] analyzing module ibuf
+INFO: [VRFC 10-311] analyzing module obuf
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ibuf(W=9)
+Compiling module xil_defaultlib.obuf(W=9)
+Compiling module xil_defaultlib.regslice_both(DataWidth=8)
+Compiling module xil_defaultlib.ibuf(W=33)
+Compiling module xil_defaultlib.obuf(W=33)
+Compiling module xil_defaultlib.regslice_both_default
+Compiling module xil_defaultlib.ibuf(W=2)
+Compiling module xil_defaultlib.obuf(W=2)
+Compiling module xil_defaultlib.regslice_both(DataWidth=1)
+Compiling module xil_defaultlib.find
+Compiling module xil_defaultlib.fifo(DEPTH=1)
+Compiling module xil_defaultlib.AESL_axi_s_val_r
+Compiling module xil_defaultlib.fifo(DEPTH=32,WIDTH=32)
+Compiling module xil_defaultlib.fifo(DEPTH=32,WIDTH=1)
+Compiling module xil_defaultlib.AESL_axi_s_in_vec
+Compiling module xil_defaultlib.AESL_axi_s_out_vec
+Compiling module xil_defaultlib.apatb_find_top
+Compiling module work.glbl
+Built simulation snapshot find

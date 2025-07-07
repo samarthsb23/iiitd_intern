@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri May 23 11:25:14 2025
+# Process ID: 6112
+# Current directory: C:/Users/Samarth/Desktop/IIIT_Intern/MUSIC/music/solution1/sim/verilog
+# Command line: wbtcv.exe -mode batch -source C:/Users/Samarth/Desktop/IIIT_Intern/MUSIC/music/solution1/sim/verilog/xsim.dir/MUSIC_top/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/Samarth/Desktop/IIIT_Intern/MUSIC/music/solution1/sim/verilog/webtalk.log
+# Journal file: C:/Users/Samarth/Desktop/IIIT_Intern/MUSIC/music/solution1/sim/verilog\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/Samarth/Desktop/IIIT_Intern/MUSIC/music/solution1/sim/verilog/xsim.dir/MUSIC_top/webtalk/xsim_webtalk.tcl -notrace

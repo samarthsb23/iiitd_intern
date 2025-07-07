@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="find_ip.cpp" path="C:\Users\Samarth\OneDrive\Desktop\IIT\IIIT_Intern\Training\Lab1\live_find\find_ip.cpp"/>
+    <originFiles name="find_ip.h" path="C:\Users\Samarth\OneDrive\Desktop\IIT\IIIT_Intern\Training\Lab1\live_find\find_ip.h"/>
+  </source>
+  <testbench>
+    <originFiles name="find_tb.cpp" path="C:\Users\Samarth\OneDrive\Desktop\IIT\IIIT_Intern\Training\Lab1\live_find\find_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

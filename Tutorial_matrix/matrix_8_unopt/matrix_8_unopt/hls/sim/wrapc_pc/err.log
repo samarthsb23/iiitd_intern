@@ -1,0 +1,26 @@
+   Build using "C:/Xilinx_2024_ent/Vitis/2024.2/vcxx/libexec/clang++"
+   Compiling apatb_matrixmul_100_unopt.cpp
+In file included from apatb_matrixmul_100_unopt.cpp:13:
+In file included from C:/Xilinx_2024_ent/Vitis/2024.2/include/ap_fixed.h:9:
+In file included from C:/Xilinx_2024_ent/Vitis/2024.2/include/etc/ap_common.h:658:
+In file included from C:/Xilinx_2024_ent/Vitis/2024.2/include/etc/ap_private.h:68:
+In file included from C:/Xilinx_2024_ent/Vitis/2024.2/include/hls_half.h:26:
+In file included from C:/Xilinx_2024_ent/Vitis/2024.2/include/etc/hls_half_fpo.h:19:
+In file included from C:/Xilinx_2024_ent/Vitis/2024.2/include/hls_fpo.h:140:
+In file included from C:/Xilinx_2024_ent/Vitis/2024.2/include/floating_point_v7_1_bitacc_cmodel.h:150:
+C:/Xilinx_2024_ent/Vitis/2024.2/include/gmp.h:58:9: warning: '__GMP_LIBGMP_DLL' macro redefined [-Wmacro-redefined]
+#define __GMP_LIBGMP_DLL  0
+        ^
+C:/Xilinx_2024_ent/Vitis/2024.2/include/floating_point_v7_1_bitacc_cmodel.h:142:9: note: previous definition is here
+#define __GMP_LIBGMP_DLL 1
+        ^
+apatb_matrixmul_100_unopt.cpp:68:14: warning: nested namespace definition is a C++17 extension; define each namespace separately [-Wc++17-extensions]
+namespace hls::sim
+             ^~~~~
+              { namespace sim
+apatb_matrixmul_100_unopt.cpp:115:14: warning: nested namespace definition is a C++17 extension; define each namespace separately [-Wc++17-extensions]
+namespace hls::sim
+             ^~~~~
+              { namespace sim
+3 warnings generated.
+   Generating cosim.pc.exe

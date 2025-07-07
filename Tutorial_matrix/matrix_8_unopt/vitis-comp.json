@@ -1,0 +1,12 @@
+{
+  "name": "matrix_8_unopt",
+  "type": "HLS",
+  "configuration": {
+    "componentType": "HLS",
+    "configFiles": [
+      "hls_config.cfg"
+    ],
+    "work_dir": "matrix_8_unopt"
+  },
+  "template": "empty_hls_component"
+}

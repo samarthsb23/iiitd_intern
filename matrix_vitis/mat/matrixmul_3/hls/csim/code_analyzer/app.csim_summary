@@ -1,0 +1,80 @@
+<ENTRY>
+{
+ "thisFile": "C:/Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat\\matrixmul_3\\hls\\csim\\code_analyzer\\app.csim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Thu May 22 14:53:34 2025",
+ "timestampMillis": "1747905814747",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_C_SIM",
+  "kernels": [],
+  "toolVersion": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Thu May 22 14:53:34 2025",
+ "timestampMillis": "1747905814748",
+ "buildStep": {
+  "cmdId": "6f64d6dc-36ee-11f0-bc69-089df4a5fce3",
+  "name": "vitis_c++",
+  "logFile": "",
+  "commandLine": "vitis_c++ code_analyzer",
+  "args": [
+   "code_analyzer"
+  ],
+  "iniFiles": [],
+  "cwd": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu May 22 14:53:34 2025",
+ "timestampMillis": "1747905814750",
+ "status": {
+  "cmdId": "6f64d6dc-36ee-11f0-bc69-089df4a5fce3",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu May 22 14:53:41 2025",
+ "timestampMillis": "1747905821927",
+ "status": {
+  "cmdId": "6f64d6dc-36ee-11f0-bc69-089df4a5fce3",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu May 22 14:53:41 2025",
+ "timestampMillis": "1747905821928",
+ "report": {
+  "path": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "VCXX_CODE_ANALYZER",
+  "cmdId": "6f64d6dc-36ee-11f0-bc69-089df4a5fce3"
+ }
+}
+</ENTRY>

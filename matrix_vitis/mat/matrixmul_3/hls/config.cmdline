@@ -1,0 +1,3 @@
+relativeroot=C:/Users/Samarth/Desktop/IIIT_Intern/matrix_vitis/mat
+original_argv=--mode hls --package --config C:\Users\Samarth\Desktop\IIIT_Intern\matrix_vitis\mat\hls_config.cfg --work_dir matrixmul_3 
+

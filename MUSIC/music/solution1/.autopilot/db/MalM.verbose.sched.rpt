@@ -1,0 +1,444 @@
+
+
+================================================================
+== Vivado HLS Report for 'MalM'
+================================================================
+* Date:           Fri May 30 11:14:50 2025
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        music
+* Solution:       solution1
+* Product family: zynquplus
+* Target device:  xczu28dr-ffvg1517-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.279|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +------+------+------+------+---------+
+    |   Latency   |   Interval  | Pipeline|
+    |  min |  max |  min |  max |   Type  |
+    +------+------+------+------+---------+
+    |  1601|  1601|  1601|  1601|   none  |
+    +------+------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+------+------+----------+-----------+-----------+------+----------+
+        |          |   Latency   | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|  min |  max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+------+------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |  1600|  1600|        16|          -|          -|   100|    no    |
+        +----------+------+------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 17
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 2 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.53>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%sin_theta_im_read = call double @_ssdm_op_Read.ap_auto.double(double %sin_theta_im)" [kernel_qrf_0.cpp:64]   --->   Operation 18 'read' 'sin_theta_im_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%sin_theta_re_read = call double @_ssdm_op_Read.ap_auto.double(double %sin_theta_re)" [kernel_qrf_0.cpp:64]   --->   Operation 19 'read' 'sin_theta_re_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%cos_theta_im_read = call double @_ssdm_op_Read.ap_auto.double(double %cos_theta_im)" [kernel_qrf_0.cpp:64]   --->   Operation 20 'read' 'cos_theta_im_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%cos_theta_re_read = call double @_ssdm_op_Read.ap_auto.double(double %cos_theta_re)" [kernel_qrf_0.cpp:64]   --->   Operation 21 'read' 'cos_theta_re_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%B_im_offset_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %B_im_offset)" [kernel_qrf_0.cpp:64]   --->   Operation 22 'read' 'B_im_offset_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%B_re_offset_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %B_re_offset)" [kernel_qrf_0.cpp:64]   --->   Operation 23 'read' 'B_re_offset_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%A_im_offset_read = call i7 @_ssdm_op_Read.ap_auto.i7(i7 %A_im_offset)" [kernel_qrf_0.cpp:64]   --->   Operation 24 'read' 'A_im_offset_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%A_re_offset_read = call i7 @_ssdm_op_Read.ap_auto.i7(i7 %A_re_offset)" [kernel_qrf_0.cpp:64]   --->   Operation 25 'read' 'A_re_offset_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%trunc_ln71 = trunc i32 %B_im_offset_read to i15" [kernel_qrf_0.cpp:71]   --->   Operation 26 'trunc' 'trunc_ln71' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (2.53ns) (root node of the DSP)   --->   "%mul_ln71 = mul i15 100, %trunc_ln71" [kernel_qrf_0.cpp:71]   --->   Operation 27 'mul' 'mul_ln71' <Predicate = true> <Delay = 2.53> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%trunc_ln71_1 = trunc i32 %B_re_offset_read to i15" [kernel_qrf_0.cpp:71]   --->   Operation 28 'trunc' 'trunc_ln71_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (2.53ns) (root node of the DSP)   --->   "%mul_ln71_1 = mul i15 100, %trunc_ln71_1" [kernel_qrf_0.cpp:71]   --->   Operation 29 'mul' 'mul_ln71_1' <Predicate = true> <Delay = 2.53> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%zext_ln71_1 = zext i7 %A_im_offset_read to i14" [kernel_qrf_0.cpp:71]   --->   Operation 30 'zext' 'zext_ln71_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (1.65ns)   --->   "%mul_ln71_2 = mul i14 100, %zext_ln71_1" [kernel_qrf_0.cpp:71]   --->   Operation 31 'mul' 'mul_ln71_2' <Predicate = true> <Delay = 1.65> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%zext_ln71_2 = zext i7 %A_re_offset_read to i14" [kernel_qrf_0.cpp:71]   --->   Operation 32 'zext' 'zext_ln71_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (1.65ns)   --->   "%mul_ln71_3 = mul i14 100, %zext_ln71_2" [kernel_qrf_0.cpp:71]   --->   Operation 33 'mul' 'mul_ln71_3' <Predicate = true> <Delay = 1.65> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%bitcast_ln211 = bitcast double %sin_theta_re_read to i64" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:211->kernel_qrf_0.cpp:71]   --->   Operation 34 'bitcast' 'bitcast_ln211' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.37ns)   --->   "%xor_ln211 = xor i64 %bitcast_ln211, -9223372036854775808" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:211->kernel_qrf_0.cpp:71]   --->   Operation 35 'xor' 'xor_ln211' <Predicate = true> <Delay = 0.37> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.37> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%tmp_re = bitcast i64 %xor_ln211 to double" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:211->kernel_qrf_0.cpp:71]   --->   Operation 36 'bitcast' 'tmp_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%bitcast_ln212 = bitcast double %sin_theta_im_read to i64" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:212->kernel_qrf_0.cpp:71]   --->   Operation 37 'bitcast' 'bitcast_ln212' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.37ns)   --->   "%xor_ln212 = xor i64 %bitcast_ln212, -9223372036854775808" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:212->kernel_qrf_0.cpp:71]   --->   Operation 38 'xor' 'xor_ln212' <Predicate = true> <Delay = 0.37> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.37> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%tmp_im = bitcast i64 %xor_ln212 to double" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:212->kernel_qrf_0.cpp:71]   --->   Operation 39 'bitcast' 'tmp_im' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.65ns)   --->   "br label %1" [kernel_qrf_0.cpp:70]   --->   Operation 40 'br' <Predicate = true> <Delay = 0.65>
+
+State 2 <SV = 1> <Delay = 2.07>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%i_0 = phi i7 [ 0, %0 ], [ %i, %2 ]"   --->   Operation 41 'phi' 'i_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 42 [1/1] (0.81ns)   --->   "%icmp_ln70 = icmp eq i7 %i_0, -28" [kernel_qrf_0.cpp:70]   --->   Operation 42 'icmp' 'icmp_ln70' <Predicate = true> <Delay = 0.81> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.81> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 100, i64 100, i64 100)"   --->   Operation 43 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 44 [1/1] (0.77ns)   --->   "%i = add i7 %i_0, 1" [kernel_qrf_0.cpp:70]   --->   Operation 44 'add' 'i' <Predicate = true> <Delay = 0.77> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 45 [1/1] (0.00ns)   --->   "br i1 %icmp_ln70, label %3, label %2" [kernel_qrf_0.cpp:70]   --->   Operation 45 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 46 [1/1] (0.00ns)   --->   "%zext_ln71_3 = zext i7 %i_0 to i15" [kernel_qrf_0.cpp:71]   --->   Operation 46 'zext' 'zext_ln71_3' <Predicate = (!icmp_ln70)> <Delay = 0.00>
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%zext_ln71_4 = zext i7 %i_0 to i14" [kernel_qrf_0.cpp:71]   --->   Operation 47 'zext' 'zext_ln71_4' <Predicate = (!icmp_ln70)> <Delay = 0.00>
+ST_2 : Operation 48 [1/1] (0.83ns)   --->   "%add_ln71 = add i14 %mul_ln71_3, %zext_ln71_4" [kernel_qrf_0.cpp:71]   --->   Operation 48 'add' 'add_ln71' <Predicate = (!icmp_ln70)> <Delay = 0.83> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 49 [1/1] (0.00ns)   --->   "%zext_ln71_5 = zext i14 %add_ln71 to i64" [kernel_qrf_0.cpp:71]   --->   Operation 49 'zext' 'zext_ln71_5' <Predicate = (!icmp_ln70)> <Delay = 0.00>
+ST_2 : Operation 50 [1/1] (0.00ns)   --->   "%B_re_addr = getelementptr [10000 x double]* %A_re, i64 0, i64 %zext_ln71_5" [kernel_qrf_0.cpp:71]   --->   Operation 50 'getelementptr' 'B_re_addr' <Predicate = (!icmp_ln70)> <Delay = 0.00>
+ST_2 : Operation 51 [1/1] (0.84ns)   --->   "%add_ln71_1 = add i15 %mul_ln71_1, %zext_ln71_3" [kernel_qrf_0.cpp:71]   --->   Operation 51 'add' 'add_ln71_1' <Predicate = (!icmp_ln70)> <Delay = 0.84> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 52 [1/1] (0.00ns)   --->   "%sext_ln71 = sext i15 %add_ln71_1 to i64" [kernel_qrf_0.cpp:71]   --->   Operation 52 'sext' 'sext_ln71' <Predicate = (!icmp_ln70)> <Delay = 0.00>
+ST_2 : Operation 53 [1/1] (0.00ns)   --->   "%B_re_addr_1 = getelementptr [10000 x double]* %A_re, i64 0, i64 %sext_ln71" [kernel_qrf_0.cpp:71]   --->   Operation 53 'getelementptr' 'B_re_addr_1' <Predicate = (!icmp_ln70)> <Delay = 0.00>
+ST_2 : Operation 54 [1/1] (0.83ns)   --->   "%add_ln71_2 = add i14 %mul_ln71_2, %zext_ln71_4" [kernel_qrf_0.cpp:71]   --->   Operation 54 'add' 'add_ln71_2' <Predicate = (!icmp_ln70)> <Delay = 0.83> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 55 [1/1] (0.00ns)   --->   "%zext_ln71_6 = zext i14 %add_ln71_2 to i64" [kernel_qrf_0.cpp:71]   --->   Operation 55 'zext' 'zext_ln71_6' <Predicate = (!icmp_ln70)> <Delay = 0.00>
+ST_2 : Operation 56 [1/1] (0.00ns)   --->   "%B_im_addr = getelementptr [10000 x double]* %A_im, i64 0, i64 %zext_ln71_6" [kernel_qrf_0.cpp:71]   --->   Operation 56 'getelementptr' 'B_im_addr' <Predicate = (!icmp_ln70)> <Delay = 0.00>
+ST_2 : Operation 57 [1/1] (0.84ns)   --->   "%add_ln71_3 = add i15 %mul_ln71, %zext_ln71_3" [kernel_qrf_0.cpp:71]   --->   Operation 57 'add' 'add_ln71_3' <Predicate = (!icmp_ln70)> <Delay = 0.84> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 58 [1/1] (0.00ns)   --->   "%sext_ln71_1 = sext i15 %add_ln71_3 to i64" [kernel_qrf_0.cpp:71]   --->   Operation 58 'sext' 'sext_ln71_1' <Predicate = (!icmp_ln70)> <Delay = 0.00>
+ST_2 : Operation 59 [1/1] (0.00ns)   --->   "%B_im_addr_1 = getelementptr [10000 x double]* %A_im, i64 0, i64 %sext_ln71_1" [kernel_qrf_0.cpp:71]   --->   Operation 59 'getelementptr' 'B_im_addr_1' <Predicate = (!icmp_ln70)> <Delay = 0.00>
+ST_2 : Operation 60 [2/2] (1.23ns)   --->   "%B_re_load = load double* %B_re_addr, align 8" [kernel_qrf_0.cpp:71]   --->   Operation 60 'load' 'B_re_load' <Predicate = (!icmp_ln70)> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 100> <RAM>
+ST_2 : Operation 61 [2/2] (1.23ns)   --->   "%B_im_load = load double* %B_im_addr, align 8" [kernel_qrf_0.cpp:71]   --->   Operation 61 'load' 'B_im_load' <Predicate = (!icmp_ln70)> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 100> <RAM>
+ST_2 : Operation 62 [2/2] (1.23ns)   --->   "%B_re_load_1 = load double* %B_re_addr_1, align 8" [kernel_qrf_0.cpp:71]   --->   Operation 62 'load' 'B_re_load_1' <Predicate = (!icmp_ln70)> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 100> <RAM>
+ST_2 : Operation 63 [2/2] (1.23ns)   --->   "%B_im_load_1 = load double* %B_im_addr_1, align 8" [kernel_qrf_0.cpp:71]   --->   Operation 63 'load' 'B_im_load_1' <Predicate = (!icmp_ln70)> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 100> <RAM>
+ST_2 : Operation 64 [1/1] (0.00ns)   --->   "ret void" [kernel_qrf_0.cpp:74]   --->   Operation 64 'ret' <Predicate = (icmp_ln70)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 8.27>
+ST_3 : Operation 65 [1/2] (1.23ns)   --->   "%B_re_load = load double* %B_re_addr, align 8" [kernel_qrf_0.cpp:71]   --->   Operation 65 'load' 'B_re_load' <Predicate = true> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 100> <RAM>
+ST_3 : Operation 66 [1/2] (1.23ns)   --->   "%B_im_load = load double* %B_im_addr, align 8" [kernel_qrf_0.cpp:71]   --->   Operation 66 'load' 'B_im_load' <Predicate = true> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 100> <RAM>
+ST_3 : Operation 67 [5/5] (7.04ns)   --->   "%m1 = fmul double %B_re_load, %cos_theta_re_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:118->kernel_qrf_0.cpp:71]   --->   Operation 67 'dmul' 'm1' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 68 [5/5] (7.04ns)   --->   "%m2 = fmul double %B_im_load, %cos_theta_im_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:119->kernel_qrf_0.cpp:71]   --->   Operation 68 'dmul' 'm2' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 69 [5/5] (7.04ns)   --->   "%m3 = fmul double %B_re_load, %cos_theta_im_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:120->kernel_qrf_0.cpp:71]   --->   Operation 69 'dmul' 'm3' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 70 [5/5] (7.04ns)   --->   "%m4 = fmul double %B_im_load, %cos_theta_re_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:121->kernel_qrf_0.cpp:71]   --->   Operation 70 'dmul' 'm4' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 71 [1/2] (1.23ns)   --->   "%B_re_load_1 = load double* %B_re_addr_1, align 8" [kernel_qrf_0.cpp:71]   --->   Operation 71 'load' 'B_re_load_1' <Predicate = true> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 100> <RAM>
+ST_3 : Operation 72 [1/2] (1.23ns)   --->   "%B_im_load_1 = load double* %B_im_addr_1, align 8" [kernel_qrf_0.cpp:71]   --->   Operation 72 'load' 'B_im_load_1' <Predicate = true> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 100> <RAM>
+ST_3 : Operation 73 [5/5] (7.04ns)   --->   "%m1_5 = fmul double %tmp_re, %B_re_load_1" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:118->kernel_qrf_0.cpp:71]   --->   Operation 73 'dmul' 'm1_5' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 74 [5/5] (7.04ns)   --->   "%m2_5 = fmul double %tmp_im, %B_im_load_1" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:119->kernel_qrf_0.cpp:71]   --->   Operation 74 'dmul' 'm2_5' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 75 [5/5] (7.04ns)   --->   "%m3_4 = fmul double %tmp_im, %B_re_load_1" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:120->kernel_qrf_0.cpp:71]   --->   Operation 75 'dmul' 'm3_4' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 76 [5/5] (7.04ns)   --->   "%m4_4 = fmul double %tmp_re, %B_im_load_1" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:121->kernel_qrf_0.cpp:71]   --->   Operation 76 'dmul' 'm4_4' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 77 [5/5] (7.04ns)   --->   "%m1_6 = fmul double %B_re_load, %sin_theta_re_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:118->kernel_qrf_0.cpp:72]   --->   Operation 77 'dmul' 'm1_6' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 78 [5/5] (7.04ns)   --->   "%m2_6 = fmul double %B_im_load, %sin_theta_im_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:119->kernel_qrf_0.cpp:72]   --->   Operation 78 'dmul' 'm2_6' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 79 [5/5] (7.04ns)   --->   "%m3_5 = fmul double %B_re_load, %sin_theta_im_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:120->kernel_qrf_0.cpp:72]   --->   Operation 79 'dmul' 'm3_5' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 80 [5/5] (7.04ns)   --->   "%m4_5 = fmul double %B_im_load, %sin_theta_re_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:121->kernel_qrf_0.cpp:72]   --->   Operation 80 'dmul' 'm4_5' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 81 [5/5] (7.04ns)   --->   "%m1_7 = fmul double %B_re_load_1, %cos_theta_re_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:118->kernel_qrf_0.cpp:72]   --->   Operation 81 'dmul' 'm1_7' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 82 [5/5] (7.04ns)   --->   "%m2_7 = fmul double %B_im_load_1, %cos_theta_im_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:119->kernel_qrf_0.cpp:72]   --->   Operation 82 'dmul' 'm2_7' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 83 [5/5] (7.04ns)   --->   "%m3_6 = fmul double %B_re_load_1, %cos_theta_im_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:120->kernel_qrf_0.cpp:72]   --->   Operation 83 'dmul' 'm3_6' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 84 [5/5] (7.04ns)   --->   "%m4_6 = fmul double %B_im_load_1, %cos_theta_re_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:121->kernel_qrf_0.cpp:72]   --->   Operation 84 'dmul' 'm4_6' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 7.04>
+ST_4 : Operation 85 [4/5] (7.04ns)   --->   "%m1 = fmul double %B_re_load, %cos_theta_re_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:118->kernel_qrf_0.cpp:71]   --->   Operation 85 'dmul' 'm1' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 86 [4/5] (7.04ns)   --->   "%m2 = fmul double %B_im_load, %cos_theta_im_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:119->kernel_qrf_0.cpp:71]   --->   Operation 86 'dmul' 'm2' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 87 [4/5] (7.04ns)   --->   "%m3 = fmul double %B_re_load, %cos_theta_im_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:120->kernel_qrf_0.cpp:71]   --->   Operation 87 'dmul' 'm3' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 88 [4/5] (7.04ns)   --->   "%m4 = fmul double %B_im_load, %cos_theta_re_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:121->kernel_qrf_0.cpp:71]   --->   Operation 88 'dmul' 'm4' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 89 [4/5] (7.04ns)   --->   "%m1_5 = fmul double %tmp_re, %B_re_load_1" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:118->kernel_qrf_0.cpp:71]   --->   Operation 89 'dmul' 'm1_5' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 90 [4/5] (7.04ns)   --->   "%m2_5 = fmul double %tmp_im, %B_im_load_1" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:119->kernel_qrf_0.cpp:71]   --->   Operation 90 'dmul' 'm2_5' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 91 [4/5] (7.04ns)   --->   "%m3_4 = fmul double %tmp_im, %B_re_load_1" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:120->kernel_qrf_0.cpp:71]   --->   Operation 91 'dmul' 'm3_4' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 92 [4/5] (7.04ns)   --->   "%m4_4 = fmul double %tmp_re, %B_im_load_1" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:121->kernel_qrf_0.cpp:71]   --->   Operation 92 'dmul' 'm4_4' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 93 [4/5] (7.04ns)   --->   "%m1_6 = fmul double %B_re_load, %sin_theta_re_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:118->kernel_qrf_0.cpp:72]   --->   Operation 93 'dmul' 'm1_6' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 94 [4/5] (7.04ns)   --->   "%m2_6 = fmul double %B_im_load, %sin_theta_im_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:119->kernel_qrf_0.cpp:72]   --->   Operation 94 'dmul' 'm2_6' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 95 [4/5] (7.04ns)   --->   "%m3_5 = fmul double %B_re_load, %sin_theta_im_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:120->kernel_qrf_0.cpp:72]   --->   Operation 95 'dmul' 'm3_5' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 96 [4/5] (7.04ns)   --->   "%m4_5 = fmul double %B_im_load, %sin_theta_re_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:121->kernel_qrf_0.cpp:72]   --->   Operation 96 'dmul' 'm4_5' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 97 [4/5] (7.04ns)   --->   "%m1_7 = fmul double %B_re_load_1, %cos_theta_re_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:118->kernel_qrf_0.cpp:72]   --->   Operation 97 'dmul' 'm1_7' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 98 [4/5] (7.04ns)   --->   "%m2_7 = fmul double %B_im_load_1, %cos_theta_im_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:119->kernel_qrf_0.cpp:72]   --->   Operation 98 'dmul' 'm2_7' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 99 [4/5] (7.04ns)   --->   "%m3_6 = fmul double %B_re_load_1, %cos_theta_im_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:120->kernel_qrf_0.cpp:72]   --->   Operation 99 'dmul' 'm3_6' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 100 [4/5] (7.04ns)   --->   "%m4_6 = fmul double %B_im_load_1, %cos_theta_re_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:121->kernel_qrf_0.cpp:72]   --->   Operation 100 'dmul' 'm4_6' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 7.04>
+ST_5 : Operation 101 [3/5] (7.04ns)   --->   "%m1 = fmul double %B_re_load, %cos_theta_re_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:118->kernel_qrf_0.cpp:71]   --->   Operation 101 'dmul' 'm1' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 102 [3/5] (7.04ns)   --->   "%m2 = fmul double %B_im_load, %cos_theta_im_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:119->kernel_qrf_0.cpp:71]   --->   Operation 102 'dmul' 'm2' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 103 [3/5] (7.04ns)   --->   "%m3 = fmul double %B_re_load, %cos_theta_im_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:120->kernel_qrf_0.cpp:71]   --->   Operation 103 'dmul' 'm3' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 104 [3/5] (7.04ns)   --->   "%m4 = fmul double %B_im_load, %cos_theta_re_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:121->kernel_qrf_0.cpp:71]   --->   Operation 104 'dmul' 'm4' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 105 [3/5] (7.04ns)   --->   "%m1_5 = fmul double %tmp_re, %B_re_load_1" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:118->kernel_qrf_0.cpp:71]   --->   Operation 105 'dmul' 'm1_5' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 106 [3/5] (7.04ns)   --->   "%m2_5 = fmul double %tmp_im, %B_im_load_1" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:119->kernel_qrf_0.cpp:71]   --->   Operation 106 'dmul' 'm2_5' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 107 [3/5] (7.04ns)   --->   "%m3_4 = fmul double %tmp_im, %B_re_load_1" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:120->kernel_qrf_0.cpp:71]   --->   Operation 107 'dmul' 'm3_4' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 108 [3/5] (7.04ns)   --->   "%m4_4 = fmul double %tmp_re, %B_im_load_1" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:121->kernel_qrf_0.cpp:71]   --->   Operation 108 'dmul' 'm4_4' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 109 [3/5] (7.04ns)   --->   "%m1_6 = fmul double %B_re_load, %sin_theta_re_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:118->kernel_qrf_0.cpp:72]   --->   Operation 109 'dmul' 'm1_6' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 110 [3/5] (7.04ns)   --->   "%m2_6 = fmul double %B_im_load, %sin_theta_im_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:119->kernel_qrf_0.cpp:72]   --->   Operation 110 'dmul' 'm2_6' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 111 [3/5] (7.04ns)   --->   "%m3_5 = fmul double %B_re_load, %sin_theta_im_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:120->kernel_qrf_0.cpp:72]   --->   Operation 111 'dmul' 'm3_5' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 112 [3/5] (7.04ns)   --->   "%m4_5 = fmul double %B_im_load, %sin_theta_re_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:121->kernel_qrf_0.cpp:72]   --->   Operation 112 'dmul' 'm4_5' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 113 [3/5] (7.04ns)   --->   "%m1_7 = fmul double %B_re_load_1, %cos_theta_re_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:118->kernel_qrf_0.cpp:72]   --->   Operation 113 'dmul' 'm1_7' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 114 [3/5] (7.04ns)   --->   "%m2_7 = fmul double %B_im_load_1, %cos_theta_im_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:119->kernel_qrf_0.cpp:72]   --->   Operation 114 'dmul' 'm2_7' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 115 [3/5] (7.04ns)   --->   "%m3_6 = fmul double %B_re_load_1, %cos_theta_im_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:120->kernel_qrf_0.cpp:72]   --->   Operation 115 'dmul' 'm3_6' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 116 [3/5] (7.04ns)   --->   "%m4_6 = fmul double %B_im_load_1, %cos_theta_re_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:121->kernel_qrf_0.cpp:72]   --->   Operation 116 'dmul' 'm4_6' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 7.04>
+ST_6 : Operation 117 [2/5] (7.04ns)   --->   "%m1 = fmul double %B_re_load, %cos_theta_re_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:118->kernel_qrf_0.cpp:71]   --->   Operation 117 'dmul' 'm1' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 118 [2/5] (7.04ns)   --->   "%m2 = fmul double %B_im_load, %cos_theta_im_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:119->kernel_qrf_0.cpp:71]   --->   Operation 118 'dmul' 'm2' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 119 [2/5] (7.04ns)   --->   "%m3 = fmul double %B_re_load, %cos_theta_im_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:120->kernel_qrf_0.cpp:71]   --->   Operation 119 'dmul' 'm3' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 120 [2/5] (7.04ns)   --->   "%m4 = fmul double %B_im_load, %cos_theta_re_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:121->kernel_qrf_0.cpp:71]   --->   Operation 120 'dmul' 'm4' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 121 [2/5] (7.04ns)   --->   "%m1_5 = fmul double %tmp_re, %B_re_load_1" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:118->kernel_qrf_0.cpp:71]   --->   Operation 121 'dmul' 'm1_5' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 122 [2/5] (7.04ns)   --->   "%m2_5 = fmul double %tmp_im, %B_im_load_1" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:119->kernel_qrf_0.cpp:71]   --->   Operation 122 'dmul' 'm2_5' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 123 [2/5] (7.04ns)   --->   "%m3_4 = fmul double %tmp_im, %B_re_load_1" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:120->kernel_qrf_0.cpp:71]   --->   Operation 123 'dmul' 'm3_4' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 124 [2/5] (7.04ns)   --->   "%m4_4 = fmul double %tmp_re, %B_im_load_1" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:121->kernel_qrf_0.cpp:71]   --->   Operation 124 'dmul' 'm4_4' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 125 [2/5] (7.04ns)   --->   "%m1_6 = fmul double %B_re_load, %sin_theta_re_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:118->kernel_qrf_0.cpp:72]   --->   Operation 125 'dmul' 'm1_6' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 126 [2/5] (7.04ns)   --->   "%m2_6 = fmul double %B_im_load, %sin_theta_im_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:119->kernel_qrf_0.cpp:72]   --->   Operation 126 'dmul' 'm2_6' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 127 [2/5] (7.04ns)   --->   "%m3_5 = fmul double %B_re_load, %sin_theta_im_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:120->kernel_qrf_0.cpp:72]   --->   Operation 127 'dmul' 'm3_5' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 128 [2/5] (7.04ns)   --->   "%m4_5 = fmul double %B_im_load, %sin_theta_re_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:121->kernel_qrf_0.cpp:72]   --->   Operation 128 'dmul' 'm4_5' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 129 [2/5] (7.04ns)   --->   "%m1_7 = fmul double %B_re_load_1, %cos_theta_re_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:118->kernel_qrf_0.cpp:72]   --->   Operation 129 'dmul' 'm1_7' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 130 [2/5] (7.04ns)   --->   "%m2_7 = fmul double %B_im_load_1, %cos_theta_im_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:119->kernel_qrf_0.cpp:72]   --->   Operation 130 'dmul' 'm2_7' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 131 [2/5] (7.04ns)   --->   "%m3_6 = fmul double %B_re_load_1, %cos_theta_im_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:120->kernel_qrf_0.cpp:72]   --->   Operation 131 'dmul' 'm3_6' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 132 [2/5] (7.04ns)   --->   "%m4_6 = fmul double %B_im_load_1, %cos_theta_re_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:121->kernel_qrf_0.cpp:72]   --->   Operation 132 'dmul' 'm4_6' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 7.04>
+ST_7 : Operation 133 [1/5] (7.04ns)   --->   "%m1 = fmul double %B_re_load, %cos_theta_re_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:118->kernel_qrf_0.cpp:71]   --->   Operation 133 'dmul' 'm1' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 134 [1/5] (7.04ns)   --->   "%m2 = fmul double %B_im_load, %cos_theta_im_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:119->kernel_qrf_0.cpp:71]   --->   Operation 134 'dmul' 'm2' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 135 [1/5] (7.04ns)   --->   "%m3 = fmul double %B_re_load, %cos_theta_im_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:120->kernel_qrf_0.cpp:71]   --->   Operation 135 'dmul' 'm3' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 136 [1/5] (7.04ns)   --->   "%m4 = fmul double %B_im_load, %cos_theta_re_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:121->kernel_qrf_0.cpp:71]   --->   Operation 136 'dmul' 'm4' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 137 [1/5] (7.04ns)   --->   "%m1_5 = fmul double %tmp_re, %B_re_load_1" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:118->kernel_qrf_0.cpp:71]   --->   Operation 137 'dmul' 'm1_5' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 138 [1/5] (7.04ns)   --->   "%m2_5 = fmul double %tmp_im, %B_im_load_1" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:119->kernel_qrf_0.cpp:71]   --->   Operation 138 'dmul' 'm2_5' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 139 [1/5] (7.04ns)   --->   "%m3_4 = fmul double %tmp_im, %B_re_load_1" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:120->kernel_qrf_0.cpp:71]   --->   Operation 139 'dmul' 'm3_4' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 140 [1/5] (7.04ns)   --->   "%m4_4 = fmul double %tmp_re, %B_im_load_1" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:121->kernel_qrf_0.cpp:71]   --->   Operation 140 'dmul' 'm4_4' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 141 [1/5] (7.04ns)   --->   "%m1_6 = fmul double %B_re_load, %sin_theta_re_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:118->kernel_qrf_0.cpp:72]   --->   Operation 141 'dmul' 'm1_6' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 142 [1/5] (7.04ns)   --->   "%m2_6 = fmul double %B_im_load, %sin_theta_im_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:119->kernel_qrf_0.cpp:72]   --->   Operation 142 'dmul' 'm2_6' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 143 [1/5] (7.04ns)   --->   "%m3_5 = fmul double %B_re_load, %sin_theta_im_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:120->kernel_qrf_0.cpp:72]   --->   Operation 143 'dmul' 'm3_5' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 144 [1/5] (7.04ns)   --->   "%m4_5 = fmul double %B_im_load, %sin_theta_re_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:121->kernel_qrf_0.cpp:72]   --->   Operation 144 'dmul' 'm4_5' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 145 [1/5] (7.04ns)   --->   "%m1_7 = fmul double %B_re_load_1, %cos_theta_re_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:118->kernel_qrf_0.cpp:72]   --->   Operation 145 'dmul' 'm1_7' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 146 [1/5] (7.04ns)   --->   "%m2_7 = fmul double %B_im_load_1, %cos_theta_im_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:119->kernel_qrf_0.cpp:72]   --->   Operation 146 'dmul' 'm2_7' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 147 [1/5] (7.04ns)   --->   "%m3_6 = fmul double %B_re_load_1, %cos_theta_im_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:120->kernel_qrf_0.cpp:72]   --->   Operation 147 'dmul' 'm3_6' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 148 [1/5] (7.04ns)   --->   "%m4_6 = fmul double %B_im_load_1, %cos_theta_re_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:121->kernel_qrf_0.cpp:72]   --->   Operation 148 'dmul' 'm4_6' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 5.06>
+ST_8 : Operation 149 [5/5] (5.06ns)   --->   "%sum_re = fsub double %m1, %m2" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:122->kernel_qrf_0.cpp:71]   --->   Operation 149 'dsub' 'sum_re' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 150 [5/5] (5.06ns)   --->   "%sum_im = fadd double %m3, %m4" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:123->kernel_qrf_0.cpp:71]   --->   Operation 150 'dadd' 'sum_im' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 151 [5/5] (5.06ns)   --->   "%sum_re_5 = fsub double %m1_5, %m2_5" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:122->kernel_qrf_0.cpp:71]   --->   Operation 151 'dsub' 'sum_re_5' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 152 [5/5] (5.06ns)   --->   "%sum_im_4 = fadd double %m3_4, %m4_4" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:123->kernel_qrf_0.cpp:71]   --->   Operation 152 'dadd' 'sum_im_4' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 153 [5/5] (5.06ns)   --->   "%sum_re_6 = fsub double %m1_6, %m2_6" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:122->kernel_qrf_0.cpp:72]   --->   Operation 153 'dsub' 'sum_re_6' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 154 [5/5] (5.06ns)   --->   "%sum_im_5 = fadd double %m3_5, %m4_5" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:123->kernel_qrf_0.cpp:72]   --->   Operation 154 'dadd' 'sum_im_5' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 155 [5/5] (5.06ns)   --->   "%sum_re_7 = fsub double %m1_7, %m2_7" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:122->kernel_qrf_0.cpp:72]   --->   Operation 155 'dsub' 'sum_re_7' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 156 [5/5] (5.06ns)   --->   "%sum_im_6 = fadd double %m3_6, %m4_6" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:123->kernel_qrf_0.cpp:72]   --->   Operation 156 'dadd' 'sum_im_6' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 5.06>
+ST_9 : Operation 157 [4/5] (5.06ns)   --->   "%sum_re = fsub double %m1, %m2" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:122->kernel_qrf_0.cpp:71]   --->   Operation 157 'dsub' 'sum_re' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 158 [4/5] (5.06ns)   --->   "%sum_im = fadd double %m3, %m4" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:123->kernel_qrf_0.cpp:71]   --->   Operation 158 'dadd' 'sum_im' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 159 [4/5] (5.06ns)   --->   "%sum_re_5 = fsub double %m1_5, %m2_5" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:122->kernel_qrf_0.cpp:71]   --->   Operation 159 'dsub' 'sum_re_5' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 160 [4/5] (5.06ns)   --->   "%sum_im_4 = fadd double %m3_4, %m4_4" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:123->kernel_qrf_0.cpp:71]   --->   Operation 160 'dadd' 'sum_im_4' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 161 [4/5] (5.06ns)   --->   "%sum_re_6 = fsub double %m1_6, %m2_6" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:122->kernel_qrf_0.cpp:72]   --->   Operation 161 'dsub' 'sum_re_6' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 162 [4/5] (5.06ns)   --->   "%sum_im_5 = fadd double %m3_5, %m4_5" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:123->kernel_qrf_0.cpp:72]   --->   Operation 162 'dadd' 'sum_im_5' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 163 [4/5] (5.06ns)   --->   "%sum_re_7 = fsub double %m1_7, %m2_7" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:122->kernel_qrf_0.cpp:72]   --->   Operation 163 'dsub' 'sum_re_7' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 164 [4/5] (5.06ns)   --->   "%sum_im_6 = fadd double %m3_6, %m4_6" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:123->kernel_qrf_0.cpp:72]   --->   Operation 164 'dadd' 'sum_im_6' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 5.06>
+ST_10 : Operation 165 [3/5] (5.06ns)   --->   "%sum_re = fsub double %m1, %m2" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:122->kernel_qrf_0.cpp:71]   --->   Operation 165 'dsub' 'sum_re' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 166 [3/5] (5.06ns)   --->   "%sum_im = fadd double %m3, %m4" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:123->kernel_qrf_0.cpp:71]   --->   Operation 166 'dadd' 'sum_im' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 167 [3/5] (5.06ns)   --->   "%sum_re_5 = fsub double %m1_5, %m2_5" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:122->kernel_qrf_0.cpp:71]   --->   Operation 167 'dsub' 'sum_re_5' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 168 [3/5] (5.06ns)   --->   "%sum_im_4 = fadd double %m3_4, %m4_4" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:123->kernel_qrf_0.cpp:71]   --->   Operation 168 'dadd' 'sum_im_4' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 169 [3/5] (5.06ns)   --->   "%sum_re_6 = fsub double %m1_6, %m2_6" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:122->kernel_qrf_0.cpp:72]   --->   Operation 169 'dsub' 'sum_re_6' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 170 [3/5] (5.06ns)   --->   "%sum_im_5 = fadd double %m3_5, %m4_5" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:123->kernel_qrf_0.cpp:72]   --->   Operation 170 'dadd' 'sum_im_5' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 171 [3/5] (5.06ns)   --->   "%sum_re_7 = fsub double %m1_7, %m2_7" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:122->kernel_qrf_0.cpp:72]   --->   Operation 171 'dsub' 'sum_re_7' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 172 [3/5] (5.06ns)   --->   "%sum_im_6 = fadd double %m3_6, %m4_6" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:123->kernel_qrf_0.cpp:72]   --->   Operation 172 'dadd' 'sum_im_6' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 5.06>
+ST_11 : Operation 173 [2/5] (5.06ns)   --->   "%sum_re = fsub double %m1, %m2" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:122->kernel_qrf_0.cpp:71]   --->   Operation 173 'dsub' 'sum_re' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 174 [2/5] (5.06ns)   --->   "%sum_im = fadd double %m3, %m4" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:123->kernel_qrf_0.cpp:71]   --->   Operation 174 'dadd' 'sum_im' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 175 [2/5] (5.06ns)   --->   "%sum_re_5 = fsub double %m1_5, %m2_5" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:122->kernel_qrf_0.cpp:71]   --->   Operation 175 'dsub' 'sum_re_5' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 176 [2/5] (5.06ns)   --->   "%sum_im_4 = fadd double %m3_4, %m4_4" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:123->kernel_qrf_0.cpp:71]   --->   Operation 176 'dadd' 'sum_im_4' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 177 [2/5] (5.06ns)   --->   "%sum_re_6 = fsub double %m1_6, %m2_6" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:122->kernel_qrf_0.cpp:72]   --->   Operation 177 'dsub' 'sum_re_6' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 178 [2/5] (5.06ns)   --->   "%sum_im_5 = fadd double %m3_5, %m4_5" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:123->kernel_qrf_0.cpp:72]   --->   Operation 178 'dadd' 'sum_im_5' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 179 [2/5] (5.06ns)   --->   "%sum_re_7 = fsub double %m1_7, %m2_7" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:122->kernel_qrf_0.cpp:72]   --->   Operation 179 'dsub' 'sum_re_7' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 180 [2/5] (5.06ns)   --->   "%sum_im_6 = fadd double %m3_6, %m4_6" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:123->kernel_qrf_0.cpp:72]   --->   Operation 180 'dadd' 'sum_im_6' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 5.06>
+ST_12 : Operation 181 [1/5] (5.06ns)   --->   "%sum_re = fsub double %m1, %m2" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:122->kernel_qrf_0.cpp:71]   --->   Operation 181 'dsub' 'sum_re' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 182 [1/5] (5.06ns)   --->   "%sum_im = fadd double %m3, %m4" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:123->kernel_qrf_0.cpp:71]   --->   Operation 182 'dadd' 'sum_im' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 183 [1/5] (5.06ns)   --->   "%sum_re_5 = fsub double %m1_5, %m2_5" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:122->kernel_qrf_0.cpp:71]   --->   Operation 183 'dsub' 'sum_re_5' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 184 [1/5] (5.06ns)   --->   "%sum_im_4 = fadd double %m3_4, %m4_4" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:123->kernel_qrf_0.cpp:71]   --->   Operation 184 'dadd' 'sum_im_4' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 185 [1/5] (5.06ns)   --->   "%sum_re_6 = fsub double %m1_6, %m2_6" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:122->kernel_qrf_0.cpp:72]   --->   Operation 185 'dsub' 'sum_re_6' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 186 [1/5] (5.06ns)   --->   "%sum_im_5 = fadd double %m3_5, %m4_5" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:123->kernel_qrf_0.cpp:72]   --->   Operation 186 'dadd' 'sum_im_5' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 187 [1/5] (5.06ns)   --->   "%sum_re_7 = fsub double %m1_7, %m2_7" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:122->kernel_qrf_0.cpp:72]   --->   Operation 187 'dsub' 'sum_re_7' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 188 [1/5] (5.06ns)   --->   "%sum_im_6 = fadd double %m3_6, %m4_6" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:123->kernel_qrf_0.cpp:72]   --->   Operation 188 'dadd' 'sum_im_6' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 5.06>
+ST_13 : Operation 189 [5/5] (5.06ns)   --->   "%tmp_re_9 = fadd double %sum_re_5, %sum_re" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171->C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:184->kernel_qrf_0.cpp:71]   --->   Operation 189 'dadd' 'tmp_re_9' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 190 [5/5] (5.06ns)   --->   "%tmp_im_10 = fadd double %sum_im_4, %sum_im" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171->C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:184->kernel_qrf_0.cpp:71]   --->   Operation 190 'dadd' 'tmp_im_10' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 191 [5/5] (5.06ns)   --->   "%tmp_re_11 = fadd double %sum_re_7, %sum_re_6" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171->C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:184->kernel_qrf_0.cpp:72]   --->   Operation 191 'dadd' 'tmp_re_11' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 192 [5/5] (5.06ns)   --->   "%tmp_im_12 = fadd double %sum_im_6, %sum_im_5" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171->C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:184->kernel_qrf_0.cpp:72]   --->   Operation 192 'dadd' 'tmp_im_12' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 5.06>
+ST_14 : Operation 193 [4/5] (5.06ns)   --->   "%tmp_re_9 = fadd double %sum_re_5, %sum_re" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171->C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:184->kernel_qrf_0.cpp:71]   --->   Operation 193 'dadd' 'tmp_re_9' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 194 [4/5] (5.06ns)   --->   "%tmp_im_10 = fadd double %sum_im_4, %sum_im" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171->C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:184->kernel_qrf_0.cpp:71]   --->   Operation 194 'dadd' 'tmp_im_10' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 195 [4/5] (5.06ns)   --->   "%tmp_re_11 = fadd double %sum_re_7, %sum_re_6" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171->C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:184->kernel_qrf_0.cpp:72]   --->   Operation 195 'dadd' 'tmp_re_11' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 196 [4/5] (5.06ns)   --->   "%tmp_im_12 = fadd double %sum_im_6, %sum_im_5" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171->C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:184->kernel_qrf_0.cpp:72]   --->   Operation 196 'dadd' 'tmp_im_12' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 5.06>
+ST_15 : Operation 197 [3/5] (5.06ns)   --->   "%tmp_re_9 = fadd double %sum_re_5, %sum_re" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171->C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:184->kernel_qrf_0.cpp:71]   --->   Operation 197 'dadd' 'tmp_re_9' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 198 [3/5] (5.06ns)   --->   "%tmp_im_10 = fadd double %sum_im_4, %sum_im" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171->C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:184->kernel_qrf_0.cpp:71]   --->   Operation 198 'dadd' 'tmp_im_10' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 199 [3/5] (5.06ns)   --->   "%tmp_re_11 = fadd double %sum_re_7, %sum_re_6" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171->C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:184->kernel_qrf_0.cpp:72]   --->   Operation 199 'dadd' 'tmp_re_11' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 200 [3/5] (5.06ns)   --->   "%tmp_im_12 = fadd double %sum_im_6, %sum_im_5" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171->C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:184->kernel_qrf_0.cpp:72]   --->   Operation 200 'dadd' 'tmp_im_12' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 5.06>
+ST_16 : Operation 201 [2/5] (5.06ns)   --->   "%tmp_re_9 = fadd double %sum_re_5, %sum_re" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171->C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:184->kernel_qrf_0.cpp:71]   --->   Operation 201 'dadd' 'tmp_re_9' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 202 [2/5] (5.06ns)   --->   "%tmp_im_10 = fadd double %sum_im_4, %sum_im" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171->C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:184->kernel_qrf_0.cpp:71]   --->   Operation 202 'dadd' 'tmp_im_10' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 203 [2/5] (5.06ns)   --->   "%tmp_re_11 = fadd double %sum_re_7, %sum_re_6" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171->C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:184->kernel_qrf_0.cpp:72]   --->   Operation 203 'dadd' 'tmp_re_11' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 204 [2/5] (5.06ns)   --->   "%tmp_im_12 = fadd double %sum_im_6, %sum_im_5" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171->C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:184->kernel_qrf_0.cpp:72]   --->   Operation 204 'dadd' 'tmp_im_12' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 16> <Delay = 6.30>
+ST_17 : Operation 205 [1/1] (0.00ns)   --->   "%zext_ln71 = zext i7 %i_0 to i64" [kernel_qrf_0.cpp:71]   --->   Operation 205 'zext' 'zext_ln71' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 206 [1/5] (5.06ns)   --->   "%tmp_re_9 = fadd double %sum_re_5, %sum_re" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171->C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:184->kernel_qrf_0.cpp:71]   --->   Operation 206 'dadd' 'tmp_re_9' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 207 [1/5] (5.06ns)   --->   "%tmp_im_10 = fadd double %sum_im_4, %sum_im" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171->C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:184->kernel_qrf_0.cpp:71]   --->   Operation 207 'dadd' 'tmp_im_10' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 208 [1/1] (0.00ns)   --->   "%C_re_addr = getelementptr [100 x double]* %C_re, i64 0, i64 %zext_ln71" [kernel_qrf_0.cpp:71]   --->   Operation 208 'getelementptr' 'C_re_addr' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 209 [1/1] (1.23ns)   --->   "store double %tmp_re_9, double* %C_re_addr, align 8" [kernel_qrf_0.cpp:71]   --->   Operation 209 'store' <Predicate = true> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 100> <RAM>
+ST_17 : Operation 210 [1/1] (0.00ns)   --->   "%C_im_addr = getelementptr [100 x double]* %C_im, i64 0, i64 %zext_ln71" [kernel_qrf_0.cpp:71]   --->   Operation 210 'getelementptr' 'C_im_addr' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 211 [1/1] (1.23ns)   --->   "store double %tmp_im_10, double* %C_im_addr, align 8" [kernel_qrf_0.cpp:71]   --->   Operation 211 'store' <Predicate = true> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 100> <RAM>
+ST_17 : Operation 212 [1/5] (5.06ns)   --->   "%tmp_re_11 = fadd double %sum_re_7, %sum_re_6" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171->C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:184->kernel_qrf_0.cpp:72]   --->   Operation 212 'dadd' 'tmp_re_11' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 213 [1/5] (5.06ns)   --->   "%tmp_im_12 = fadd double %sum_im_6, %sum_im_5" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171->C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:184->kernel_qrf_0.cpp:72]   --->   Operation 213 'dadd' 'tmp_im_12' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 214 [1/1] (0.00ns)   --->   "%D_re_addr = getelementptr [100 x double]* %D_re, i64 0, i64 %zext_ln71" [kernel_qrf_0.cpp:72]   --->   Operation 214 'getelementptr' 'D_re_addr' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 215 [1/1] (1.23ns)   --->   "store double %tmp_re_11, double* %D_re_addr, align 8" [kernel_qrf_0.cpp:72]   --->   Operation 215 'store' <Predicate = true> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 100> <RAM>
+ST_17 : Operation 216 [1/1] (0.00ns)   --->   "%D_im_addr = getelementptr [100 x double]* %D_im, i64 0, i64 %zext_ln71" [kernel_qrf_0.cpp:72]   --->   Operation 216 'getelementptr' 'D_im_addr' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 217 [1/1] (1.23ns)   --->   "store double %tmp_im_12, double* %D_im_addr, align 8" [kernel_qrf_0.cpp:72]   --->   Operation 217 'store' <Predicate = true> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 100> <RAM>
+ST_17 : Operation 218 [1/1] (0.00ns)   --->   "br label %1" [kernel_qrf_0.cpp:70]   --->   Operation 218 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 2.53ns
+The critical path consists of the following:
+	wire read on port 'B_im_offset' (kernel_qrf_0.cpp:64) [19]  (0 ns)
+	'mul' operation of DSP[24] ('mul_ln71', kernel_qrf_0.cpp:71) [24]  (2.53 ns)
+
+ <State 2>: 2.08ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', kernel_qrf_0.cpp:70) [39]  (0 ns)
+	'add' operation ('add_ln71_1', kernel_qrf_0.cpp:71) [51]  (0.842 ns)
+	'getelementptr' operation ('B_re_addr_1', kernel_qrf_0.cpp:71) [53]  (0 ns)
+	'load' operation ('x_complex<double>.re', kernel_qrf_0.cpp:71) on array 'A_re' [68]  (1.24 ns)
+
+ <State 3>: 8.28ns
+The critical path consists of the following:
+	'load' operation ('x_complex<double>.re', kernel_qrf_0.cpp:71) on array 'A_re' [60]  (1.24 ns)
+	'dmul' operation ('m1', C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:118->kernel_qrf_0.cpp:71) [62]  (7.04 ns)
+
+ <State 4>: 7.04ns
+The critical path consists of the following:
+	'dmul' operation ('m1', C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:118->kernel_qrf_0.cpp:71) [62]  (7.04 ns)
+
+ <State 5>: 7.04ns
+The critical path consists of the following:
+	'dmul' operation ('m1', C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:118->kernel_qrf_0.cpp:71) [62]  (7.04 ns)
+
+ <State 6>: 7.04ns
+The critical path consists of the following:
+	'dmul' operation ('m1', C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:118->kernel_qrf_0.cpp:71) [62]  (7.04 ns)
+
+ <State 7>: 7.04ns
+The critical path consists of the following:
+	'dmul' operation ('m1', C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:118->kernel_qrf_0.cpp:71) [62]  (7.04 ns)
+
+ <State 8>: 5.07ns
+The critical path consists of the following:
+	'dsub' operation ('sum_re', C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:122->kernel_qrf_0.cpp:71) [66]  (5.07 ns)
+
+ <State 9>: 5.07ns
+The critical path consists of the following:
+	'dsub' operation ('sum_re', C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:122->kernel_qrf_0.cpp:71) [66]  (5.07 ns)
+
+ <State 10>: 5.07ns
+The critical path consists of the following:
+	'dsub' operation ('sum_re', C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:122->kernel_qrf_0.cpp:71) [66]  (5.07 ns)
+
+ <State 11>: 5.07ns
+The critical path consists of the following:
+	'dsub' operation ('sum_re', C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:122->kernel_qrf_0.cpp:71) [66]  (5.07 ns)
+
+ <State 12>: 5.07ns
+The critical path consists of the following:
+	'dsub' operation ('sum_re', C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:122->kernel_qrf_0.cpp:71) [66]  (5.07 ns)
+
+ <State 13>: 5.07ns
+The critical path consists of the following:
+	'dadd' operation ('agg.result.re', C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171->C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:184->kernel_qrf_0.cpp:71) [76]  (5.07 ns)
+
+ <State 14>: 5.07ns
+The critical path consists of the following:
+	'dadd' operation ('agg.result.re', C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171->C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:184->kernel_qrf_0.cpp:71) [76]  (5.07 ns)
+
+ <State 15>: 5.07ns
+The critical path consists of the following:
+	'dadd' operation ('agg.result.re', C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171->C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:184->kernel_qrf_0.cpp:71) [76]  (5.07 ns)
+
+ <State 16>: 5.07ns
+The critical path consists of the following:
+	'dadd' operation ('agg.result.re', C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171->C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:184->kernel_qrf_0.cpp:71) [76]  (5.07 ns)
+
+ <State 17>: 6.31ns
+The critical path consists of the following:
+	'dadd' operation ('agg.result.re', C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171->C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:184->kernel_qrf_0.cpp:71) [76]  (5.07 ns)
+	'store' operation ('store_ln71', kernel_qrf_0.cpp:71) of variable 'agg.result.re', C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171->C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:184->kernel_qrf_0.cpp:71 on array 'C_re' [79]  (1.24 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

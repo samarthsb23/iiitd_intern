@@ -1,0 +1,23 @@
+  **** HLS Build v2024.2 5238294
+INFO: [HLS 200-2005] Using work_dir C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_8_opt/matrix_8_opt 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'syn.file=matrix.cpp' from C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_8_opt/hls_config.cfg(7)
+INFO: [HLS 200-10] Adding design file 'C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_8_opt/matrix.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=matrix.h' from C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_8_opt/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file 'C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_8_opt/matrix.h' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=matrix_tb.cpp' from C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_8_opt/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_8_opt/matrix_tb.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.top=matrixmul_8_opt' from C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_8_opt/hls_config.cfg(11)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_8_opt/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xczu28dr-ffvg1517-2-e' from C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_8_opt/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xczu28dr-ffvg1517-2-e'
+INFO: [HLS 200-1465] Applying ini 'csim.code_analyzer=1' from C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_8_opt/hls_config.cfg(10)
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_8_opt/hls_config.cfg(5)
+INFO: [HLS 200-1465] Applying ini 'syn.unroll.tripcount_threshold=10000' from C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_8_opt/hls_config.cfg(12)
+INFO: [XFORM 203-502] Automatic unrolling enabled: cut-off trip count is 10000.
+INFO: [SIM 211-200] Executing Code Analyzer instead of classic HLS C simulation
+INFO: [HLS 211-200] Compiling source code matrix.cpp as hardware code with instrumentation
+INFO: [HLS 211-200] Compiling source code matrix.cpp as test bench code with instrumentation

@@ -1,0 +1,179 @@
+
+
+================================================================
+== Synthesis Summary Report of 'matrixmul_3'
+================================================================
++ General Information: 
+    * Date:           Thu May 22 14:54:11 2025
+    * Version:        2024.2 (Build 5238294 on Nov  8 2024)
+    * Project:        matrixmul_3
+    * Solution:       hls (Vivado IP Flow Target)
+    * Product family: azynq
+    * Target device:  xa7z020-clg400-1I
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+----------+-----------+-----------+-----+
+    |                        Modules                        | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |         |          |           |           |     |
+    |                        & Loops                        | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM   |    DSP   |     FF    |    LUT    | URAM|
+    +-------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+----------+-----------+-----------+-----+
+    |+ matrixmul_3                                          |     -|  0.38|      281|  2.810e+03|         -|      282|     -|        no|  1 (~0%)|  24 (10%)|  2916 (2%)|  2071 (3%)|    -|
+    | + matrixmul_3_Pipeline_loop_input_A1_loop_input_A2    |     -|  0.57|       66|    660.000|         -|       66|     -|        no|        -|         -|   18 (~0%)|  143 (~0%)|    -|
+    |  o loop_input_A1_loop_input_A2                        |     -|  7.30|       64|    640.000|         2|        1|    64|       yes|        -|         -|          -|          -|    -|
+    | + matrixmul_3_Pipeline_loop_input_B1_loop_input_B2    |     -|  0.57|       66|    660.000|         -|       66|     -|        no|        -|         -|   18 (~0%)|  143 (~0%)|    -|
+    |  o loop_input_B1_loop_input_B2                        |     -|  7.30|       64|    640.000|         2|        1|    64|       yes|        -|         -|          -|          -|    -|
+    | + matrixmul_3_Pipeline_loop1_loop2                    |     -|  0.38|       72|    720.000|         -|       72|     -|        no|        -|  24 (10%)|  2260 (2%)|   823 (1%)|    -|
+    |  o loop1_loop2                                        |     -|  7.30|       70|    700.000|         8|        1|    64|       yes|        -|         -|          -|          -|    -|
+    | + matrixmul_3_Pipeline_loop_output_C1_loop_output_C2  |     -|  1.22|       68|    680.000|         -|       68|     -|        no|        -|         -|   30 (~0%)|  185 (~0%)|    -|
+    |  o loop_output_C1_loop_output_C2                      |     -|  7.30|       66|    660.000|         4|        1|    64|       yes|        -|         -|          -|          -|    -|
+    +-------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+----------+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AXIS
++-----------+-----------+---------------+-------+--------+--------+
+| Interface | Direction | Register Mode | TDATA | TREADY | TVALID |
++-----------+-----------+---------------+-------+--------+--------+
+| in_A      | in        | both          | 64    | 1      | 1      |
+| out_C     | out       | both          | 64    | 1      | 1      |
++-----------+-----------+---------------+-------+--------+--------+
+
+* TOP LEVEL CONTROL
++-----------+--------------+----------+
+| Interface | Type         | Ports    |
++-----------+--------------+----------+
+| ap_clk    | clock        | ap_clk   |
+| ap_rst_n  | reset        | ap_rst_n |
+| ap_ctrl   | ap_ctrl_none |          |
++-----------+--------------+----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+-----------------------+
+| Argument | Direction | Datatype              |
++----------+-----------+-----------------------+
+| in_A     | in        | stream<axis_data, 0>& |
+| out_C    | out       | stream<axis_data, 0>& |
++----------+-----------+-----------------------+
+
+* SW-to-HW Mapping
++----------+--------------+-----------+
+| Argument | HW Interface | HW Type   |
++----------+--------------+-----------+
+| in_A     | in_A         | interface |
+| out_C    | out_C        | interface |
++----------+--------------+-----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++-------------------------------------------------------+-----+--------+-------------------+--------+----------+---------+
+| Name                                                  | DSP | Pragma | Variable          | Op     | Impl     | Latency |
++-------------------------------------------------------+-----+--------+-------------------+--------+----------+---------+
+| + matrixmul_3                                         | 24  |        |                   |        |          |         |
+|  + matrixmul_3_Pipeline_loop_input_A1_loop_input_A2   | 0   |        |                   |        |          |         |
+|    icmp_ln147_fu_212_p2                               |     |        | icmp_ln147        | seteq  | auto     | 0       |
+|    add_ln147_1_fu_218_p2                              |     |        | add_ln147_1       | add    | fabric   | 0       |
+|    add_ln147_fu_235_p2                                |     |        | add_ln147         | add    | fabric   | 0       |
+|    icmp_ln148_fu_241_p2                               |     |        | icmp_ln148        | seteq  | auto     | 0       |
+|    select_ln142_fu_247_p3                             |     |        | select_ln142      | select | auto_sel | 0       |
+|    select_ln147_fu_255_p3                             |     |        | select_ln147      | select | auto_sel | 0       |
+|    add_ln148_fu_291_p2                                |     |        | add_ln148         | add    | fabric   | 0       |
+|  + matrixmul_3_Pipeline_loop_input_B1_loop_input_B2   | 0   |        |                   |        |          |         |
+|    icmp_ln156_fu_212_p2                               |     |        | icmp_ln156        | seteq  | auto     | 0       |
+|    add_ln156_1_fu_218_p2                              |     |        | add_ln156_1       | add    | fabric   | 0       |
+|    add_ln156_fu_235_p2                                |     |        | add_ln156         | add    | fabric   | 0       |
+|    icmp_ln157_fu_241_p2                               |     |        | icmp_ln157        | seteq  | auto     | 0       |
+|    select_ln142_fu_247_p3                             |     |        | select_ln142      | select | auto_sel | 0       |
+|    select_ln156_fu_255_p3                             |     |        | select_ln156      | select | auto_sel | 0       |
+|    add_ln157_fu_291_p2                                |     |        | add_ln157         | add    | fabric   | 0       |
+|  + matrixmul_3_Pipeline_loop1_loop2                   | 24  |        |                   |        |          |         |
+|    icmp_ln167_fu_353_p2                               |     |        | icmp_ln167        | seteq  | auto     | 0       |
+|    add_ln167_1_fu_359_p2                              |     |        | add_ln167_1       | add    | fabric   | 0       |
+|    add_ln167_fu_376_p2                                |     |        | add_ln167         | add    | fabric   | 0       |
+|    icmp_ln168_fu_382_p2                               |     |        | icmp_ln168        | seteq  | auto     | 0       |
+|    select_ln142_fu_388_p3                             |     |        | select_ln142      | select | auto_sel | 0       |
+|    select_ln167_fu_396_p3                             |     |        | select_ln167      | select | auto_sel | 0       |
+|    add_ln176_fu_436_p2                                |     |        | add_ln176         | add    | fabric   | 0       |
+|    mul_32s_32s_32_2_1_U19                             | 3   |        | mul_ln174         | mul    | auto     | 1       |
+|    mul_32s_32s_32_2_1_U23                             | 3   |        | mul_ln174_1       | mul    | auto     | 1       |
+|    mul_32s_32s_32_2_1_U20                             | 3   |        | mul_ln174_2       | mul    | auto     | 1       |
+|    mul_32s_32s_32_2_1_U21                             | 3   |        | mul_ln174_3       | mul    | auto     | 1       |
+|    mul_32s_32s_32_2_1_U24                             | 3   |        | mul_ln174_4       | mul    | auto     | 1       |
+|    mul_32s_32s_32_2_1_U22                             | 3   |        | mul_ln174_5       | mul    | auto     | 1       |
+|    mul_32s_32s_32_2_1_U25                             | 3   |        | mul_ln174_6       | mul    | auto     | 1       |
+|    mul_32s_32s_32_2_1_U26                             | 3   |        | mul_ln174_7       | mul    | auto     | 1       |
+|    add_ln174_fu_472_p2                                |     |        | add_ln174         | add    | fabric   | 0       |
+|    add_ln174_1_fu_476_p2                              |     |        | add_ln174_1       | add    | fabric   | 0       |
+|    add_ln174_4_fu_462_p2                              |     |        | add_ln174_4       | add    | fabric   | 0       |
+|    add_ln168_fu_442_p2                                |     |        | add_ln168         | add    | fabric   | 0       |
+|  + matrixmul_3_Pipeline_loop_output_C1_loop_output_C2 | 0   |        |                   |        |          |         |
+|    icmp_ln181_fu_102_p2                               |     |        | icmp_ln181        | seteq  | auto     | 0       |
+|    add_ln181_1_fu_108_p2                              |     |        | add_ln181_1       | add    | fabric   | 0       |
+|    add_ln181_fu_125_p2                                |     |        | add_ln181         | add    | fabric   | 0       |
+|    icmp_ln182_fu_131_p2                               |     |        | icmp_ln182        | seteq  | auto     | 0       |
+|    select_ln142_fu_137_p3                             |     |        | select_ln142      | select | auto_sel | 0       |
+|    select_ln181_fu_145_p3                             |     |        | select_ln181      | select | auto_sel | 0       |
+|    cmp68_fu_165_p2                                    |     |        | cmp68             | seteq  | auto     | 0       |
+|    add_ln185_fu_175_p2                                |     |        | add_ln185         | add    | fabric   | 0       |
+|    icmp_ln187_fu_181_p2                               |     |        | icmp_ln187        | seteq  | auto     | 0       |
+|    local_stream_last_fu_187_p2                        |     |        | local_stream_last | and    | auto     | 0       |
+|    add_ln182_fu_193_p2                                |     |        | add_ln182         | add    | fabric   | 0       |
++-------------------------------------------------------+-----+--------+-------------------+--------+----------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++---------------+--------------+------+------+------+--------+-----------+------+---------+------------------+
+| Name          | Usage        | Type | BRAM | URAM | Pragma | Variable  | Impl | Latency | Bitwidth, Depth, |
+|               |              |      |      |      |        |           |      |         | Banks            |
++---------------+--------------+------+------+------+--------+-----------+------+---------+------------------+
+| + matrixmul_3 |              |      | 1    | 0    |        |           |      |         |                  |
+|   input_A_U   | ram_1p array |      |      |      |        | input_A   | auto | 1       | 32, 8, 1         |
+|   input_A_1_U | ram_1p array |      |      |      |        | input_A_1 | auto | 1       | 32, 8, 1         |
+|   input_A_2_U | ram_1p array |      |      |      |        | input_A_2 | auto | 1       | 32, 8, 1         |
+|   input_A_3_U | ram_1p array |      |      |      |        | input_A_3 | auto | 1       | 32, 8, 1         |
+|   input_A_4_U | ram_1p array |      |      |      |        | input_A_4 | auto | 1       | 32, 8, 1         |
+|   input_A_5_U | ram_1p array |      |      |      |        | input_A_5 | auto | 1       | 32, 8, 1         |
+|   input_A_6_U | ram_1p array |      |      |      |        | input_A_6 | auto | 1       | 32, 8, 1         |
+|   input_A_7_U | ram_1p array |      |      |      |        | input_A_7 | auto | 1       | 32, 8, 1         |
+|   input_B_U   | ram_1p array |      |      |      |        | input_B   | auto | 1       | 32, 8, 1         |
+|   input_B_1_U | ram_1p array |      |      |      |        | input_B_1 | auto | 1       | 32, 8, 1         |
+|   input_B_2_U | ram_1p array |      |      |      |        | input_B_2 | auto | 1       | 32, 8, 1         |
+|   input_B_3_U | ram_1p array |      |      |      |        | input_B_3 | auto | 1       | 32, 8, 1         |
+|   input_B_4_U | ram_1p array |      |      |      |        | input_B_4 | auto | 1       | 32, 8, 1         |
+|   input_B_5_U | ram_1p array |      |      |      |        | input_B_5 | auto | 1       | 32, 8, 1         |
+|   input_B_6_U | ram_1p array |      |      |      |        | input_B_6 | auto | 1       | 32, 8, 1         |
+|   input_B_7_U | ram_1p array |      |      |      |        | input_B_7 | auto | 1       | 32, 8, 1         |
+|   output_C_U  | ram_1p array |      | 2    |      |        | output_C  | auto | 1       | 32, 64, 1        |
++---------------+--------------+------+------+------+--------+-----------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+---------------------------------+--------------------------------------------+
+| Type            | Options                         | Location                                   |
++-----------------+---------------------------------+--------------------------------------------+
+| interface       | ap_ctrl_none port=return        | ../mat_mul.cpp:133 in matrixmul_3, return  |
+| interface       | axis register both port=in_A    | ../mat_mul.cpp:134 in matrixmul_3, in_A    |
+| interface       | axis register both port=out_C   | ../mat_mul.cpp:135 in matrixmul_3, out_C   |
+| array_partition | variable=input_A complete dim=2 | ../mat_mul.cpp:137 in matrixmul_3, input_A |
+| array_partition | variable=input_B complete dim=1 | ../mat_mul.cpp:139 in matrixmul_3, input_B |
+| loop_flatten    |                                 | ../mat_mul.cpp:150 in matrixmul_3          |
+| loop_flatten    |                                 | ../mat_mul.cpp:158 in matrixmul_3          |
+| pipeline        |                                 | ../mat_mul.cpp:170 in matrixmul_3          |
+| pipeline        |                                 | ../mat_mul.cpp:183 in matrixmul_3          |
++-----------------+---------------------------------+--------------------------------------------+
+
+

@@ -1,0 +1,249 @@
+
+
+================================================================
+== Vivado HLS Report for 'MalM'
+================================================================
+* Date:           Fri May 30 11:15:41 2025
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        music
+* Solution:       solution1
+* Product family: zynquplus
+* Target device:  xczu28dr-ffvg1517-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.279|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +------+------+------+------+---------+
+    |   Latency   |   Interval  | Pipeline|
+    |  min |  max |  min |  max |   Type  |
+    +------+------+------+------+---------+
+    |  1601|  1601|  1601|  1601|   none  |
+    +------+------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+------+------+----------+-----------+-----------+------+----------+
+        |          |   Latency   | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|  min |  max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+------+------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |  1600|  1600|        16|          -|          -|   100|    no    |
+        +----------+------+------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  | URAM|
++-----------------+---------+-------+--------+--------+-----+
+|DSP              |        -|      2|       -|       -|    -|
+|Expression       |        -|      0|       0|     302|    -|
+|FIFO             |        -|      -|       -|       -|    -|
+|Instance         |        -|    200|    8344|    9504|    -|
+|Memory           |        -|      -|       -|       -|    -|
+|Multiplexer      |        -|      -|       -|     248|    -|
+|Register         |        -|      -|    1753|       -|    -|
++-----------------+---------+-------+--------+--------+-----+
+|Total            |        0|    202|   10097|   10054|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Available        |     2160|   4272|  850560|  425280|   80|
++-----------------+---------+-------+--------+--------+-----+
+|Utilization (%)  |        0|      4|       1|       2|    0|
++-----------------+---------+-------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------+----------------------+---------+-------+-----+-----+-----+
+    |         Instance         |        Module        | BRAM_18K| DSP48E|  FF | LUT | URAM|
+    +--------------------------+----------------------+---------+-------+-----+-----+-----+
+    |MUSIC_top_dadd_64cud_U22  |MUSIC_top_dadd_64cud  |        0|      3|  445|  782|    0|
+    |MUSIC_top_dadd_64cud_U24  |MUSIC_top_dadd_64cud  |        0|      3|  445|  782|    0|
+    |MUSIC_top_dadd_64cud_U26  |MUSIC_top_dadd_64cud  |        0|      3|  445|  782|    0|
+    |MUSIC_top_dadd_64cud_U28  |MUSIC_top_dadd_64cud  |        0|      3|  445|  782|    0|
+    |MUSIC_top_dadddsubkb_U21  |MUSIC_top_dadddsubkb  |        0|      3|  445|  782|    0|
+    |MUSIC_top_dadddsubkb_U23  |MUSIC_top_dadddsubkb  |        0|      3|  445|  782|    0|
+    |MUSIC_top_dmul_64dEe_U29  |MUSIC_top_dmul_64dEe  |        0|     11|  299|  203|    0|
+    |MUSIC_top_dmul_64dEe_U30  |MUSIC_top_dmul_64dEe  |        0|     11|  299|  203|    0|
+    |MUSIC_top_dmul_64dEe_U31  |MUSIC_top_dmul_64dEe  |        0|     11|  299|  203|    0|
+    |MUSIC_top_dmul_64dEe_U32  |MUSIC_top_dmul_64dEe  |        0|     11|  299|  203|    0|
+    |MUSIC_top_dmul_64dEe_U33  |MUSIC_top_dmul_64dEe  |        0|     11|  299|  203|    0|
+    |MUSIC_top_dmul_64dEe_U34  |MUSIC_top_dmul_64dEe  |        0|     11|  299|  203|    0|
+    |MUSIC_top_dmul_64dEe_U35  |MUSIC_top_dmul_64dEe  |        0|     11|  299|  203|    0|
+    |MUSIC_top_dmul_64dEe_U36  |MUSIC_top_dmul_64dEe  |        0|     11|  299|  203|    0|
+    |MUSIC_top_dmul_64dEe_U37  |MUSIC_top_dmul_64dEe  |        0|     11|  299|  203|    0|
+    |MUSIC_top_dmul_64dEe_U38  |MUSIC_top_dmul_64dEe  |        0|     11|  299|  203|    0|
+    |MUSIC_top_dmul_64dEe_U39  |MUSIC_top_dmul_64dEe  |        0|     11|  299|  203|    0|
+    |MUSIC_top_dmul_64dEe_U40  |MUSIC_top_dmul_64dEe  |        0|     11|  299|  203|    0|
+    |MUSIC_top_dmul_64dEe_U41  |MUSIC_top_dmul_64dEe  |        0|     11|  299|  203|    0|
+    |MUSIC_top_dmul_64dEe_U42  |MUSIC_top_dmul_64dEe  |        0|     11|  299|  203|    0|
+    |MUSIC_top_dmul_64dEe_U43  |MUSIC_top_dmul_64dEe  |        0|     11|  299|  203|    0|
+    |MUSIC_top_dmul_64dEe_U44  |MUSIC_top_dmul_64dEe  |        0|     11|  299|  203|    0|
+    |MUSIC_top_dsub_64fYi_U25  |MUSIC_top_dsub_64fYi  |        0|      3|  445|  782|    0|
+    |MUSIC_top_dsub_64fYi_U27  |MUSIC_top_dsub_64fYi  |        0|      3|  445|  782|    0|
+    +--------------------------+----------------------+---------+-------+-----+-----+-----+
+    |Total                     |                      |        0|    200| 8344| 9504|    0|
+    +--------------------------+----------------------+---------+-------+-----+-----+-----+
+
+    * DSP48E: 
+    +--------------------------+----------------------+-----------+
+    |         Instance         |        Module        | Expression|
+    +--------------------------+----------------------+-----------+
+    |MUSIC_top_mul_mulg8j_U45  |MUSIC_top_mul_mulg8j  |  i0 * i1  |
+    |MUSIC_top_mul_mulg8j_U46  |MUSIC_top_mul_mulg8j  |  i0 * i1  |
+    +--------------------------+----------------------+-----------+
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------+----------+-------+---+----+------------+------------+
+    |     Variable Name    | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+-------+---+----+------------+------------+
+    |mul_ln71_2_fu_342_p2  |     *    |      0|  0|  30|           7|           7|
+    |mul_ln71_3_fu_352_p2  |     *    |      0|  0|  30|           7|           7|
+    |add_ln71_1_fu_416_p2  |     +    |      0|  0|  22|          15|          15|
+    |add_ln71_2_fu_426_p2  |     +    |      0|  0|  21|          14|          14|
+    |add_ln71_3_fu_436_p2  |     +    |      0|  0|  22|          15|          15|
+    |add_ln71_fu_406_p2    |     +    |      0|  0|  21|          14|          14|
+    |i_fu_392_p2           |     +    |      0|  0|  15|           7|           1|
+    |icmp_ln70_fu_386_p2   |   icmp   |      0|  0|  11|           7|           6|
+    |xor_ln211_fu_362_p2   |    xor   |      0|  0|  65|          64|          65|
+    |xor_ln212_fu_376_p2   |    xor   |      0|  0|  65|          64|          65|
+    +----------------------+----------+-------+---+----+------------+------------+
+    |Total                 |          |      0|  0| 302|         214|         209|
+    +----------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------+----+-----------+-----+-----------+
+    |        Name       | LUT| Input Size| Bits| Total Bits|
+    +-------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm          |  89|         18|    1|         18|
+    |grp_fu_214_opcode  |  15|          3|    2|          6|
+    |grp_fu_214_p0      |  15|          3|   64|        192|
+    |grp_fu_214_p1      |  15|          3|   64|        192|
+    |grp_fu_218_p0      |  15|          3|   64|        192|
+    |grp_fu_218_p1      |  15|          3|   64|        192|
+    |grp_fu_222_opcode  |  15|          3|    2|          6|
+    |grp_fu_222_p0      |  15|          3|   64|        192|
+    |grp_fu_222_p1      |  15|          3|   64|        192|
+    |grp_fu_226_p0      |  15|          3|   64|        192|
+    |grp_fu_226_p1      |  15|          3|   64|        192|
+    |i_0_reg_202        |   9|          2|    7|         14|
+    +-------------------+----+-----------+-----+-----------+
+    |Total              | 248|         50|  524|       1580|
+    +-------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------+----+----+-----+-----------+
+    |        Name        | FF | LUT| Bits| Const Bits|
+    +--------------------+----+----+-----+-----------+
+    |ap_CS_fsm           |  17|   0|   17|          0|
+    |i_0_reg_202         |   7|   0|    7|          0|
+    |i_reg_529           |   7|   0|    7|          0|
+    |m1_5_reg_606        |  64|   0|   64|          0|
+    |m1_6_reg_626        |  64|   0|   64|          0|
+    |m1_7_reg_646        |  64|   0|   64|          0|
+    |m1_reg_586          |  64|   0|   64|          0|
+    |m2_5_reg_611        |  64|   0|   64|          0|
+    |m2_6_reg_631        |  64|   0|   64|          0|
+    |m2_7_reg_651        |  64|   0|   64|          0|
+    |m2_reg_591          |  64|   0|   64|          0|
+    |m3_4_reg_616        |  64|   0|   64|          0|
+    |m3_5_reg_636        |  64|   0|   64|          0|
+    |m3_6_reg_656        |  64|   0|   64|          0|
+    |m3_reg_596          |  64|   0|   64|          0|
+    |m4_4_reg_621        |  64|   0|   64|          0|
+    |m4_5_reg_641        |  64|   0|   64|          0|
+    |m4_6_reg_661        |  64|   0|   64|          0|
+    |m4_reg_601          |  64|   0|   64|          0|
+    |mul_ln71_1_reg_499  |  15|   0|   15|          0|
+    |mul_ln71_2_reg_504  |  14|   0|   14|          0|
+    |mul_ln71_3_reg_509  |  14|   0|   14|          0|
+    |mul_ln71_reg_494    |  15|   0|   15|          0|
+    |sum_im_4_reg_681    |  64|   0|   64|          0|
+    |sum_im_5_reg_691    |  64|   0|   64|          0|
+    |sum_im_6_reg_701    |  64|   0|   64|          0|
+    |sum_im_reg_671      |  64|   0|   64|          0|
+    |sum_re_5_reg_676    |  64|   0|   64|          0|
+    |sum_re_6_reg_686    |  64|   0|   64|          0|
+    |sum_re_7_reg_696    |  64|   0|   64|          0|
+    |sum_re_reg_666      |  64|   0|   64|          0|
+    |tmp_im_reg_520      |  64|   0|   64|          0|
+    |tmp_re_reg_514      |  64|   0|   64|          0|
+    +--------------------+----+----+-----+-----------+
+    |Total               |1753|   0| 1753|          0|
+    +--------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------+-----+-----+------------+--------------+--------------+
+|   RTL Ports   | Dir | Bits|  Protocol  | Source Object|    C Type    |
++---------------+-----+-----+------------+--------------+--------------+
+|ap_clk         |  in |    1| ap_ctrl_hs |     MalM     | return value |
+|ap_rst         |  in |    1| ap_ctrl_hs |     MalM     | return value |
+|ap_start       |  in |    1| ap_ctrl_hs |     MalM     | return value |
+|ap_done        | out |    1| ap_ctrl_hs |     MalM     | return value |
+|ap_idle        | out |    1| ap_ctrl_hs |     MalM     | return value |
+|ap_ready       | out |    1| ap_ctrl_hs |     MalM     | return value |
+|A_re_address0  | out |   14|  ap_memory |     A_re     |     array    |
+|A_re_ce0       | out |    1|  ap_memory |     A_re     |     array    |
+|A_re_q0        |  in |   64|  ap_memory |     A_re     |     array    |
+|A_re_address1  | out |   14|  ap_memory |     A_re     |     array    |
+|A_re_ce1       | out |    1|  ap_memory |     A_re     |     array    |
+|A_re_q1        |  in |   64|  ap_memory |     A_re     |     array    |
+|A_re_offset    |  in |    7|   ap_none  |  A_re_offset |    scalar    |
+|A_im_address0  | out |   14|  ap_memory |     A_im     |     array    |
+|A_im_ce0       | out |    1|  ap_memory |     A_im     |     array    |
+|A_im_q0        |  in |   64|  ap_memory |     A_im     |     array    |
+|A_im_address1  | out |   14|  ap_memory |     A_im     |     array    |
+|A_im_ce1       | out |    1|  ap_memory |     A_im     |     array    |
+|A_im_q1        |  in |   64|  ap_memory |     A_im     |     array    |
+|A_im_offset    |  in |    7|   ap_none  |  A_im_offset |    scalar    |
+|B_re_offset    |  in |   32|   ap_none  |  B_re_offset |    scalar    |
+|B_im_offset    |  in |   32|   ap_none  |  B_im_offset |    scalar    |
+|cos_theta_re   |  in |   64|   ap_none  | cos_theta_re |    scalar    |
+|cos_theta_im   |  in |   64|   ap_none  | cos_theta_im |    scalar    |
+|sin_theta_re   |  in |   64|   ap_none  | sin_theta_re |    scalar    |
+|sin_theta_im   |  in |   64|   ap_none  | sin_theta_im |    scalar    |
+|C_re_address0  | out |    7|  ap_memory |     C_re     |     array    |
+|C_re_ce0       | out |    1|  ap_memory |     C_re     |     array    |
+|C_re_we0       | out |    1|  ap_memory |     C_re     |     array    |
+|C_re_d0        | out |   64|  ap_memory |     C_re     |     array    |
+|C_im_address0  | out |    7|  ap_memory |     C_im     |     array    |
+|C_im_ce0       | out |    1|  ap_memory |     C_im     |     array    |
+|C_im_we0       | out |    1|  ap_memory |     C_im     |     array    |
+|C_im_d0        | out |   64|  ap_memory |     C_im     |     array    |
+|D_re_address0  | out |    7|  ap_memory |     D_re     |     array    |
+|D_re_ce0       | out |    1|  ap_memory |     D_re     |     array    |
+|D_re_we0       | out |    1|  ap_memory |     D_re     |     array    |
+|D_re_d0        | out |   64|  ap_memory |     D_re     |     array    |
+|D_im_address0  | out |    7|  ap_memory |     D_im     |     array    |
+|D_im_ce0       | out |    1|  ap_memory |     D_im     |     array    |
+|D_im_we0       | out |    1|  ap_memory |     D_im     |     array    |
+|D_im_d0        | out |   64|  ap_memory |     D_im     |     array    |
++---------------+-----+-----+------------+--------------+--------------+
+

@@ -1,0 +1,148 @@
+
+
+================================================================
+== Vivado HLS Report for 'operator_add_assign'
+================================================================
+* Date:           Fri May 30 11:14:54 2025
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        music
+* Solution:       solution1
+* Product family: zynquplus
+* Target device:  xczu28dr-ffvg1517-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     6.437|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    3|    3|    1|    1| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 4
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 4, States = { 1 2 3 4 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 6.43>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%rhs_im_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %rhs_im_read)" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:170]   --->   Operation 5 'read' 'rhs_im_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%rhs_re_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %rhs_re_read)" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:170]   --->   Operation 6 'read' 'rhs_re_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%x_complex_im_read = call float @_ssdm_op_Read.ap_auto.float(float %x_complex_float_im_read)" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:170]   --->   Operation 7 'read' 'x_complex_im_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%x_complex_re_read = call float @_ssdm_op_Read.ap_auto.float(float %x_complex_float_re_read)" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:170]   --->   Operation 8 'read' 'x_complex_re_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [4/4] (6.43ns)   --->   "%agg_result_re_write_s = fadd float %rhs_re_read_1, %x_complex_re_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171]   --->   Operation 9 'fadd' 'agg_result_re_write_s' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 10 [4/4] (6.43ns)   --->   "%agg_result_im_write_s = fadd float %rhs_im_read_1, %x_complex_im_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171]   --->   Operation 10 'fadd' 'agg_result_im_write_s' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 6.43>
+ST_2 : Operation 11 [3/4] (6.43ns)   --->   "%agg_result_re_write_s = fadd float %rhs_re_read_1, %x_complex_re_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171]   --->   Operation 11 'fadd' 'agg_result_re_write_s' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 12 [3/4] (6.43ns)   --->   "%agg_result_im_write_s = fadd float %rhs_im_read_1, %x_complex_im_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171]   --->   Operation 12 'fadd' 'agg_result_im_write_s' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 6.43>
+ST_3 : Operation 13 [2/4] (6.43ns)   --->   "%agg_result_re_write_s = fadd float %rhs_re_read_1, %x_complex_re_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171]   --->   Operation 13 'fadd' 'agg_result_re_write_s' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 14 [2/4] (6.43ns)   --->   "%agg_result_im_write_s = fadd float %rhs_im_read_1, %x_complex_im_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171]   --->   Operation 14 'fadd' 'agg_result_im_write_s' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 6.43>
+ST_4 : Operation 15 [1/4] (6.43ns)   --->   "%agg_result_re_write_s = fadd float %rhs_re_read_1, %x_complex_re_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171]   --->   Operation 15 'fadd' 'agg_result_re_write_s' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 16 [1/4] (6.43ns)   --->   "%agg_result_im_write_s = fadd float %rhs_im_read_1, %x_complex_im_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171]   --->   Operation 16 'fadd' 'agg_result_im_write_s' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 17 [1/1] (0.00ns)   --->   "%newret = insertvalue { float, float } undef, float %agg_result_re_write_s, 0" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171]   --->   Operation 17 'insertvalue' 'newret' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 18 [1/1] (0.00ns)   --->   "%newret2 = insertvalue { float, float } %newret, float %agg_result_im_write_s, 1" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171]   --->   Operation 18 'insertvalue' 'newret2' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 19 [1/1] (0.00ns)   --->   "ret { float, float } %newret2" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171]   --->   Operation 19 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 6.44ns
+The critical path consists of the following:
+	wire read on port 'rhs_im_read' (C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:170) [5]  (0 ns)
+	'fadd' operation ('agg.result.im', C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171) [10]  (6.44 ns)
+
+ <State 2>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('agg.result.re', C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171) [9]  (6.44 ns)
+
+ <State 3>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('agg.result.re', C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171) [9]  (6.44 ns)
+
+ <State 4>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('agg.result.re', C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:171) [9]  (6.44 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

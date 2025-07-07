@@ -1,0 +1,32 @@
+<pragmas>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="matrix.cpp" line="17" pragmaType="inline" parentfunction="matrixmul_100_unopt" off="1" region="0" recursive="0"/>
+<pragma file="matrix.cpp" line="16" pragmaType="pipeline" parentfunction="matrixmul_100_unopt" off="1" ii="0" style=""/>
+<pragma file="matrix.cpp" line="56" pragmaType="unroll" parentfunction="matrixmul_100_unopt" factor="1" skip_exit_check="0"/>
+<pragma file="matrix.cpp" line="57" pragmaType="loop_flatten" parentfunction="matrixmul_100_unopt" off="1"/>
+<pragma file="matrix.cpp" line="44" pragmaType="unroll" parentfunction="matrixmul_100_unopt" factor="1" skip_exit_check="0"/>
+<pragma file="matrix.cpp" line="45" pragmaType="loop_flatten" parentfunction="matrixmul_100_unopt" off="1"/>
+<pragma file="matrix.cpp" line="31" pragmaType="unroll" parentfunction="matrixmul_100_unopt" factor="1" skip_exit_check="0"/>
+<pragma file="matrix.cpp" line="32" pragmaType="loop_flatten" parentfunction="matrixmul_100_unopt" off="1"/>
+<pragma file="matrix.cpp" line="22" pragmaType="unroll" parentfunction="matrixmul_100_unopt" factor="1" skip_exit_check="0"/>
+<pragma file="matrix.cpp" line="23" pragmaType="loop_flatten" parentfunction="matrixmul_100_unopt" off="1"/>
+<pragma file="matrix.cpp" line="5" pragmaType="interface" parentfunction="matrixmul_100_unopt" mode="ap_ctrl_none" port="return" name=""/>
+<pragma file="matrix.cpp" line="6" pragmaType="interface" parentfunction="matrixmul_100_unopt" mode="axis" port="in_A" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="matrix.cpp" line="7" pragmaType="interface" parentfunction="matrixmul_100_unopt" mode="axis" port="out_C" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<1>::ap_uint(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_last_ptr" off="0" region="0" recursive="0"/>
+<pragma file="C:/Xilinx_2024_ent/Vitis/2024.2/common/technology/autopilot\etc/ap_common.h" line="523" pragmaType="inline" parentfunction="_ZN8ssdm_intILi4ELb0EEC2EDq4_j" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<4>::ap_uint(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<1, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="C:/Xilinx_2024_ent/Vitis/2024.2/common/technology/autopilot\etc/ap_common.h" line="523" pragmaType="inline" parentfunction="_ZN8ssdm_intILi1ELb0EEC2EDq1_j" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_data_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_strb_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<4, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_keep_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_user_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_dest_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_id_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+</pragmas>

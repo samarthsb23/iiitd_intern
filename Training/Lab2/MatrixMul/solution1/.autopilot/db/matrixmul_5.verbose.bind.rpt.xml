@@ -1,0 +1,49 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'matrixmul_5'" level="0">
+<item name = "Date">Fri Apr 18 15:23:33 2025
+</item>
+<item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
+<item name = "Project">MatrixMul</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 8.670 ns, 1.25 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">275, 275, 2.750 us, 2.750 us, 275, 275, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- loop_input_A1_loop_input_A2">66, 66, 4, 1, 1, 64, yes</column>
+<column name="- loop_input_B1_loop_input_B2">66, 66, 4, 1, 1, 64, yes</column>
+<column name="- loop1_loop2">67, 67, 5, 1, 1, 64, yes</column>
+<column name="- loop_output_C1_loop_output_C2">68, 68, 6, 1, 1, 64, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

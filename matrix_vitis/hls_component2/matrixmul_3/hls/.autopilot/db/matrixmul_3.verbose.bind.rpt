@@ -1,0 +1,766 @@
+
+
+================================================================
+== Vitis HLS Report for 'matrixmul_3'
+================================================================
+* Date:           Thu May 22 15:58:12 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        matrixmul_3
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.923 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      281|      281|  2.810 us|  2.810 us|  282|  282|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------------------------------------------+----------------------------------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
+        |                                                               |                                                    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+        |                            Instance                           |                       Module                       |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+        +---------------------------------------------------------------+----------------------------------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
+        |grp_matrixmul_3_Pipeline_loop_input_A1_loop_input_A2_fu_104    |matrixmul_3_Pipeline_loop_input_A1_loop_input_A2    |       66|       66|  0.660 us|  0.660 us|   65|   65|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        |grp_matrixmul_3_Pipeline_loop_input_B1_loop_input_B2_fu_118    |matrixmul_3_Pipeline_loop_input_B1_loop_input_B2    |       66|       66|  0.660 us|  0.660 us|   65|   65|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        |grp_matrixmul_3_Pipeline_loop1_loop2_fu_132                    |matrixmul_3_Pipeline_loop1_loop2                    |       72|       72|  0.720 us|  0.720 us|   65|   65|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        |grp_matrixmul_3_Pipeline_loop_output_C1_loop_output_C2_fu_153  |matrixmul_3_Pipeline_loop_output_C1_loop_output_C2  |       68|       68|  0.680 us|  0.680 us|   65|   65|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        +---------------------------------------------------------------+----------------------------------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 10
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.25>
+ST_1 : Operation 11 [1/1] (2.32ns)   --->   "%input_A = alloca i64 1" [../mat_mul.cpp:136]   --->   Operation 11 'alloca' 'input_A' <Predicate = true> <Delay = 2.32>
+ST_1 : Operation 12 [1/1] (2.32ns)   --->   "%input_A_1 = alloca i64 1" [../mat_mul.cpp:136]   --->   Operation 12 'alloca' 'input_A_1' <Predicate = true> <Delay = 2.32>
+ST_1 : Operation 13 [1/1] (2.32ns)   --->   "%input_A_2 = alloca i64 1" [../mat_mul.cpp:136]   --->   Operation 13 'alloca' 'input_A_2' <Predicate = true> <Delay = 2.32>
+ST_1 : Operation 14 [1/1] (2.32ns)   --->   "%input_A_3 = alloca i64 1" [../mat_mul.cpp:136]   --->   Operation 14 'alloca' 'input_A_3' <Predicate = true> <Delay = 2.32>
+ST_1 : Operation 15 [1/1] (2.32ns)   --->   "%input_A_4 = alloca i64 1" [../mat_mul.cpp:136]   --->   Operation 15 'alloca' 'input_A_4' <Predicate = true> <Delay = 2.32>
+ST_1 : Operation 16 [1/1] (2.32ns)   --->   "%input_A_5 = alloca i64 1" [../mat_mul.cpp:136]   --->   Operation 16 'alloca' 'input_A_5' <Predicate = true> <Delay = 2.32>
+ST_1 : Operation 17 [1/1] (2.32ns)   --->   "%input_A_6 = alloca i64 1" [../mat_mul.cpp:136]   --->   Operation 17 'alloca' 'input_A_6' <Predicate = true> <Delay = 2.32>
+ST_1 : Operation 18 [1/1] (2.32ns)   --->   "%input_A_7 = alloca i64 1" [../mat_mul.cpp:136]   --->   Operation 18 'alloca' 'input_A_7' <Predicate = true> <Delay = 2.32>
+ST_1 : Operation 19 [1/1] (2.32ns)   --->   "%input_B = alloca i64 1" [../mat_mul.cpp:138]   --->   Operation 19 'alloca' 'input_B' <Predicate = true> <Delay = 2.32>
+ST_1 : Operation 20 [1/1] (2.32ns)   --->   "%input_B_1 = alloca i64 1" [../mat_mul.cpp:138]   --->   Operation 20 'alloca' 'input_B_1' <Predicate = true> <Delay = 2.32>
+ST_1 : Operation 21 [1/1] (2.32ns)   --->   "%input_B_2 = alloca i64 1" [../mat_mul.cpp:138]   --->   Operation 21 'alloca' 'input_B_2' <Predicate = true> <Delay = 2.32>
+ST_1 : Operation 22 [1/1] (2.32ns)   --->   "%input_B_3 = alloca i64 1" [../mat_mul.cpp:138]   --->   Operation 22 'alloca' 'input_B_3' <Predicate = true> <Delay = 2.32>
+ST_1 : Operation 23 [1/1] (2.32ns)   --->   "%input_B_4 = alloca i64 1" [../mat_mul.cpp:138]   --->   Operation 23 'alloca' 'input_B_4' <Predicate = true> <Delay = 2.32>
+ST_1 : Operation 24 [1/1] (2.32ns)   --->   "%input_B_5 = alloca i64 1" [../mat_mul.cpp:138]   --->   Operation 24 'alloca' 'input_B_5' <Predicate = true> <Delay = 2.32>
+ST_1 : Operation 25 [1/1] (2.32ns)   --->   "%input_B_6 = alloca i64 1" [../mat_mul.cpp:138]   --->   Operation 25 'alloca' 'input_B_6' <Predicate = true> <Delay = 2.32>
+ST_1 : Operation 26 [1/1] (2.32ns)   --->   "%input_B_7 = alloca i64 1" [../mat_mul.cpp:138]   --->   Operation 26 'alloca' 'input_B_7' <Predicate = true> <Delay = 2.32>
+ST_1 : Operation 27 [1/1] (3.25ns)   --->   "%output_C = alloca i64 1" [../mat_mul.cpp:140]   --->   Operation 27 'alloca' 'output_C' <Predicate = true> <Delay = 3.25>
+
+State 2 <SV = 1> <Delay = 2.84>
+ST_2 : Operation 28 [2/2] (2.84ns)   --->   "%call_ln0 = call void @matrixmul_3_Pipeline_loop_input_A1_loop_input_A2, i32 %input_A, i32 %input_A_1, i32 %input_A_2, i32 %input_A_3, i32 %input_A_4, i32 %input_A_5, i32 %input_A_6, i32 %input_A_7, i64 %in_A"   --->   Operation 28 'call' 'call_ln0' <Predicate = true> <Delay = 2.84> <CoreType = "Generic">   --->   Generic Core
+
+State 3 <SV = 2> <Delay = 5.04>
+ST_3 : Operation 29 [1/2] (5.04ns)   --->   "%call_ln0 = call void @matrixmul_3_Pipeline_loop_input_A1_loop_input_A2, i32 %input_A, i32 %input_A_1, i32 %input_A_2, i32 %input_A_3, i32 %input_A_4, i32 %input_A_5, i32 %input_A_6, i32 %input_A_7, i64 %in_A"   --->   Operation 29 'call' 'call_ln0' <Predicate = true> <Delay = 5.04> <CoreType = "Generic">   --->   Generic Core
+
+State 4 <SV = 3> <Delay = 2.84>
+ST_4 : Operation 30 [2/2] (2.84ns)   --->   "%call_ln0 = call void @matrixmul_3_Pipeline_loop_input_B1_loop_input_B2, i32 %input_B_7, i32 %input_B_6, i32 %input_B_5, i32 %input_B_4, i32 %input_B_3, i32 %input_B_2, i32 %input_B_1, i32 %input_B, i64 %in_A"   --->   Operation 30 'call' 'call_ln0' <Predicate = true> <Delay = 2.84> <CoreType = "Generic">   --->   Generic Core
+
+State 5 <SV = 4> <Delay = 5.04>
+ST_5 : Operation 31 [1/2] (5.04ns)   --->   "%call_ln0 = call void @matrixmul_3_Pipeline_loop_input_B1_loop_input_B2, i32 %input_B_7, i32 %input_B_6, i32 %input_B_5, i32 %input_B_4, i32 %input_B_3, i32 %input_B_2, i32 %input_B_1, i32 %input_B, i64 %in_A"   --->   Operation 31 'call' 'call_ln0' <Predicate = true> <Delay = 5.04> <CoreType = "Generic">   --->   Generic Core
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 32 [2/2] (0.00ns)   --->   "%call_ln0 = call void @matrixmul_3_Pipeline_loop1_loop2, i32 %input_A, i32 %input_A_1, i32 %input_A_2, i32 %input_A_3, i32 %input_A_4, i32 %input_A_5, i32 %input_A_6, i32 %input_A_7, i32 %output_C, i32 %input_B, i32 %input_B_1, i32 %input_B_2, i32 %input_B_3, i32 %input_B_4, i32 %input_B_5, i32 %input_B_6, i32 %input_B_7"   --->   Operation 32 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 7 <SV = 6> <Delay = 0.00>
+ST_7 : Operation 33 [1/2] (0.00ns)   --->   "%call_ln0 = call void @matrixmul_3_Pipeline_loop1_loop2, i32 %input_A, i32 %input_A_1, i32 %input_A_2, i32 %input_A_3, i32 %input_A_4, i32 %input_A_5, i32 %input_A_6, i32 %input_A_7, i32 %output_C, i32 %input_B, i32 %input_B_1, i32 %input_B_2, i32 %input_B_3, i32 %input_B_4, i32 %input_B_5, i32 %input_B_6, i32 %input_B_7"   --->   Operation 33 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 8 <SV = 7> <Delay = 0.00>
+ST_8 : Operation 34 [2/2] (0.00ns)   --->   "%call_ln0 = call void @matrixmul_3_Pipeline_loop_output_C1_loop_output_C2, i32 %output_C, i64 %out_C"   --->   Operation 34 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 9 <SV = 8> <Delay = 5.08>
+ST_9 : Operation 35 [1/2] (5.08ns)   --->   "%call_ln0 = call void @matrixmul_3_Pipeline_loop_output_C1_loop_output_C2, i32 %output_C, i64 %out_C"   --->   Operation 35 'call' 'call_ln0' <Predicate = true> <Delay = 5.08> <CoreType = "Generic">   --->   Generic Core
+
+State 10 <SV = 9> <Delay = 0.00>
+ST_10 : Operation 36 [1/1] (0.00ns)   --->   "%spectopmodule_ln132 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_2" [../mat_mul.cpp:132]   --->   Operation 36 'spectopmodule' 'spectopmodule_ln132' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 37 [1/1] (0.00ns)   --->   "%specinterface_ln132 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0" [../mat_mul.cpp:132]   --->   Operation 37 'specinterface' 'specinterface_ln132' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 38 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %in_A, void @empty, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 38 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 39 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i64 %in_A"   --->   Operation 39 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 40 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %out_C, void @empty, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 40 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 41 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i64 %out_C"   --->   Operation 41 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 42 [1/1] (0.00ns)   --->   "%ret_ln197 = ret" [../mat_mul.cpp:197]   --->   Operation 42 'ret' 'ret_ln197' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 1
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_none:ce=0
+Port [ in_A]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ out_C]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+input_A             (alloca       ) [ 00111111000]
+input_A_1           (alloca       ) [ 00111111000]
+input_A_2           (alloca       ) [ 00111111000]
+input_A_3           (alloca       ) [ 00111111000]
+input_A_4           (alloca       ) [ 00111111000]
+input_A_5           (alloca       ) [ 00111111000]
+input_A_6           (alloca       ) [ 00111111000]
+input_A_7           (alloca       ) [ 00111111000]
+input_B             (alloca       ) [ 00111111000]
+input_B_1           (alloca       ) [ 00111111000]
+input_B_2           (alloca       ) [ 00111111000]
+input_B_3           (alloca       ) [ 00111111000]
+input_B_4           (alloca       ) [ 00111111000]
+input_B_5           (alloca       ) [ 00111111000]
+input_B_6           (alloca       ) [ 00111111000]
+input_B_7           (alloca       ) [ 00111111000]
+output_C            (alloca       ) [ 00111111110]
+call_ln0            (call         ) [ 00000000000]
+call_ln0            (call         ) [ 00000000000]
+call_ln0            (call         ) [ 00000000000]
+call_ln0            (call         ) [ 00000000000]
+spectopmodule_ln132 (spectopmodule) [ 00000000000]
+specinterface_ln132 (specinterface) [ 00000000000]
+specinterface_ln0   (specinterface) [ 00000000000]
+specbitsmap_ln0     (specbitsmap  ) [ 00000000000]
+specinterface_ln0   (specinterface) [ 00000000000]
+specbitsmap_ln0     (specbitsmap  ) [ 00000000000]
+ret_ln197           (ret          ) [ 00000000000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="in_A">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="in_A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="out_C">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="out_C"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1001" name="const_4">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1001" name="const_6">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="matrixmul_3_Pipeline_loop_input_A1_loop_input_A2"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1001" name="const_8">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="matrixmul_3_Pipeline_loop_input_B1_loop_input_B2"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1001" name="const_10">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="matrixmul_3_Pipeline_loop1_loop2"/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1001" name="const_12">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="matrixmul_3_Pipeline_loop_output_C1_loop_output_C2"/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1001" name="const_14">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecTopModule"/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1001" name="const_16">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_2"/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1001" name="const_18">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1001" name="const_20">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1001" name="const_22">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_3"/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1001" name="const_24">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1001" name="const_26">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1001" name="const_28">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty"/></StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1001" name="const_30">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1001" name="const_32">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_0"/></StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1001" name="const_34">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecBitsMap"/></StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1004" name="input_A_alloca_fu_36">
+<pin_list>
+<pin id="37" dir="0" index="0" bw="1" slack="0"/>
+<pin id="38" dir="1" index="1" bw="32" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="input_A/1 "/>
+</bind>
+</comp>
+
+<comp id="40" class="1004" name="input_A_1_alloca_fu_40">
+<pin_list>
+<pin id="41" dir="0" index="0" bw="1" slack="0"/>
+<pin id="42" dir="1" index="1" bw="32" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="input_A_1/1 "/>
+</bind>
+</comp>
+
+<comp id="44" class="1004" name="input_A_2_alloca_fu_44">
+<pin_list>
+<pin id="45" dir="0" index="0" bw="1" slack="0"/>
+<pin id="46" dir="1" index="1" bw="32" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="input_A_2/1 "/>
+</bind>
+</comp>
+
+<comp id="48" class="1004" name="input_A_3_alloca_fu_48">
+<pin_list>
+<pin id="49" dir="0" index="0" bw="1" slack="0"/>
+<pin id="50" dir="1" index="1" bw="32" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="input_A_3/1 "/>
+</bind>
+</comp>
+
+<comp id="52" class="1004" name="input_A_4_alloca_fu_52">
+<pin_list>
+<pin id="53" dir="0" index="0" bw="1" slack="0"/>
+<pin id="54" dir="1" index="1" bw="32" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="input_A_4/1 "/>
+</bind>
+</comp>
+
+<comp id="56" class="1004" name="input_A_5_alloca_fu_56">
+<pin_list>
+<pin id="57" dir="0" index="0" bw="1" slack="0"/>
+<pin id="58" dir="1" index="1" bw="32" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="input_A_5/1 "/>
+</bind>
+</comp>
+
+<comp id="60" class="1004" name="input_A_6_alloca_fu_60">
+<pin_list>
+<pin id="61" dir="0" index="0" bw="1" slack="0"/>
+<pin id="62" dir="1" index="1" bw="32" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="input_A_6/1 "/>
+</bind>
+</comp>
+
+<comp id="64" class="1004" name="input_A_7_alloca_fu_64">
+<pin_list>
+<pin id="65" dir="0" index="0" bw="1" slack="0"/>
+<pin id="66" dir="1" index="1" bw="32" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="input_A_7/1 "/>
+</bind>
+</comp>
+
+<comp id="68" class="1004" name="input_B_alloca_fu_68">
+<pin_list>
+<pin id="69" dir="0" index="0" bw="1" slack="0"/>
+<pin id="70" dir="1" index="1" bw="32" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="input_B/1 "/>
+</bind>
+</comp>
+
+<comp id="72" class="1004" name="input_B_1_alloca_fu_72">
+<pin_list>
+<pin id="73" dir="0" index="0" bw="1" slack="0"/>
+<pin id="74" dir="1" index="1" bw="32" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="input_B_1/1 "/>
+</bind>
+</comp>
+
+<comp id="76" class="1004" name="input_B_2_alloca_fu_76">
+<pin_list>
+<pin id="77" dir="0" index="0" bw="1" slack="0"/>
+<pin id="78" dir="1" index="1" bw="32" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="input_B_2/1 "/>
+</bind>
+</comp>
+
+<comp id="80" class="1004" name="input_B_3_alloca_fu_80">
+<pin_list>
+<pin id="81" dir="0" index="0" bw="1" slack="0"/>
+<pin id="82" dir="1" index="1" bw="32" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="input_B_3/1 "/>
+</bind>
+</comp>
+
+<comp id="84" class="1004" name="input_B_4_alloca_fu_84">
+<pin_list>
+<pin id="85" dir="0" index="0" bw="1" slack="0"/>
+<pin id="86" dir="1" index="1" bw="32" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="input_B_4/1 "/>
+</bind>
+</comp>
+
+<comp id="88" class="1004" name="input_B_5_alloca_fu_88">
+<pin_list>
+<pin id="89" dir="0" index="0" bw="1" slack="0"/>
+<pin id="90" dir="1" index="1" bw="32" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="input_B_5/1 "/>
+</bind>
+</comp>
+
+<comp id="92" class="1004" name="input_B_6_alloca_fu_92">
+<pin_list>
+<pin id="93" dir="0" index="0" bw="1" slack="0"/>
+<pin id="94" dir="1" index="1" bw="32" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="input_B_6/1 "/>
+</bind>
+</comp>
+
+<comp id="96" class="1004" name="input_B_7_alloca_fu_96">
+<pin_list>
+<pin id="97" dir="0" index="0" bw="1" slack="0"/>
+<pin id="98" dir="1" index="1" bw="32" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="input_B_7/1 "/>
+</bind>
+</comp>
+
+<comp id="100" class="1004" name="output_C_alloca_fu_100">
+<pin_list>
+<pin id="101" dir="0" index="0" bw="1" slack="0"/>
+<pin id="102" dir="1" index="1" bw="32" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="output_C/1 "/>
+</bind>
+</comp>
+
+<comp id="104" class="1004" name="grp_matrixmul_3_Pipeline_loop_input_A1_loop_input_A2_fu_104">
+<pin_list>
+<pin id="105" dir="0" index="0" bw="0" slack="0"/>
+<pin id="106" dir="0" index="1" bw="32" slack="2147483647"/>
+<pin id="107" dir="0" index="2" bw="32" slack="2147483647"/>
+<pin id="108" dir="0" index="3" bw="32" slack="2147483647"/>
+<pin id="109" dir="0" index="4" bw="32" slack="2147483647"/>
+<pin id="110" dir="0" index="5" bw="32" slack="2147483647"/>
+<pin id="111" dir="0" index="6" bw="32" slack="2147483647"/>
+<pin id="112" dir="0" index="7" bw="32" slack="2147483647"/>
+<pin id="113" dir="0" index="8" bw="32" slack="2147483647"/>
+<pin id="114" dir="0" index="9" bw="64" slack="0"/>
+<pin id="115" dir="1" index="10" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln0/2 "/>
+</bind>
+</comp>
+
+<comp id="118" class="1004" name="grp_matrixmul_3_Pipeline_loop_input_B1_loop_input_B2_fu_118">
+<pin_list>
+<pin id="119" dir="0" index="0" bw="0" slack="0"/>
+<pin id="120" dir="0" index="1" bw="32" slack="2147483647"/>
+<pin id="121" dir="0" index="2" bw="32" slack="2147483647"/>
+<pin id="122" dir="0" index="3" bw="32" slack="2147483647"/>
+<pin id="123" dir="0" index="4" bw="32" slack="2147483647"/>
+<pin id="124" dir="0" index="5" bw="32" slack="2147483647"/>
+<pin id="125" dir="0" index="6" bw="32" slack="2147483647"/>
+<pin id="126" dir="0" index="7" bw="32" slack="2147483647"/>
+<pin id="127" dir="0" index="8" bw="32" slack="2147483647"/>
+<pin id="128" dir="0" index="9" bw="64" slack="0"/>
+<pin id="129" dir="1" index="10" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln0/4 "/>
+</bind>
+</comp>
+
+<comp id="132" class="1004" name="grp_matrixmul_3_Pipeline_loop1_loop2_fu_132">
+<pin_list>
+<pin id="133" dir="0" index="0" bw="0" slack="0"/>
+<pin id="134" dir="0" index="1" bw="32" slack="2147483647"/>
+<pin id="135" dir="0" index="2" bw="32" slack="2147483647"/>
+<pin id="136" dir="0" index="3" bw="32" slack="2147483647"/>
+<pin id="137" dir="0" index="4" bw="32" slack="2147483647"/>
+<pin id="138" dir="0" index="5" bw="32" slack="2147483647"/>
+<pin id="139" dir="0" index="6" bw="32" slack="2147483647"/>
+<pin id="140" dir="0" index="7" bw="32" slack="2147483647"/>
+<pin id="141" dir="0" index="8" bw="32" slack="2147483647"/>
+<pin id="142" dir="0" index="9" bw="32" slack="2147483647"/>
+<pin id="143" dir="0" index="10" bw="32" slack="2147483647"/>
+<pin id="144" dir="0" index="11" bw="32" slack="2147483647"/>
+<pin id="145" dir="0" index="12" bw="32" slack="2147483647"/>
+<pin id="146" dir="0" index="13" bw="32" slack="2147483647"/>
+<pin id="147" dir="0" index="14" bw="32" slack="2147483647"/>
+<pin id="148" dir="0" index="15" bw="32" slack="2147483647"/>
+<pin id="149" dir="0" index="16" bw="32" slack="2147483647"/>
+<pin id="150" dir="0" index="17" bw="32" slack="2147483647"/>
+<pin id="151" dir="1" index="18" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln0/6 "/>
+</bind>
+</comp>
+
+<comp id="153" class="1004" name="grp_matrixmul_3_Pipeline_loop_output_C1_loop_output_C2_fu_153">
+<pin_list>
+<pin id="154" dir="0" index="0" bw="0" slack="0"/>
+<pin id="155" dir="0" index="1" bw="32" slack="2147483647"/>
+<pin id="156" dir="0" index="2" bw="64" slack="0"/>
+<pin id="157" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln0/8 "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="39"><net_src comp="4" pin="0"/><net_sink comp="36" pin=0"/></net>
+
+<net id="43"><net_src comp="4" pin="0"/><net_sink comp="40" pin=0"/></net>
+
+<net id="47"><net_src comp="4" pin="0"/><net_sink comp="44" pin=0"/></net>
+
+<net id="51"><net_src comp="4" pin="0"/><net_sink comp="48" pin=0"/></net>
+
+<net id="55"><net_src comp="4" pin="0"/><net_sink comp="52" pin=0"/></net>
+
+<net id="59"><net_src comp="4" pin="0"/><net_sink comp="56" pin=0"/></net>
+
+<net id="63"><net_src comp="4" pin="0"/><net_sink comp="60" pin=0"/></net>
+
+<net id="67"><net_src comp="4" pin="0"/><net_sink comp="64" pin=0"/></net>
+
+<net id="71"><net_src comp="4" pin="0"/><net_sink comp="68" pin=0"/></net>
+
+<net id="75"><net_src comp="4" pin="0"/><net_sink comp="72" pin=0"/></net>
+
+<net id="79"><net_src comp="4" pin="0"/><net_sink comp="76" pin=0"/></net>
+
+<net id="83"><net_src comp="4" pin="0"/><net_sink comp="80" pin=0"/></net>
+
+<net id="87"><net_src comp="4" pin="0"/><net_sink comp="84" pin=0"/></net>
+
+<net id="91"><net_src comp="4" pin="0"/><net_sink comp="88" pin=0"/></net>
+
+<net id="95"><net_src comp="4" pin="0"/><net_sink comp="92" pin=0"/></net>
+
+<net id="99"><net_src comp="4" pin="0"/><net_sink comp="96" pin=0"/></net>
+
+<net id="103"><net_src comp="4" pin="0"/><net_sink comp="100" pin=0"/></net>
+
+<net id="116"><net_src comp="6" pin="0"/><net_sink comp="104" pin=0"/></net>
+
+<net id="117"><net_src comp="0" pin="0"/><net_sink comp="104" pin=9"/></net>
+
+<net id="130"><net_src comp="8" pin="0"/><net_sink comp="118" pin=0"/></net>
+
+<net id="131"><net_src comp="0" pin="0"/><net_sink comp="118" pin=9"/></net>
+
+<net id="152"><net_src comp="10" pin="0"/><net_sink comp="132" pin=0"/></net>
+
+<net id="158"><net_src comp="12" pin="0"/><net_sink comp="153" pin=0"/></net>
+
+<net id="159"><net_src comp="2" pin="0"/><net_sink comp="153" pin=2"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: out_C | {8 9 }
+ - Input state : 
+	Port: matrixmul_3 : in_A | {2 3 4 5 }
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|---------------------------------------------------------------|---------|---------|---------|---------|
+| Operation|                        Functional Unit                        |   DSP   |  Delay  |    FF   |   LUT   |
+|----------|---------------------------------------------------------------|---------|---------|---------|---------|
+|          |  grp_matrixmul_3_Pipeline_loop_input_A1_loop_input_A2_fu_104  |    0    |    0    |    15   |    75   |
+|   call   |  grp_matrixmul_3_Pipeline_loop_input_B1_loop_input_B2_fu_118  |    0    |    0    |    15   |    75   |
+|          |          grp_matrixmul_3_Pipeline_loop1_loop2_fu_132          |    24   |  25.408 |   2350  |   878   |
+|          | grp_matrixmul_3_Pipeline_loop_output_C1_loop_output_C2_fu_153 |    0    |  1.588  |    29   |   126   |
+|----------|---------------------------------------------------------------|---------|---------|---------|---------|
+|   Total  |                                                               |    24   |  26.996 |   2409  |   1154  |
+|----------|---------------------------------------------------------------|---------|---------|---------|---------|
+
+Memories:
++---------+--------+--------+--------+--------+
+|         |  BRAM  |   FF   |   LUT  |  URAM  |
++---------+--------+--------+--------+--------+
+| input_A |    0   |   32   |    4   |    0   |
+|input_A_1|    0   |   32   |    4   |    0   |
+|input_A_2|    0   |   32   |    4   |    0   |
+|input_A_3|    0   |   32   |    4   |    0   |
+|input_A_4|    0   |   32   |    4   |    0   |
+|input_A_5|    0   |   32   |    4   |    0   |
+|input_A_6|    0   |   32   |    4   |    0   |
+|input_A_7|    0   |   32   |    4   |    0   |
+| input_B |    0   |   32   |    4   |    0   |
+|input_B_1|    0   |   32   |    4   |    0   |
+|input_B_2|    0   |   32   |    4   |    0   |
+|input_B_3|    0   |   32   |    4   |    0   |
+|input_B_4|    0   |   32   |    4   |    0   |
+|input_B_5|    0   |   32   |    4   |    0   |
+|input_B_6|    0   |   32   |    4   |    0   |
+|input_B_7|    0   |   32   |    4   |    0   |
+| output_C|    1   |    0   |    0   |    0   |
++---------+--------+--------+--------+--------+
+|  Total  |    1   |   512  |   64   |    0   |
++---------+--------+--------+--------+--------+
+
+* Register list:
+N/A
+
+* Multiplexer (MUX) list: 
+|--------|------|------|------|--------|
+|  Comp  |  Pin | Size |  BW  | S x BW |
+|--------|------|------|------|--------|
+|  Total |      |      |      |    0   |
+|--------|------|------|------|--------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+--------+--------+--------+
+|           |  BRAM  |   DSP  |  Delay |   FF   |   LUT  |  URAM  |
++-----------+--------+--------+--------+--------+--------+--------+
+|  Function |    -   |   24   |   26   |  2409  |  1154  |    -   |
+|   Memory  |    1   |    -   |    -   |   512  |   64   |    0   |
+|Multiplexer|    -   |    -   |    -   |    -   |    -   |    -   |
+|  Register |    -   |    -   |    -   |    -   |    -   |    -   |
++-----------+--------+--------+--------+--------+--------+--------+
+|   Total   |    1   |   24   |   26   |  2921  |  1218  |    0   |
++-----------+--------+--------+--------+--------+--------+--------+

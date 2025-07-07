@@ -1,0 +1,251 @@
+
+
+================================================================
+== Vitis HLS Report for 'matrixmul_32_opt_Pipeline_loop_input_A21'
+================================================================
+* Date:           Mon Jun  2 11:52:48 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        matrix_8_opt
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynquplusRFSOC
+* Target device:  xczu28dr-ffvg1517-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  1.635 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |       34|       34|  0.340 us|  0.340 us|   33|   33|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                 |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |    Loop Name    |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- loop_input_A2  |       32|       32|         2|          1|          1|    32|       yes|
+        +-----------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|      31|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       0|      54|    -|
+|Register         |        -|     -|    1039|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|    1039|      85|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     2160|  4272|  850560|  425280|   80|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------+----------+----+---+----+------------+------------+
+    |       Variable Name       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------+----------+----+---+----+------------+------------+
+    |add_ln19_fu_572_p2         |         +|   0|  0|  13|           6|           1|
+    |ap_block_pp0_stage0_11001  |       and|   0|  0|   2|           1|           1|
+    |icmp_ln19_fu_566_p2        |      icmp|   0|  0|  14|           6|           7|
+    |ap_enable_pp0              |       xor|   0|  0|   2|           1|           2|
+    +---------------------------+----------+----+---+----+------------+------------+
+    |Total                      |          |   0|  0|  31|          14|          11|
+    +---------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_col     |   9|          2|    6|         12|
+    |col_1_fu_184             |   9|          2|    6|         12|
+    |empty_292_o              |   9|          2|   32|         64|
+    |in_A_TDATA_blk_n         |   9|          2|    1|          2|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  54|         12|   47|         94|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------------+----+----+-----+-----------+
+    |                    Name                   | FF | LUT| Bits| Const Bits|
+    +-------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                  |   1|   0|    1|          0|
+    |ap_block_pp0_stage0_subdone_grp0_done_reg  |   1|   0|    1|          0|
+    |ap_done_reg                                |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1                    |   1|   0|    1|          0|
+    |col_1_fu_184                               |   6|   0|    6|          0|
+    |input_A_65_fu_188                          |  32|   0|   32|          0|
+    |input_A_66_fu_192                          |  32|   0|   32|          0|
+    |input_A_67_fu_196                          |  32|   0|   32|          0|
+    |input_A_68_fu_200                          |  32|   0|   32|          0|
+    |input_A_69_fu_204                          |  32|   0|   32|          0|
+    |input_A_70_fu_208                          |  32|   0|   32|          0|
+    |input_A_71_fu_212                          |  32|   0|   32|          0|
+    |input_A_72_fu_216                          |  32|   0|   32|          0|
+    |input_A_73_fu_220                          |  32|   0|   32|          0|
+    |input_A_74_fu_224                          |  32|   0|   32|          0|
+    |input_A_75_fu_228                          |  32|   0|   32|          0|
+    |input_A_76_fu_232                          |  32|   0|   32|          0|
+    |input_A_77_fu_236                          |  32|   0|   32|          0|
+    |input_A_78_fu_240                          |  32|   0|   32|          0|
+    |input_A_79_fu_244                          |  32|   0|   32|          0|
+    |input_A_80_fu_248                          |  32|   0|   32|          0|
+    |input_A_81_fu_252                          |  32|   0|   32|          0|
+    |input_A_82_fu_256                          |  32|   0|   32|          0|
+    |input_A_83_fu_260                          |  32|   0|   32|          0|
+    |input_A_84_fu_264                          |  32|   0|   32|          0|
+    |input_A_85_fu_268                          |  32|   0|   32|          0|
+    |input_A_86_fu_272                          |  32|   0|   32|          0|
+    |input_A_87_fu_276                          |  32|   0|   32|          0|
+    |input_A_88_fu_280                          |  32|   0|   32|          0|
+    |input_A_89_fu_284                          |  32|   0|   32|          0|
+    |input_A_90_fu_288                          |  32|   0|   32|          0|
+    |input_A_91_fu_292                          |  32|   0|   32|          0|
+    |input_A_92_fu_296                          |  32|   0|   32|          0|
+    |input_A_93_fu_300                          |  32|   0|   32|          0|
+    |input_A_94_fu_304                          |  32|   0|   32|          0|
+    |input_A_95_fu_308                          |  32|   0|   32|          0|
+    |input_A_96_fu_312                          |  32|   0|   32|          0|
+    |trunc_ln19_reg_1121                        |   5|   0|    5|          0|
+    +-------------------------------------------+----+----+-----+-----------+
+    |Total                                      |1039|   0| 1039|          0|
+    +-------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------+-----+-----+------------+------------------------------------------+--------------+
+|       RTL Ports       | Dir | Bits|  Protocol  |               Source Object              |    C Type    |
++-----------------------+-----+-----+------------+------------------------------------------+--------------+
+|ap_clk                 |   in|    1|  ap_ctrl_hs|  matrixmul_32_opt_Pipeline_loop_input_A21|  return value|
+|ap_rst                 |   in|    1|  ap_ctrl_hs|  matrixmul_32_opt_Pipeline_loop_input_A21|  return value|
+|ap_start               |   in|    1|  ap_ctrl_hs|  matrixmul_32_opt_Pipeline_loop_input_A21|  return value|
+|ap_done                |  out|    1|  ap_ctrl_hs|  matrixmul_32_opt_Pipeline_loop_input_A21|  return value|
+|ap_idle                |  out|    1|  ap_ctrl_hs|  matrixmul_32_opt_Pipeline_loop_input_A21|  return value|
+|ap_ready               |  out|    1|  ap_ctrl_hs|  matrixmul_32_opt_Pipeline_loop_input_A21|  return value|
+|in_A_TVALID            |   in|    1|        axis|                             in_A_V_data_V|       pointer|
+|in_A_TDATA             |   in|   32|        axis|                             in_A_V_data_V|       pointer|
+|in_A_TREADY            |  out|    1|        axis|                             in_A_V_last_V|       pointer|
+|in_A_TLAST             |   in|    1|        axis|                             in_A_V_last_V|       pointer|
+|in_A_TKEEP             |   in|    4|        axis|                             in_A_V_keep_V|       pointer|
+|in_A_TSTRB             |   in|    4|        axis|                             in_A_V_strb_V|       pointer|
+|empty_292_i            |   in|   32|     ap_ovld|                                 empty_292|       pointer|
+|empty_292_o            |  out|   32|     ap_ovld|                                 empty_292|       pointer|
+|empty_292_o_ap_vld     |  out|    1|     ap_ovld|                                 empty_292|       pointer|
+|empty_293              |  out|    4|      ap_vld|                                 empty_293|       pointer|
+|empty_293_ap_vld       |  out|    1|      ap_vld|                                 empty_293|       pointer|
+|empty_294              |  out|    4|      ap_vld|                                 empty_294|       pointer|
+|empty_294_ap_vld       |  out|    1|      ap_vld|                                 empty_294|       pointer|
+|empty                  |  out|    1|      ap_vld|                                     empty|       pointer|
+|empty_ap_vld           |  out|    1|      ap_vld|                                     empty|       pointer|
+|input_A_96_out         |  out|   32|      ap_vld|                            input_A_96_out|       pointer|
+|input_A_96_out_ap_vld  |  out|    1|      ap_vld|                            input_A_96_out|       pointer|
+|input_A_95_out         |  out|   32|      ap_vld|                            input_A_95_out|       pointer|
+|input_A_95_out_ap_vld  |  out|    1|      ap_vld|                            input_A_95_out|       pointer|
+|input_A_94_out         |  out|   32|      ap_vld|                            input_A_94_out|       pointer|
+|input_A_94_out_ap_vld  |  out|    1|      ap_vld|                            input_A_94_out|       pointer|
+|input_A_93_out         |  out|   32|      ap_vld|                            input_A_93_out|       pointer|
+|input_A_93_out_ap_vld  |  out|    1|      ap_vld|                            input_A_93_out|       pointer|
+|input_A_92_out         |  out|   32|      ap_vld|                            input_A_92_out|       pointer|
+|input_A_92_out_ap_vld  |  out|    1|      ap_vld|                            input_A_92_out|       pointer|
+|input_A_91_out         |  out|   32|      ap_vld|                            input_A_91_out|       pointer|
+|input_A_91_out_ap_vld  |  out|    1|      ap_vld|                            input_A_91_out|       pointer|
+|input_A_90_out         |  out|   32|      ap_vld|                            input_A_90_out|       pointer|
+|input_A_90_out_ap_vld  |  out|    1|      ap_vld|                            input_A_90_out|       pointer|
+|input_A_89_out         |  out|   32|      ap_vld|                            input_A_89_out|       pointer|
+|input_A_89_out_ap_vld  |  out|    1|      ap_vld|                            input_A_89_out|       pointer|
+|input_A_88_out         |  out|   32|      ap_vld|                            input_A_88_out|       pointer|
+|input_A_88_out_ap_vld  |  out|    1|      ap_vld|                            input_A_88_out|       pointer|
+|input_A_87_out         |  out|   32|      ap_vld|                            input_A_87_out|       pointer|
+|input_A_87_out_ap_vld  |  out|    1|      ap_vld|                            input_A_87_out|       pointer|
+|input_A_86_out         |  out|   32|      ap_vld|                            input_A_86_out|       pointer|
+|input_A_86_out_ap_vld  |  out|    1|      ap_vld|                            input_A_86_out|       pointer|
+|input_A_85_out         |  out|   32|      ap_vld|                            input_A_85_out|       pointer|
+|input_A_85_out_ap_vld  |  out|    1|      ap_vld|                            input_A_85_out|       pointer|
+|input_A_84_out         |  out|   32|      ap_vld|                            input_A_84_out|       pointer|
+|input_A_84_out_ap_vld  |  out|    1|      ap_vld|                            input_A_84_out|       pointer|
+|input_A_83_out         |  out|   32|      ap_vld|                            input_A_83_out|       pointer|
+|input_A_83_out_ap_vld  |  out|    1|      ap_vld|                            input_A_83_out|       pointer|
+|input_A_82_out         |  out|   32|      ap_vld|                            input_A_82_out|       pointer|
+|input_A_82_out_ap_vld  |  out|    1|      ap_vld|                            input_A_82_out|       pointer|
+|input_A_81_out         |  out|   32|      ap_vld|                            input_A_81_out|       pointer|
+|input_A_81_out_ap_vld  |  out|    1|      ap_vld|                            input_A_81_out|       pointer|
+|input_A_80_out         |  out|   32|      ap_vld|                            input_A_80_out|       pointer|
+|input_A_80_out_ap_vld  |  out|    1|      ap_vld|                            input_A_80_out|       pointer|
+|input_A_79_out         |  out|   32|      ap_vld|                            input_A_79_out|       pointer|
+|input_A_79_out_ap_vld  |  out|    1|      ap_vld|                            input_A_79_out|       pointer|
+|input_A_78_out         |  out|   32|      ap_vld|                            input_A_78_out|       pointer|
+|input_A_78_out_ap_vld  |  out|    1|      ap_vld|                            input_A_78_out|       pointer|
+|input_A_77_out         |  out|   32|      ap_vld|                            input_A_77_out|       pointer|
+|input_A_77_out_ap_vld  |  out|    1|      ap_vld|                            input_A_77_out|       pointer|
+|input_A_76_out         |  out|   32|      ap_vld|                            input_A_76_out|       pointer|
+|input_A_76_out_ap_vld  |  out|    1|      ap_vld|                            input_A_76_out|       pointer|
+|input_A_75_out         |  out|   32|      ap_vld|                            input_A_75_out|       pointer|
+|input_A_75_out_ap_vld  |  out|    1|      ap_vld|                            input_A_75_out|       pointer|
+|input_A_74_out         |  out|   32|      ap_vld|                            input_A_74_out|       pointer|
+|input_A_74_out_ap_vld  |  out|    1|      ap_vld|                            input_A_74_out|       pointer|
+|input_A_73_out         |  out|   32|      ap_vld|                            input_A_73_out|       pointer|
+|input_A_73_out_ap_vld  |  out|    1|      ap_vld|                            input_A_73_out|       pointer|
+|input_A_72_out         |  out|   32|      ap_vld|                            input_A_72_out|       pointer|
+|input_A_72_out_ap_vld  |  out|    1|      ap_vld|                            input_A_72_out|       pointer|
+|input_A_71_out         |  out|   32|      ap_vld|                            input_A_71_out|       pointer|
+|input_A_71_out_ap_vld  |  out|    1|      ap_vld|                            input_A_71_out|       pointer|
+|input_A_70_out         |  out|   32|      ap_vld|                            input_A_70_out|       pointer|
+|input_A_70_out_ap_vld  |  out|    1|      ap_vld|                            input_A_70_out|       pointer|
+|input_A_69_out         |  out|   32|      ap_vld|                            input_A_69_out|       pointer|
+|input_A_69_out_ap_vld  |  out|    1|      ap_vld|                            input_A_69_out|       pointer|
+|input_A_68_out         |  out|   32|      ap_vld|                            input_A_68_out|       pointer|
+|input_A_68_out_ap_vld  |  out|    1|      ap_vld|                            input_A_68_out|       pointer|
+|input_A_67_out         |  out|   32|      ap_vld|                            input_A_67_out|       pointer|
+|input_A_67_out_ap_vld  |  out|    1|      ap_vld|                            input_A_67_out|       pointer|
+|input_A_66_out         |  out|   32|      ap_vld|                            input_A_66_out|       pointer|
+|input_A_66_out_ap_vld  |  out|    1|      ap_vld|                            input_A_66_out|       pointer|
+|input_A_65_out         |  out|   32|      ap_vld|                            input_A_65_out|       pointer|
+|input_A_65_out_ap_vld  |  out|    1|      ap_vld|                            input_A_65_out|       pointer|
++-----------------------+-----+-----+------------+------------------------------------------+--------------+
+

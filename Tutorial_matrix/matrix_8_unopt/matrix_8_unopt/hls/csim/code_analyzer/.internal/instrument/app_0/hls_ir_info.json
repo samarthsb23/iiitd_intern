@@ -1,0 +1,198 @@
+{
+    "top_level_hw_fn_id": 271,
+    "functions": {
+        "200": {
+            "fn_id": 200,
+            "mangled_name": "_GLOBAL__sub_I_matrix_tb.cpp",
+            "fully_qualified_name": "_GLOBAL__sub_I_matrix_tb",
+            "is_sys": true,
+            "is_declaration": false,
+            "supports_dataflow": false,
+            "src_loc": {
+                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix_tb.cpp",
+                "line": 0,
+                "column": 0
+            }
+        },
+        "201": {
+            "fn_id": 201,
+            "mangled_name": "__cxx_global_var_init",
+            "fully_qualified_name": "__cxx_global_var_init",
+            "is_sys": true,
+            "is_declaration": false,
+            "supports_dataflow": false,
+            "src_loc": {
+                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix_tb.cpp",
+                "line": 0,
+                "column": 0
+            }
+        },
+        "203": {
+            "fn_id": 203,
+            "mangled_name": "__dtor__ZStL8__ioinit",
+            "fully_qualified_name": "__dtor__ZStL8__ioinit",
+            "is_sys": true,
+            "is_declaration": false,
+            "supports_dataflow": false,
+            "src_loc": {
+                "file": "C:\\Xilinx_2024_ent\\Vitis\\2024.2\\tps\\mingw\\10.0.0\\win64.o\\nt\\include\\c++\\9.5.0\\iostream",
+                "line": 74,
+                "column": 0
+            }
+        },
+        "265": {
+            "fn_id": 265,
+            "mangled_name": "_GLOBAL__sub_I_matrix.cpp",
+            "fully_qualified_name": "_GLOBAL__sub_I_matrix",
+            "is_sys": true,
+            "is_declaration": false,
+            "supports_dataflow": false,
+            "src_loc": {
+                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                "line": 0,
+                "column": 0
+            }
+        },
+        "266": {
+            "fn_id": 266,
+            "mangled_name": "__cxx_global_var_init.2",
+            "fully_qualified_name": "__cxx_global_var_init",
+            "is_sys": true,
+            "is_declaration": false,
+            "supports_dataflow": false,
+            "src_loc": {
+                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                "line": 0,
+                "column": 0
+            }
+        },
+        "267": {
+            "fn_id": 267,
+            "mangled_name": "__dtor__ZStL8__ioinit.4",
+            "fully_qualified_name": "__dtor__ZStL8__ioinit",
+            "is_sys": true,
+            "is_declaration": false,
+            "supports_dataflow": false,
+            "src_loc": {
+                "file": "C:\\Xilinx_2024_ent\\Vitis\\2024.2\\tps\\mingw\\10.0.0\\win64.o\\nt\\include\\c++\\9.5.0\\iostream",
+                "line": 74,
+                "column": 0
+            }
+        },
+        "268": {
+            "fn_id": 268,
+            "mangled_name": "_GLOBAL__sub_I_matrix.cpp.6",
+            "fully_qualified_name": "_GLOBAL__sub_I_matrix",
+            "is_sys": true,
+            "is_declaration": false,
+            "supports_dataflow": false,
+            "src_loc": {
+                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                "line": 0,
+                "column": 0
+            }
+        },
+        "269": {
+            "fn_id": 269,
+            "mangled_name": "__cxx_global_var_init.7",
+            "fully_qualified_name": "__cxx_global_var_init",
+            "is_sys": true,
+            "is_declaration": false,
+            "supports_dataflow": false,
+            "src_loc": {
+                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                "line": 0,
+                "column": 0
+            }
+        },
+        "270": {
+            "fn_id": 270,
+            "mangled_name": "__dtor__ZStL8__ioinit.9",
+            "fully_qualified_name": "__dtor__ZStL8__ioinit",
+            "is_sys": true,
+            "is_declaration": false,
+            "supports_dataflow": false,
+            "src_loc": {
+                "file": "C:\\Xilinx_2024_ent\\Vitis\\2024.2\\tps\\mingw\\10.0.0\\win64.o\\nt\\include\\c++\\9.5.0\\iostream",
+                "line": 74,
+                "column": 0
+            }
+        },
+        "271": {
+            "fn_id": 271,
+            "mangled_name": "_Z18matrixmul_32_unoptRN3hls6streamINS_4axisIfLy0ELy0ELy0ELh56ELb0EEELi0EEES4_",
+            "fully_qualified_name": "matrixmul_32_unopt",
+            "is_sys": false,
+            "is_declaration": false,
+            "supports_dataflow": true,
+            "src_loc": {
+                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+                "line": 4,
+                "column": 1
+            }
+        },
+        "21": {
+            "fn_id": 21,
+            "mangled_name": "llvm.fpga.fifo.push.s_struct.hls::axis.9s.p0s_struct.hls::axis.9s",
+            "fully_qualified_name": "llvm.fpga.fifo.push.s_struct.hls::axis.9s.p0s_struct.hls::axis.9s",
+            "is_sys": true,
+            "is_declaration": true,
+            "supports_dataflow": false
+        },
+        "20": {
+            "fn_id": 20,
+            "mangled_name": "llvm.fpga.fifo.pop.s_struct.hls::axis.9s.p0s_struct.hls::axis.9s",
+            "fully_qualified_name": "llvm.fpga.fifo.pop.s_struct.hls::axis.9s.p0s_struct.hls::axis.9s",
+            "is_sys": true,
+            "is_declaration": true,
+            "supports_dataflow": false
+        }
+    },
+    "loops": {
+        "15": {
+            "fn_id": 271,
+            "lp_id": 15,
+            "label": "loop_output_C1"
+        },
+        "16": {
+            "fn_id": 271,
+            "lp_id": 16,
+            "label": "loop_output_C2"
+        },
+        "17": {
+            "fn_id": 271,
+            "lp_id": 17,
+            "label": "loop1"
+        },
+        "18": {
+            "fn_id": 271,
+            "lp_id": 18,
+            "label": "loop2"
+        },
+        "19": {
+            "fn_id": 271,
+            "lp_id": 19,
+            "label": "loop3"
+        },
+        "20": {
+            "fn_id": 271,
+            "lp_id": 20,
+            "label": "loop_input_B1"
+        },
+        "21": {
+            "fn_id": 271,
+            "lp_id": 21,
+            "label": "loop_input_B2"
+        },
+        "22": {
+            "fn_id": 271,
+            "lp_id": 22,
+            "label": "loop_input_A1"
+        },
+        "23": {
+            "fn_id": 271,
+            "lp_id": 23,
+            "label": "loop_input_A2"
+        }
+    }
+}
