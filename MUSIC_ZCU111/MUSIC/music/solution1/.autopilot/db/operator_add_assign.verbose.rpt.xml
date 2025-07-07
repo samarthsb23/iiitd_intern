@@ -1,0 +1,120 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'operator_add_assign'" level="0">
+<item name = "Date">Fri May 30 11:15:52 2025
+</item>
+<item name = "Version">2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)</item>
+<item name = "Project">music</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu28dr-ffvg1517-2-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 6.437, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">3, 3, 1, 1, function</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, -, -, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, 4, 454, 428, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 18, -</column>
+<column name="Register">-, -, 193, -, -</column>
+<specialColumn name="Available">2160, 4272, 850560, 425280, 80</specialColumn>
+<specialColumn name="Utilization (%)">0, ~0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="MUSIC_top_fadd_32lbW_U308">MUSIC_top_fadd_32lbW, 0, 2, 227, 214, 0</column>
+<column name="MUSIC_top_fadd_32lbW_U309">MUSIC_top_fadd_32lbW, 0, 2, 227, 214, 0</column>
+</table>
+</item>
+<item name = "DSP48E"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_return_0">9, 2, 32, 64</column>
+<column name="ap_return_1">9, 2, 32, 64</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_ce_reg">1, 0, 1, 0</column>
+<column name="ap_return_0_int_reg">32, 0, 32, 0</column>
+<column name="ap_return_1_int_reg">32, 0, 32, 0</column>
+<column name="rhs_im_read_int_reg">32, 0, 32, 0</column>
+<column name="rhs_re_read_int_reg">32, 0, 32, 0</column>
+<column name="x_complex_float_im_read_int_reg">32, 0, 32, 0</column>
+<column name="x_complex_float_re_read_int_reg">32, 0, 32, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, operator+=, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, operator+=, return value</column>
+<column name="ap_return_0">out, 32, ap_ctrl_hs, operator+=, return value</column>
+<column name="ap_return_1">out, 32, ap_ctrl_hs, operator+=, return value</column>
+<column name="ap_ce">in, 1, ap_ctrl_hs, operator+=, return value</column>
+<column name="x_complex_float_re_read">in, 32, ap_none, x_complex_float_re_read, scalar</column>
+<column name="x_complex_float_im_read">in, 32, ap_none, x_complex_float_im_read, scalar</column>
+<column name="rhs_re_read">in, 32, ap_none, rhs_re_read, scalar</column>
+<column name="rhs_im_read">in, 32, ap_none, rhs_im_read, scalar</column>
+</table>
+</item>
+</section>
+</profile>

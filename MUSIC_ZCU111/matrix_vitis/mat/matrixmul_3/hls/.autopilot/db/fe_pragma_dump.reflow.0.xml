@@ -1,0 +1,18 @@
+<pragmas>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="C:/Xilinx/Vitis/2024.2/common/technology/autopilot\etc/ap_common.h" line="523" pragmaType="inline" parentfunction="_ZN8ssdm_intILi1ELb0EEC2EDq1_j" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<1>::ap_uint(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<1, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="../mat_mul.cpp" line="183" pragmaType="pipeline" parentfunction="matrixmul_3" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="../mat_mul.cpp" line="170" pragmaType="pipeline" parentfunction="matrixmul_3" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="../mat_mul.cpp" line="158" pragmaType="loop_flatten" parentfunction="matrixmul_3" off="0"/>
+<pragma file="../mat_mul.cpp" line="150" pragmaType="loop_flatten" parentfunction="matrixmul_3" off="0"/>
+<pragma file="../mat_mul.cpp" line="133" pragmaType="interface" parentfunction="matrixmul_3" mode="ap_ctrl_none" port="return" name=""/>
+<pragma file="../mat_mul.cpp" line="134" pragmaType="interface" parentfunction="matrixmul_3" mode="axis" port="in_A" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="../mat_mul.cpp" line="135" pragmaType="interface" parentfunction="matrixmul_3" mode="axis" port="out_C" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="../mat_mul.cpp" line="137" pragmaType="array_partition" parentfunction="matrixmul_3" dim="2" factor="0" mode="complete" dynamic="0" variable="input_A"/>
+<pragma file="../mat_mul.cpp" line="139" pragmaType="array_partition" parentfunction="matrixmul_3" dim="1" factor="0" mode="complete" dynamic="0" variable="input_B"/>
+</pragmas>

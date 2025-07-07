@@ -1,0 +1,33 @@
+verilog xil_defaultlib --include "C:/Xilinx/Vivado/2024.2/data/xilinx_vip/include" --include "../../../../fft_F.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../fft_F.gen/sources_1/bd/design_1/ipshared/86fe/hdl" --include "../../../../fft_F.gen/sources_1/bd/design_1/ipshared/814a/hdl/verilog" --include "../../../../fft_F.gen/sources_1/bd/design_1/ipshared/1017/hdl/verilog" --include "../../../../fft_F.gen/sources_1/bd/design_1/ipshared/52c0/hdl/verilog" --include "../../../../fft_F.gen/sources_1/bd/design_1/ipshared/2276/hdl/verilog" \
+"../../../bd/design_1/ip/design_1_processing_system7_0_0/sim/design_1_processing_system7_0_0.v" \
+"../../../bd/design_1/ip/design_1_xlconstant_0_0/sim/design_1_xlconstant_0_0.v" \
+"../../../bd/design_1/ip/design_1_xlconstant_0_1/sim/design_1_xlconstant_0_1.v" \
+"../../../bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/sim/bd_f60c_ila_lib_0.v" \
+"../../../bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_1/bd_f60c_g_inst_0_gigantic_mux.v" \
+"../../../bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_1/sim/bd_f60c_g_inst_0.v" \
+"../../../bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_2/sim/bd_f60c_slot_0_aw_0.v" \
+"../../../bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_3/sim/bd_f60c_slot_0_w_0.v" \
+"../../../bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_4/sim/bd_f60c_slot_0_b_0.v" \
+"../../../bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_5/sim/bd_f60c_slot_0_ar_0.v" \
+"../../../bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_6/sim/bd_f60c_slot_0_r_0.v" \
+"../../../bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_7/sim/bd_f60c_slot_1_aw_0.v" \
+"../../../bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_8/sim/bd_f60c_slot_1_w_0.v" \
+"../../../bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_9/sim/bd_f60c_slot_1_b_0.v" \
+"../../../bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_10/sim/bd_f60c_slot_1_ar_0.v" \
+"../../../bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_11/sim/bd_f60c_slot_1_r_0.v" \
+"../../../bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_12/sim/bd_f60c_slot_3_aw_0.v" \
+"../../../bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_13/sim/bd_f60c_slot_3_w_0.v" \
+"../../../bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_14/sim/bd_f60c_slot_3_b_0.v" \
+"../../../bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_15/sim/bd_f60c_slot_3_ar_0.v" \
+"../../../bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_16/sim/bd_f60c_slot_3_r_0.v" \
+"../../../bd/design_1/ip/design_1_system_ila_0_0/bd_0/sim/bd_f60c.v" \
+"../../../bd/design_1/ip/design_1_system_ila_0_0/sim/design_1_system_ila_0_0.v" \
+"../../../bd/design_1/ip/design_1_axi_mem_intercon_upgraded_ipi_imp_xbar_0/sim/design_1_axi_mem_intercon_upgraded_ipi_imp_xbar_0.v" \
+"../../../bd/design_1/ip/design_1_ps7_0_axi_periph_imp_auto_pc_0/sim/design_1_ps7_0_axi_periph_imp_auto_pc_0.v" \
+"../../../bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_pc_0/sim/design_1_axi_mem_intercon_imp_auto_pc_0.v" \
+"../../../bd/design_1/sim/design_1.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

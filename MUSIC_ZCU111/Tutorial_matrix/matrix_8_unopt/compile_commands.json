@@ -1,0 +1,27 @@
+[
+  {
+    "directory": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt",
+    "arguments": [
+      "C:\\Xilinx_2024_ent\\Vitis\\2024.2\\vcxx\\libexec\\clang++.exe",
+      "--sysroot=C:\\Xilinx_2024_ent\\Vitis\\2024.2\\tps\\mingw\\10.0.0\\win64.o\\nt",
+      "-fhls",
+      "-hls-syn-headers-dir=C:\\Xilinx_2024_ent\\Vitis\\2024.2\\common\\technology\\autopilot",
+      "-fhlstoplevel=matrixmul_100_unopt",
+      "-c",
+      "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp"
+    ],
+    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp"
+  },
+  {
+    "directory": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt",
+    "arguments": [
+      "C:\\Xilinx_2024_ent\\Vitis\\2024.2\\vcxx\\libexec\\clang++.exe",
+      "--sysroot=C:\\Xilinx_2024_ent\\Vitis\\2024.2\\tps\\mingw\\10.0.0\\win64.o\\nt",
+      "-fhls-tb",
+      "-hls-sim-headers-dir=C:\\Xilinx_2024_ent\\Vitis\\2024.2\\include",
+      "-c",
+      "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix_tb.cpp"
+    ],
+    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix_tb.cpp"
+  }
+]

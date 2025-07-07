@@ -1,0 +1,209 @@
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: matrix.cpp, Line: 42, Column: 9 }
+Function:        _Z17matrixmul_100_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        loop3
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: matrix.cpp, Line: 3, Column: 0 }
+Function:        _Z17matrixmul_100_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop3
+  - String:          ''' ('
+  - LoopLoc:         'matrix.cpp:42:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matrixmul_100_opt
+  - String:          ''' completely with a factor of '
+  - Factor:          '100'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_matrixmul_100_opt_ir
+Args:            
+  - Callee:          'matrixmul_100_opt(hls::stream<hls::axis<float, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<float, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: matrix.cpp, Line: 3, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_matrixmul_100_opt_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z17matrixmul_100_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          input_A
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 9, Column: 12 }
+Function:        _Z17matrixmul_100_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          input_B
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        loop_input_A2
+  - String:          '> at '
+  - LoopLoc:         'matrix.cpp:19:18'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        loop_input_B2
+  - String:          '> at '
+  - LoopLoc:         'matrix.cpp:28:18'
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-unroll-small-loop
+Name:            UnrollSmallLoop
+DebugLoc:        { File: matrix.cpp, Line: 3, Column: 0 }
+Function:        _Z17matrixmul_100_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Unrolling small iteration loop '''
+  - LoopName:        loop_output_C1
+  - String:          ''' ('
+  - LoopLoc:         'matrix.cpp:52:18'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matrixmul_100_opt
+  - String:          ''' automatically'
+...
+--- !Passed
+Pass:            reflow-unroll-small-loop
+Name:            UnrollSmallLoop
+DebugLoc:        { File: matrix.cpp, Line: 3, Column: 0 }
+Function:        _Z17matrixmul_100_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Unrolling small iteration loop '''
+  - LoopName:        loop1
+  - String:          ''' ('
+  - LoopLoc:         'matrix.cpp:38:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matrixmul_100_opt
+  - String:          ''' automatically'
+...
+--- !Passed
+Pass:            reflow-unroll-small-loop
+Name:            UnrollSmallLoop
+DebugLoc:        { File: matrix.cpp, Line: 3, Column: 0 }
+Function:        _Z17matrixmul_100_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Unrolling small iteration loop '''
+  - LoopName:        loop_input_B1
+  - String:          ''' ('
+  - LoopLoc:         'matrix.cpp:27:17'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matrixmul_100_opt
+  - String:          ''' automatically'
+...
+--- !Passed
+Pass:            reflow-unroll-small-loop
+Name:            UnrollSmallLoop
+DebugLoc:        { File: matrix.cpp, Line: 3, Column: 0 }
+Function:        _Z17matrixmul_100_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Unrolling small iteration loop '''
+  - LoopName:        loop_input_A1
+  - String:          ''' ('
+  - LoopLoc:         'matrix.cpp:18:17'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matrixmul_100_opt
+  - String:          ''' automatically'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: matrix.cpp, Line: 3, Column: 0 }
+Function:        _Z17matrixmul_100_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_output_C1
+  - String:          ''' ('
+  - LoopLoc:         'matrix.cpp:52:18'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matrixmul_100_opt
+  - String:          ''' completely with a factor of '
+  - Factor:          '100'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: matrix.cpp, Line: 3, Column: 0 }
+Function:        _Z17matrixmul_100_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop1
+  - String:          ''' ('
+  - LoopLoc:         'matrix.cpp:38:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matrixmul_100_opt
+  - String:          ''' completely with a factor of '
+  - Factor:          '100'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: matrix.cpp, Line: 3, Column: 0 }
+Function:        _Z17matrixmul_100_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_input_B1
+  - String:          ''' ('
+  - LoopLoc:         'matrix.cpp:27:17'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matrixmul_100_opt
+  - String:          ''' completely with a factor of '
+  - Factor:          '100'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: matrix.cpp, Line: 3, Column: 0 }
+Function:        _Z17matrixmul_100_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_in

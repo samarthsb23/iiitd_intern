@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Thu Mar 27 12:30:05 2025
+# Process ID: 21088
+# Current directory: C:/Users/Samarth/OneDrive/Desktop/IIT/IIIT_Intern/Training/Lab1/live_find/solution1/impl/ip
+# Command line: vivado.exe -notrace -mode batch -source run_ippack.tcl
+# Log file: C:/Users/Samarth/OneDrive/Desktop/IIT/IIIT_Intern/Training/Lab1/live_find/solution1/impl/ip/vivado.log
+# Journal file: C:/Users/Samarth/OneDrive/Desktop/IIT/IIIT_Intern/Training/Lab1/live_find/solution1/impl/ip\vivado.jou
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx_HLS/Vivado/2019.2/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 27 12:30:14 2025...

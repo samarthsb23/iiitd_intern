@@ -1,0 +1,30 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Tue May  6 13:41:33 2025
+# Process ID         : 36196
+# Current directory  : C:/Users/Samarth/OneDrive/Desktop/IIT/IIIT_Intern/Training/Lab5/fft_F/fft_F.runs/design_1_axi_mem_intercon_upgraded_ipi_imp_xbar_0_synth_1
+# Command line       : vivado.exe -log design_1_axi_mem_intercon_upgraded_ipi_imp_xbar_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_axi_mem_intercon_upgraded_ipi_imp_xbar_0.tcl
+# Log file           : C:/Users/Samarth/OneDrive/Desktop/IIT/IIIT_Intern/Training/Lab5/fft_F/fft_F.runs/design_1_axi_mem_intercon_upgraded_ipi_imp_xbar_0_synth_1/design_1_axi_mem_intercon_upgraded_ipi_imp_xbar_0.vds
+# Journal file       : C:/Users/Samarth/OneDrive/Desktop/IIT/IIIT_Intern/Training/Lab5/fft_F/fft_F.runs/design_1_axi_mem_intercon_upgraded_ipi_imp_xbar_0_synth_1\vivado.jou
+# Running On         : Samarth-Asus
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i5-12500H
+# CPU Frequency      : 3110 MHz
+# CPU Physical cores : 12
+# CPU Logical cores  : 16
+# Host memory        : 16785 MB
+# Swap memory        : 28991 MB
+# Total Virtual      : 45776 MB
+# Available Virtual  : 20904 MB
+#-----------------------------------------------------------
+source design_1_axi_mem_intercon_upgraded_ipi_imp_xbar_0.tcl -notrace
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_axi_mem_intercon_upgraded_ipi_imp_xbar_0
+Command: synth_design -top design_1_axi_mem_intercon_upgraded_ipi_imp_xbar_0 -part xc7z020clg484-1 -incremental_mode off -mode out_of_context
+1 Infos, 0 Warnings, 0 Critical Warnings and 1 Errors encountered.
+synth_design failed
+ERROR: [Common 17-1293] The path 'C:/Users/Samarth/OneDrive/Desktop/IIT/IIIT_Intern/Training/Lab5/fft_F/fft_F.cache/wt' already exists, is a directory, but is not writable.
+INFO: [Common 17-206] Exiting Vivado at Tue May  6 13:41:38 2025...

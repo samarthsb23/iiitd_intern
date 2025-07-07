@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog>
+        <logs message="ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***" projectName="abcd" solutionName="solution1" date="2025-05-13T14:26:18.752+0530"/>
+        <logs message="ERROR: Please check the snapshot name which is created during 'xelab',the current snapshot name &quot;xsim.dir/lab_1/xsimk.exe&quot; does not exist " projectName="abcd" solutionName="solution1" date="2025-05-13T14:26:18.734+0530"/>
+        <logs message="ERROR: [VRFC 10-2865] module 'apatb_lab_1_top' ignored due to previous errors [C:/Users/Samarth/Desktop/IIIT_Intern/pynq_impl/abcd/solution1/sim/verilog/lab_1.autotb.v:31]" projectName="abcd" solutionName="solution1" date="2025-05-13T14:26:18.509+0530"/>
+        <logs message="ERROR: [VRFC 10-2989] 'ap_done' is not declared [C:/Users/Samarth/Desktop/IIIT_Intern/pynq_impl/abcd/solution1/sim/verilog/lab_1.autotb.v:175]" projectName="abcd" solutionName="solution1" date="2025-05-13T14:26:17.769+0530"/>
+        <logs message="ERROR: [VRFC 10-3821] variable 'AESL_done' is written by both continuous and procedural assignments [C:/Users/Samarth/Desktop/IIIT_Intern/pynq_impl/abcd/solution1/sim/verilog/lab_1.autotb.v:147]" projectName="abcd" solutionName="solution1" date="2025-05-13T14:26:17.753+0530"/>
+        <logs message="ERROR: [VRFC 10-2989] 'ap_done' is not declared [C:/Users/Samarth/Desktop/IIIT_Intern/pynq_impl/abcd/solution1/sim/verilog/lab_1.autotb.v:147]" projectName="abcd" solutionName="solution1" date="2025-05-13T14:26:17.733+0530"/>
+      </simLog>
+      <mgLog/>
+      <packageLog>
+        <logs message="ERROR: [IMPL 213-28] Failed to generate IP.&#xD;&#xA;command 'ap_source' returned error code&#xD;&#xA;    while executing&#xD;&#xA;&quot;source C:/Users/Samarth/Desktop/IIIT_Intern/pynq_impl/abcd/solution1/export.tcl&quot;&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls::main C:/Users/Samarth/Desktop/IIIT_Intern/pynq_impl/abcd/solution1/export.tcl&quot;&#xD;&#xA;    (&quot;uplevel&quot; body line 1)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xD;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls_proc $argv&quot;&#xD;&#xA;" projectName="abcd" solutionName="solution1" date="2025-05-13T14:43:23.419+0530"/>
+        <logs message="ERROR: [IMPL 213-28] Failed to generate IP.&#xD;&#xA;command 'ap_source' returned error code&#xD;&#xA;    while executing&#xD;&#xA;&quot;source C:/Users/Samarth/Desktop/IIIT_Intern/pynq_impl/abcd/solution1/export.tcl&quot;&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls::main C:/Users/Samarth/Desktop/IIIT_Intern/pynq_impl/abcd/solution1/export.tcl&quot;&#xD;&#xA;    (&quot;uplevel&quot; body line 1)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xD;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls_proc $argv&quot;&#xD;&#xA;" projectName="abcd" solutionName="solution1" date="2025-05-13T14:29:59.170+0530"/>
+      </packageLog>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

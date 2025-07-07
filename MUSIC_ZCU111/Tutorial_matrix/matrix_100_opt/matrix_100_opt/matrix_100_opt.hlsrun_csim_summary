@@ -1,0 +1,157 @@
+<ENTRY>
+{
+ "thisFile": "C:/Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_100_opt\\matrix_100_opt\\matrix_100_opt.hlsrun_csim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "05/30/25 16:36:34",
+ "timestampMillis": "1748603194533",
+ "buildStep": {
+  "cmdId": "8078ccdb-4728-4c27-a68d-f0e2f06f539b",
+  "name": "vitis-run",
+  "logFile": "C:/Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_100_opt\\matrix_100_opt\\logs\\matrix_100_opt.steps.log",
+  "commandLine": "C:/Xilinx_2024_ent/Vitis/2024.2/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --csim --config C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_100_opt\\hls_config.cfg --work_dir matrix_100_opt ",
+  "args": [
+   "--mode",
+   "hls",
+   "--csim",
+   "--config",
+   "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_100_opt\\hls_config.cfg",
+   "--work_dir",
+   "matrix_100_opt"
+  ],
+  "iniFiles": [],
+  "cwd": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_100_opt"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "05/30/25 16:36:34",
+ "timestampMillis": "1748603194535",
+ "status": {
+  "cmdId": "8078ccdb-4728-4c27-a68d-f0e2f06f539b",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "05/30/25 16:36:42",
+ "timestampMillis": "1748603202213",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_C_SIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "matrixmul_100_opt",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "C:/Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_100_opt\\matrix.cpp",
+     "C:/Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_100_opt\\matrix.h"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2024.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "05/30/25 16:36:42",
+ "timestampMillis": "1748603202216",
+ "buildStep": {
+  "cmdId": "a740331a-0ad1-4a01-bc3d-7530af1006bd",
+  "name": "",
+  "logFile": "C:/Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_100_opt\\matrix_100_opt\\hls\\hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_100_opt"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "05/30/25 16:36:42",
+ "timestampMillis": "1748603202217",
+ "status": {
+  "cmdId": "a740331a-0ad1-4a01-bc3d-7530af1006bd",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "05/30/25 16:36:55",
+ "timestampMillis": "1748603215809",
+ "status": {
+  "cmdId": "a740331a-0ad1-4a01-bc3d-7530af1006bd",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "05/30/25 16:36:56",
+ "timestampMillis": "1748603216003",
+ "status": {
+  "cmdId": "8078ccdb-4728-4c27-a68d-f0e2f06f539b",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "05/30/25 16:36:56",
+ "timestampMillis": "1748603216008",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "05/30/25 16:36:56",
+ "timestampMillis": "1748603216009",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

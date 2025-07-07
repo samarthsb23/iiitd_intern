@@ -1,0 +1,40 @@
+#-----------------------------------------------------------
+# xsim v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Thu May 22 14:57:30 2025
+# Process ID         : 14712
+# Current directory  : C:/Users/Samarth/Desktop/IIIT_Intern/matrix_vitis/mat/matrixmul_3/hls/sim/verilog
+# Command line       : xsim.exe -mode tcl -source {xsim.dir/matrixmul_3/xsim_script.tcl}
+# Log file           : C:/Users/Samarth/Desktop/IIIT_Intern/matrix_vitis/mat/matrixmul_3/hls/sim/verilog/xsim.log
+# Journal file       : C:/Users/Samarth/Desktop/IIIT_Intern/matrix_vitis/mat/matrixmul_3/hls/sim/verilog\xsim.jou
+# Running On         : Samarth-Asus
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i5-12500H
+# CPU Frequency      : 3110 MHz
+# CPU Physical cores : 12
+# CPU Logical cores  : 16
+# Host memory        : 16785 MB
+# Swap memory        : 16785 MB
+# Total Virtual      : 33570 MB
+# Available Virtual  : 5977 MB
+#-----------------------------------------------------------
+source xsim.dir/matrixmul_3/xsim_script.tcl
+# xsim {matrixmul_3} -autoloadwcfg -tclbatch {matrixmul_3.tcl}
+Time resolution is 1 ps
+source matrixmul_3.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "125000"
+// RTL Simulation : 1 / 1 [100.00%] @ "2865000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 2925 ns : File "C:/Users/Samarth/Desktop/IIIT_Intern/matrix_vitis/mat/matrixmul_3/hls/sim/verilog/matrixmul_3.autotb.v" Line 196
+## quit
+INFO: [Common 17-206] Exiting xsim at Thu May 22 14:57:36 2025...

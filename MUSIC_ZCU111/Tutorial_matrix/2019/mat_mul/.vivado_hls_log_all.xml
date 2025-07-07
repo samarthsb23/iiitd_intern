@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <csimLog>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="mat_mul" solutionName="solution1" date="2025-05-30T14:35:19.212+0530"/>
+      </csimLog>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <csimLog>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/zynquplusRFSOC/zynquplusRFSOC'." projectName="mat_mul" solutionName="solution1" date="2025-05-30T14:35:12.624+0530" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx2/Vivado/2019.1/common/technology/xilinx/zynquplusRFSOC/zynquplusRFSOC.lib'." projectName="mat_mul" solutionName="solution1" date="2025-05-30T14:35:10.785+0530" type="Warning"/>
+      </csimLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

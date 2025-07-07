@@ -1,0 +1,741 @@
+<profile>
+    <ReportVersion>
+        <Version>2024.2</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>zynquplusRFSOC</ProductFamily>
+        <Part>xczu28dr-ffvg1517-2-e</Part>
+        <TopModelName>matrixmul_100_unopt</TopModelName>
+        <TargetClockPeriod>10.00</TargetClockPeriod>
+        <ClockUncertainty>2.70</ClockUncertainty>
+        <FlowTarget>vivado</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>no</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>13.301</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>3111204</Best-caseLatency>
+            <Average-caseLatency>3111204</Average-caseLatency>
+            <Worst-caseLatency>3111204</Worst-caseLatency>
+            <Best-caseRealTimeLatency>41.382 ms</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>41.382 ms</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>41.382 ms</Worst-caseRealTimeLatency>
+            <Interval-min>3111205</Interval-min>
+            <Interval-max>3111205</Interval-max>
+        </SummaryOfOverallLatency>
+        <SummaryOfLoopLatency>
+            <loop_input_A1>
+                <Slack>7.30</Slack>
+                <TripCount>100</TripCount>
+                <Latency>10300</Latency>
+                <AbsoluteTimeLatency>137000</AbsoluteTimeLatency>
+                <IterationLatency>103</IterationLatency>
+                <InstanceList/>
+                <loop_input_A2>
+                    <Slack>7.30</Slack>
+                    <TripCount>100</TripCount>
+                    <Latency>100</Latency>
+                    <AbsoluteTimeLatency>1330</AbsoluteTimeLatency>
+                    <PipelineII>1</PipelineII>
+                    <PipelineDepth>2</PipelineDepth>
+                    <InstanceList/>
+                </loop_input_A2>
+            </loop_input_A1>
+            <loop_input_B1>
+                <Slack>7.30</Slack>
+                <TripCount>100</TripCount>
+                <Latency>10300</Latency>
+                <AbsoluteTimeLatency>137000</AbsoluteTimeLatency>
+                <IterationLatency>103</IterationLatency>
+                <InstanceList/>
+                <loop_input_B2>
+                    <Slack>7.30</Slack>
+                    <TripCount>100</TripCount>
+                    <Latency>100</Latency>
+                    <AbsoluteTimeLatency>1330</AbsoluteTimeLatency>
+                    <PipelineII>1</PipelineII>
+                    <PipelineDepth>2</PipelineDepth>
+                    <InstanceList/>
+                </loop_input_B2>
+            </loop_input_B1>
+            <loop1>
+                <Slack>7.30</Slack>
+                <TripCount>100</TripCount>
+                <Latency>3080200</Latency>
+                <AbsoluteTimeLatency>40969740</AbsoluteTimeLatency>
+                <IterationLatency>30802</IterationLatency>
+                <InstanceList/>
+                <loop2>
+                    <Slack>7.30</Slack>
+                    <TripCount>100</TripCount>
+                    <Latency>30800</Latency>
+                    <AbsoluteTimeLatency>409670</AbsoluteTimeLatency>
+                    <IterationLatency>308</IterationLatency>
+                    <InstanceList/>
+                    <loop3>
+                        <Slack>7.30</Slack>
+                        <TripCount>100</TripCount>
+                        <Latency>305</Latency>
+                        <AbsoluteTimeLatency>4056</AbsoluteTimeLatency>
+                        <PipelineII>3</PipelineII>
+                        <PipelineDepth>9</PipelineDepth>
+                        <InstanceList/>
+                    </loop3>
+                </loop2>
+            </loop1>
+            <loop_output_C1>
+                <Slack>7.30</Slack>
+                <TripCount>100</TripCount>
+                <Latency>10400</Latency>
+                <AbsoluteTimeLatency>138330</AbsoluteTimeLatency>
+                <IterationLatency>104</IterationLatency>
+                <InstanceList/>
+                <loop_output_C2>
+                    <Slack>7.30</Slack>
+                    <TripCount>100</TripCount>
+                    <Latency>101</Latency>
+                    <AbsoluteTimeLatency>1343</AbsoluteTimeLatency>
+                    <PipelineII>1</PipelineII>
+                    <PipelineDepth>3</PipelineDepth>
+                    <InstanceList/>
+                </loop_output_C2>
+            </loop_output_C1>
+        </SummaryOfLoopLatency>
+        <SummaryOfViolations>
+            <IssueType>Timing Violation</IssueType>
+            <ViolationType>-</ViolationType>
+            <SourceLocation>matrix.cpp:12</SourceLocation>
+            <SummaryOfLoopViolations>
+                <loop_input_A1>
+                    <Name>loop_input_A1</Name>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>matrix.cpp:25</SourceLocation>
+                    <loop_input_A2>
+                        <Name>loop_input_A2</Name>
+                        <IssueType>-</IssueType>
+                        <ViolationType>-</ViolationType>
+                        <SourceLocation>matrix.cpp:21</SourceLocation>
+                    </loop_input_A2>
+                </loop_input_A1>
+                <loop_input_B1>
+                    <Name>loop_input_B1</Name>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>matrix.cpp:34</SourceLocation>
+                    <loop_input_B2>
+                        <Name>loop_input_B2</Name>
+                        <IssueType>-</IssueType>
+                        <ViolationType>-</ViolationType>
+                        <SourceLocation>matrix.cpp:30</SourceLocation>
+                    </loop_input_B2>
+                </loop_input_B1>
+                <loop1>
+                    <Name>loop1</Name>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>matrix.cpp:47</SourceLocation>
+                    <loop2>
+                        <Name>loop2</Name>
+                        <IssueType>-</IssueType>
+                        <ViolationType>-</ViolationType>
+                        <SourceLocation>matrix.cpp:41</SourceLocation>
+                        <loop3>
+                            <Name>loop3</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>matrix.cpp:43</SourceLocation>
+                        </loop3>
+                    </loop2>
+                </loop1>
+                <loop_output_C1>
+                    <Name>loop_output_C1</Name>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>matrix.cpp:61</SourceLocation>
+                    <loop_output_C2>
+                        <Name>loop_output_C2</Name>
+                        <IssueType>-</IssueType>
+                        <ViolationType>-</ViolationType>
+                        <SourceLocation>matrix.cpp:55</SourceLocation>
+                    </loop_output_C2>
+                </loop_output_C1>
+            </SummaryOfLoopViolations>
+        </SummaryOfViolations>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <BRAM_18K>66</BRAM_18K>
+            <DSP>5</DSP>
+            <FF>931</FF>
+            <LUT>1294</LUT>
+            <URAM>0</URAM>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>2160</BRAM_18K>
+            <DSP>4272</DSP>
+            <FF>850560</FF>
+            <LUT>425280</LUT>
+            <URAM>80</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>matrixmul_100_unopt</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst_n</name>
+            <Object>matrixmul_100_unopt</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_A_TDATA</name>
+            <Object>in_A_V_data_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_A_TVALID</name>
+            <Object>in_A_V_last_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_A_TREADY</name>
+            <Object>in_A_V_last_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_A_TLAST</name>
+            <Object>in_A_V_last_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_A_TKEEP</name>
+            <Object>in_A_V_keep_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>4</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_A_TSTRB</name>
+            <Object>in_A_V_strb_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>4</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>out_C_TDATA</name>
+            <Object>out_C_V_data_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>out_C_TVALID</name>
+            <Object>out_C_V_last_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>out_C_TREADY</name>
+            <Object>out_C_V_last_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>out_C_TLAST</name>
+            <Object>out_C_V_last_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>out_C_TKEEP</name>
+            <Object>out_C_V_keep_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>4</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>out_C_TSTRB</name>
+            <Object>out_C_V_strb_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>4</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule MAX_DEPTH="2">
+            <ModuleName>matrixmul_100_unopt</ModuleName>
+            <BindInstances>input_A_U input_B_U output_C_U add_ln20_1_fu_338_p2 icmp_ln20_fu_344_p2 add_ln20_fu_350_p2 icmp_ln21_fu_366_p2 add_ln21_fu_372_p2 add_ln25_fu_382_p2 add_ln29_1_fu_410_p2 icmp_ln29_fu_416_p2 add_ln29_fu_422_p2 icmp_ln30_fu_438_p2 add_ln30_fu_444_p2 add_ln34_fu_454_p2 add_ln40_1_fu_482_p2 icmp_ln40_fu_488_p2 add_ln40_fu_494_p2 icmp_ln41_fu_510_p2 add_ln41_fu_516_p2 add_ln49_fu_526_p2 icmp_ln43_fu_544_p2 add_ln43_fu_574_p2 add_ln47_fu_554_p2 add_ln47_2_fu_580_p2 add_ln47_1_fu_564_p2 fmul_32ns_32ns_32_3_max_dsp_1_U2 fadd_32ns_32ns_32_4_full_dsp_1_U1 add_ln54_1_fu_592_p2 icmp_ln54_fu_598_p2 add_ln54_fu_604_p2 cmp68_fu_610_p2 icmp_ln55_fu_616_p2 add_ln55_fu_622_p2 add_ln61_fu_632_p2 icmp_ln63_fu_642_p2 out_element_last_fu_648_p2</BindInstances>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>matrixmul_100_unopt</Name>
+            <Loops>
+                <loop_input_A1>
+                    <loop_input_A2/>
+                </loop_input_A1>
+                <loop_input_B1>
+                    <loop_input_B2/>
+                </loop_input_B1>
+                <loop1>
+                    <loop2>
+                        <loop3/>
+                    </loop2>
+                </loop1>
+                <loop_output_C1>
+                    <loop_output_C2/>
+                </loop_output_C1>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>13.301</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>3111204</Best-caseLatency>
+                    <Average-caseLatency>3111204</Average-caseLatency>
+                    <Worst-caseLatency>3111204</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>41.382 ms</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>41.382 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>41.382 ms</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>3111205</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <loop_input_A1>
+                        <Name>loop_input_A1</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>100</TripCount>
+                        <Latency>10300</Latency>
+                        <AbsoluteTimeLatency>0.137 ms</AbsoluteTimeLatency>
+                        <IterationLatency>103</IterationLatency>
+                        <PipelineDepth>103</PipelineDepth>
+                        <PipelineType>no</PipelineType>
+                        <InstanceList/>
+                        <loop_input_A2>
+                            <Name>loop_input_A2</Name>
+                            <Slack>7.30</Slack>
+                            <TripCount>100</TripCount>
+                            <Latency>100</Latency>
+                            <AbsoluteTimeLatency>1.330 us</AbsoluteTimeLatency>
+                            <PipelineII>1</PipelineII>
+                            <PipelineDepth>2</PipelineDepth>
+                            <PipelineType>yes</PipelineType>
+                            <InstanceList/>
+                        </loop_input_A2>
+                    </loop_input_A1>
+                    <loop_input_B1>
+                        <Name>loop_input_B1</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>100</TripCount>
+                        <Latency>10300</Latency>
+                        <AbsoluteTimeLatency>0.137 ms</AbsoluteTimeLatency>
+                        <IterationLatency>103</IterationLatency>
+                        <PipelineDepth>103</PipelineDepth>
+                        <PipelineType>no</PipelineType>
+                        <InstanceList/>
+                        <loop_input_B2>
+                            <Name>loop_input_B2</Name>
+                            <Slack>7.30</Slack>
+                            <TripCount>100</TripCount>
+                            <Latency>100</Latency>
+                            <AbsoluteTimeLatency>1.330 us</AbsoluteTimeLatency>
+                            <PipelineII>1</PipelineII>
+                            <PipelineDepth>2</PipelineDepth>
+                            <PipelineType>yes</PipelineType>
+                            <InstanceList/>
+                        </loop_input_B2>
+                    </loop_input_B1>
+                    <loop1>
+                        <Name>loop1</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>100</TripCount>
+                        <Latency>3080200</Latency>
+                        <AbsoluteTimeLatency>40.970 ms</AbsoluteTimeLatency>
+                        <IterationLatency>30802</IterationLatency>
+                        <PipelineDepth>30802</PipelineDepth>
+                        <PipelineType>no</PipelineType>
+                        <InstanceList/>
+                        <loop2>
+                            <Name>loop2</Name>
+                            <Slack>7.30</Slack>
+                            <TripCount>100</TripCount>
+                            <Latency>30800</Latency>
+                            <AbsoluteTimeLatency>0.410 ms</AbsoluteTimeLatency>
+                            <IterationLatency>308</IterationLatency>
+                            <PipelineDepth>308</PipelineDepth>
+                            <PipelineType>no</PipelineType>
+                            <InstanceList/>
+                            <loop3>
+                                <Name>loop3</Name>
+                                <Slack>7.30</Slack>
+                                <TripCount>100</TripCount>
+                                <Latency>305</Latency>
+                                <AbsoluteTimeLatency>4.057 us</AbsoluteTimeLatency>
+                                <PipelineII>3</PipelineII>
+                                <PipelineDepth>9</PipelineDepth>
+                                <PipelineType>yes</PipelineType>
+                                <InstanceList/>
+                            </loop3>
+                        </loop2>
+                    </loop1>
+                    <loop_output_C1>
+                        <Name>loop_output_C1</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>100</TripCount>
+                        <Latency>10400</Latency>
+                        <AbsoluteTimeLatency>0.138 ms</AbsoluteTimeLatency>
+                        <IterationLatency>104</IterationLatency>
+                        <PipelineDepth>104</PipelineDepth>
+                        <PipelineType>no</PipelineType>
+                        <InstanceList/>
+                        <loop_output_C2>
+                            <Name>loop_output_C2</Name>
+                            <Slack>7.30</Slack>
+                            <TripCount>100</TripCount>
+                            <Latency>101</Latency>
+                            <AbsoluteTimeLatency>1.343 us</AbsoluteTimeLatency>
+                            <PipelineII>1</PipelineII>
+                            <PipelineDepth>3</PipelineDepth>
+                            <PipelineType>yes</PipelineType>
+                            <InstanceList/>
+                        </loop_output_C2>
+                    </loop_output_C1>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>Timing Violation</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>matrix.cpp:12</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <loop_input_A1>
+                            <Name>loop_input_A1</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>matrix.cpp:25</SourceLocation>
+                            <loop_input_A2>
+                                <Name>loop_input_A2</Name>
+                                <IssueType>-</IssueType>
+                                <ViolationType>-</ViolationType>
+                                <SourceLocation>matrix.cpp:21</SourceLocation>
+                            </loop_input_A2>
+                        </loop_input_A1>
+                        <loop_input_B1>
+                            <Name>loop_input_B1</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>matrix.cpp:34</SourceLocation>
+                            <loop_input_B2>
+                                <Name>loop_input_B2</Name>
+                                <IssueType>-</IssueType>
+                                <ViolationType>-</ViolationType>
+                                <SourceLocation>matrix.cpp:30</SourceLocation>
+                            </loop_input_B2>
+                        </loop_input_B1>
+                        <loop1>
+                            <Name>loop1</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>matrix.cpp:47</SourceLocation>
+                            <loop2>
+                                <Name>loop2</Name>
+                                <IssueType>-</IssueType>
+                                <ViolationType>-</ViolationType>
+                                <SourceLocation>matrix.cpp:41</SourceLocation>
+                                <loop3>
+                                    <Name>loop3</Name>
+                                    <IssueType>-</IssueType>
+                                    <ViolationType>-</ViolationType>
+                                    <SourceLocation>matrix.cpp:43</SourceLocation>
+                                </loop3>
+                            </loop2>
+                        </loop1>
+                        <loop_output_C1>
+                            <Name>loop_output_C1</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>matrix.cpp:61</SourceLocation>
+                            <loop_output_C2>
+                                <Name>loop_output_C2</Name>
+                                <IssueType>-</IssueType>
+                                <ViolationType>-</ViolationType>
+                                <SourceLocation>matrix.cpp:55</SourceLocation>
+                            </loop_output_C2>
+                        </loop_output_C1>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>66</BRAM_18K>
+                    <AVAIL_BRAM>2160</AVAIL_BRAM>
+                    <UTIL_BRAM>3</UTIL_BRAM>
+                    <DSP>5</DSP>
+                    <AVAIL_DSP>4272</AVAIL_DSP>
+                    <UTIL_DSP>~0</UTIL_DSP>
+                    <FF>931</FF>
+                    <AVAIL_FF>850560</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>1294</LUT>
+                    <AVAIL_LUT>425280</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>80</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="storage" BRAM="22" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="input_A_U" SOURCE="matrix.cpp:8" STORAGESIZE="32 10000 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_1p array" URAM="0" VARIABLE="input_A" VISIBLE="true"/>
+                <BindNode BINDTYPE="storage" BRAM="22" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="input_B_U" SOURCE="matrix.cpp:9" STORAGESIZE="32 10000 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_1p array" URAM="0" VARIABLE="input_B" VISIBLE="true"/>
+                <BindNode BINDTYPE="storage" BRAM="22" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="output_C_U" SOURCE="matrix.cpp:10" STORAGESIZE="32 10000 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_1p array" URAM="0" VARIABLE="output_C" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_input_A1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln20_1_fu_338_p2" SOURCE="matrix.cpp:20" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln20_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="loop_input_A1" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln20_fu_344_p2" SOURCE="matrix.cpp:20" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln20" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_input_A1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln20_fu_350_p2" SOURCE="matrix.cpp:20" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln20" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="loop_input_A2" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln21_fu_366_p2" SOURCE="matrix.cpp:21" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln21" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_input_A2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln21_fu_372_p2" SOURCE="matrix.cpp:21" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln21" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_input_A2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln25_fu_382_p2" SOURCE="matrix.cpp:25" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln25" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_input_B1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln29_1_fu_410_p2" SOURCE="matrix.cpp:29" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln29_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="loop_input_B1" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln29_fu_416_p2" SOURCE="matrix.cpp:29" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln29" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_input_B1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln29_fu_422_p2" SOURCE="matrix.cpp:29" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln29" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="loop_input_B2" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln30_fu_438_p2" SOURCE="matrix.cpp:30" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln30" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_input_B2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln30_fu_444_p2" SOURCE="matrix.cpp:30" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln30" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_input_B2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln34_fu_454_p2" SOURCE="matrix.cpp:34" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln34" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln40_1_fu_482_p2" SOURCE="matrix.cpp:40" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln40_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="loop1" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln40_fu_488_p2" SOURCE="matrix.cpp:40" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln40" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln40_fu_494_p2" SOURCE="matrix.cpp:40" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln40" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="loop2" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln41_fu_510_p2" SOURCE="matrix.cpp:41" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln41" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln41_fu_516_p2" SOURCE="matrix.cpp:41" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln41" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln49_fu_526_p2" SOURCE="matrix.cpp:49" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln49" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="loop3" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln43_fu_544_p2" SOURCE="matrix.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln43" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln43_fu_574_p2" SOURCE="matrix.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln43" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln47_fu_554_p2" SOURCE="matrix.cpp:47" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln47" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln47_2_fu_580_p2" SOURCE="matrix.cpp:47" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln47_2" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln47_1_fu_564_p2" SOURCE="matrix.cpp:47" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln47_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="2" LOOP="loop3" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_3_max_dsp_1_U2" SOURCE="matrix.cpp:47" STORAGESUBTYPE="" URAM="0" VARIABLE="mul" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="loop3" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_4_full_dsp_1_U1" SOURCE="matrix.cpp:47" STORAGESUBTYPE="" URAM="0" VARIABLE="res_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_output_C1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_1_fu_592_p2" SOURCE="matrix.cpp:54" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln54_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="loop_output_C1" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln54_fu_598_p2" SOURCE="matrix.cpp:54" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln54" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_output_C1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_fu_604_p2" SOURCE="matrix.cpp:54" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln54" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="loop_output_C1" OPTYPE="seteq" PRAGMA="" RTLNAME="cmp68_fu_610_p2" SOURCE="matrix.cpp:54" STORAGESUBTYPE="" URAM="0" VARIABLE="cmp68" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="loop_output_C2" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln55_fu_616_p2" SOURCE="matrix.cpp:55" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln55" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_output_C2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln55_fu_622_p2" SOURCE="matrix.cpp:55" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln55" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loop_output_C2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln61_fu_632_p2" SOURCE="matrix.cpp:61" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln61" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="loop_output_C2" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln63_fu_642_p2" SOURCE="matrix.cpp:63" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln63" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="loop_output_C2" OPTYPE="and" PRAGMA="" RTLNAME="out_element_last_fu_648_p2" SOURCE="matrix.cpp:63" STORAGESUBTYPE="" URAM="0" VARIABLE="out_element_last" VISIBLE="false"/>
+            </BindNodes>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation/>
+    <UserConfigCommands>
+        <config_array_partition throughput_driven="off"/>
+        <config_compile enable_auto_rewind="0" pipeline_flush_in_task="never" pipeline_loops="100000000"/>
+    </UserConfigCommands>
+    <Args>
+        <Arg ArgName="in_A" index="0" direction="in" srcType="stream&lt;hls::axis&lt;float, 0, 0, 0, '8', false&gt;, 0&gt;&amp;" srcSize="96">
+            <hwRefs>
+                <hwRef type="interface" interface="in_A" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="out_C" index="1" direction="out" srcType="stream&lt;hls::axis&lt;float, 0, 0, 0, '8', false&gt;, 0&gt;&amp;" srcSize="96">
+            <hwRefs>
+                <hwRef type="interface" interface="out_C" name="" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_BUSIF">in_A:out_C</busParam>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst_n</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst_n" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_LOW</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst_n">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst_n</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="in_A" type="axi4stream" busTypeName="axis" mode="slave" direction="in" dataWidth="32" portPrefix="in_A_">
+            <ports>
+                <port>in_A_TDATA</port>
+                <port>in_A_TKEEP</port>
+                <port>in_A_TLAST</port>
+                <port>in_A_TREADY</port>
+                <port>in_A_TSTRB</port>
+                <port>in_A_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="in_A"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="out_C" type="axi4stream" busTypeName="axis" mode="master" direction="out" dataWidth="32" portPrefix="out_C_">
+            <ports>
+                <port>out_C_TDATA</port>
+                <port>out_C_TKEEP</port>
+                <port>out_C_TLAST</port>
+                <port>out_C_TREADY</port>
+                <port>out_C_TSTRB</port>
+                <port>out_C_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="out_C"/>
+            </constraints>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="AXIS">
+                <table>
+                    <keys size="9">Interface, Direction, Register Mode, TDATA, TKEEP, TLAST, TREADY, TSTRB, TVALID</keys>
+                    <column name="in_A">in, both, 32, 4, 1, 1, 4, 1</column>
+                    <column name="out_C">out, both, 32, 4, 1, 1, 4, 1</column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table>
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk</column>
+                    <column name="ap_rst_n">reset, ap_rst_n</column>
+                    <column name="ap_ctrl">ap_ctrl_none, </column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table>
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="in_A">in, stream&lt;hls::axis&lt;float 0 0 0 '8' false&gt; 0&gt;&amp;</column>
+                    <column name="out_C">out, stream&lt;hls::axis&lt;float 0 0 0 '8' false&gt; 0&gt;&amp;</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table>
+                    <keys size="3">Argument, HW Interface, HW Type</keys>
+                    <column name="in_A">in_A, interface</column>
+                    <column name="out_C">out_C, interface</column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <ResolutionUrl key="ZZZ">docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&amp;url=ug1448-hls-guidance&amp;resourceid=ZZZ.html</ResolutionUrl>
+    <PragmaReport>
+        <Pragma type="interface" location="matrix.cpp:5" status="valid" parentFunction="matrixmul_100_unopt" variable="return" isDirective="0" options="ap_ctrl_none port=return"/>
+        <Pragma type="interface" location="matrix.cpp:6" status="valid" parentFunction="matrixmul_100_unopt" variable="in_A" isDirective="0" options="axis register both port=in_A"/>
+        <Pragma type="interface" location="matrix.cpp:7" status="valid" parentFunction="matrixmul_100_unopt" variable="out_C" isDirective="0" options="axis register both port=out_C"/>
+        <Pragma type="pipeline" location="matrix.cpp:16" status="valid" parentFunction="matrixmul_100_unopt" variable="" isDirective="0" options="off"/>
+        <Pragma type="inline" location="matrix.cpp:17" status="valid" parentFunction="matrixmul_100_unopt" variable="" isDirective="0" options="off"/>
+        <Pragma type="unroll" location="matrix.cpp:22" status="valid" parentFunction="matrixmul_100_unopt" variable="" isDirective="0" options="off"/>
+        <Pragma type="loop_flatten" location="matrix.cpp:23" status="valid" parentFunction="matrixmul_100_unopt" variable="" isDirective="0" options="off"/>
+        <Pragma type="unroll" location="matrix.cpp:31" status="valid" parentFunction="matrixmul_100_unopt" variable="" isDirective="0" options="off"/>
+        <Pragma type="loop_flatten" location="matrix.cpp:32" status="valid" parentFunction="matrixmul_100_unopt" variable="" isDirective="0" options="off"/>
+        <Pragma type="unroll" location="matrix.cpp:44" status="valid" parentFunction="matrixmul_100_unopt" variable="" isDirective="0" options="off"/>
+        <Pragma type="loop_flatten" location="matrix.cpp:45" status="valid" parentFunction="matrixmul_100_unopt" variable="" isDirective="0" options="off"/>
+        <Pragma type="unroll" location="matrix.cpp:56" status="valid" parentFunction="matrixmul_100_unopt" variable="" isDirective="0" options="off"/>
+        <Pragma type="loop_flatten" location="matrix.cpp:57" status="valid" parentFunction="matrixmul_100_unopt" variable="" isDirective="0" options="off"/>
+    </PragmaReport>
+</profile>
+

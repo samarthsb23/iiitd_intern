@@ -1,0 +1,620 @@
+
+
+================================================================
+== Vivado HLS Report for 'operator_mul'
+================================================================
+* Date:           Fri May 30 11:14:53 2025
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        music
+* Solution:       solution1
+* Product family: zynquplus
+* Target device:  xczu28dr-ffvg1517-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.419|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    5|    5|    1|    1| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 6
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 6, States = { 1 2 3 4 5 6 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 8.41>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%rhs_im_read_2 = call float @_ssdm_op_Read.ap_auto.float(float %rhs_im_read)" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:113]   --->   Operation 7 'read' 'rhs_im_read_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%rhs_re_read_2 = call float @_ssdm_op_Read.ap_auto.float(float %rhs_re_read)" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:113]   --->   Operation 8 'read' 'rhs_re_read_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%x_complex_im_read = call float @_ssdm_op_Read.ap_auto.float(float %x_complex_float_im_read)" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:113]   --->   Operation 9 'read' 'x_complex_im_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%x_complex_re_read = call float @_ssdm_op_Read.ap_auto.float(float %x_complex_float_re_read)" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:113]   --->   Operation 10 'read' 'x_complex_re_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [2/2] (8.41ns)   --->   "%m1 = fmul float %rhs_re_read_2, %x_complex_re_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:118]   --->   Operation 11 'fmul' 'm1' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 12 [2/2] (8.41ns)   --->   "%m2 = fmul float %rhs_im_read_2, %x_complex_im_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:119]   --->   Operation 12 'fmul' 'm2' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 13 [2/2] (8.41ns)   --->   "%m3 = fmul float %rhs_im_read_2, %x_complex_re_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:120]   --->   Operation 13 'fmul' 'm3' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 14 [2/2] (8.41ns)   --->   "%m4 = fmul float %rhs_re_read_2, %x_complex_im_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:121]   --->   Operation 14 'fmul' 'm4' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 8.41>
+ST_2 : Operation 15 [1/2] (8.41ns)   --->   "%m1 = fmul float %rhs_re_read_2, %x_complex_re_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:118]   --->   Operation 15 'fmul' 'm1' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 16 [1/2] (8.41ns)   --->   "%m2 = fmul float %rhs_im_read_2, %x_complex_im_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:119]   --->   Operation 16 'fmul' 'm2' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 17 [1/2] (8.41ns)   --->   "%m3 = fmul float %rhs_im_read_2, %x_complex_re_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:120]   --->   Operation 17 'fmul' 'm3' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 18 [1/2] (8.41ns)   --->   "%m4 = fmul float %rhs_re_read_2, %x_complex_im_read" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:121]   --->   Operation 18 'fmul' 'm4' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 6.43>
+ST_3 : Operation 19 [4/4] (6.43ns)   --->   "%sum_re = fsub float %m1, %m2" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:122]   --->   Operation 19 'fsub' 'sum_re' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 20 [4/4] (6.43ns)   --->   "%sum_im = fadd float %m3, %m4" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:123]   --->   Operation 20 'fadd' 'sum_im' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 6.43>
+ST_4 : Operation 21 [3/4] (6.43ns)   --->   "%sum_re = fsub float %m1, %m2" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:122]   --->   Operation 21 'fsub' 'sum_re' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 22 [3/4] (6.43ns)   --->   "%sum_im = fadd float %m3, %m4" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:123]   --->   Operation 22 'fadd' 'sum_im' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 6.43>
+ST_5 : Operation 23 [2/4] (6.43ns)   --->   "%sum_re = fsub float %m1, %m2" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:122]   --->   Operation 23 'fsub' 'sum_re' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 24 [2/4] (6.43ns)   --->   "%sum_im = fadd float %m3, %m4" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:123]   --->   Operation 24 'fadd' 'sum_im' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 6.43>
+ST_6 : Operation 25 [1/4] (6.43ns)   --->   "%sum_re = fsub float %m1, %m2" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:122]   --->   Operation 25 'fsub' 'sum_re' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 26 [1/4] (6.43ns)   --->   "%sum_im = fadd float %m3, %m4" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:123]   --->   Operation 26 'fadd' 'sum_im' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 27 [1/1] (0.00ns)   --->   "%mrv = insertvalue { float, float } undef, float %sum_re, 0" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:126]   --->   Operation 27 'insertvalue' 'mrv' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 28 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue { float, float } %mrv, float %sum_im, 1" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:126]   --->   Operation 28 'insertvalue' 'mrv_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 29 [1/1] (0.00ns)   --->   "ret { float, float } %mrv_1" [C:/Xilinx2/Vivado/2019.1/common/technology/autopilot\hls/linear_algebra/utils/x_hls_complex.h:126]   --->   Operation 29 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 1
+- Is pipelined: 1
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ x_complex_float_re_read]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ x_complex_float_im_read]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ rhs_re_read]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ rhs_im_read]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+rhs_im_read_2     (read       ) [ 0110000]
+rhs_re_read_2     (read       ) [ 0110000]
+x_complex_im_read (read       ) [ 0110000]
+x_complex_re_read (read       ) [ 0110000]
+m1                (fmul       ) [ 0101111]
+m2                (fmul       ) [ 0101111]
+m3                (fmul       ) [ 0101111]
+m4                (fmul       ) [ 0101111]
+sum_re            (fsub       ) [ 0000000]
+sum_im            (fadd       ) [ 0000000]
+mrv               (insertvalue) [ 0000000]
+mrv_1             (insertvalue) [ 0000000]
+ret_ln126         (ret        ) [ 0000000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="x_complex_float_re_read">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="x_complex_float_re_read"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="x_complex_float_im_read">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="x_complex_float_im_read"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="rhs_re_read">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="rhs_re_read"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="rhs_im_read">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="rhs_im_read"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1001" name="const_8">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.float"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1001" name="const_10">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1004" name="rhs_im_read_2_read_fu_12">
+<pin_list>
+<pin id="13" dir="0" index="0" bw="32" slack="0"/>
+<pin id="14" dir="0" index="1" bw="32" slack="0"/>
+<pin id="15" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="rhs_im_read_2/1 "/>
+</bind>
+</comp>
+
+<comp id="18" class="1004" name="rhs_re_read_2_read_fu_18">
+<pin_list>
+<pin id="19" dir="0" index="0" bw="32" slack="0"/>
+<pin id="20" dir="0" index="1" bw="32" slack="0"/>
+<pin id="21" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="rhs_re_read_2/1 "/>
+</bind>
+</comp>
+
+<comp id="24" class="1004" name="x_complex_im_read_read_fu_24">
+<pin_list>
+<pin id="25" dir="0" index="0" bw="32" slack="0"/>
+<pin id="26" dir="0" index="1" bw="32" slack="0"/>
+<pin id="27" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="x_complex_im_read/1 "/>
+</bind>
+</comp>
+
+<comp id="30" class="1004" name="x_complex_re_read_read_fu_30">
+<pin_list>
+<pin id="31" dir="0" index="0" bw="32" slack="0"/>
+<pin id="32" dir="0" index="1" bw="32" slack="0"/>
+<pin id="33" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="x_complex_re_read/1 "/>
+</bind>
+</comp>
+
+<comp id="36" class="1004" name="grp_fu_36">
+<pin_list>
+<pin id="37" dir="0" index="0" bw="32" slack="1"/>
+<pin id="38" dir="0" index="1" bw="32" slack="1"/>
+<pin id="39" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="fsub(11) " fcode="fadd"/>
+<opset="sum_re/3 "/>
+</bind>
+</comp>
+
+<comp id="40" class="1004" name="grp_fu_40">
+<pin_list>
+<pin id="41" dir="0" index="0" bw="32" slack="1"/>
+<pin id="42" dir="0" index="1" bw="32" slack="1"/>
+<pin id="43" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="fadd(9) " fcode="fadd"/>
+<opset="sum_im/3 "/>
+</bind>
+</comp>
+
+<comp id="44" class="1004" name="grp_fu_44">
+<pin_list>
+<pin id="45" dir="0" index="0" bw="32" slack="0"/>
+<pin id="46" dir="0" index="1" bw="32" slack="0"/>
+<pin id="47" dir="1" index="2" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opcode="fmul(13) " fcode="fmul"/>
+<opset="m1/1 "/>
+</bind>
+</comp>
+
+<comp id="50" class="1004" name="grp_fu_50">
+<pin_list>
+<pin id="51" dir="0" index="0" bw="32" slack="0"/>
+<pin id="52" dir="0" index="1" bw="32" slack="0"/>
+<pin id="53" dir="1" index="2" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opcode="fmul(13) " fcode="fmul"/>
+<opset="m2/1 "/>
+</bind>
+</comp>
+
+<comp id="56" class="1004" name="grp_fu_56">
+<pin_list>
+<pin id="57" dir="0" index="0" bw="32" slack="0"/>
+<pin id="58" dir="0" index="1" bw="32" slack="0"/>
+<pin id="59" dir="1" index="2" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opcode="fmul(13) " fcode="fmul"/>
+<opset="m3/1 "/>
+</bind>
+</comp>
+
+<comp id="62" class="1004" name="grp_fu_62">
+<pin_list>
+<pin id="63" dir="0" index="0" bw="32" slack="0"/>
+<pin id="64" dir="0" index="1" bw="32" slack="0"/>
+<pin id="65" dir="1" index="2" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opcode="fmul(13) " fcode="fmul"/>
+<opset="m4/1 "/>
+</bind>
+</comp>
+
+<comp id="68" class="1004" name="mrv_fu_68">
+<pin_list>
+<pin id="69" dir="0" index="0" bw="64" slack="0"/>
+<pin id="70" dir="0" index="1" bw="32" slack="0"/>
+<pin id="71" dir="1" index="2" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="insertvalue(57) " fcode="insertvalue"/>
+<opset="mrv/6 "/>
+</bind>
+</comp>
+
+<comp id="74" class="1004" name="mrv_1_fu_74">
+<pin_list>
+<pin id="75" dir="0" index="0" bw="64" slack="0"/>
+<pin id="76" dir="0" index="1" bw="32" slack="0"/>
+<pin id="77" dir="1" index="2" bw="64" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="insertvalue(57) " fcode="insertvalue"/>
+<opset="mrv_1/6 "/>
+</bind>
+</comp>
+
+<comp id="80" class="1005" name="rhs_im_read_2_reg_80">
+<pin_list>
+<pin id="81" dir="0" index="0" bw="32" slack="1"/>
+<pin id="82" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="rhs_im_read_2 "/>
+</bind>
+</comp>
+
+<comp id="86" class="1005" name="rhs_re_read_2_reg_86">
+<pin_list>
+<pin id="87" dir="0" index="0" bw="32" slack="1"/>
+<pin id="88" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="rhs_re_read_2 "/>
+</bind>
+</comp>
+
+<comp id="92" class="1005" name="x_complex_im_read_reg_92">
+<pin_list>
+<pin id="93" dir="0" index="0" bw="32" slack="1"/>
+<pin id="94" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="x_complex_im_read "/>
+</bind>
+</comp>
+
+<comp id="98" class="1005" name="x_complex_re_read_reg_98">
+<pin_list>
+<pin id="99" dir="0" index="0" bw="32" slack="1"/>
+<pin id="100" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="x_complex_re_read "/>
+</bind>
+</comp>
+
+<comp id="104" class="1005" name="m1_reg_104">
+<pin_list>
+<pin id="105" dir="0" index="0" bw="32" slack="1"/>
+<pin id="106" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="m1 "/>
+</bind>
+</comp>
+
+<comp id="109" class="1005" name="m2_reg_109">
+<pin_list>
+<pin id="110" dir="0" index="0" bw="32" slack="1"/>
+<pin id="111" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="m2 "/>
+</bind>
+</comp>
+
+<comp id="114" class="1005" name="m3_reg_114">
+<pin_list>
+<pin id="115" dir="0" index="0" bw="32" slack="1"/>
+<pin id="116" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="m3 "/>
+</bind>
+</comp>
+
+<comp id="119" class="1005" name="m4_reg_119">
+<pin_list>
+<pin id="120" dir="0" index="0" bw="32" slack="1"/>
+<pin id="121" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="m4 "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="16"><net_src comp="8" pin="0"/><net_sink comp="12" pin=0"/></net>
+
+<net id="17"><net_src comp="6" pin="0"/><net_sink comp="12" pin=1"/></net>
+
+<net id="22"><net_src comp="8" pin="0"/><net_sink comp="18" pin=0"/></net>
+
+<net id="23"><net_src comp="4" pin="0"/><net_sink comp="18" pin=1"/></net>
+
+<net id="28"><net_src comp="8" pin="0"/><net_sink comp="24" pin=0"/></net>
+
+<net id="29"><net_src comp="2" pin="0"/><net_sink comp="24" pin=1"/></net>
+
+<net id="34"><net_src comp="8" pin="0"/><net_sink comp="30" pin=0"/></net>
+
+<net id="35"><net_src comp="0" pin="0"/><net_sink comp="30" pin=1"/></net>
+
+<net id="48"><net_src comp="18" pin="2"/><net_sink comp="44" pin=0"/></net>
+
+<net id="49"><net_src comp="30" pin="2"/><net_sink comp="44" pin=1"/></net>
+
+<net id="54"><net_src comp="12" pin="2"/><net_sink comp="50" pin=0"/></net>
+
+<net id="55"><net_src comp="24" pin="2"/><net_sink comp="50" pin=1"/></net>
+
+<net id="60"><net_src comp="12" pin="2"/><net_sink comp="56" pin=0"/></net>
+
+<net id="61"><net_src comp="30" pin="2"/><net_sink comp="56" pin=1"/></net>
+
+<net id="66"><net_src comp="18" pin="2"/><net_sink comp="62" pin=0"/></net>
+
+<net id="67"><net_src comp="24" pin="2"/><net_sink comp="62" pin=1"/></net>
+
+<net id="72"><net_src comp="10" pin="0"/><net_sink comp="68" pin=0"/></net>
+
+<net id="73"><net_src comp="36" pin="2"/><net_sink comp="68" pin=1"/></net>
+
+<net id="78"><net_src comp="68" pin="2"/><net_sink comp="74" pin=0"/></net>
+
+<net id="79"><net_src comp="40" pin="2"/><net_sink comp="74" pin=1"/></net>
+
+<net id="83"><net_src comp="12" pin="2"/><net_sink comp="80" pin=0"/></net>
+
+<net id="84"><net_src comp="80" pin="1"/><net_sink comp="50" pin=0"/></net>
+
+<net id="85"><net_src comp="80" pin="1"/><net_sink comp="56" pin=0"/></net>
+
+<net id="89"><net_src comp="18" pin="2"/><net_sink comp="86" pin=0"/></net>
+
+<net id="90"><net_src comp="86" pin="1"/><net_sink comp="44" pin=0"/></net>
+
+<net id="91"><net_src comp="86" pin="1"/><net_sink comp="62" pin=0"/></net>
+
+<net id="95"><net_src comp="24" pin="2"/><net_sink comp="92" pin=0"/></net>
+
+<net id="96"><net_src comp="92" pin="1"/><net_sink comp="50" pin=1"/></net>
+
+<net id="97"><net_src comp="92" pin="1"/><net_sink comp="62" pin=1"/></net>
+
+<net id="101"><net_src comp="30" pin="2"/><net_sink comp="98" pin=0"/></net>
+
+<net id="102"><net_src comp="98" pin="1"/><net_sink comp="44" pin=1"/></net>
+
+<net id="103"><net_src comp="98" pin="1"/><net_sink comp="56" pin=1"/></net>
+
+<net id="107"><net_src comp="44" pin="2"/><net_sink comp="104" pin=0"/></net>
+
+<net id="108"><net_src comp="104" pin="1"/><net_sink comp="36" pin=0"/></net>
+
+<net id="112"><net_src comp="50" pin="2"/><net_sink comp="109" pin=0"/></net>
+
+<net id="113"><net_src comp="109" pin="1"/><net_sink comp="36" pin=1"/></net>
+
+<net id="117"><net_src comp="56" pin="2"/><net_sink comp="114" pin=0"/></net>
+
+<net id="118"><net_src comp="114" pin="1"/><net_sink comp="40" pin=0"/></net>
+
+<net id="122"><net_src comp="62" pin="2"/><net_sink comp="119" pin=0"/></net>
+
+<net id="123"><net_src comp="119" pin="1"/><net_sink comp="40" pin=1"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+	Port: operator* : x_complex_float_re_read | {1 }
+	Port: operator* : x_complex_float_im_read | {1 }
+	Port: operator* : rhs_re_read | {1 }
+	Port: operator* : rhs_im_read | {1 }
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+		mrv : 1
+		mrv_1 : 2
+		ret_ln126 : 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|------------------------------|---------|---------|---------|
+| Operation|        Functional Unit       |  DSP48E |    FF   |   LUT   |
+|----------|------------------------------|---------|---------|---------|
+|          |           grp_fu_44          |    3    |   128   |   135   |
+|   fmul   |           grp_fu_50          |    3    |   128   |   135   |
+|          |           grp_fu_56          |    3    |   128   |   135   |
+|          |           grp_fu_62          |    3    |   128   |   135   |
+|----------|------------------------------|---------|---------|---------|
+|   fadd   |           grp_fu_36          |    2    |   227   |   214   |
+|          |           grp_fu_40          |    2    |   227   |   214   |
+|----------|------------------------------|---------|---------|---------|
+|          |   rhs_im_read_2_read_fu_12   |    0    |    0    |    0    |
+|   read   |   rhs_re_read_2_read_fu_18   |    0    |    0    |    0    |
+|          | x_complex_im_read_read_fu_24 |    0    |    0    |    0    |
+|          | x_complex_re_read_read_fu_30 |    0    |    0    |    0    |
+|----------|------------------------------|---------|---------|---------|
+|insertvalue|           mrv_fu_68          |    0    |    0    |    0    |
+|          |          mrv_1_fu_74         |    0    |    0    |    0    |
+|----------|------------------------------|---------|---------|---------|
+|   Total  |                              |    16   |   966   |   968   |
+|----------|------------------------------|---------|---------|---------|
+
+Memories:
+N/A
+
+* Register list:
++------------------------+--------+
+|                        |   FF   |
++------------------------+--------+
+|       m1_reg_104       |   32   |
+|       m2_reg_109       |   32   |
+|       m3_reg_114       |   32   |
+|       m4_reg_119       |   32   |
+|  rhs_im_read_2_reg_80  |   32   |
+|  rhs_re_read_2_reg_86  |   32   |
+|x_complex_im_read_reg_92|   32   |
+|x_complex_re_read_reg_98|   32   |
++------------------------+--------+
+|          Total         |   256  |
++------------------------+--------+
+
+* Multiplexer (MUX) list: 
+|-----------|------|------|------|--------||---------||---------|
+|    Comp   |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
+|-----------|------|------|------|--------||---------||---------|
+| grp_fu_44 |  p0  |   2  |  32  |   64   ||    9    |
+| grp_fu_44 |  p1  |   2  |  32  |   64   ||    9    |
+| grp_fu_50 |  p0  |   2  |  32  |   64   ||    9    |
+| grp_fu_50 |  p1  |   2  |  32  |   64   ||    9    |
+| grp_fu_56 |  p0  |   2  |  32  |   64   ||    9    |
+| grp_fu_56 |  p1  |   2  |  32  |   64   ||    9    |
+| grp_fu_62 |  p0  |   2  |  32  |   64   ||    9    |
+| grp_fu_62 |  p1  |   2  |  32  |   64   ||    9    |
+|-----------|------|------|------|--------||---------||---------|
+|   Total   |      |      |      |   512  ||  5.248  ||    72   |
+|-----------|------|------|------|--------||---------||---------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+--------+
+|           | DSP48E |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+--------+
+|  Function |   16   |    -   |   966  |   968  |
+|   Memory  |    -   |    -   |    -   |    -   |
+|Multiplexer|    -   |    5   |    -   |   72   |
+|  Register |    -   |    -   |   256  |    -   |
++-----------+--------+--------+--------+--------+
+|   Total   |   16   |    5   |  1222  |  1040  |
++-----------+--------+--------+--------+--------+

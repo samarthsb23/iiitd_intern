@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# xsim v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri May 23 11:25:16 2025
+# Process ID: 21228
+# Current directory: C:/Users/Samarth/Desktop/IIIT_Intern/MUSIC/music/solution1/sim/verilog
+# Command line: xsim.exe -mode tcl -source {xsim.dir/MUSIC_top/xsim_script.tcl}
+# Log file: C:/Users/Samarth/Desktop/IIIT_Intern/MUSIC/music/solution1/sim/verilog/xsim.log
+# Journal file: C:/Users/Samarth/Desktop/IIIT_Intern/MUSIC/music/solution1/sim/verilog\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/MUSIC_top/xsim_script.tcl
+source MUSIC_top.tcl

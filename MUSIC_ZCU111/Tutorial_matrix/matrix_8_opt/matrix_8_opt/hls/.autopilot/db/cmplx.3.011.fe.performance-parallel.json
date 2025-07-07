@@ -1,0 +1,18 @@
+{
+  "0": {
+    "basicblocks": 1313,
+    "calls": "",
+    "file": "matrix.cpp",
+    "fileloc": 3,
+    "instructions": 12609,
+    "loads": {
+      "G": 1,
+      "L": 1440
+    },
+    "name": "matrixmul_32_opt",
+    "stores": {
+      "L": 1248
+    },
+    "total_instructions": 12937
+  }
+}

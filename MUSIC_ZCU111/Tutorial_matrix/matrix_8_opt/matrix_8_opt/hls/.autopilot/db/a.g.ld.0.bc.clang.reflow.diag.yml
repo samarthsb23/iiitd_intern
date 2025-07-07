@@ -1,0 +1,2461 @@
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: matrix.cpp, Line: 42, Column: 9 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        loop3
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: matrix.cpp, Line: 3, Column: 0 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop3
+  - String:          ''' ('
+  - LoopLoc:         'matrix.cpp:42:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matrixmul_32_opt
+  - String:          ''' completely with a factor of '
+  - Factor:          '32'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_matrixmul_32_opt_ir
+Args:            
+  - Callee:          'matrixmul_32_opt(hls::stream<hls::axis<float, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<float, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: matrix.cpp, Line: 3, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_matrixmul_32_opt_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          input_A
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 9, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          input_B
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        loop_input_A2
+  - String:          '> at '
+  - LoopLoc:         'matrix.cpp:19:18'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        loop_input_B2
+  - String:          '> at '
+  - LoopLoc:         'matrix.cpp:28:18'
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-unroll-small-loop
+Name:            UnrollSmallLoop
+DebugLoc:        { File: matrix.cpp, Line: 3, Column: 0 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Unrolling small iteration loop '''
+  - LoopName:        loop_output_C1
+  - String:          ''' ('
+  - LoopLoc:         'matrix.cpp:52:18'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matrixmul_32_opt
+  - String:          ''' automatically'
+...
+--- !Passed
+Pass:            reflow-unroll-small-loop
+Name:            UnrollSmallLoop
+DebugLoc:        { File: matrix.cpp, Line: 3, Column: 0 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Unrolling small iteration loop '''
+  - LoopName:        loop1
+  - String:          ''' ('
+  - LoopLoc:         'matrix.cpp:38:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matrixmul_32_opt
+  - String:          ''' automatically'
+...
+--- !Passed
+Pass:            reflow-unroll-small-loop
+Name:            UnrollSmallLoop
+DebugLoc:        { File: matrix.cpp, Line: 3, Column: 0 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Unrolling small iteration loop '''
+  - LoopName:        loop_input_B1
+  - String:          ''' ('
+  - LoopLoc:         'matrix.cpp:27:17'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matrixmul_32_opt
+  - String:          ''' automatically'
+...
+--- !Passed
+Pass:            reflow-unroll-small-loop
+Name:            UnrollSmallLoop
+DebugLoc:        { File: matrix.cpp, Line: 3, Column: 0 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Unrolling small iteration loop '''
+  - LoopName:        loop_input_A1
+  - String:          ''' ('
+  - LoopLoc:         'matrix.cpp:18:17'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matrixmul_32_opt
+  - String:          ''' automatically'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: matrix.cpp, Line: 3, Column: 0 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_output_C1
+  - String:          ''' ('
+  - LoopLoc:         'matrix.cpp:52:18'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matrixmul_32_opt
+  - String:          ''' completely with a factor of '
+  - Factor:          '32'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: matrix.cpp, Line: 3, Column: 0 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop1
+  - String:          ''' ('
+  - LoopLoc:         'matrix.cpp:38:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matrixmul_32_opt
+  - String:          ''' completely with a factor of '
+  - Factor:          '32'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: matrix.cpp, Line: 3, Column: 0 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_input_B1
+  - String:          ''' ('
+  - LoopLoc:         'matrix.cpp:27:17'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matrixmul_32_opt
+  - String:          ''' completely with a factor of '
+  - Factor:          '32'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: matrix.cpp, Line: 3, Column: 0 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_input_A1
+  - String:          ''' ('
+  - LoopLoc:         'matrix.cpp:18:17'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matrixmul_32_opt
+  - String:          ''' completely with a factor of '
+  - Factor:          '32'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayPromotion
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Automatically partitioning array '''
+  - Value:           input_A
+  - String:          ''' dimension '
+  - Dim:             '1'
+  - String:          ' completely based on constant index.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayPromotion
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Automatically partitioning array '''
+  - Value:           input_A
+  - String:          ''' dimension '
+  - Dim:             '1'
+  - String:          ' completely based on constant index.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayPromotion
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Automatically partitioning array '''
+  - Value:           input_A
+  - String:          ''' dimension '
+  - Dim:             '1'
+  - String:          ' completely based on constant index.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayPromotion
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Automatically partitioning array '''
+  - Value:           input_A
+  - String:          ''' dimension '
+  - Dim:             '1'
+  - String:          ' completely based on constant index.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayPromotion
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Automatically partitioning array '''
+  - Value:           input_A
+  - String:          ''' dimension '
+  - Dim:             '1'
+  - String:          ' completely based on constant index.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayPromotion
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Automatically partitioning array '''
+  - Value:           input_A
+  - String:          ''' dimension '
+  - Dim:             '1'
+  - String:          ' completely based on constant index.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayPromotion
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Automatically partitioning array '''
+  - Value:           input_A
+  - String:          ''' dimension '
+  - Dim:             '1'
+  - String:          ' completely based on constant index.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayPromotion
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Automatically partitioning array '''
+  - Value:           input_A
+  - String:          ''' dimension '
+  - Dim:             '1'
+  - String:          ' completely based on constant index.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayPromotion
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Automatically partitioning array '''
+  - Value:           input_A
+  - String:          ''' dimension '
+  - Dim:             '1'
+  - String:          ' completely based on constant index.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayPromotion
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Automatically partitioning array '''
+  - Value:           input_A
+  - String:          ''' dimension '
+  - Dim:             '1'
+  - String:          ' completely based on constant index.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayPromotion
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Automatically partitioning array '''
+  - Value:           input_A
+  - String:          ''' dimension '
+  - Dim:             '1'
+  - String:          ' completely based on constant index.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayPromotion
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Automatically partitioning array '''
+  - Value:           input_A
+  - String:          ''' dimension '
+  - Dim:             '1'
+  - String:          ' completely based on constant index.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayPromotion
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Automatically partitioning array '''
+  - Value:           input_A
+  - String:          ''' dimension '
+  - Dim:             '1'
+  - String:          ' completely based on constant index.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayPromotion
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Automatically partitioning array '''
+  - Value:           input_A
+  - String:          ''' dimension '
+  - Dim:             '1'
+  - String:          ' completely based on constant index.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayPromotion
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Automatically partitioning array '''
+  - Value:           input_A
+  - String:          ''' dimension '
+  - Dim:             '1'
+  - String:          ' completely based on constant index.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayPromotion
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Automatically partitioning array '''
+  - Value:           input_A
+  - String:          ''' dimension '
+  - Dim:             '1'
+  - String:          ' completely based on constant index.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayPromotion
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Automatically partitioning array '''
+  - Value:           input_A
+  - String:          ''' dimension '
+  - Dim:             '1'
+  - String:          ' completely based on constant index.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayPromotion
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Automatically partitioning array '''
+  - Value:           input_A
+  - String:          ''' dimension '
+  - Dim:             '1'
+  - String:          ' completely based on constant index.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayPromotion
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Automatically partitioning array '''
+  - Value:           input_A
+  - String:          ''' dimension '
+  - Dim:             '1'
+  - String:          ' completely based on constant index.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayPromotion
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Automatically partitioning array '''
+  - Value:           input_A
+  - String:          ''' dimension '
+  - Dim:             '1'
+  - String:          ' completely based on constant index.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayPromotion
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Automatically partitioning array '''
+  - Value:           input_A
+  - String:          ''' dimension '
+  - Dim:             '1'
+  - String:          ' completely based on constant index.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayPromotion
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Automatically partitioning array '''
+  - Value:           input_A
+  - String:          ''' dimension '
+  - Dim:             '1'
+  - String:          ' completely based on constant index.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayPromotion
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Automatically partitioning array '''
+  - Value:           input_A
+  - String:          ''' dimension '
+  - Dim:             '1'
+  - String:          ' completely based on constant index.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayPromotion
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Automatically partitioning array '''
+  - Value:           input_A
+  - String:          ''' dimension '
+  - Dim:             '1'
+  - String:          ' completely based on constant index.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayPromotion
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Automatically partitioning array '''
+  - Value:           input_A
+  - String:          ''' dimension '
+  - Dim:             '1'
+  - String:          ' completely based on constant index.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayPromotion
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Automatically partitioning array '''
+  - Value:           input_A
+  - String:          ''' dimension '
+  - Dim:             '1'
+  - String:          ' completely based on constant index.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayPromotion
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Automatically partitioning array '''
+  - Value:           input_A
+  - String:          ''' dimension '
+  - Dim:             '1'
+  - String:          ' completely based on constant index.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayPromotion
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Automatically partitioning array '''
+  - Value:           input_A
+  - String:          ''' dimension '
+  - Dim:             '1'
+  - String:          ' completely based on constant index.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayPromotion
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Automatically partitioning array '''
+  - Value:           input_A
+  - String:          ''' dimension '
+  - Dim:             '1'
+  - String:          ' completely based on constant index.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayPromotion
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Automatically partitioning array '''
+  - Value:           input_A
+  - String:          ''' dimension '
+  - Dim:             '1'
+  - String:          ' completely based on constant index.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayPromotion
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Automatically partitioning array '''
+  - Value:           input_A
+  - String:          ''' dimension '
+  - Dim:             '1'
+  - String:          ' completely based on constant index.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayPromotion
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Automatically partitioning array '''
+  - Value:           input_A
+  - String:          ''' dimension '
+  - Dim:             '1'
+  - String:          ' completely based on constant index.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayPromotion
+DebugLoc:        { File: matrix.cpp, Line: 11, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Automatically partitioning array '''
+  - Value:           output_C
+  - String:          ''' dimension '
+  - Dim:             '1'
+  - String:          ' completely based on constant index.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=input_A_0'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  matrixmul_32_opt
+  - String:          ' '
+  - varLoc:          'matrix.cpp:7:12'
+  - String:          ' '
+  - VarName:         input_A_0
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            input_A_0
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=input_A_1'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  matrixmul_32_opt
+  - String:          ' '
+  - varLoc:          'matrix.cpp:7:12'
+  - String:          ' '
+  - VarName:         input_A_1
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            input_A_1
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=input_A_10'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  matrixmul_32_opt
+  - String:          ' '
+  - varLoc:          'matrix.cpp:7:12'
+  - String:          ' '
+  - VarName:         input_A_10
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            input_A_10
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=input_A_11'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  matrixmul_32_opt
+  - String:          ' '
+  - varLoc:          'matrix.cpp:7:12'
+  - String:          ' '
+  - VarName:         input_A_11
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            input_A_11
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=input_A_12'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  matrixmul_32_opt
+  - String:          ' '
+  - varLoc:          'matrix.cpp:7:12'
+  - String:          ' '
+  - VarName:         input_A_12
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            input_A_12
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=input_A_13'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  matrixmul_32_opt
+  - String:          ' '
+  - varLoc:          'matrix.cpp:7:12'
+  - String:          ' '
+  - VarName:         input_A_13
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            input_A_13
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=input_A_14'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  matrixmul_32_opt
+  - String:          ' '
+  - varLoc:          'matrix.cpp:7:12'
+  - String:          ' '
+  - VarName:         input_A_14
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            input_A_14
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=input_A_15'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  matrixmul_32_opt
+  - String:          ' '
+  - varLoc:          'matrix.cpp:7:12'
+  - String:          ' '
+  - VarName:         input_A_15
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            input_A_15
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=input_A_16'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  matrixmul_32_opt
+  - String:          ' '
+  - varLoc:          'matrix.cpp:7:12'
+  - String:          ' '
+  - VarName:         input_A_16
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            input_A_16
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=input_A_17'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  matrixmul_32_opt
+  - String:          ' '
+  - varLoc:          'matrix.cpp:7:12'
+  - String:          ' '
+  - VarName:         input_A_17
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            input_A_17
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=input_A_18'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  matrixmul_32_opt
+  - String:          ' '
+  - varLoc:          'matrix.cpp:7:12'
+  - String:          ' '
+  - VarName:         input_A_18
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            input_A_18
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=input_A_19'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  matrixmul_32_opt
+  - String:          ' '
+  - varLoc:          'matrix.cpp:7:12'
+  - String:          ' '
+  - VarName:         input_A_19
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            input_A_19
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=input_A_2'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  matrixmul_32_opt
+  - String:          ' '
+  - varLoc:          'matrix.cpp:7:12'
+  - String:          ' '
+  - VarName:         input_A_2
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            input_A_2
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=input_A_20'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  matrixmul_32_opt
+  - String:          ' '
+  - varLoc:          'matrix.cpp:7:12'
+  - String:          ' '
+  - VarName:         input_A_20
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            input_A_20
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=input_A_21'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  matrixmul_32_opt
+  - String:          ' '
+  - varLoc:          'matrix.cpp:7:12'
+  - String:          ' '
+  - VarName:         input_A_21
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            input_A_21
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=input_A_22'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  matrixmul_32_opt
+  - String:          ' '
+  - varLoc:          'matrix.cpp:7:12'
+  - String:          ' '
+  - VarName:         input_A_22
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            input_A_22
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=input_A_23'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  matrixmul_32_opt
+  - String:          ' '
+  - varLoc:          'matrix.cpp:7:12'
+  - String:          ' '
+  - VarName:         input_A_23
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            input_A_23
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=input_A_24'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  matrixmul_32_opt
+  - String:          ' '
+  - varLoc:          'matrix.cpp:7:12'
+  - String:          ' '
+  - VarName:         input_A_24
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            input_A_24
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=input_A_25'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  matrixmul_32_opt
+  - String:          ' '
+  - varLoc:          'matrix.cpp:7:12'
+  - String:          ' '
+  - VarName:         input_A_25
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            input_A_25
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=input_A_26'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  matrixmul_32_opt
+  - String:          ' '
+  - varLoc:          'matrix.cpp:7:12'
+  - String:          ' '
+  - VarName:         input_A_26
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            input_A_26
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=input_A_27'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  matrixmul_32_opt
+  - String:          ' '
+  - varLoc:          'matrix.cpp:7:12'
+  - String:          ' '
+  - VarName:         input_A_27
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            input_A_27
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=input_A_28'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  matrixmul_32_opt
+  - String:          ' '
+  - varLoc:          'matrix.cpp:7:12'
+  - String:          ' '
+  - VarName:         input_A_28
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            input_A_28
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=input_A_29'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  matrixmul_32_opt
+  - String:          ' '
+  - varLoc:          'matrix.cpp:7:12'
+  - String:          ' '
+  - VarName:         input_A_29
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            input_A_29
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=input_A_3'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  matrixmul_32_opt
+  - String:          ' '
+  - varLoc:          'matrix.cpp:7:12'
+  - String:          ' '
+  - VarName:         input_A_3
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            input_A_3
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=input_A_30'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  matrixmul_32_opt
+  - String:          ' '
+  - varLoc:          'matrix.cpp:7:12'
+  - String:          ' '
+  - VarName:         input_A_30
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            input_A_30
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=input_A_31'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  matrixmul_32_opt
+  - String:          ' '
+  - varLoc:          'matrix.cpp:7:12'
+  - String:          ' '
+  - VarName:         input_A_31
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            input_A_31
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=input_A_4'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  matrixmul_32_opt
+  - String:          ' '
+  - varLoc:          'matrix.cpp:7:12'
+  - String:          ' '
+  - VarName:         input_A_4
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            input_A_4
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=input_A_5'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  matrixmul_32_opt
+  - String:          ' '
+  - varLoc:          'matrix.cpp:7:12'
+  - String:          ' '
+  - VarName:         input_A_5
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            input_A_5
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=input_A_6'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  matrixmul_32_opt
+  - String:          ' '
+  - varLoc:          'matrix.cpp:7:12'
+  - String:          ' '
+  - VarName:         input_A_6
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            input_A_6
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=input_A_7'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  matrixmul_32_opt
+  - String:          ' '
+  - varLoc:          'matrix.cpp:7:12'
+  - String:          ' '
+  - VarName:         input_A_7
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            input_A_7
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=input_A_8'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  matrixmul_32_opt
+  - String:          ' '
+  - varLoc:          'matrix.cpp:7:12'
+  - String:          ' '
+  - VarName:         input_A_8
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            input_A_8
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=input_A_9'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  matrixmul_32_opt
+  - String:          ' '
+  - varLoc:          'matrix.cpp:7:12'
+  - String:          ' '
+  - VarName:         input_A_9
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            input_A_9
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: matrix.cpp, Line: 11, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=output_C'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  matrixmul_32_opt
+  - String:          ' '
+  - varLoc:          'matrix.cpp:11:12'
+  - String:          ' '
+  - VarName:         output_C
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 11, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            output_C
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          input_A_0
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          input_A_1
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          input_A_2
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          input_A_3
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          input_A_4
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          input_A_5
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          input_A_6
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          input_A_7
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          input_A_8
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          input_A_9
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          input_A_10
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          input_A_11
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          input_A_12
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          input_A_13
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          input_A_14
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          input_A_15
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          input_A_16
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          input_A_17
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          input_A_18
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          input_A_19
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          input_A_20
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          input_A_21
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          input_A_22
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          input_A_23
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          input_A_24
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          input_A_25
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          input_A_26
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          input_A_27
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          input_A_28
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          input_A_29
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          input_A_30
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 7, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          input_A_31
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: matrix.cpp, Line: 11, Column: 12 }
+Function:        _Z16matrixmul_32_optRN3hls6streamINS_4axisIfLm0ELm0ELm0ELh56ELb0EEELi0EEES4_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          output_C
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...

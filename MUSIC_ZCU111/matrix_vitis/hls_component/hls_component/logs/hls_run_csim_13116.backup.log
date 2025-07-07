@@ -1,0 +1,22 @@
+  **** HLS Build v2024.2 5238294
+INFO: [HLS 200-2005] Using work_dir C:/Users/Samarth/Desktop/IIIT_Intern/matrix_vitis/hls_component/hls_component 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:\Users\Samarth\Desktop\IIIT_Intern\matrix_vitis\mat_mul.cpp' from C:/Users/Samarth/Desktop/IIIT_Intern/matrix_vitis/hls_component/hls_config.cfg(7)
+INFO: [HLS 200-10] Adding design file 'C:/Users/Samarth/Desktop/IIIT_Intern/matrix_vitis/mat_mul.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:\Users\Samarth\Desktop\IIIT_Intern\matrix_vitis\mat_mul.h' from C:/Users/Samarth/Desktop/IIIT_Intern/matrix_vitis/hls_component/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file 'C:/Users/Samarth/Desktop/IIIT_Intern/matrix_vitis/mat_mul.h' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=C:\Users\Samarth\Desktop\IIIT_Intern\matrix_vitis\mat_mul_tb.cpp' from C:/Users/Samarth/Desktop/IIIT_Intern/matrix_vitis/hls_component/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/Samarth/Desktop/IIIT_Intern/matrix_vitis/mat_mul_tb.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/Users/Samarth/Desktop/IIIT_Intern/matrix_vitis/hls_component/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xc7z020clg484-1' from C:/Users/Samarth/Desktop/IIIT_Intern/matrix_vitis/hls_component/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1465] Applying ini 'csim.code_analyzer=1' from C:/Users/Samarth/Desktop/IIIT_Intern/matrix_vitis/hls_component/hls_config.cfg(10)
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/Users/Samarth/Desktop/IIIT_Intern/matrix_vitis/hls_component/hls_config.cfg(5)
+INFO: [SIM 211-200] Executing Code Analyzer instead of classic HLS C simulation
+slxcmd:0:0: error: No top-level hardware function has been defined
+ERROR: [SIM 211-200] Code Analyzer execution failed. Consider running the classic C simulation instead by disabling the hls.csim.code_analyzer option in the config file.
+ERROR: Problem running csim: child process exited abnormally
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 1 seconds. Total elapsed time: 6.487 seconds; peak allocated memory: 141.180 MB.

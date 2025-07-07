@@ -1,0 +1,149 @@
+
+
+================================================================
+== Vivado HLS Report for 'inputdatamover'
+================================================================
+* Date:           Fri May 30 11:14:48 2025
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        music
+* Solution:       solution1
+* Product family: zynquplus
+* Target device:  xczu28dr-ffvg1517-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     1.237|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------------------------------------------+
+    |  Latency  |  Interval |                   Pipeline                  |
+    | min | max | min | max |                     Type                    |
+    +-----+-----+-----+-----+---------------------------------------------+
+    |  199|  200|  200|  200| loop rewind(delay=0 initiation interval(s)) |
+    +-----+-----+-----+-----+---------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1  |  199|  199|         1|          1|          1|   200|    yes   |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 1, States = { 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 2 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.65>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i128* %in_V_data, i1* %in_V_last_V, [5 x i8]* @p_str7, i32 1, i32 1, [5 x i8]* @p_str8, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind"   --->   Operation 3 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.65ns)   --->   "br label %rewind_header" [kernel_qrf_0.cpp:8]   --->   Operation 4 'br' <Predicate = true> <Delay = 0.65>
+
+State 2 <SV = 1> <Delay = 1.23>
+ST_2 : Operation 5 [1/1] (0.00ns)   --->   "%do_init = phi i1 [ true, %0 ], [ false, %hls_label_0 ], [ true, %1 ]"   --->   Operation 5 'phi' 'do_init' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 6 [1/1] (0.00ns)   --->   "%i_017 = phi i8 [ 0, %0 ], [ %i, %hls_label_0 ], [ 0, %1 ]"   --->   Operation 6 'phi' 'i_017' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 7 [1/1] (0.00ns)   --->   "br i1 %do_init, label %rewind_init, label %hls_label_0"   --->   Operation 7 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 8 [1/1] (0.00ns)   --->   "br label %hls_label_0" [kernel_qrf_0.cpp:8]   --->   Operation 8 'br' <Predicate = (do_init)> <Delay = 0.00>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str)" [kernel_qrf_0.cpp:8]   --->   Operation 9 'specregionbegin' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind" [kernel_qrf_0.cpp:9]   --->   Operation 10 'specpipeline' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%empty = call { i128, i1 } @_ssdm_op_Read.axis.volatile.i128P.i1P(i128* %in_V_data, i1* %in_V_last_V)" [kernel_qrf_0.cpp:10]   --->   Operation 11 'read' 'empty' <Predicate = true> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%tmp_data = extractvalue { i128, i1 } %empty, 0" [kernel_qrf_0.cpp:10]   --->   Operation 12 'extractvalue' 'tmp_data' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%trunc_ln29 = trunc i128 %tmp_data to i64" [./music.h:29->kernel_qrf_0.cpp:10]   --->   Operation 13 'trunc' 'trunc_ln29' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%bitcast_ln29 = bitcast i64 %trunc_ln29 to double" [./music.h:29->kernel_qrf_0.cpp:10]   --->   Operation 14 'bitcast' 'bitcast_ln29' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%tmp_data_im_load_new = call i64 @_ssdm_op_PartSelect.i64.i128.i32.i32(i128 %tmp_data, i32 64, i32 127)" [./music.h:29->kernel_qrf_0.cpp:10]   --->   Operation 15 'partselect' 'tmp_data_im_load_new' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%bitcast_ln29_1 = bitcast i64 %tmp_data_im_load_new to double" [./music.h:29->kernel_qrf_0.cpp:10]   --->   Operation 16 'bitcast' 'bitcast_ln29_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%zext_ln11 = zext i8 %i_017 to i64" [kernel_qrf_0.cpp:11]   --->   Operation 17 'zext' 'zext_ln11' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%out_strm_re_addr = getelementptr [200 x double]* %out_strm_re, i64 0, i64 %zext_ln11" [kernel_qrf_0.cpp:11]   --->   Operation 18 'getelementptr' 'out_strm_re_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (1.23ns)   --->   "store double %bitcast_ln29, double* %out_strm_re_addr, align 8" [kernel_qrf_0.cpp:11]   --->   Operation 19 'store' <Predicate = true> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 200> <RAM>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%out_strm_im_addr = getelementptr [200 x double]* %out_strm_im, i64 0, i64 %zext_ln11" [kernel_qrf_0.cpp:11]   --->   Operation 20 'getelementptr' 'out_strm_im_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (1.23ns)   --->   "store double %bitcast_ln29_1, double* %out_strm_im_addr, align 8" [kernel_qrf_0.cpp:11]   --->   Operation 21 'store' <Predicate = true> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 200> <RAM>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%empty_15 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str, i32 %tmp)" [kernel_qrf_0.cpp:12]   --->   Operation 22 'specregionend' 'empty_15' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.76ns)   --->   "%i = add i8 1, %i_017" [kernel_qrf_0.cpp:8]   --->   Operation 23 'add' 'i' <Predicate = true> <Delay = 0.76> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 24 [1/1] (0.84ns)   --->   "%icmp_ln8 = icmp eq i8 %i_017, -57" [kernel_qrf_0.cpp:8]   --->   Operation 24 'icmp' 'icmp_ln8' <Predicate = true> <Delay = 0.84> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%empty_16 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 200, i64 200, i64 200)"   --->   Operation 25 'speclooptripcount' 'empty_16' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "br i1 %icmp_ln8, label %1, label %rewind_header" [kernel_qrf_0.cpp:8]   --->   Operation 26 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_Return()" [kernel_qrf_0.cpp:13]   --->   Operation 27 'return' <Predicate = (icmp_ln8)> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "br label %rewind_header" [kernel_qrf_0.cpp:13]   --->   Operation 28 'br' <Predicate = (icmp_ln8)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 0.656ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('do_init') [8]  (0.656 ns)
+
+ <State 2>: 1.24ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', kernel_qrf_0.cpp:8) [9]  (0 ns)
+	'getelementptr' operation ('out_strm_re_addr', kernel_qrf_0.cpp:11) [23]  (0 ns)
+	'store' operation ('store_ln11', kernel_qrf_0.cpp:11) of variable 'bitcast_ln29', ./music.h:29->kernel_qrf_0.cpp:10 on array 'out_strm_re' [24]  (1.24 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

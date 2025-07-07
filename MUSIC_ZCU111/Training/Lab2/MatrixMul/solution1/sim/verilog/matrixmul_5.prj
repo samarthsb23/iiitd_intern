@@ -1,0 +1,12 @@
+vhdl xil_defaultlib "ip/xil_defaultlib/matrixmul_5_ap_fpext_0_no_dsp_32.vhd"
+sv work "glbl.v"
+sv xil_defaultlib "AESL_axi_s_in_A.v"
+sv xil_defaultlib "AESL_axi_s_out_C.v"
+sv xil_defaultlib "AESL_fifo.v"
+sv xil_defaultlib "matrixmul_5.autotb.v"
+sv xil_defaultlib "matrixmul_5.v"
+sv xil_defaultlib "matrixmul_5_fpextsc4.v"
+sv xil_defaultlib "matrixmul_5_inputbkb.v"
+sv xil_defaultlib "matrixmul_5_outpurcU.v"
+sv xil_defaultlib "regslice_core.v"
+

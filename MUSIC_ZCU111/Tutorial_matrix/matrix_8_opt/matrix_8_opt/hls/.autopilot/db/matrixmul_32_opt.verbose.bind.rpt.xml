@@ -1,0 +1,173 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'matrixmul_32_opt'" level="0">
+<item name = "Date">Mon Jun  2 11:52:46 2025
+</item>
+<item name = "Version">2024.2 (Build 5238294 on Nov  8 2024)</item>
+<item name = "Project">matrix_8_opt</item>
+<item name = "Solution">hls (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplusRFSOC</item>
+<item name = "Target device">xczu28dr-ffvg1517-2-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.016 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">7718, 7718, 77.180 us, 77.180 us, 7719, 7719, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_A2_fu_4704">matrixmul_32_opt_Pipeline_loop_input_A2, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_A21_fu_4752">matrixmul_32_opt_Pipeline_loop_input_A21, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_A22_fu_4800">matrixmul_32_opt_Pipeline_loop_input_A22, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_A23_fu_4848">matrixmul_32_opt_Pipeline_loop_input_A23, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_A24_fu_4896">matrixmul_32_opt_Pipeline_loop_input_A24, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_A25_fu_4944">matrixmul_32_opt_Pipeline_loop_input_A25, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_A26_fu_4992">matrixmul_32_opt_Pipeline_loop_input_A26, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_A27_fu_5040">matrixmul_32_opt_Pipeline_loop_input_A27, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_A28_fu_5088">matrixmul_32_opt_Pipeline_loop_input_A28, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_A29_fu_5136">matrixmul_32_opt_Pipeline_loop_input_A29, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_A210_fu_5184">matrixmul_32_opt_Pipeline_loop_input_A210, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_A211_fu_5232">matrixmul_32_opt_Pipeline_loop_input_A211, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_A212_fu_5280">matrixmul_32_opt_Pipeline_loop_input_A212, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_A213_fu_5328">matrixmul_32_opt_Pipeline_loop_input_A213, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_A214_fu_5376">matrixmul_32_opt_Pipeline_loop_input_A214, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_A215_fu_5424">matrixmul_32_opt_Pipeline_loop_input_A215, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_A216_fu_5472">matrixmul_32_opt_Pipeline_loop_input_A216, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_A217_fu_5520">matrixmul_32_opt_Pipeline_loop_input_A217, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_A218_fu_5568">matrixmul_32_opt_Pipeline_loop_input_A218, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_A219_fu_5616">matrixmul_32_opt_Pipeline_loop_input_A219, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_A220_fu_5664">matrixmul_32_opt_Pipeline_loop_input_A220, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_A221_fu_5712">matrixmul_32_opt_Pipeline_loop_input_A221, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_A222_fu_5760">matrixmul_32_opt_Pipeline_loop_input_A222, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_A223_fu_5808">matrixmul_32_opt_Pipeline_loop_input_A223, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_A224_fu_5856">matrixmul_32_opt_Pipeline_loop_input_A224, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_A225_fu_5904">matrixmul_32_opt_Pipeline_loop_input_A225, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_A226_fu_5952">matrixmul_32_opt_Pipeline_loop_input_A226, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_A227_fu_6000">matrixmul_32_opt_Pipeline_loop_input_A227, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_A228_fu_6048">matrixmul_32_opt_Pipeline_loop_input_A228, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_A229_fu_6096">matrixmul_32_opt_Pipeline_loop_input_A229, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_A230_fu_6144">matrixmul_32_opt_Pipeline_loop_input_A230, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_A231_fu_6192">matrixmul_32_opt_Pipeline_loop_input_A231, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_B2_fu_6240">matrixmul_32_opt_Pipeline_loop_input_B2, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_B232_fu_6257">matrixmul_32_opt_Pipeline_loop_input_B232, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_B233_fu_6274">matrixmul_32_opt_Pipeline_loop_input_B233, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_B234_fu_6291">matrixmul_32_opt_Pipeline_loop_input_B234, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_B235_fu_6308">matrixmul_32_opt_Pipeline_loop_input_B235, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_B236_fu_6325">matrixmul_32_opt_Pipeline_loop_input_B236, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_B237_fu_6342">matrixmul_32_opt_Pipeline_loop_input_B237, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_B238_fu_6359">matrixmul_32_opt_Pipeline_loop_input_B238, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_B239_fu_6376">matrixmul_32_opt_Pipeline_loop_input_B239, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_B240_fu_6393">matrixmul_32_opt_Pipeline_loop_input_B240, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_B241_fu_6410">matrixmul_32_opt_Pipeline_loop_input_B241, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_B242_fu_6427">matrixmul_32_opt_Pipeline_loop_input_B242, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_B243_fu_6444">matrixmul_32_opt_Pipeline_loop_input_B243, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_B244_fu_6461">matrixmul_32_opt_Pipeline_loop_input_B244, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_B245_fu_6478">matrixmul_32_opt_Pipeline_loop_input_B245, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_B246_fu_6495">matrixmul_32_opt_Pipeline_loop_input_B246, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_B247_fu_6512">matrixmul_32_opt_Pipeline_loop_input_B247, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_B248_fu_6529">matrixmul_32_opt_Pipeline_loop_input_B248, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_B249_fu_6546">matrixmul_32_opt_Pipeline_loop_input_B249, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_B250_fu_6563">matrixmul_32_opt_Pipeline_loop_input_B250, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_B251_fu_6580">matrixmul_32_opt_Pipeline_loop_input_B251, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_B252_fu_6597">matrixmul_32_opt_Pipeline_loop_input_B252, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_B253_fu_6614">matrixmul_32_opt_Pipeline_loop_input_B253, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_B254_fu_6631">matrixmul_32_opt_Pipeline_loop_input_B254, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_B255_fu_6648">matrixmul_32_opt_Pipeline_loop_input_B255, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_B256_fu_6665">matrixmul_32_opt_Pipeline_loop_input_B256, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_B257_fu_6682">matrixmul_32_opt_Pipeline_loop_input_B257, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_B258_fu_6699">matrixmul_32_opt_Pipeline_loop_input_B258, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_B259_fu_6716">matrixmul_32_opt_Pipeline_loop_input_B259, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_B260_fu_6733">matrixmul_32_opt_Pipeline_loop_input_B260, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_B261_fu_6750">matrixmul_32_opt_Pipeline_loop_input_B261, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_input_B262_fu_6767">matrixmul_32_opt_Pipeline_loop_input_B262, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop2_fu_6784">matrixmul_32_opt_Pipeline_loop2, 166, 166, 1.660 us, 1.660 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop263_fu_6853">matrixmul_32_opt_Pipeline_loop263, 166, 166, 1.660 us, 1.660 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_output_C2_fu_6922">matrixmul_32_opt_Pipeline_loop_output_C2, 35, 35, 0.350 us, 0.350 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop264_fu_6939">matrixmul_32_opt_Pipeline_loop264, 166, 166, 1.660 us, 1.660 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_output_C294_fu_7008">matrixmul_32_opt_Pipeline_loop_output_C294, 35, 35, 0.350 us, 0.350 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop265_fu_7025">matrixmul_32_opt_Pipeline_loop265, 166, 166, 1.660 us, 1.660 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_output_C295_fu_7094">matrixmul_32_opt_Pipeline_loop_output_C295, 35, 35, 0.350 us, 0.350 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop266_fu_7111">matrixmul_32_opt_Pipeline_loop266, 166, 166, 1.660 us, 1.660 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_output_C296_fu_7180">matrixmul_32_opt_Pipeline_loop_output_C296, 35, 35, 0.350 us, 0.350 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop267_fu_7197">matrixmul_32_opt_Pipeline_loop267, 166, 166, 1.660 us, 1.660 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_output_C297_fu_7266">matrixmul_32_opt_Pipeline_loop_output_C297, 35, 35, 0.350 us, 0.350 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop268_fu_7283">matrixmul_32_opt_Pipeline_loop268, 166, 166, 1.660 us, 1.660 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_output_C298_fu_7352">matrixmul_32_opt_Pipeline_loop_output_C298, 35, 35, 0.350 us, 0.350 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop269_fu_7369">matrixmul_32_opt_Pipeline_loop269, 166, 166, 1.660 us, 1.660 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_output_C299_fu_7438">matrixmul_32_opt_Pipeline_loop_output_C299, 35, 35, 0.350 us, 0.350 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop270_fu_7455">matrixmul_32_opt_Pipeline_loop270, 166, 166, 1.660 us, 1.660 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_output_C2100_fu_7524">matrixmul_32_opt_Pipeline_loop_output_C2100, 35, 35, 0.350 us, 0.350 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop271_fu_7541">matrixmul_32_opt_Pipeline_loop271, 166, 166, 1.660 us, 1.660 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_output_C2101_fu_7610">matrixmul_32_opt_Pipeline_loop_output_C2101, 35, 35, 0.350 us, 0.350 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop272_fu_7627">matrixmul_32_opt_Pipeline_loop272, 166, 166, 1.660 us, 1.660 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_output_C2102_fu_7696">matrixmul_32_opt_Pipeline_loop_output_C2102, 35, 35, 0.350 us, 0.350 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop273_fu_7713">matrixmul_32_opt_Pipeline_loop273, 166, 166, 1.660 us, 1.660 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_output_C2103_fu_7782">matrixmul_32_opt_Pipeline_loop_output_C2103, 35, 35, 0.350 us, 0.350 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop274_fu_7799">matrixmul_32_opt_Pipeline_loop274, 166, 166, 1.660 us, 1.660 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_output_C2104_fu_7868">matrixmul_32_opt_Pipeline_loop_output_C2104, 35, 35, 0.350 us, 0.350 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop275_fu_7885">matrixmul_32_opt_Pipeline_loop275, 166, 166, 1.660 us, 1.660 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_output_C2105_fu_7954">matrixmul_32_opt_Pipeline_loop_output_C2105, 35, 35, 0.350 us, 0.350 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop276_fu_7971">matrixmul_32_opt_Pipeline_loop276, 166, 166, 1.660 us, 1.660 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_output_C2106_fu_8040">matrixmul_32_opt_Pipeline_loop_output_C2106, 35, 35, 0.350 us, 0.350 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop277_fu_8057">matrixmul_32_opt_Pipeline_loop277, 166, 166, 1.660 us, 1.660 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_output_C2107_fu_8126">matrixmul_32_opt_Pipeline_loop_output_C2107, 35, 35, 0.350 us, 0.350 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop278_fu_8143">matrixmul_32_opt_Pipeline_loop278, 166, 166, 1.660 us, 1.660 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_output_C2108_fu_8212">matrixmul_32_opt_Pipeline_loop_output_C2108, 35, 35, 0.350 us, 0.350 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop279_fu_8229">matrixmul_32_opt_Pipeline_loop279, 166, 166, 1.660 us, 1.660 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_output_C2109_fu_8298">matrixmul_32_opt_Pipeline_loop_output_C2109, 35, 35, 0.350 us, 0.350 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop280_fu_8315">matrixmul_32_opt_Pipeline_loop280, 166, 166, 1.660 us, 1.660 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_output_C2110_fu_8384">matrixmul_32_opt_Pipeline_loop_output_C2110, 35, 35, 0.350 us, 0.350 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop281_fu_8401">matrixmul_32_opt_Pipeline_loop281, 166, 166, 1.660 us, 1.660 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_output_C2111_fu_8470">matrixmul_32_opt_Pipeline_loop_output_C2111, 35, 35, 0.350 us, 0.350 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop282_fu_8487">matrixmul_32_opt_Pipeline_loop282, 166, 166, 1.660 us, 1.660 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_output_C2112_fu_8556">matrixmul_32_opt_Pipeline_loop_output_C2112, 35, 35, 0.350 us, 0.350 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop283_fu_8573">matrixmul_32_opt_Pipeline_loop283, 166, 166, 1.660 us, 1.660 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_output_C2113_fu_8642">matrixmul_32_opt_Pipeline_loop_output_C2113, 35, 35, 0.350 us, 0.350 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop284_fu_8659">matrixmul_32_opt_Pipeline_loop284, 166, 166, 1.660 us, 1.660 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_output_C2114_fu_8728">matrixmul_32_opt_Pipeline_loop_output_C2114, 35, 35, 0.350 us, 0.350 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop285_fu_8745">matrixmul_32_opt_Pipeline_loop285, 166, 166, 1.660 us, 1.660 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_output_C2115_fu_8814">matrixmul_32_opt_Pipeline_loop_output_C2115, 35, 35, 0.350 us, 0.350 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop286_fu_8831">matrixmul_32_opt_Pipeline_loop286, 166, 166, 1.660 us, 1.660 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_output_C2116_fu_8900">matrixmul_32_opt_Pipeline_loop_output_C2116, 35, 35, 0.350 us, 0.350 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop287_fu_8917">matrixmul_32_opt_Pipeline_loop287, 166, 166, 1.660 us, 1.660 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_output_C2117_fu_8986">matrixmul_32_opt_Pipeline_loop_output_C2117, 35, 35, 0.350 us, 0.350 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop288_fu_9003">matrixmul_32_opt_Pipeline_loop288, 166, 166, 1.660 us, 1.660 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_output_C2118_fu_9072">matrixmul_32_opt_Pipeline_loop_output_C2118, 35, 35, 0.350 us, 0.350 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop289_fu_9089">matrixmul_32_opt_Pipeline_loop289, 166, 166, 1.660 us, 1.660 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_output_C2119_fu_9158">matrixmul_32_opt_Pipeline_loop_output_C2119, 35, 35, 0.350 us, 0.350 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop290_fu_9175">matrixmul_32_opt_Pipeline_loop290, 166, 166, 1.660 us, 1.660 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_output_C2120_fu_9244">matrixmul_32_opt_Pipeline_loop_output_C2120, 35, 35, 0.350 us, 0.350 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop291_fu_9261">matrixmul_32_opt_Pipeline_loop291, 166, 166, 1.660 us, 1.660 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_output_C2121_fu_9330">matrixmul_32_opt_Pipeline_loop_output_C2121, 35, 35, 0.350 us, 0.350 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop292_fu_9347">matrixmul_32_opt_Pipeline_loop292, 166, 166, 1.660 us, 1.660 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_output_C2122_fu_9416">matrixmul_32_opt_Pipeline_loop_output_C2122, 35, 35, 0.350 us, 0.350 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop293_fu_9433">matrixmul_32_opt_Pipeline_loop293, 166, 166, 1.660 us, 1.660 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_output_C2123_fu_9502">matrixmul_32_opt_Pipeline_loop_output_C2123, 35, 35, 0.350 us, 0.350 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_matrixmul_32_opt_Pipeline_loop_output_C2124_fu_9519">matrixmul_32_opt_Pipeline_loop_output_C2124, 35, 35, 0.350 us, 0.350 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

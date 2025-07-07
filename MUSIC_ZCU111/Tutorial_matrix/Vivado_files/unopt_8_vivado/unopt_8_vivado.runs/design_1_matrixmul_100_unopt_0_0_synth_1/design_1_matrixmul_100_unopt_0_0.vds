@@ -1,0 +1,451 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Sat May 31 22:54:54 2025
+# Process ID         : 10884
+# Current directory  : C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/Vivado_files/unopt_8_vivado/unopt_8_vivado.runs/design_1_matrixmul_100_unopt_0_0_synth_1
+# Command line       : vivado.exe -log design_1_matrixmul_100_unopt_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_matrixmul_100_unopt_0_0.tcl
+# Log file           : C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/Vivado_files/unopt_8_vivado/unopt_8_vivado.runs/design_1_matrixmul_100_unopt_0_0_synth_1/design_1_matrixmul_100_unopt_0_0.vds
+# Journal file       : C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/Vivado_files/unopt_8_vivado/unopt_8_vivado.runs/design_1_matrixmul_100_unopt_0_0_synth_1\vivado.jou
+# Running On         : Samarth-Asus
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i5-12500H
+# CPU Frequency      : 3110 MHz
+# CPU Physical cores : 12
+# CPU Logical cores  : 16
+# Host memory        : 16785 MB
+# Swap memory        : 20401 MB
+# Total Virtual      : 37186 MB
+# Available Virtual  : 19437 MB
+#-----------------------------------------------------------
+source design_1_matrixmul_100_unopt_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Samarth/Desktop/IIIT_Intern'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'c:/Users/Samarth/Desktop/IIIT_Intern' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'c:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/Vivado_files/unopt_8_vivado/unopt_8_vivado.runs/design_1_matrixmul_100_unopt_0_0_synth_1'.)
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx_2024_ent/Vivado/2024.2/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/Vivado_files/unopt_8_vivado/unopt_8_vivado.cache/ip 
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_matrixmul_100_unopt_0_0
+Command: synth_design -top design_1_matrixmul_100_unopt_0_0 -part xczu28dr-ffvg1517-2-e -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu28dr'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu28dr'
+INFO: [Common 17-1540] The version limit for your license is '2025.01' and has expired for new software. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for new releases.
+INFO: [Device 21-403] Loading part xczu28dr-ffvg1517-2-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 17156
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1859.664 ; gain = 380.637
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_matrixmul_100_unopt_0_0' [c:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/Vivado_files/unopt_8_vivado/unopt_8_vivado.gen/sources_1/bd/design_1/ip/design_1_matrixmul_100_unopt_0_0/synth/design_1_matrixmul_100_unopt_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'matrixmul_100_unopt' [c:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/Vivado_files/unopt_8_vivado/unopt_8_vivado.gen/sources_1/bd/design_1/ipshared/9fd0/hdl/verilog/matrixmul_100_unopt.v:9]
+INFO: [Synth 8-6157] synthesizing module 'matrixmul_100_unopt_input_A_RAM_AUTO_1R1W' [c:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/Vivado_files/unopt_8_vivado/unopt_8_vivado.gen/sources_1/bd/design_1/ipshared/9fd0/hdl/verilog/matrixmul_100_unopt_input_A_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'matrixmul_100_unopt_input_A_RAM_AUTO_1R1W' (0#1) [c:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/Vivado_files/unopt_8_vivado/unopt_8_vivado.gen/sources_1/bd/design_1/ipshared/9fd0/hdl/verilog/matrixmul_100_unopt_input_A_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6157] synthesizing module 'matrixmul_100_unopt_fadd_32ns_32ns_32_4_full_dsp_1' [c:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/Vivado_files/unopt_8_vivado/unopt_8_vivado.gen/sources_1/bd/design_1/ipshared/9fd0/hdl/verilog/matrixmul_100_unopt_fadd_32ns_32ns_32_4_full_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'matrixmul_100_unopt_fadd_32ns_32ns_32_4_full_dsp_1_ip' [c:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/Vivado_files/unopt_8_vivado/unopt_8_vivado.gen/sources_1/bd/design_1/ipshared/9fd0/hdl/ip/matrixmul_100_unopt_fadd_32ns_32ns_32_4_full_dsp_1_ip.v:53]
+INFO: [Synth 8-6157] synthesizing module 'LUT1' [C:/Xilinx_2024_ent/Vivado/2024.2/scripts/rt/data/unisim_comp_diablo.v:87650]
+INFO: [Synth 8-6155] done synthesizing module 'LUT1' (0#1) [C:/Xilinx_2024_ent/Vivado/2024.2/scripts/rt/data/unisim_comp_diablo.v:87650]
+INFO: [Synth 8-6155] done synthesizing module 'matrixmul_100_unopt_fadd_32ns_32ns_32_4_full_dsp_1_ip' (0#1) [c:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/Vivado_files/unopt_8_vivado/unopt_8_vivado.gen/sources_1/bd/design_1/ipshared/9fd0/hdl/ip/matrixmul_100_unopt_fadd_32ns_32ns_32_4_full_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'matrixmul_100_unopt_fadd_32ns_32ns_32_4_full_dsp_1' (0#1) [c:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/Vivado_files/unopt_8_vivado/unopt_8_vivado.gen/sources_1/bd/design_1/ipshared/9fd0/hdl/verilog/matrixmul_100_unopt_fadd_32ns_32ns_32_4_full_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'matrixmul_100_unopt_fmul_32ns_32ns_32_3_max_dsp_1' [c:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/Vivado_files/unopt_8_vivado/unopt_8_vivado.gen/sources_1/bd/design_1/ipshared/9fd0/hdl/verilog/matrixmul_100_unopt_fmul_32ns_32ns_32_3_max_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'matrixmul_100_unopt_fmul_32ns_32ns_32_3_max_dsp_1_ip' [c:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/Vivado_files/unopt_8_vivado/unopt_8_vivado.gen/sources_1/bd/design_1/ipshared/9fd0/hdl/ip/matrixmul_100_unopt_fmul_32ns_32ns_32_3_max_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'matrixmul_100_unopt_fmul_32ns_32ns_32_3_max_dsp_1_ip' (0#1) [c:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/Vivado_files/unopt_8_vivado/unopt_8_vivado.gen/sources_1/bd/design_1/ipshared/9fd0/hdl/ip/matrixmul_100_unopt_fmul_32ns_32ns_32_3_max_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'matrixmul_100_unopt_fmul_32ns_32ns_32_3_max_dsp_1' (0#1) [c:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/Vivado_files/unopt_8_vivado/unopt_8_vivado.gen/sources_1/bd/design_1/ipshared/9fd0/hdl/verilog/matrixmul_100_unopt_fmul_32ns_32ns_32_3_max_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'matrixmul_100_unopt_regslice_both' [c:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/Vivado_files/unopt_8_vivado/unopt_8_vivado.gen/sources_1/bd/design_1/ipshared/9fd0/hdl/verilog/matrixmul_100_unopt_regslice_both.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'matrixmul_100_unopt_regslice_both' (0#1) [c:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/Vivado_files/unopt_8_vivado/unopt_8_vivado.gen/sources_1/bd/design_1/ipshared/9fd0/hdl/verilog/matrixmul_100_unopt_regslice_both.v:8]
+INFO: [Synth 8-6157] synthesizing module 'matrixmul_100_unopt_regslice_both__parameterized0' [c:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/Vivado_files/unopt_8_vivado/unopt_8_vivado.gen/sources_1/bd/design_1/ipshared/9fd0/hdl/verilog/matrixmul_100_unopt_regslice_both.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'matrixmul_100_unopt_regslice_both__parameterized0' (0#1) [c:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/Vivado_files/unopt_8_vivado/unopt_8_vivado.gen/sources_1/bd/design_1/ipshared/9fd0/hdl/verilog/matrixmul_100_unopt_regslice_both.v:8]
+INFO: [Synth 8-6157] synthesizing module 'matrixmul_100_unopt_regslice_both__parameterized1' [c:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/Vivado_files/unopt_8_vivado/unopt_8_vivado.gen/sources_1/bd/design_1/ipshared/9fd0/hdl/verilog/matrixmul_100_unopt_regslice_both.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'matrixmul_100_unopt_regslice_both__parameterized1' (0#1) [c:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/Vivado_files/unopt_8_vivado/unopt_8_vivado.gen/sources_1/bd/design_1/ipshared/9fd0/hdl/verilog/matrixmul_100_unopt_regslice_both.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'matrixmul_100_unopt' (0#1) [c:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/Vivado_files/unopt_8_vivado/unopt_8_vivado.gen/sources_1/bd/design_1/ipshared/9fd0/hdl/verilog/matrixmul_100_unopt.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_matrixmul_100_unopt_0_0' (0#1) [c:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/Vivado_files/unopt_8_vivado/unopt_8_vivado.gen/sources_1/bd/design_1/ip/design_1_matrixmul_100_unopt_0_0/synth/design_1_matrixmul_100_unopt_0_0.v:53]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_10_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_10_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_10_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_10_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_10_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_10_viv__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_10_viv__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_10_viv__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_10_viv__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_10_viv__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEC_OP_STATE[11] in module flt_dec_op_lat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEC_OP_STATE[10] in module flt_dec_op_lat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEC_OP_STATE[9] in module flt_dec_op_lat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEC_OP_STATE[8] in module flt_dec_op_lat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DIVIDE_BY_ZERO_IN in module flt_dec_op_lat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_10_viv__parameterized33 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_10_viv__parameterized33 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_10_viv__parameterized33 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_10_viv__parameterized33 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_10_viv__parameterized33 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_10_viv__parameterized70 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_10_viv__parameterized70 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_10_viv__parameterized70 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_10_viv__parameterized70 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_10_viv__parameterized70 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_10_viv__parameterized68 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_10_viv__parameterized68 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_10_viv__parameterized68 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_10_viv__parameterized68 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_10_viv__parameterized68 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_10_viv__parameterized13 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_10_viv__parameterized13 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_10_viv__parameterized13 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_10_viv__parameterized13 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_10_viv__parameterized13 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_10_viv__parameterized11 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_10_viv__parameterized11 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_10_viv__parameterized11 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_10_viv__parameterized11 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_10_viv__parameterized11 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_10_viv__parameterized7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_10_viv__parameterized7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_10_viv__parameterized7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_10_viv__parameterized7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_10_viv__parameterized7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module dsp48e1_wrapper__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SIGN in module flt_round_dsp_opt_full is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_10_viv__parameterized66 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_10_viv__parameterized66 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_10_viv__parameterized66 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_10_viv__parameterized66 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_10_viv__parameterized66 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_10_viv__parameterized51 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_10_viv__parameterized51 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_10_viv__parameterized51 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_10_viv__parameterized51 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_10_viv__parameterized51 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_10_viv__parameterized49 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_10_viv__parameterized49 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_10_viv__parameterized49 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_10_viv__parameterized49 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_10_viv__parameterized49 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_10_viv__parameterized64 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_10_viv__parameterized64 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_10_viv__parameterized64 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_10_viv__parameterized64 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_10_viv__parameterized64 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_10_viv__parameterized45 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_10_viv__parameterized45 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_10_viv__parameterized45 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_10_viv__parameterized45 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_10_viv__parameterized45 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_10_viv__parameterized53 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_10_viv__parameterized53 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_10_viv__parameterized53 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_10_viv__parameterized53 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_10_viv__parameterized53 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CARRYS_OUT[0] in module compare_eq_im__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[31] in module special_detect__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_10_viv__parameterized62 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_10_viv__parameterized62 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_10_viv__parameterized62 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_10_viv__parameterized62 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_10_viv__parameterized62 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_10_viv__parameterized15 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_10_viv__parameterized15 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_10_viv__parameterized15 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_10_viv__parameterized15 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_10_viv__parameterized15 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module dsp48e1_wrapper__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_10_viv__parameterized60 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_10_viv__parameterized60 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_10_viv__parameterized60 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_10_viv__parameterized60 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_10_viv__parameterized60 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_10_viv__parameterized9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_10_viv__parameterized9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_10_viv__parameterized9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_10_viv__parameterized9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_10_viv__parameterized9 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2066.578 ; gain = 587.551
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2066.578 ; gain = 587.551
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2066.578 ; gain = 587.551
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.050 . Memory (MB): peak = 2066.578 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 118 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/Vivado_files/unopt_8_vivado/unopt_8_vivado.gen/sources_1/bd/design_1/ip/design_1_matrixmul_100_unopt_0_0/constraints/matrixmul_100_unopt_ooc.xdc] for cell 'inst'
+create_clock: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2153.996 ; gain = 0.105
+Finished Parsing XDC File [c:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/Vivado_files/unopt_8_vivado/unopt_8_vivado.gen/sources_1/bd/design_1/ip/design_1_matrixmul_100_unopt_0_0/constraints/matrixmul_100_unopt_ooc.xdc] for cell 'inst'
+Parsing XDC File [C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/Vivado_files/unopt_8_vivado/unopt_8_vivado.runs/design_1_matrixmul_100_unopt_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/Vivado_files/unopt_8_vivado/unopt_8_vivado.runs/design_1_matrixmul_100_unopt_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2153.996 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 16 instances were transformed.
+  DSP48E1 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 5 instances
+  FDE => FDRE: 11 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 2154.117 ; gain = 0.121
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 2154.117 ; gain = 675.090
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu28dr-ffvg1517-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 2154.117 ; gain = 675.090
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/Vivado_files/unopt_8_vivado/unopt_8_vivado.runs/design_1_matrixmul_100_unopt_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 2154.117 ; gain = 675.090
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'matrixmul_100_unopt_regslice_both'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'matrixmul_100_unopt_regslice_both__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'matrixmul_100_unopt_regslice_both__parameterized1'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-6793] RAM ("matrixmul_100_unopt_input_A_RAM_AUTO_1R1W:/ram_reg") is implemented using BRAM instead of URAM due to insufficient pipeline registers. Available pipeline stages = 0, Minimum required pipeline stages = 1 
+INFO: [Synth 8-5800] Cascade chain of height 8 reduced to 5 because memory depth for RAM "matrixmul_100_unopt_input_A_RAM_AUTO_1R1W:/ram_reg" is not power of 2. 
+INFO: [Synth 8-5800] Cascade chain of height 4 reduced to 3 because memory depth for RAM "matrixmul_100_unopt_input_A_RAM_AUTO_1R1W:/ram_reg" is not power of 2. 
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                               00 |                               00
+*
+                    ZERO |                               01 |                               10
+                     ONE |                               11 |                               11
+                     TWO |                               10 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'matrixmul_100_unopt_regslice_both'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                               00 |                               00
+*
+                    ZERO |                               01 |                               10
+                     ONE |                               11 |                               11
+                     TWO |                               10 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'matrixmul_100_unopt_regslice_both__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                               00 |                               00
+*
+                    ZERO |                               01 |                               10
+                     ONE |                               11 |                               11
+                     TWO |                               10 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'matrixmul_100_unopt_regslice_both__parameterized1'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 2154.117 ; gain = 675.090
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'inst/fadd_32ns_32ns_32_4_full_dsp_1_U1/matrixmul_100_unopt_fadd_32ns_32ns_32_4_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/SUB_DELAY' (delay__parameterized0) to 'inst/fadd_32ns_32ns_32_4_full_dsp_1_U1/matrixmul_100_unopt_fadd_32ns_32ns_32_4_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/SUB_ADD_IP_DELAY'
+INFO: [Synth 8-223] decloning instance 'inst/fadd_32ns_32ns_32_4_full_dsp_1_U1/matrixmul_100_unopt_fadd_32ns_32ns_32_4_full_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'inst/fadd_32ns_32ns_32_4_full_dsp_1_U1/matrixmul_100_unopt_fadd_32ns_32ns_32_4_full_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/fadd_32ns_32ns_32_4_full_dsp_1_U1/matrixmul_100_unopt_fadd_32ns_32ns_32_4_full_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'inst/fadd_32ns_32ns_32_4_full_dsp_1_U1/matrixmul_100_unopt_fadd_32ns_32ns_32_4_full_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/fmul_32ns_32ns_32_3_max_dsp_1_U2/matrixmul_100_unopt_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'inst/fmul_32ns_32ns_32_3_max_dsp_1_U2/matrixmul_100_unopt_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/fmul_32ns_32ns_32_3_max_dsp_1_U2/matrixmul_100_unopt_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'inst/fmul_32ns_32ns_32_3_max_dsp_1_U2/matrixmul_100_unopt_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 4272 (col length:192)
+BRAMs: 2160 (col length: RAMB18 192 RAMB36 96)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+INFO: [Synth 8-6793] RAM ("inst/input_A_U/ram_reg") is implemented using BRAM instead of URAM due to insufficient pipeline registers. Available pipeline stages = 0, Minimum required pipeline stages = 1 
+INFO: [Synth 8-5800] Cascade chain of height 8 reduced to 5 because memory depth for RAM "inst/input_A_U/ram_reg" is not power of 2. 
+INFO: [Synth 8-5800] Cascade chain of height 4 reduced to 3 because memory depth for RAM "inst/input_A_U/ram_reg" is not power of 2. 
+INFO: [Synth 8-6793] RAM ("inst/input_B_U/ram_reg") is implemented using BRAM instead of URAM due to insufficient pipeline registers. Available pipeline stages = 0, Minimum required pipeline stages = 1 
+INFO: [Synth 8-5800] Cascade chain of height 8 reduced to 5 because memory depth for RAM "inst/input_B_U/ram_reg" is not power of 2. 
+INFO: [Synth 8-5800] Cascade chain of height 4 reduced to 3 because memory depth for RAM "inst/input_B_U/ram_reg" is not power of 2. 
+INFO: [Synth 8-6793] RAM ("inst/output_C_U/ram_reg") is implemented using BRAM instead of URAM due to insufficient pipeline registers. Available pipeline stages = 0, Minimum required pipeline stages = 1 
+INFO: [Synth 8-5800] Cascade chain of height 8 reduced to 5 because memory depth for RAM "inst/output_C_U/ram_reg" is not power of 2. 
+INFO: [Synth 8-5800] Cascade chain of height 4 reduced to 3 because memory depth for RAM "inst/output_C_U/ram_reg" is not power of 2. 
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_19_viv.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_19_viv.
+WARNING: [Synth 8-3332] Sequential element (regslice_both_in_A_V_keep_V_U/FSM_sequential_state_reg[1]) is unused and will be removed from module matrixmul_100_unopt.
+WARNING: [Synth 8-3332] Sequential element (regslice_both_in_A_V_keep_V_U/FSM_sequential_state_reg[0]) is unused and will be removed from module matrixmul_100_unopt.
+WARNING: [Synth 8-3332] Sequential element (regslice_both_in_A_V_strb_V_U/FSM_sequential_state_reg[1]) is unused and will be removed from module matrixmul_100_unopt.
+WARNING: [Synth 8-3332] Sequential element (regslice_both_in_A_V_strb_V_U/FSM_sequential_state_reg[0]) is unused and will be removed from module matrixmul_100_unopt.
+WARNING: [Synth 8-3332] Sequential element (regslice_both_in_A_V_last_V_U/FSM_sequential_state_reg[1]) is unused and will be removed from module matrixmul_100_unopt.
+WARNING: [Synth 8-3332] Sequential element (regslice_both_in_A_V_last_V_U/FSM_sequential_state_reg[0]) is unused and will be removed from module matrixmul_100_unopt.
+WARNING: [Synth 8-3332] Sequential element (regslice_both_out_C_V_strb_V_U/FSM_sequential_state_reg[1]) is unused and will be removed from module matrixmul_100_unopt.
+WARNING: [Synth 8-3332] Sequential element (regslice_both_out_C_V_strb_V_U/FSM_sequential_state_reg[0]) is unused and will be removed from module matrixmul_100_unopt.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 2154.117 ; gain = 675.090
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:40 . Memory (MB): peak = 2613.906 ; gain = 1134.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 2654.984 ; gain = 1175.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance inst/output_C_U/ram_reg_bram_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/output_C_U/ram_reg_bram_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/output_C_U/ram_reg_bram_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/output_C_U/ram_reg_bram_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 2667.527 ; gain = 1188.500
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 2853.973 ; gain = 1374.945
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 2853.973 ; gain = 1374.945
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 2853.973 ; gain = 1374.945
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 2853.973 ; gain = 1374.945
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 2853.973 ; gain = 1374.945
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 2853.973 ; gain = 1374.945
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++--------------------------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                     | DSP Mapping  | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------------------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|dsp48e1_wrapper                 | Dynamic      | -      | -      | -      | -      | 40     | -    | -    | -    | -    | 0     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized0 | C+A*B        | 24     | 16     | 35     | -      | 35     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized1 | A*B          | 24     | 17     | -      | -      | 41     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized2 | PCIN>>17+A*B | 0      | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized3 | PCIN+A:B+C   | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++--------------------------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY8   |    22|
+|2     |DSP48E1  |     5|
+|3     |LUT1     |    30|
+|4     |LUT2     |    65|
+|5     |LUT3     |    91|
+|6     |LUT4     |   239|
+|7     |LUT5     |   184|
+|8     |LUT6     |   225|
+|9     |MUXCY    |    74|
+|10    |MUXF7    |     3|
+|11    |RAMB18E2 |     3|
+|13    |RAMB36E2 |    30|
+|24    |XORCY    |    25|
+|25    |FDE      |    11|
+|26    |FDRE     |   863|
+|27    |FDSE     |     7|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 2853.973 ; gain = 1374.945
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 113 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:37 . Memory (MB): peak = 2853.973 ; gain = 1287.406
+Synthesis Optimization Complete : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 2853.973 ; gain = 1374.945
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 2853.973 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 140 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2853.973 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 29 instances were transformed.
+  (CARRY4) => CARRY8: 13 instances
+  DSP48E1 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 5 instances
+  FDE => FDRE: 11 instances
+
+Synth Design complete | Checksum: 38a00ddb
+INFO: [Common 17-83] Releasing license: Synthesis
+78 Infos, 111 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:53 ; elapsed = 00:01:18 . Memory (MB): peak = 2853.973 ; gain = 2305.301
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2853.973 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/Vivado_files/unopt_8_vivado/unopt_8_vivado.runs/design_1_matrixmul_100_unopt_0_0_synth_1/design_1_matrixmul_100_unopt_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_matrixmul_100_unopt_0_0, cache-ID = 2917d11c7a92b432
+INFO: [Coretcl 2-1174] Renamed 100 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2853.973 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/Vivado_files/unopt_8_vivado/unopt_8_vivado.runs/design_1_matrixmul_100_unopt_0_0_synth_1/design_1_matrixmul_100_unopt_0_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file design_1_matrixmul_100_unopt_0_0_utilization_synth.rpt -pb design_1_matrixmul_100_unopt_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat May 31 22:56:28 2025...

@@ -1,0 +1,96 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'matmul2'" level="0">
+<item name = "Date">Fri May 30 11:15:13 2025
+</item>
+<item name = "Version">2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)</item>
+<item name = "Project">music</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu28dr-ffvg1517-2-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 8.419, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">910, 910, 910, 910, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_operator_mul_fu_4659">operator_mul, 5, 5, 1, 1, function</column>
+<column name="grp_operator_mul_fu_4667">operator_mul, 5, 5, 1, 1, function</column>
+<column name="grp_operator_mul_fu_4675">operator_mul, 5, 5, 1, 1, function</column>
+<column name="grp_operator_mul_fu_4683">operator_mul, 5, 5, 1, 1, function</column>
+<column name="grp_operator_mul_fu_4691">operator_mul, 5, 5, 1, 1, function</column>
+<column name="grp_operator_mul_fu_4699">operator_mul, 5, 5, 1, 1, function</column>
+<column name="grp_operator_mul_fu_4707">operator_mul, 5, 5, 1, 1, function</column>
+<column name="grp_operator_mul_fu_4715">operator_mul, 5, 5, 1, 1, function</column>
+<column name="grp_operator_mul_fu_4723">operator_mul, 5, 5, 1, 1, function</column>
+<column name="grp_operator_mul_fu_4731">operator_mul, 5, 5, 1, 1, function</column>
+<column name="grp_operator_mul_fu_4739">operator_mul, 5, 5, 1, 1, function</column>
+<column name="grp_operator_mul_fu_4747">operator_mul, 5, 5, 1, 1, function</column>
+<column name="grp_operator_mul_fu_4755">operator_mul, 5, 5, 1, 1, function</column>
+<column name="grp_operator_mul_fu_4763">operator_mul, 5, 5, 1, 1, function</column>
+<column name="grp_operator_mul_fu_4771">operator_mul, 5, 5, 1, 1, function</column>
+<column name="grp_operator_mul_fu_4779">operator_mul, 5, 5, 1, 1, function</column>
+<column name="grp_operator_mul_fu_4787">operator_mul, 5, 5, 1, 1, function</column>
+<column name="grp_operator_mul_fu_4795">operator_mul, 5, 5, 1, 1, function</column>
+<column name="grp_operator_mul_fu_4803">operator_mul, 5, 5, 1, 1, function</column>
+<column name="grp_operator_mul_fu_4811">operator_mul, 5, 5, 1, 1, function</column>
+<column name="grp_operator_mul_fu_4819">operator_mul, 5, 5, 1, 1, function</column>
+<column name="grp_operator_mul_fu_4827">operator_mul, 5, 5, 1, 1, function</column>
+<column name="grp_operator_mul_fu_4835">operator_mul, 5, 5, 1, 1, function</column>
+<column name="grp_operator_mul_fu_4843">operator_mul, 5, 5, 1, 1, function</column>
+<column name="grp_operator_mul_fu_4851">operator_mul, 5, 5, 1, 1, function</column>
+<column name="grp_operator_add_assign_fu_4859">operator_add_assign, 3, 3, 1, 1, function</column>
+<column name="grp_operator_add_assign_fu_4869">operator_add_assign, 3, 3, 1, 1, function</column>
+<column name="grp_operator_add_assign_fu_4877">operator_add_assign, 3, 3, 1, 1, function</column>
+<column name="grp_operator_add_assign_fu_4885">operator_add_assign, 3, 3, 1, 1, function</column>
+<column name="grp_operator_add_assign_fu_4893">operator_add_assign, 3, 3, 1, 1, function</column>
+<column name="grp_operator_add_assign_fu_4901">operator_add_assign, 3, 3, 1, 1, function</column>
+<column name="grp_operator_add_assign_fu_4909">operator_add_assign, 3, 3, 1, 1, function</column>
+<column name="grp_operator_add_assign_fu_4917">operator_add_assign, 3, 3, 1, 1, function</column>
+<column name="grp_operator_add_assign_fu_4925">operator_add_assign, 3, 3, 1, 1, function</column>
+<column name="grp_operator_add_assign_fu_4933">operator_add_assign, 3, 3, 1, 1, function</column>
+<column name="grp_operator_add_assign_fu_4941">operator_add_assign, 3, 3, 1, 1, function</column>
+<column name="grp_operator_add_assign_fu_4949">operator_add_assign, 3, 3, 1, 1, function</column>
+<column name="grp_operator_add_assign_fu_4957">operator_add_assign, 3, 3, 1, 1, function</column>
+<column name="grp_operator_add_assign_fu_4965">operator_add_assign, 3, 3, 1, 1, function</column>
+<column name="grp_operator_add_assign_fu_4973">operator_add_assign, 3, 3, 1, 1, function</column>
+<column name="grp_operator_add_assign_fu_4981">operator_add_assign, 3, 3, 1, 1, function</column>
+<column name="grp_operator_add_assign_fu_4989">operator_add_assign, 3, 3, 1, 1, function</column>
+<column name="grp_operator_add_assign_fu_4997">operator_add_assign, 3, 3, 1, 1, function</column>
+<column name="grp_operator_add_assign_fu_5005">operator_add_assign, 3, 3, 1, 1, function</column>
+<column name="grp_operator_add_assign_fu_5013">operator_add_assign, 3, 3, 1, 1, function</column>
+<column name="grp_operator_add_assign_fu_5021">operator_add_assign, 3, 3, 1, 1, function</column>
+<column name="grp_operator_add_assign_fu_5029">operator_add_assign, 3, 3, 1, 1, function</column>
+<column name="grp_operator_add_assign_fu_5037">operator_add_assign, 3, 3, 1, 1, function</column>
+<column name="grp_operator_add_assign_fu_5045">operator_add_assign, 3, 3, 1, 1, function</column>
+<column name="grp_operator_add_assign_fu_5053">operator_add_assign, 3, 3, 1, 1, function</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">908, 908, 521, 4, 1, 98, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

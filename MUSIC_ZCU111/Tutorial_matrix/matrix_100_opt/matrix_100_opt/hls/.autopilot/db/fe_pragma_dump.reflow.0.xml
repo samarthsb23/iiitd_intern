@@ -1,0 +1,28 @@
+<pragmas>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_user_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_id_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_dest_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_strb_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_last_ptr" off="0" region="0" recursive="0"/>
+<pragma file="C:/Xilinx_2024_ent/Vitis/2024.2/common/technology/autopilot\etc/ap_common.h" line="523" pragmaType="inline" parentfunction="_ZN8ssdm_intILi1ELb0EEC2EDq1_j" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<1, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<4, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<4>::ap_uint(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="C:/Xilinx_2024_ent/Vitis/2024.2/common/technology/autopilot\etc/ap_common.h" line="523" pragmaType="inline" parentfunction="_ZN8ssdm_intILi4ELb0EEC2EDq4_j" off="0" region="0" recursive="0"/>
+<pragma file="matrix.cpp" line="54" pragmaType="pipeline" parentfunction="matrixmul_100_opt" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="matrix.cpp" line="41" pragmaType="pipeline" parentfunction="matrixmul_100_opt" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="matrix.cpp" line="29" pragmaType="loop_flatten" parentfunction="matrixmul_100_opt" off="0"/>
+<pragma file="matrix.cpp" line="21" pragmaType="loop_flatten" parentfunction="matrixmul_100_opt" off="0"/>
+<pragma file="matrix.cpp" line="4" pragmaType="interface" parentfunction="matrixmul_100_opt" mode="ap_ctrl_none" port="return" name=""/>
+<pragma file="matrix.cpp" line="5" pragmaType="interface" parentfunction="matrixmul_100_opt" mode="axis" port="in_A" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="matrix.cpp" line="6" pragmaType="interface" parentfunction="matrixmul_100_opt" mode="axis" port="out_C" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="matrix.cpp" line="8" pragmaType="array_partition" parentfunction="matrixmul_100_opt" dim="2" factor="0" mode="complete" dynamic="0" variable="input_A"/>
+<pragma file="matrix.cpp" line="10" pragmaType="array_partition" parentfunction="matrixmul_100_opt" dim="1" factor="0" mode="complete" dynamic="0" variable="input_B"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<1>::ap_uint(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_keep_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_data_ptr" off="0" region="0" recursive="0"/>
+</pragmas>

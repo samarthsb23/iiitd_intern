@@ -1,0 +1,9 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch CLANG as the compiler.
+   Compiling ../../../../matrix_tb.cpp in debug mode
+   Compiling ../../../../matrix.cpp in debug mode
+   Generating csim.exe
+No errors!! Average RMSE over 10 runs: 0.000001
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 128
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

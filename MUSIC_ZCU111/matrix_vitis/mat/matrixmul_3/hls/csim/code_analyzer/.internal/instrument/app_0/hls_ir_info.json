@@ -1,0 +1,198 @@
+{
+    "top_level_hw_fn_id": 257,
+    "functions": {
+        "200": {
+            "fn_id": 200,
+            "mangled_name": "_GLOBAL__sub_I_mat_mul_tb.cpp",
+            "fully_qualified_name": "_GLOBAL__sub_I_mat_mul_tb",
+            "is_sys": true,
+            "is_declaration": false,
+            "supports_dataflow": false,
+            "src_loc": {
+                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul_tb.cpp",
+                "line": 0,
+                "column": 0
+            }
+        },
+        "201": {
+            "fn_id": 201,
+            "mangled_name": "__cxx_global_var_init",
+            "fully_qualified_name": "__cxx_global_var_init",
+            "is_sys": true,
+            "is_declaration": false,
+            "supports_dataflow": false,
+            "src_loc": {
+                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul_tb.cpp",
+                "line": 0,
+                "column": 0
+            }
+        },
+        "203": {
+            "fn_id": 203,
+            "mangled_name": "__dtor__ZStL8__ioinit",
+            "fully_qualified_name": "__dtor__ZStL8__ioinit",
+            "is_sys": true,
+            "is_declaration": false,
+            "supports_dataflow": false,
+            "src_loc": {
+                "file": "C:\\Xilinx\\Vitis\\2024.2\\tps\\mingw\\10.0.0\\win64.o\\nt\\include\\c++\\9.5.0\\iostream",
+                "line": 74,
+                "column": 0
+            }
+        },
+        "251": {
+            "fn_id": 251,
+            "mangled_name": "_GLOBAL__sub_I_mat_mul.cpp",
+            "fully_qualified_name": "_GLOBAL__sub_I_mat_mul",
+            "is_sys": true,
+            "is_declaration": false,
+            "supports_dataflow": false,
+            "src_loc": {
+                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                "line": 0,
+                "column": 0
+            }
+        },
+        "252": {
+            "fn_id": 252,
+            "mangled_name": "__cxx_global_var_init.2",
+            "fully_qualified_name": "__cxx_global_var_init",
+            "is_sys": true,
+            "is_declaration": false,
+            "supports_dataflow": false,
+            "src_loc": {
+                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                "line": 0,
+                "column": 0
+            }
+        },
+        "253": {
+            "fn_id": 253,
+            "mangled_name": "__dtor__ZStL8__ioinit.4",
+            "fully_qualified_name": "__dtor__ZStL8__ioinit",
+            "is_sys": true,
+            "is_declaration": false,
+            "supports_dataflow": false,
+            "src_loc": {
+                "file": "C:\\Xilinx\\Vitis\\2024.2\\tps\\mingw\\10.0.0\\win64.o\\nt\\include\\c++\\9.5.0\\iostream",
+                "line": 74,
+                "column": 0
+            }
+        },
+        "254": {
+            "fn_id": 254,
+            "mangled_name": "_GLOBAL__sub_I_mat_mul.cpp.6",
+            "fully_qualified_name": "_GLOBAL__sub_I_mat_mul",
+            "is_sys": true,
+            "is_declaration": false,
+            "supports_dataflow": false,
+            "src_loc": {
+                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                "line": 0,
+                "column": 0
+            }
+        },
+        "255": {
+            "fn_id": 255,
+            "mangled_name": "__cxx_global_var_init.7",
+            "fully_qualified_name": "__cxx_global_var_init",
+            "is_sys": true,
+            "is_declaration": false,
+            "supports_dataflow": false,
+            "src_loc": {
+                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                "line": 0,
+                "column": 0
+            }
+        },
+        "256": {
+            "fn_id": 256,
+            "mangled_name": "__dtor__ZStL8__ioinit.9",
+            "fully_qualified_name": "__dtor__ZStL8__ioinit",
+            "is_sys": true,
+            "is_declaration": false,
+            "supports_dataflow": false,
+            "src_loc": {
+                "file": "C:\\Xilinx\\Vitis\\2024.2\\tps\\mingw\\10.0.0\\win64.o\\nt\\include\\c++\\9.5.0\\iostream",
+                "line": 74,
+                "column": 0
+            }
+        },
+        "257": {
+            "fn_id": 257,
+            "mangled_name": "_Z11matrixmul_3RN3hls6streamI9axis_dataLi0EEES3_",
+            "fully_qualified_name": "matrixmul_3",
+            "is_sys": false,
+            "is_declaration": false,
+            "supports_dataflow": true,
+            "src_loc": {
+                "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+                "line": 132,
+                "column": 1
+            }
+        },
+        "21": {
+            "fn_id": 21,
+            "mangled_name": "llvm.fpga.fifo.push.s_struct.axis_data.9s.p0s_struct.axis_data.9s",
+            "fully_qualified_name": "llvm.fpga.fifo.push.s_struct.axis_data.9s.p0s_struct.axis_data.9s",
+            "is_sys": true,
+            "is_declaration": true,
+            "supports_dataflow": false
+        },
+        "20": {
+            "fn_id": 20,
+            "mangled_name": "llvm.fpga.fifo.pop.s_struct.axis_data.9s.p0s_struct.axis_data.9s",
+            "fully_qualified_name": "llvm.fpga.fifo.pop.s_struct.axis_data.9s.p0s_struct.axis_data.9s",
+            "is_sys": true,
+            "is_declaration": true,
+            "supports_dataflow": false
+        }
+    },
+    "loops": {
+        "14": {
+            "fn_id": 257,
+            "lp_id": 14,
+            "label": "loop_output_C1"
+        },
+        "15": {
+            "fn_id": 257,
+            "lp_id": 15,
+            "label": "loop_output_C2"
+        },
+        "16": {
+            "fn_id": 257,
+            "lp_id": 16,
+            "label": "loop1"
+        },
+        "17": {
+            "fn_id": 257,
+            "lp_id": 17,
+            "label": "loop2"
+        },
+        "18": {
+            "fn_id": 257,
+            "lp_id": 18,
+            "label": "loop3"
+        },
+        "19": {
+            "fn_id": 257,
+            "lp_id": 19,
+            "label": "loop_input_B1"
+        },
+        "20": {
+            "fn_id": 257,
+            "lp_id": 20,
+            "label": "loop_input_B2"
+        },
+        "21": {
+            "fn_id": 257,
+            "lp_id": 21,
+            "label": "loop_input_A1"
+        },
+        "22": {
+            "fn_id": 257,
+            "lp_id": 22,
+            "label": "loop_input_A2"
+        }
+    }
+}

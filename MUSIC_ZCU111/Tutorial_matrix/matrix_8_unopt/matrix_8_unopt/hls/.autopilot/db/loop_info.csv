@@ -1,0 +1,9 @@
+,loop_input_A2,pp_loop_status1.csv
+,loop_input_A1,seq_loop_status1.csv
+,loop_input_B2,pp_loop_status2.csv
+,loop_input_B1,seq_loop_status2.csv
+,loop3,pp_loop_status3.csv
+,loop2,seq_loop_status3.csv
+,loop1,seq_loop_status4.csv
+,loop_output_C2,pp_loop_status4.csv
+,loop_output_C1,seq_loop_status5.csv

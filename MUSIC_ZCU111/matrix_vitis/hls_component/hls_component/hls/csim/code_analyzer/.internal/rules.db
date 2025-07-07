@@ -1,0 +1,81 @@
+{
+    "rules": {
+        "['C:\\\\Users\\\\Samarth\\\\Desktop\\\\IIIT_Intern\\\\matrix_vitis\\\\hls_component\\\\hls_component\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\mat_mul.cpp.0.bc', 'C:\\\\Users\\\\Samarth\\\\Desktop\\\\IIIT_Intern\\\\matrix_vitis\\\\hls_component\\\\hls_component\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\mat_mul.cpp.0.bc.d']": {
+            "command": [
+                "c:\\xilinx\\vitis\\2024.2\\vcxx\\/libexec/clang.exe",
+                "-c",
+                "-emit-llvm",
+                "-MD",
+                "-MF",
+                "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\hls_component\\hls_component\\hls\\csim\\code_analyzer\\.internal\\build\\mat_mul.cpp.0.bc.d",
+                "-fhls",
+                "-hls-syn-headers-dir=c:\\xilinx\\vitis\\2024.2\\vcxx\\data\\autopilot",
+                "-vitis-hls=C:\\Xilinx\\Vitis\\2024.2",
+                "--sysroot=C:\\Xilinx\\Vitis\\2024.2\\tps\\mingw\\10.0.0\\win64.o\\nt",
+                "-hls-clock-period=10.0",
+                "-fslxtrace",
+                "-fslx-compile-mode",
+                "-fhlstoplevel=matrixul_3",
+                "../mat_mul.cpp",
+                "-o",
+                "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\hls_component\\hls_component\\hls\\csim\\code_analyzer\\.internal\\build\\mat_mul.cpp.0.bc"
+            ],
+            "exectime": 4.264959096908569,
+            "cwd": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\hls_component"
+        },
+        "['C:\\\\Users\\\\Samarth\\\\Desktop\\\\IIIT_Intern\\\\matrix_vitis\\\\hls_component\\\\hls_component\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\mat_mul_tb.cpp.0.o', 'C:\\\\Users\\\\Samarth\\\\Desktop\\\\IIIT_Intern\\\\matrix_vitis\\\\hls_component\\\\hls_component\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\mat_mul_tb.cpp.0.o.d']": {
+            "command": [
+                "c:\\xilinx\\vitis\\2024.2\\vcxx\\/libexec/clang.exe",
+                "-c",
+                "-MD",
+                "-MF",
+                "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\hls_component\\hls_component\\hls\\csim\\code_analyzer\\.internal\\build\\mat_mul_tb.cpp.0.o.d",
+                "-fhls-tb",
+                "-hls-sim-headers-dir=c:\\xilinx\\vitis\\2024.2\\vcxx\\data\\include",
+                "-vitis-hls=C:\\Xilinx\\Vitis\\2024.2",
+                "--sysroot=C:\\Xilinx\\Vitis\\2024.2\\tps\\mingw\\10.0.0\\win64.o\\nt",
+                "-fslxtrace",
+                "-fslx-compile-mode",
+                "-fslxskipfunctionbody",
+                "-fhlstoplevel=matrixul_3",
+                "C:/Users/Samarth/Desktop/IIIT_Intern/matrix_vitis/mat_mul_tb.cpp",
+                "-o",
+                "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\hls_component\\hls_component\\hls\\csim\\code_analyzer\\.internal\\build\\mat_mul_tb.cpp.0.o"
+            ],
+            "exectime": 2.5946426391601562,
+            "cwd": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\hls_component"
+        },
+        "['C:\\\\Users\\\\Samarth\\\\Desktop\\\\IIIT_Intern\\\\matrix_vitis\\\\hls_component\\\\hls_component\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\mat_mul.cpp.0.o', 'C:\\\\Users\\\\Samarth\\\\Desktop\\\\IIIT_Intern\\\\matrix_vitis\\\\hls_component\\\\hls_component\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\mat_mul.cpp.0.o.d']": {
+            "command": [
+                "c:\\xilinx\\vitis\\2024.2\\vcxx\\/libexec/clang.exe",
+                "-c",
+                "-MD",
+                "-MF",
+                "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\hls_component\\hls_component\\hls\\csim\\code_analyzer\\.internal\\build\\mat_mul.cpp.0.o.d",
+                "-fhls-tb",
+                "-hls-sim-headers-dir=c:\\xilinx\\vitis\\2024.2\\vcxx\\data\\include",
+                "-vitis-hls=C:\\Xilinx\\Vitis\\2024.2",
+                "--sysroot=C:\\Xilinx\\Vitis\\2024.2\\tps\\mingw\\10.0.0\\win64.o\\nt",
+                "-fslxtrace",
+                "-fslx-compile-mode",
+                "-fslxskipfunctionbody",
+                "-fhlstoplevel=matrixul_3",
+                "../mat_mul.cpp",
+                "-o",
+                "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\hls_component\\hls_component\\hls\\csim\\code_analyzer\\.internal\\build\\mat_mul.cpp.0.o"
+            ],
+            "exectime": 2.220947742462158,
+            "cwd": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\hls_component"
+        },
+        "['C:\\\\Users\\\\Samarth\\\\Desktop\\\\IIIT_Intern\\\\matrix_vitis\\\\hls_component\\\\hls_component\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\syn_srcs.bc']": {
+            "command": [
+                "c:\\xilinx\\vitis\\2024.2\\vcxx\\/libexec/llvm-link.exe",
+                "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\hls_component\\hls_component\\hls\\csim\\code_analyzer\\.internal\\build\\mat_mul.cpp.0.bc",
+                "-o",
+                "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\hls_component\\hls_component\\hls\\csim\\code_analyzer\\.internal\\build\\syn_srcs.bc"
+            ],
+            "exectime": 0.3950233459472656,
+            "cwd": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\hls_component"
+        }
+    }
+}

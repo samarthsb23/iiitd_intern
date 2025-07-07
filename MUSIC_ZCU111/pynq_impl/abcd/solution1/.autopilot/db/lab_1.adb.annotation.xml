@@ -1,0 +1,7 @@
+<annotationInfo>
+<annotationInfo>
+<item  id="18" filename="abcd/lab1.cpp" linenumber="4" name="shl_ln68" contextFuncName="lab_1" moduleName="lab_1" rtlName="shl_ln68_fu_55_p2" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\Users\Samarth\Desktop\IIIT_Intern\pynq_impl"><\/item>
+<item  id="19" filename="abcd/lab1.cpp" linenumber="4" name="add_ln68" contextFuncName="lab_1" moduleName="lab_1" rtlName="add_ln68_fu_61_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="32" fileDirectory="C:\Users\Samarth\Desktop\IIIT_Intern\pynq_impl"><\/item>
+<item  id="20" filename="abcd/lab1.cpp" linenumber="4" name="sub_ln68" contextFuncName="lab_1" moduleName="lab_1" rtlName="Y_V" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="32" fileDirectory="C:\Users\Samarth\Desktop\IIIT_Intern\pynq_impl"><\/item>
+<\/annotationInfo>
+</annotationInfo>

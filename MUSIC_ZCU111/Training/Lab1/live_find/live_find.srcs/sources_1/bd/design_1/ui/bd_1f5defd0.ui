@@ -1,0 +1,61 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.241958",
+   "Default View_TopLeft":"-831,0",
+   "ExpandedHierarchyInLayout":"/axi_mem_intercon|/axi_mem_intercon/s00_couplers",
+   "guistr":"# # String gsaved with Nlview 7.0.21  2019-05-29 bk=1.5064 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -lvl 6 -x 2720 -y 510 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 6 -x 2720 -y 540 -defaultsOSRD
+preplace inst axi_dma_0 -pg 1 -lvl 3 -x 990 -y 650 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -x 180 -y 940 -defaultsOSRD
+preplace inst smartconnect_0 -pg 1 -lvl 4 -x 1490 -y 90 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 600 -y 290 -defaultsOSRD
+preplace inst rst_ps7_0_50M -pg 1 -lvl 1 -x 180 -y 380 -defaultsOSRD
+preplace inst find_0 -pg 1 -lvl 4 -x 1490 -y 960 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 3 -x 990 -y 1200 -defaultsOSRD
+preplace inst xlconstant_1 -pg 1 -lvl 3 -x 990 -y 1300 -defaultsOSRD
+preplace inst system_ila_0 -pg 1 -lvl 5 -x 2600 -y 210 -defaultsOSRD
+preplace inst axi_mem_intercon -pg 1 -lvl 4 -x 1490 -y 362 -defaultsOSRD
+preplace inst axi_mem_intercon|xbar -pg 1 -lvl 2 -x 1960 -y 428 -defaultsOSRD
+preplace inst axi_mem_intercon|s00_couplers -pg 1 -lvl 1 -x 1630 -y 372 -defaultsOSRD
+preplace inst axi_mem_intercon|s01_couplers -pg 1 -lvl 1 -x 1630 -y 648 -defaultsOSRD
+preplace inst axi_mem_intercon|m00_couplers -pg 1 -lvl 3 -x 2230 -y 468 -defaultsOSRD
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 5 -60 1420 430 160 760 160 1200 1150 2490J
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 -50 280 410
+preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 1 4 420 170 740 200 1180 212 2480J
+preplace netloc xlconstant_0_dout 1 3 1 1190J 880n
+preplace netloc xlconstant_1_dout 1 3 1 1210J 920n
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 440 230n
+preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 750 290n
+preplace netloc processing_system7_0_DDR 1 1 5 NJ 860 750J 1120 NJ 1120 2480J 510 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 1 5 NJ 880 740J 1140 NJ 1140 2500J 540 NJ
+preplace netloc find_0_out_vec 1 2 3 770 1130 NJ 1130 2470
+preplace netloc axi_dma_0_M_AXI_MM2S 1 3 2 1160 180 N
+preplace netloc axi_dma_0_M_AXI_S2MM 1 3 1 1170 80n
+preplace netloc axi_dma_0_M_AXIS_MM2S 1 3 1 1170 900n
+preplace netloc axi_mem_intercon_M00_AXI 1 0 5 -70 150 NJ 150 NJ 150 1210J 190 2450
+preplace netloc smartconnect_0_M00_AXI 1 3 2 1210 200 2460
+preplace netloc axi_dma_0_M_AXI_SG 1 3 1 1190 260n
+preplace netloc axi_mem_intercon|axi_mem_intercon_ACLK_net 1 0 3 1410 252 1810 338 2090
+preplace netloc axi_mem_intercon|axi_mem_intercon_ARESETN_net 1 0 3 1420 262 1790 328 2100
+preplace netloc axi_mem_intercon|axi_mem_intercon_to_s00_couplers 1 0 1 N 332
+preplace netloc axi_mem_intercon|s00_couplers_to_xbar 1 1 1 1780 332n
+preplace netloc axi_mem_intercon|axi_mem_intercon_to_s01_couplers 1 0 1 N 608
+preplace netloc axi_mem_intercon|s01_couplers_to_xbar 1 1 1 1800 418n
+preplace netloc axi_mem_intercon|m00_couplers_to_axi_mem_intercon 1 3 1 N 468
+preplace netloc axi_mem_intercon|xbar_to_m00_couplers 1 2 1 N 428
+preplace netloc axi_mem_intercon|s00_couplers|s00_couplers_to_s00_couplers 1 0 1 N 332
+levelinfo -pg 1 -90 180 600 990 1490 2600 2720
+levelinfo -hier axi_mem_intercon * 1630 1960 2230 *
+levelinfo -hier axi_mem_intercon|s00_couplers * *
+pagesize -pg 1 -db -bbox -sgen -90 0 2830 1430
+pagesize -hier axi_mem_intercon -db -bbox -sgen 1380 242 2370 782
+pagesize -hier axi_mem_intercon|s00_couplers -db -bbox -sgen 1550 302 1710 442
+"
+}
+{
+   "da_axi4_cnt":"4",
+   "da_clkrst_cnt":"1",
+   "da_ps7_cnt":"2"
+}

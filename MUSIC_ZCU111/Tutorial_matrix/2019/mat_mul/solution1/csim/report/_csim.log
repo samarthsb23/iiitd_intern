@@ -1,0 +1,69 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../../matrix_8_unopt/matrix_tb.cpp in debug mode
+csim.mk:74: recipe for target 'obj/matrix_tb.o' failed
+In file included from C:/Xilinx2/Vivado/2019.1/include/floating_point_v7_0_bitacc_cmodel.h:143:0,
+                 from C:/Xilinx2/Vivado/2019.1/include/hls_fpo.h:186,
+                 from C:/Xilinx2/Vivado/2019.1/include/hls_half.h:44,
+                 from C:/Xilinx2/Vivado/2019.1/include/etc/ap_private.h:90,
+                 from C:/Xilinx2/Vivado/2019.1/include/ap_common.h:641,
+                 from C:/Xilinx2/Vivado/2019.1/include/ap_int.h:54,
+                 from ../../../../../matrix_8_unopt/matrix.h:3,
+                 from ../../../../../matrix_8_unopt/matrix_tb.cpp:1:
+C:/Xilinx2/Vivado/2019.1/include/gmp.h:62:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from C:/Xilinx2/Vivado/2019.1/include/hls_fpo.h:186:0,
+                 from C:/Xilinx2/Vivado/2019.1/include/hls_half.h:44,
+                 from C:/Xilinx2/Vivado/2019.1/include/etc/ap_private.h:90,
+                 from C:/Xilinx2/Vivado/2019.1/include/ap_common.h:641,
+                 from C:/Xilinx2/Vivado/2019.1/include/ap_int.h:54,
+                 from ../../../../../matrix_8_unopt/matrix.h:3,
+                 from ../../../../../matrix_8_unopt/matrix_tb.cpp:1:
+C:/Xilinx2/Vivado/2019.1/include/floating_point_v7_0_bitacc_cmodel.h:135:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+In file included from ../../../../../matrix_8_unopt/matrix_tb.cpp:1:0:
+../../../../../matrix_8_unopt/matrix.h:14:14: error: 'axis' in namespace 'hls' does not name a template type
+ typedef hls::axis<Mat_Dtype, 0, 0, 0> axis_float_t; //<data_type, user bits, id bits, destination bits>
+              ^~~~
+../../../../../matrix_8_unopt/matrix.h:15:21: error: 'axis_float_t' was not declared in this scope
+ typedef hls::stream<axis_float_t> axis_data; //creates a FIFO stream of AXI-compliant elements
+                     ^~~~~~~~~~~~
+../../../../../matrix_8_unopt/matrix.h:15:33: error: template argument 1 is invalid
+ typedef hls::stream<axis_float_t> axis_data; //creates a FIFO stream of AXI-compliant elements
+                                 ^
+../../../../../matrix_8_unopt/matrix_tb.cpp: In function 'int main()':
+../../../../../matrix_8_unopt/matrix_tb.cpp:32:16: error: 'axis' in namespace 'hls' does not name a template type
+   typedef hls::axis<Mat_Dtype, 0, 0, 0> axis_float_t;
+                ^~~~
+../../../../../matrix_8_unopt/matrix_tb.cpp:33:23: error: 'axis_float_t' was not declared in this scope
+   typedef hls::stream<axis_float_t> axis_data;
+                       ^~~~~~~~~~~~
+../../../../../matrix_8_unopt/matrix_tb.cpp:33:35: error: template argument 1 is invalid
+   typedef hls::stream<axis_float_t> axis_data;
+                                   ^
+../../../../../matrix_8_unopt/matrix_tb.cpp:36:16: error: expected ';' before 'local_stream'
+   axis_float_t local_stream;
+                ^~~~~~~~~~~~
+../../../../../matrix_8_unopt/matrix_tb.cpp:41:5: error: 'local_stream' was not declared in this scope
+     local_stream.data = (float)input_A[row][col];
+     ^~~~~~~~~~~~
+../../../../../matrix_8_unopt/matrix_tb.cpp:43:10: error: request for member 'write' in 'in_A', which is of non-class type 'axis_data {aka int}'
+     in_A.write(local_stream);
+          ^~~~~
+../../../../../matrix_8_unopt/matrix_tb.cpp:50:5: error: 'local_stream' was not declared in this scope
+     local_stream.data = (float)input_B[row][col];
+     ^~~~~~~~~~~~
+../../../../../matrix_8_unopt/matrix_tb.cpp:52:10: error: request for member 'write' in 'in_A', which is of non-class type 'axis_data {aka int}'
+     in_A.write(local_stream);
+          ^~~~~
+../../../../../matrix_8_unopt/matrix_tb.cpp:62:5: error: 'local_stream' was not declared in this scope
+     local_stream = out_C.read();
+     ^~~~~~~~~~~~
+../../../../../matrix_8_unopt/matrix_tb.cpp:62:26: error: request for member 'read' in 'out_C', which is of non-class type 'axis_data {aka int}'
+     local_stream = out_C.read();
+                          ^~~~
+make: *** [obj/matrix_tb.o] Error 1
+ERR: [SIM 100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 3] *************** CSIM finish ***************

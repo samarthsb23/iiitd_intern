@@ -1,0 +1,93 @@
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../mat_mul.cpp, Line: 171, Column: 9 }
+Function:        _Z11matrixmul_3RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        loop3
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../mat_mul.cpp, Line: 132, Column: 0 }
+Function:        _Z11matrixmul_3RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop3
+  - String:          ''' ('
+  - LoopLoc:         '../mat_mul.cpp:171:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matrixmul_3
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_matrixmul_3_ir
+Args:            
+  - Callee:          'matrixmul_3(hls::stream<axis_data, 0>&, hls::stream<axis_data, 0>&)'
+    DebugLoc:        { File: ../mat_mul.cpp, Line: 132, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_matrixmul_3_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../mat_mul.cpp, Line: 136, Column: 12 }
+Function:        _Z11matrixmul_3RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          input_A
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../mat_mul.cpp, Line: 138, Column: 12 }
+Function:        _Z11matrixmul_3RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          input_B
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        loop_input_A2
+  - String:          '> at '
+  - LoopLoc:         '../mat_mul.cpp:148:18'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        loop_input_B2
+  - String:          '> at '
+  - LoopLoc:         '../mat_mul.cpp:157:18'
+  - String:          ' '
+...

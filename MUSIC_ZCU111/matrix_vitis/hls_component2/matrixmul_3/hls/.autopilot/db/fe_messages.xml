@@ -1,0 +1,45 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="directive:1:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="matrixmul_3" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=matrixmul_3" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../mat_mul.cpp:133:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matrixmul_3" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_ctrl_none port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../mat_mul.cpp:134:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matrixmul_3" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis register both port=in_A" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../mat_mul.cpp:135:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matrixmul_3" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis register both port=out_C" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../mat_mul.cpp:137:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matrixmul_3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=input_A complete dim=2" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../mat_mul.cpp:139:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matrixmul_3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=input_B complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../mat_mul.cpp:150:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matrixmul_3" ARG_PragmaIsValid="1" ARG_PragmaType="loop_flatten" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../mat_mul.cpp:158:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matrixmul_3" ARG_PragmaIsValid="1" ARG_PragmaType="loop_flatten" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../mat_mul.cpp:170:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matrixmul_3" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../mat_mul.cpp:183:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matrixmul_3" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="../mat_mul.cpp:171:9" msg_body="Loop 'loop3' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="loop3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../mat_mul.cpp:132:0" msg_body="Unrolling loop 'loop3' (../mat_mul.cpp:171:9) in function 'matrixmul_3' completely with a factor of 8">
+        <args Factor="8" LoopLoc="../mat_mul.cpp:171:9" LoopName="loop3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../mat_mul.cpp:136:12" msg_body="Applying array_partition to 'input_A': Complete partitioning on dimension 2.">
+        <args Dim="2" Mode="Complete" UOName="input_A"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../mat_mul.cpp:138:12" msg_body="Applying array_partition to 'input_B': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="input_B"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

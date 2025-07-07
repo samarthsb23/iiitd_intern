@@ -1,0 +1,15 @@
+remark: matrix.cpp:42:9: Loop 'loop3' is marked as complete unroll implied by the pipeline pragma
+remark: matrix.cpp:3:0: Unrolling loop 'loop3' (matrix.cpp:42:9) in function 'matrixmul_100_opt' completely with a factor of 100
+remark: <unknown>:0:0: matrixmul_100_opt(hls::stream<hls::axis<float, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<float, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&) not inlined into apatb_matrixmul_100_opt_ir because it should never be inlined (cost=never)
+remark: matrix.cpp:7:12: Applying array_partition to 'input_A': Complete partitioning on dimension 2.
+remark: matrix.cpp:9:12: Applying array_partition to 'input_B': Complete partitioning on dimension 1.
+remark: automatically set the pipeline for Loop< loop_input_A2> at matrix.cpp:19:18 
+remark: automatically set the pipeline for Loop< loop_input_B2> at matrix.cpp:28:18 
+remark: matrix.cpp:3:0: Unrolling small iteration loop 'loop_output_C1' (matrix.cpp:52:18) in function 'matrixmul_100_opt' automatically
+remark: matrix.cpp:3:0: Unrolling small iteration loop 'loop1' (matrix.cpp:38:9) in function 'matrixmul_100_opt' automatically
+remark: matrix.cpp:3:0: Unrolling small iteration loop 'loop_input_B1' (matrix.cpp:27:17) in function 'matrixmul_100_opt' automatically
+remark: matrix.cpp:3:0: Unrolling small iteration loop 'loop_input_A1' (matrix.cpp:18:17) in function 'matrixmul_100_opt' automatically
+remark: matrix.cpp:3:0: Unrolling loop 'loop_output_C1' (matrix.cpp:52:18) in function 'matrixmul_100_opt' completely with a factor of 100
+remark: matrix.cpp:3:0: Unrolling loop 'loop1' (matrix.cpp:38:9) in function 'matrixmul_100_opt' completely with a factor of 100
+remark: matrix.cpp:3:0: Unrolling loop 'loop_input_B1' (matrix.cpp:27:17) in function 'matrixmul_100_opt' completely with a factor of 100
+remark: matrix.cpp:3:0: Unrolling loop 'loop_input_A1' (matrix.cpp:18:17) in function 'matrixmul_100_opt' completely with a factor of 100

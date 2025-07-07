@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="matrix_mul.h" path="C:\Users\Samarth\OneDrive\Desktop\IIT\IIIT_Intern\Training\Lab2\MatrixMul\matrix_mul.h"/>
+    <originFiles name="matrix_mul.cpp" path="C:\Users\Samarth\OneDrive\Desktop\IIT\IIIT_Intern\Training\Lab2\MatrixMul\matrix_mul.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="matrix_mul_tb.cpp" path="C:\Users\Samarth\OneDrive\Desktop\IIT\IIIT_Intern\Training\Lab2\MatrixMul\matrix_mul_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

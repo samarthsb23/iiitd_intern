@@ -1,0 +1,12 @@
+{
+  "name": "matrix_8_opt",
+  "type": "HLS",
+  "configuration": {
+    "componentType": "HLS",
+    "configFiles": [
+      "hls_config.cfg"
+    ],
+    "work_dir": "matrix_8_opt"
+  },
+  "template": "empty_hls_component"
+}

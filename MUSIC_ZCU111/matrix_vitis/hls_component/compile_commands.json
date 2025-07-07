@@ -1,0 +1,27 @@
+[
+  {
+    "directory": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\hls_component",
+    "arguments": [
+      "C:\\Xilinx\\Vitis\\2024.2\\vcxx\\libexec\\clang++.exe",
+      "--sysroot=C:\\Xilinx\\Vitis\\2024.2\\tps\\mingw\\10.0.0\\win64.o\\nt",
+      "-fhls",
+      "-hls-syn-headers-dir=C:\\Xilinx\\Vitis\\2024.2\\common\\technology\\autopilot",
+      "-fhlstoplevel=matrixul_3",
+      "-c",
+      "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp"
+    ],
+    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp"
+  },
+  {
+    "directory": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\hls_component",
+    "arguments": [
+      "C:\\Xilinx\\Vitis\\2024.2\\vcxx\\libexec\\clang++.exe",
+      "--sysroot=C:\\Xilinx\\Vitis\\2024.2\\tps\\mingw\\10.0.0\\win64.o\\nt",
+      "-fhls-tb",
+      "-hls-sim-headers-dir=C:\\Xilinx\\Vitis\\2024.2\\include",
+      "-c",
+      "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul_tb.cpp"
+    ],
+    "file": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul_tb.cpp"
+  }
+]

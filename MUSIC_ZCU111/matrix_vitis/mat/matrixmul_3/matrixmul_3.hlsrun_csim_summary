@@ -1,0 +1,157 @@
+<ENTRY>
+{
+ "thisFile": "C:/Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat\\matrixmul_3\\matrixmul_3.hlsrun_csim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "05/22/25 14:53:29",
+ "timestampMillis": "1747905809287",
+ "buildStep": {
+  "cmdId": "8fa091db-8861-4e74-9c74-23bfc76b6027",
+  "name": "vitis-run",
+  "logFile": "C:/Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat\\matrixmul_3\\logs\\matrixmul_3.steps.log",
+  "commandLine": "C:/Xilinx/Vitis/2024.2/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --csim --config C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat\\hls_config.cfg --work_dir matrixmul_3 ",
+  "args": [
+   "--mode",
+   "hls",
+   "--csim",
+   "--config",
+   "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat\\hls_config.cfg",
+   "--work_dir",
+   "matrixmul_3"
+  ],
+  "iniFiles": [],
+  "cwd": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "05/22/25 14:53:29",
+ "timestampMillis": "1747905809288",
+ "status": {
+  "cmdId": "8fa091db-8861-4e74-9c74-23bfc76b6027",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "05/22/25 14:53:32",
+ "timestampMillis": "1747905812765",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_C_SIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "matrixmul_3",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "C:/Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.cpp",
+     "C:/Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat_mul.h"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2024.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "05/22/25 14:53:32",
+ "timestampMillis": "1747905812767",
+ "buildStep": {
+  "cmdId": "92583e29-e554-4200-a627-6fb51333053a",
+  "name": "",
+  "logFile": "C:/Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat\\matrixmul_3\\hls\\hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\matrix_vitis\\mat"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "05/22/25 14:53:32",
+ "timestampMillis": "1747905812768",
+ "status": {
+  "cmdId": "92583e29-e554-4200-a627-6fb51333053a",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "05/22/25 14:53:41",
+ "timestampMillis": "1747905821993",
+ "status": {
+  "cmdId": "92583e29-e554-4200-a627-6fb51333053a",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "05/22/25 14:53:42",
+ "timestampMillis": "1747905822075",
+ "status": {
+  "cmdId": "8fa091db-8861-4e74-9c74-23bfc76b6027",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "05/22/25 14:53:42",
+ "timestampMillis": "1747905822075",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "05/22/25 14:53:42",
+ "timestampMillis": "1747905822075",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

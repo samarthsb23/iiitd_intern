@@ -1,0 +1,3 @@
+relativeroot=C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_100_opt
+original_argv=-c --mode hls --config C:\Users\Samarth\Desktop\IIIT_Intern\Tutorial_matrix\matrix_100_opt\hls_config.cfg --work_dir matrix_100_opt 
+

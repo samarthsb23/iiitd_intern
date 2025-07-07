@@ -1,0 +1,6 @@
+SubspaceNet/
+SubspaceNet/
+*.log
+*.vhdl
+*.v
+*.log

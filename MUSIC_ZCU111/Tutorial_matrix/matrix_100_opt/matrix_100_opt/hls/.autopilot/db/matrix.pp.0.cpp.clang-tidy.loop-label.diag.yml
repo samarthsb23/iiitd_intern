@@ -1,0 +1,40 @@
+---
+MainSourceFile:  'C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_100_opt/matrix_100_opt/hls/.autopilot/db/matrix.pp.0.cpp'
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        'C:\Xilinx_2024_ent\Vitis\2024.2\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Samarth\Desktop\IIIT_Intern\Tutorial_matrix\matrix_100_opt\matrix_100_opt\hls\.autopilot\db\matrix.pp.0.cpp'
+        Offset:          324180
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        'C:\Xilinx_2024_ent\Vitis\2024.2\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Samarth\Desktop\IIIT_Intern\Tutorial_matrix\matrix_100_opt\matrix_100_opt\hls\.autopilot\db\matrix.pp.0.cpp'
+        Offset:          324646
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        'C:\Xilinx_2024_ent\Vitis\2024.2\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Samarth\Desktop\IIIT_Intern\Tutorial_matrix\matrix_100_opt\matrix_100_opt\hls\.autopilot\db\matrix.pp.0.cpp'
+        Offset:          325113
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1248_1:  '
+    FileOffset:      1248
+    FilePath:        'C:\Xilinx_2024_ent\Vitis\2024.2\common\technology\autopilot\etc\ap_fixed_base.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Samarth\Desktop\IIIT_Intern\Tutorial_matrix\matrix_100_opt\matrix_100_opt\hls\.autopilot\db\matrix.pp.0.cpp'
+        Offset:          608786
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1248_1: '
+...

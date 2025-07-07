@@ -1,0 +1,186 @@
+  **** HLS Build v2024.2 5238294
+INFO: [HLS 200-2005] Using work_dir C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_8_unopt/matrix_8_unopt 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'syn.file=matrix.cpp' from C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_8_unopt/hls_config.cfg(7)
+INFO: [HLS 200-10] Adding design file 'C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_8_unopt/matrix.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=matrix.h' from C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_8_unopt/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file 'C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_8_unopt/matrix.h' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=matrix_tb.cpp' from C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_8_unopt/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_8_unopt/matrix_tb.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.top=matrixmul_8_unopt' from C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_8_unopt/hls_config.cfg(11)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_8_unopt/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xczu28dr-ffvg1517-2-e' from C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_8_unopt/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xczu28dr-ffvg1517-2-e'
+INFO: [HLS 200-1465] Applying ini 'csim.code_analyzer=1' from C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_8_unopt/hls_config.cfg(10)
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_8_unopt/hls_config.cfg(5)
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 2.507 seconds; current allocated memory: 183.719 MB.
+INFO: [HLS 200-10] Analyzing design file 'matrix.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 5.665 seconds; current allocated memory: 186.785 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 385 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_8_unopt/matrix_8_unopt/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 173 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_8_unopt/matrix_8_unopt/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 147 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_8_unopt/matrix_8_unopt/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 138 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_8_unopt/matrix_8_unopt/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 138 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_8_unopt/matrix_8_unopt/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 138 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_8_unopt/matrix_8_unopt/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 138 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_8_unopt/matrix_8_unopt/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 138 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_8_unopt/matrix_8_unopt/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 138 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_8_unopt/matrix_8_unopt/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 138 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_8_unopt/matrix_8_unopt/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 133 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_8_unopt/matrix_8_unopt/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 168 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_8_unopt/matrix_8_unopt/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 393 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_8_unopt/matrix_8_unopt/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 281 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_8_unopt/matrix_8_unopt/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 268 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_8_unopt/matrix_8_unopt/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 289 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/Samarth/Desktop/IIIT_Intern/Tutorial_matrix/matrix_8_unopt/matrix_8_unopt/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-376] automatically set the pipeline for Loop< loop_input_A2> at matrix.cpp:17:18 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< loop_input_B2> at matrix.cpp:24:18 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< loop2> at matrix.cpp:33:10 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< loop_output_C2> at matrix.cpp:45:19 
+INFO: [HLS 214-291] Loop 'loop3' is marked as complete unroll implied by the pipeline pragma (matrix.cpp:35:11)
+INFO: [HLS 214-186] Unrolling loop 'loop3' (matrix.cpp:35:11) in function 'matrixmul_8_unopt' completely with a factor of 8 (matrix.cpp:3:0)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=2' for array 'input_A' due to pipeline pragma (matrix.cpp:7:12)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=1' for array 'input_B' due to pipeline pragma (matrix.cpp:8:12)
+INFO: [HLS 214-248] Applying array_partition to 'input_A': Complete partitioning on dimension 2. (matrix.cpp:7:12)
+INFO: [HLS 214-248] Applying array_partition to 'input_B': Complete partitioning on dimension 1. (matrix.cpp:8:12)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 11.011 seconds; current allocated memory: 188.645 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.006 seconds; current allocated memory: 188.645 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.494 seconds; current allocated memory: 192.758 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.251 seconds; current allocated memory: 194.262 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.335 seconds; current allocated memory: 216.195 MB.
+INFO: [HLS 200-2061] Successfully converted nested loops 'loop_input_A1'(matrix.cpp:16:17) and 'loop_input_A2'(matrix.cpp:17:18) in function 'matrixmul_8_unopt' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'loop_input_B1'(matrix.cpp:23:17) and 'loop_input_B2'(matrix.cpp:24:18) in function 'matrixmul_8_unopt' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'loop1'(matrix.cpp:32:9) and 'loop2'(matrix.cpp:33:10) in function 'matrixmul_8_unopt' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'loop_output_C1'(matrix.cpp:44:18) and 'loop_output_C2'(matrix.cpp:45:19) in function 'matrixmul_8_unopt' into perfectly nested loops.
+INFO: [XFORM 203-541] Flattening a loop nest 'loop_input_A1' (matrix.cpp:16:17) in function 'matrixmul_8_unopt'.
+INFO: [XFORM 203-541] Flattening a loop nest 'loop_input_B1' (matrix.cpp:23:17) in function 'matrixmul_8_unopt'.
+INFO: [XFORM 203-541] Flattening a loop nest 'loop1' (matrix.cpp:32:9) in function 'matrixmul_8_unopt'.
+INFO: [XFORM 203-541] Flattening a loop nest 'loop_output_C1' (matrix.cpp:44:18) in function 'matrixmul_8_unopt'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.763 seconds; current allocated memory: 245.184 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'matrixmul_8_unopt' ...
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrixmul_8_unopt_Pipeline_loop_input_A1_loop_input_A2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_input_A1_loop_input_A2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'loop_input_A1_loop_input_A2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.203 seconds; current allocated memory: 248.664 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.37 seconds; current allocated memory: 249.750 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrixmul_8_unopt_Pipeline_loop_input_B1_loop_input_B2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_input_B1_loop_input_B2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'loop_input_B1_loop_input_B2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.436 seconds; current allocated memory: 249.812 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.261 seconds; current allocated memory: 249.934 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrixmul_8_unopt_Pipeline_loop1_loop2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop1_loop2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 38, loop 'loop1_loop2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.267 seconds; current allocated memory: 250.230 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.27 seconds; current allocated memory: 250.406 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrixmul_8_unopt_Pipeline_loop_output_C1_loop_output_C2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_output_C1_loop_output_C2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'loop_output_C1_loop_output_C2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.395 seconds; current allocated memory: 250.547 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.159 seconds; current allocated memory: 250.613 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrixmul_8_unopt' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.34 seconds; current allocated memory: 250.949 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.419 seconds; current allocated memory: 251.152 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrixmul_8_unopt_Pipeline_loop_input_A1_loop_input_A2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'matrixmul_8_unopt_Pipeline_loop_input_A1_loop_input_A2' pipeline 'loop_input_A1_loop_input_A2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrixmul_8_unopt_Pipeline_loop_input_A1_loop_input_A2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.603 seconds; current allocated memory: 253.133 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrixmul_8_unopt_Pipeline_loop_input_B1_loop_input_B2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'matrixmul_8_unopt_Pipeline_loop_input_B1_loop_input_B2' pipeline 'loop_input_B1_loop_input_B2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrixmul_8_unopt_Pipeline_loop_input_B1_loop_input_B2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.613 seconds; current allocated memory: 255.328 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrixmul_8_unopt_Pipeline_loop1_loop2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'matrixmul_8_unopt_Pipeline_loop1_loop2' pipeline 'loop1_loop2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 8 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrixmul_8_unopt_Pipeline_loop1_loop2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.834 seconds; current allocated memory: 258.609 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrixmul_8_unopt_Pipeline_loop_output_C1_loop_output_C2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'matrixmul_8_unopt_Pipeline_loop_output_C1_loop_output_C2' pipeline 'loop_output_C1_loop_output_C2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrixmul_8_unopt_Pipeline_loop_output_C1_loop_output_C2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.285 seconds; current allocated memory: 260.922 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrixmul_8_unopt' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixmul_8_unopt/in_A_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixmul_8_unopt/in_A_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixmul_8_unopt/in_A_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixmul_8_unopt/in_A_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixmul_8_unopt/out_C_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixmul_8_unopt/out_C_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixmul_8_unopt/out_C_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixmul_8_unopt/out_C_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'matrixmul_8_unopt' to 'ap_ctrl_none'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrixmul_8_unopt'.
+INFO: [RTMG 210-278] Implementing memory 'matrixmul_8_unopt_input_A_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'matrixmul_8_unopt_output_C_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.455 seconds; current allocated memory: 263.312 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 2.276 seconds; current allocated memory: 267.492 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.938 seconds; current allocated memory: 270.824 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for matrixmul_8_unopt.
+INFO: [VLOG 209-307] Generating Verilog RTL for matrixmul_8_unopt.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 142.53 MHz
+INFO: [HLS 200-112] Total CPU user time: 5 seconds. Total CPU system time: 3 seconds. Total elapsed time: 38.084 seconds; peak allocated memory: 271.164 MB.
+INFO: [v++ 60-791] Total elapsed time: 0h 0m 43s

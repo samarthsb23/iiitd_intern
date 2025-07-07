@@ -1,0 +1,157 @@
+<ENTRY>
+{
+ "thisFile": "C:/Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix_8_unopt\\matrix_8_unopt.hlsrun_package_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "05/31/25 22:48:46",
+ "timestampMillis": "1748711926300",
+ "buildStep": {
+  "cmdId": "6e761503-2c08-48d0-902c-f093be43f685",
+  "name": "vitis-run",
+  "logFile": "C:/Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix_8_unopt\\logs\\matrix_8_unopt.steps.log",
+  "commandLine": "C:/Xilinx_2024_ent/Vitis/2024.2/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --package --config C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\hls_config.cfg --work_dir matrix_8_unopt ",
+  "args": [
+   "--mode",
+   "hls",
+   "--package",
+   "--config",
+   "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\hls_config.cfg",
+   "--work_dir",
+   "matrix_8_unopt"
+  ],
+  "iniFiles": [],
+  "cwd": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "05/31/25 22:48:46",
+ "timestampMillis": "1748711926301",
+ "status": {
+  "cmdId": "6e761503-2c08-48d0-902c-f093be43f685",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "05/31/25 22:48:51",
+ "timestampMillis": "1748711931385",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_IP",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "matrixmul_100_unopt",
+     "file": "C:/Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix_8_unopt\\matrixmul_100_unopt.zip",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "C:/Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.cpp",
+     "C:/Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix.h"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2024.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "05/31/25 22:48:51",
+ "timestampMillis": "1748711931387",
+ "buildStep": {
+  "cmdId": "4af11a5d-13b6-4c27-b737-ddb0b0b2fc10",
+  "name": "",
+  "logFile": "C:/Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt\\matrix_8_unopt\\hls\\hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "C:\\Users\\Samarth\\Desktop\\IIIT_Intern\\Tutorial_matrix\\matrix_8_unopt"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "05/31/25 22:48:51",
+ "timestampMillis": "1748711931388",
+ "status": {
+  "cmdId": "4af11a5d-13b6-4c27-b737-ddb0b0b2fc10",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "05/31/25 22:49:33",
+ "timestampMillis": "1748711973723",
+ "status": {
+  "cmdId": "4af11a5d-13b6-4c27-b737-ddb0b0b2fc10",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "05/31/25 22:49:34",
+ "timestampMillis": "1748711974488",
+ "status": {
+  "cmdId": "6e761503-2c08-48d0-902c-f093be43f685",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "05/31/25 22:49:34",
+ "timestampMillis": "1748711974489",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "05/31/25 22:49:34",
+ "timestampMillis": "1748711974489",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
