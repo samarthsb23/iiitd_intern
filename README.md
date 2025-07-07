@@ -1,4 +1,4 @@
-**• FPGA-Based Radar Signal Processing on Zynq SoC (Mar’25- July'25)**
+**• Radar Signal Processing on Zynq SoCs for Doppler Estimation (Mar’25- ONGOING)**
 Research Intern, Algorithms to Architecture (A2A) lab, IIIT Delhi (Prof. Sumit J. Darak, Dept of ECE, IIITD)
 
 Objective: To accelerate and compare classical and deep-learning-aided doppler estimation algorithms to evaluate latency–resource trade-offs in real-time radar systems on FPGAs of Zynq-SoCs (Pynq-Z2 and ZCU111).
