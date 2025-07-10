@@ -105,17 +105,17 @@ python3 main.py --input data/sample_snapshot.npy
 
 ## Internship Info
 
-Title: Research Intern, Algorithms to Architecture (A2A) Lab, IIIT Delhi
-Mentor: Prof. Sumit J. Darak (Dept. of ECE)
-Duration: March 2025 – Ongoing
-Mode: Hybrid (Remote during IITK semester, On-site in May-July)
+Title: Research Intern, Algorithms to Architecture (A2A) Lab, IIIT Delhi   
+Mentor: Prof. Sumit J. Darak (Dept. of ECE)   
+Duration: March 2025 – Ongoing   
+Mode: Hybrid (Remote during IITK semester, On-site in May-July)   
 
 ## Contact 
 
-Samarth Sharma
-B.Tech Electrical Engineering, IIT Kanpur
-📧 samarthsb23@iitk.ac.in
-🔗 GitHub (/samarthsb23)
+Samarth Sharma Bhardwaj   
+B.Tech Electrical Engineering, IIT Kanpur   
+📧 samarthsb23@iitk.ac.in   
+🔗 GitHub (/samarthsb23)   
 
 ---
 This repo is messy because real hardware research isn’t clean and perfect. If you’re looking for organized results, check SubspaceNet/, pynq_drivers/, and MUSIC_ZCU111/.
