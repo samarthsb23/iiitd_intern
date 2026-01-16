@@ -106,7 +106,7 @@ python3 main.py --input data/sample_snapshot.npy
 ## Internship Info
 
 Title: Research Intern, Algorithms to Architecture (A2A) Lab, IIIT Delhi   
-Mentor: Prof. Sumit J. Darak (Dept. of ECE)   
+Mentor: Prof. Sumit J. Darak (Dept. of ECE), Aakanksha Tewari 
 Duration: March 2025 – Ongoing   
 Mode: Hybrid (Remote during IITK semester, On-site in May-July)   
 
@@ -116,9 +116,6 @@ Samarth Sharma Bhardwaj
 B.Tech Electrical Engineering, IIT Kanpur   
 📧 samarthsb23@iitk.ac.in   
 🔗 GitHub (/samarthsb23)   
-
----
-This repo is messy because real hardware research isn’t clean and perfect. If you’re looking for organized results, check SubspaceNet/, pynq_drivers/, and MUSIC_ZCU111/.
 
 
 ---
@@ -137,10 +134,7 @@ Approach: • Developed custom HLS IPs and integrated PYNQ drivers via Vivado bl
 • Integrated deep neural networks (DNNs) to boost accuracy under coherent sources and array miscalibration.
 • Used Integrated Logic Analyzers to debug AXI transactions and verify dataflow correctness on hardware
 
-Impact: • Achieved up to 4x acceleration over NumPy in FPGA-accelerated matrix multiplication on ZCU111.
+Impact: • Co-authoring two research manuscripts, including one submitted to IEEE RadarConf 2026.
+• Achieved up to 4x acceleration over NumPy in FPGA-accelerated matrix multiplication on ZCU111.
 • Created a 4-part YouTube tutorial series on HLS-to-PYNQ design flow and benchmarking on Vitis 2024.2.
 • Attained a 30x acceleration over NumPy for reliable Doppler estimation using MUSIC and ESPRIT
-
-
-Note:
-The internship was on-site, where I worked in the Algorithms to Architecture (A2A) lab, guided by Aakanksha Tewari and Prof. Darak. The initial weeks, while I was in college, were remote where I underwent training to understand the Vivado workflow and how HLS works. 
